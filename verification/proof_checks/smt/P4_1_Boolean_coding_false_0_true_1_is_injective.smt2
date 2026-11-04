@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const b1 Bool)
+(declare-const b2 Bool)
+(assert (= (ite b1 1 0) (ite b2 1 0)))
+(assert (not (= b1 b2)))
+(check-sat)

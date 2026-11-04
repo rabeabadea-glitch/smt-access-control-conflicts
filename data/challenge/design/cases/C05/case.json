@@ -1,0 +1,68 @@
+{
+  "case_id": "C05",
+  "title": "Three-source intersecting conflicts",
+  "role": "substantive finite challenge",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    }
+  },
+  "source_assets": [
+    {
+      "source_id": "A",
+      "format": "cpm",
+      "rule_count": 2,
+      "combining": "union",
+      "path": "cases/C05/sources/A.json"
+    },
+    {
+      "source_id": "B",
+      "format": "cpm",
+      "rule_count": 2,
+      "combining": "union",
+      "path": "cases/C05/sources/B.json"
+    },
+    {
+      "source_id": "C",
+      "format": "cpm",
+      "rule_count": 2,
+      "combining": "union",
+      "path": "cases/C05/sources/C.json"
+    }
+  ],
+  "request_count": 8,
+  "source_count": 3,
+  "source_rule_count": 6,
+  "anticipated_compiled_rule_count": 6,
+  "independent_priority_specification_high_to_low": [
+    "A",
+    "B",
+    "C"
+  ],
+  "target_specification": "First applicable source in A > B > C order; preserve every originally pure Permit and Deny point.",
+  "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+  "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+  "original_union_decision_counts": {
+    "Deny": 3,
+    "Permit": 3,
+    "Conflict": 2
+  },
+  "target_decision_counts": {
+    "Deny": 5,
+    "Permit": 3
+  },
+  "conflict_request_count": 2,
+  "preserved_original_permit_count": 3,
+  "preserved_original_deny_count": 3,
+  "input_path": "cases/C05/input.json",
+  "requirements_path": "cases/C05/requirements.json",
+  "truth_table_path": "cases/C05/expected_truth_table.json",
+  "governance_path": "cases/C05/governance.json",
+  "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+}

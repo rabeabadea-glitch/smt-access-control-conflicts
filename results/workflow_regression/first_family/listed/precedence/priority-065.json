@@ -1,0 +1,1308 @@
+{
+  "input": {
+    "schema_version": "cpm-1",
+    "attributes": {
+      "item": {
+        "type": "int",
+        "min": 0,
+        "max": 5
+      },
+      "requested": {
+        "type": "bool"
+      }
+    },
+    "sources": {
+      "S0": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      },
+      "S1": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      },
+      "S2": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      },
+      "S3": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      }
+    },
+    "rules": [
+      {
+        "id": "S0r0",
+        "source": "S0",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 2
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "S0r1",
+        "source": "S0",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 1
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "S1r0",
+        "source": "S1",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 4
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "S1r1",
+        "source": "S1",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 4
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "S2r0",
+        "source": "S2",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 4
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "S2r1",
+        "source": "S2",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 4
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "S3r0",
+        "source": "S3",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 3
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "S3r1",
+        "source": "S3",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "ge",
+              "attr": "item",
+              "value": 1
+            },
+            {
+              "op": "le",
+              "attr": "item",
+              "value": 4
+            }
+          ]
+        }
+      }
+    ],
+    "precedence": [
+      {
+        "higher": "S0",
+        "lower": "S1",
+        "approval_id": "SYNTHETIC_TEST_ONLY"
+      },
+      {
+        "higher": "S0",
+        "lower": "S3",
+        "approval_id": "SYNTHETIC_TEST_ONLY"
+      },
+      {
+        "higher": "S1",
+        "lower": "S3",
+        "approval_id": "SYNTHETIC_TEST_ONLY"
+      }
+    ],
+    "validity": true,
+    "invariants": []
+  },
+  "approval": {
+    "approval_id": "SYNTHETIC_TEST_ONLY_NO_ORGANIZATIONAL_AUTHORITY",
+    "policy_sha256": "c3f0fac808aeb08495d6edfd96b56941e25d8bf7ad46dd6d21e7456c3afa7f0d",
+    "operation": "apply_precedence",
+    "edges": [
+      {
+        "higher": "S0",
+        "lower": "S1",
+        "approval_id": "SYNTHETIC_TEST_ONLY"
+      },
+      {
+        "higher": "S0",
+        "lower": "S3",
+        "approval_id": "SYNTHETIC_TEST_ONLY"
+      },
+      {
+        "higher": "S1",
+        "lower": "S3",
+        "approval_id": "SYNTHETIC_TEST_ONLY"
+      }
+    ]
+  },
+  "result": {
+    "status": "APPLIED",
+    "committed": true,
+    "operation": "apply_precedence",
+    "before_sha256": "c3f0fac808aeb08495d6edfd96b56941e25d8bf7ad46dd6d21e7456c3afa7f0d",
+    "checks": {
+      "narrowing": [
+        {
+          "rule": "S0r0",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.6990230000810698,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S0r1",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.6784060000627505,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S1r0",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.5139890001119056,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S1r1",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.326375999904485,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S2r0",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.1267919998754223,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S2r1",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.0914439998923626,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S3r0",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.6188289998572145,
+            "witness": null
+          }
+        },
+        {
+          "rule": "S3r1",
+          "new_applicability_outside_original": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.464823999844157,
+            "witness": null
+          }
+        }
+      ],
+      "final": {
+        "label": "CONFLICTS_PRESENT",
+        "screening": "exhaustive",
+        "validity": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 4.8094579999542475,
+          "witness": {
+            "item": 0,
+            "requested": false
+          }
+        },
+        "eligible_pairs": 14,
+        "checked_pairs": 14,
+        "discarded_pairs": [],
+        "results": [
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 3.0987750001258973,
+            "witness": null,
+            "pair": [
+              "S0r0",
+              "S2r0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.91346800008796,
+            "witness": null,
+            "pair": [
+              "S0r0",
+              "S2r1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.319390999900861,
+            "witness": null,
+            "pair": [
+              "S0r0",
+              "S3r0"
+            ],
+            "governed": true
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.47651700010465,
+            "witness": null,
+            "pair": [
+              "S0r0",
+              "S3r1"
+            ],
+            "governed": true
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.3998870001378236,
+            "witness": null,
+            "pair": [
+              "S0r1",
+              "S1r0"
+            ],
+            "governed": true
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.425600999913513,
+            "witness": null,
+            "pair": [
+              "S0r1",
+              "S1r1"
+            ],
+            "governed": true
+          },
+          {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.54879199997049,
+            "witness": {
+              "item": 4,
+              "requested": true
+            },
+            "pair": [
+              "S1r0",
+              "S2r0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.693459999818515,
+            "witness": {
+              "item": 4,
+              "requested": true
+            },
+            "pair": [
+              "S1r0",
+              "S2r1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.4610430000393535,
+            "witness": null,
+            "pair": [
+              "S1r0",
+              "S3r0"
+            ],
+            "governed": true
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.4241539999820816,
+            "witness": null,
+            "pair": [
+              "S1r0",
+              "S3r1"
+            ],
+            "governed": true
+          },
+          {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.5629869999193033,
+            "witness": {
+              "item": 4,
+              "requested": true
+            },
+            "pair": [
+              "S1r1",
+              "S2r0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.5773760000902257,
+            "witness": {
+              "item": 4,
+              "requested": true
+            },
+            "pair": [
+              "S1r1",
+              "S2r1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.45916800008672,
+            "witness": null,
+            "pair": [
+              "S1r1",
+              "S3r0"
+            ],
+            "governed": true
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.4473309999848425,
+            "witness": null,
+            "pair": [
+              "S1r1",
+              "S3r1"
+            ],
+            "governed": true
+          }
+        ],
+        "elapsed_ms": 45.79198500005077
+      }
+    },
+    "reason": "AUTHORIZED_ORDER_COMPILED",
+    "approval_id": "SYNTHETIC_TEST_ONLY_NO_ORGANIZATIONAL_AUTHORITY",
+    "after_sha256": "280f6b4a7f8e0192a4d97870544edc5e4bfc2fa0b0d5ce1593320def711d5495",
+    "policy": {
+      "schema_version": "cpm-1",
+      "attributes": {
+        "item": {
+          "type": "int",
+          "min": 0,
+          "max": 5
+        },
+        "requested": {
+          "type": "bool"
+        }
+      },
+      "sources": {
+        "S0": {
+          "kind": "synthetic",
+          "citation": "Constructed formal experiment 2026-10-19",
+          "mapping_status": "Authored finite test, not a regulatory mapping"
+        },
+        "S1": {
+          "kind": "synthetic",
+          "citation": "Constructed formal experiment 2026-10-19",
+          "mapping_status": "Authored finite test, not a regulatory mapping"
+        },
+        "S2": {
+          "kind": "synthetic",
+          "citation": "Constructed formal experiment 2026-10-19",
+          "mapping_status": "Authored finite test, not a regulatory mapping"
+        },
+        "S3": {
+          "kind": "synthetic",
+          "citation": "Constructed formal experiment 2026-10-19",
+          "mapping_status": "Authored finite test, not a regulatory mapping"
+        }
+      },
+      "rules": [
+        {
+          "id": "S0r0",
+          "source": "S0",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 2
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "S0r1",
+          "source": "S0",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 1
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "S1r0",
+          "source": "S1",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "ge",
+                    "attr": "item",
+                    "value": 4
+                  },
+                  {
+                    "op": "le",
+                    "attr": "item",
+                    "value": 5
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "or",
+                  "args": [
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 2
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 3
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 1
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "S1r1",
+          "source": "S1",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "ge",
+                    "attr": "item",
+                    "value": 4
+                  },
+                  {
+                    "op": "le",
+                    "attr": "item",
+                    "value": 4
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "or",
+                  "args": [
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 2
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 3
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 1
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "S2r0",
+          "source": "S2",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 4
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "S2r1",
+          "source": "S2",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 4
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "S3r0",
+          "source": "S3",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "ge",
+                    "attr": "item",
+                    "value": 3
+                  },
+                  {
+                    "op": "le",
+                    "attr": "item",
+                    "value": 3
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "or",
+                  "args": [
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 2
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 3
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 1
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 4
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 5
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 4
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "S3r1",
+          "source": "S3",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "ge",
+                    "attr": "item",
+                    "value": 1
+                  },
+                  {
+                    "op": "le",
+                    "attr": "item",
+                    "value": 4
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "or",
+                  "args": [
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 2
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 3
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 1
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 4
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 5
+                        }
+                      ]
+                    },
+                    {
+                      "op": "and",
+                      "args": [
+                        {
+                          "op": "eq",
+                          "attr": "requested",
+                          "value": true
+                        },
+                        {
+                          "op": "ge",
+                          "attr": "item",
+                          "value": 4
+                        },
+                        {
+                          "op": "le",
+                          "attr": "item",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "precedence": [
+        {
+          "higher": "S0",
+          "lower": "S1",
+          "approval_id": "SYNTHETIC_TEST_ONLY"
+        },
+        {
+          "higher": "S0",
+          "lower": "S3",
+          "approval_id": "SYNTHETIC_TEST_ONLY"
+        },
+        {
+          "higher": "S1",
+          "lower": "S3",
+          "approval_id": "SYNTHETIC_TEST_ONLY"
+        }
+      ],
+      "validity": true,
+      "invariants": []
+    },
+    "final_scoped_label": "CONFLICTS_PRESENT",
+    "diagnostic_overlap": {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 5.137877999914053,
+      "witness": {
+        "item": 5,
+        "requested": true
+      }
+    }
+  },
+  "independent_checks": [
+    {
+      "request": {
+        "item": 0,
+        "requested": false
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 0,
+        "requested": true
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 1,
+        "requested": false
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 1,
+        "requested": true
+      },
+      "expected": {
+        "decision": "Deny",
+        "matched": [
+          "S0r1"
+        ]
+      },
+      "actual": {
+        "decision": "Deny",
+        "matched": [
+          "S0r1"
+        ]
+      }
+    },
+    {
+      "request": {
+        "item": 2,
+        "requested": false
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 2,
+        "requested": true
+      },
+      "expected": {
+        "decision": "Permit",
+        "matched": [
+          "S0r0"
+        ]
+      },
+      "actual": {
+        "decision": "Permit",
+        "matched": [
+          "S0r0"
+        ]
+      }
+    },
+    {
+      "request": {
+        "item": 3,
+        "requested": false
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 3,
+        "requested": true
+      },
+      "expected": {
+        "decision": "Permit",
+        "matched": [
+          "S0r0"
+        ]
+      },
+      "actual": {
+        "decision": "Permit",
+        "matched": [
+          "S0r0"
+        ]
+      }
+    },
+    {
+      "request": {
+        "item": 4,
+        "requested": false
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 4,
+        "requested": true
+      },
+      "expected": {
+        "decision": "Conflict",
+        "matched": [
+          "S1r0",
+          "S1r1",
+          "S2r0",
+          "S2r1"
+        ]
+      },
+      "actual": {
+        "decision": "Conflict",
+        "matched": [
+          "S1r0",
+          "S1r1",
+          "S2r0",
+          "S2r1"
+        ]
+      }
+    },
+    {
+      "request": {
+        "item": 5,
+        "requested": false
+      },
+      "expected": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "actual": {
+        "decision": "NotApplicable",
+        "matched": []
+      }
+    },
+    {
+      "request": {
+        "item": 5,
+        "requested": true
+      },
+      "expected": {
+        "decision": "Conflict",
+        "matched": [
+          "S1r0",
+          "S2r0",
+          "S2r1"
+        ]
+      },
+      "actual": {
+        "decision": "Conflict",
+        "matched": [
+          "S1r0",
+          "S2r0",
+          "S2r1"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "profile": "cpm-xacml-paired-1",
+  "xml_sha256": "d9f64d2c88de5a14aa775c599f66bb6273b59afcd83418075a87fcafc4eb6916",
+  "model_sha256": "b9bc776f00d8f3e2d9c8fc5ee75d7fc529058e25c56cf78866bf91d448965aa9",
+  "model": {
+    "schema_version": "cpm-1",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "sources": {
+      "A": {
+        "kind": "synthetic",
+        "citation": "Manually authored challenge C10",
+        "mapping_status": "synthetic structured source; no external interpretation"
+      },
+      "B": {
+        "kind": "synthetic",
+        "citation": "Manually authored challenge C10",
+        "mapping_status": "synthetic structured source; no external interpretation"
+      },
+      "C": {
+        "kind": "synthetic",
+        "citation": "Manually authored challenge C10",
+        "mapping_status": "synthetic structured source; no external interpretation"
+      },
+      "D": {
+        "kind": "synthetic",
+        "citation": "Manually authored challenge C10",
+        "mapping_status": "synthetic structured source; no external interpretation"
+      }
+    },
+    "rules": [
+      {
+        "id": "A_r1",
+        "source": "A",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "B_r1",
+        "source": "B",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            },
+            {
+              "op": "not",
+              "arg": {
+                "op": "eq",
+                "attr": "q",
+                "value": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "C_r1",
+        "source": "C",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "not",
+              "arg": {
+                "op": "eq",
+                "attr": "p",
+                "value": true
+              }
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "D_r1",
+        "source": "D",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "not",
+              "arg": {
+                "op": "eq",
+                "attr": "p",
+                "value": true
+              }
+            },
+            {
+              "op": "not",
+              "arg": {
+                "op": "eq",
+                "attr": "r",
+                "value": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "precedence": [],
+    "invariants": [
+      {
+        "id": "C10_request_0_must_Deny",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": false
+            }
+          ]
+        },
+        "required": "Deny"
+      },
+      {
+        "id": "C10_request_1_must_Permit",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": true
+            }
+          ]
+        },
+        "required": "Permit"
+      },
+      {
+        "id": "C10_request_2_must_Deny",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": false
+            }
+          ]
+        },
+        "required": "Deny"
+      },
+      {
+        "id": "C10_request_3_must_Permit",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": true
+            }
+          ]
+        },
+        "required": "Permit"
+      },
+      {
+        "id": "C10_request_4_must_Deny",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": false
+            }
+          ]
+        },
+        "required": "Deny"
+      },
+      {
+        "id": "C10_request_5_must_Deny",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": false
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": true
+            }
+          ]
+        },
+        "required": "Deny"
+      },
+      {
+        "id": "C10_request_6_must_Permit",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": false
+            }
+          ]
+        },
+        "required": "Permit"
+      },
+      {
+        "id": "C10_request_7_must_Permit",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "q",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "r",
+              "value": true
+            }
+          ]
+        },
+        "required": "Permit"
+      }
+    ],
+    "validity": true
+  },
+  "attribute_mapping": {
+    "p": {
+      "name": "p",
+      "Category": "urn:research:cpm",
+      "AttributeId": "p",
+      "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+      "Issuer": ""
+    },
+    "q": {
+      "name": "q",
+      "Category": "urn:research:cpm",
+      "AttributeId": "q",
+      "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+      "Issuer": ""
+    },
+    "r": {
+      "name": "r",
+      "Category": "urn:research:cpm",
+      "AttributeId": "r",
+      "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+      "Issuer": ""
+    }
+  },
+  "rule_id_mapping": {
+    "A_r1": "urn:research:cpm-rule:e5eab9176809444e14f308350ae50ca96d62bd4cbf8a83753fa1e378f5ba8370",
+    "B_r1": "urn:research:cpm-rule:aba733a58942a38fdba47bc510093e98318a17225aa471809132aee1e567628d",
+    "C_r1": "urn:research:cpm-rule:6813ed5f3e46cf07dbff6f5a1cdb63e8a45578500855a6b5e3be05b91e16bb14",
+    "D_r1": "urn:research:cpm-rule:6927cecbebd38ae94d75548aa479f596493e4f4c06f862747950112db34982a4"
+  },
+  "ambiguity_gate": {
+    "status": "UNSAT",
+    "reason": "",
+    "elapsed_ms": 7.187000999920201,
+    "witness": null
+  },
+  "limitations": [
+    "Metadata retained by paired sidecar; ordinary PDP does not execute precedence/invariant approval metadata",
+    "Requests must satisfy declared finite domains and validity; equivalence excludes invalid requests"
+  ]
+}

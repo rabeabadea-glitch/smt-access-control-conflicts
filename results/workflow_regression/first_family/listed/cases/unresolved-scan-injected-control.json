@@ -1,0 +1,268 @@
+{
+  "name": "unresolved-scan-injected-control",
+  "expected": "REJECTED",
+  "expectation_origin": "Authored case before execution",
+  "injection": "unresolved-scan",
+  "elapsed_ms": 9.648353000102361,
+  "input_unchanged": true,
+  "input": {
+    "schema_version": "cpm-1",
+    "attributes": {
+      "item": {
+        "type": "int",
+        "min": 0,
+        "max": 4
+      },
+      "requested": {
+        "type": "bool"
+      }
+    },
+    "sources": {
+      "permit": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      },
+      "deny": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      }
+    },
+    "rules": [
+      {
+        "id": "P0",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 0
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "D0",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "P1",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 2
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "D1",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "SAFE",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 4
+            }
+          ]
+        }
+      }
+    ],
+    "invariants": [
+      {
+        "id": "required-denials",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 1
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        },
+        "required": "Deny"
+      },
+      {
+        "id": "required-access",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 4
+            }
+          ]
+        },
+        "required": "Permit"
+      }
+    ],
+    "validity": true,
+    "precedence": []
+  },
+  "approval": {
+    "approval_id": "SYNTHETIC_TEST_ONLY_NO_ORGANIZATIONAL_AUTHORITY",
+    "policy_sha256": "636089b5bbcc37171c93000d382b41049334bd8aa47168bb48a18aaf274acc2c",
+    "operation": "bounded_refinement",
+    "choices": [
+      {
+        "winner": "D0",
+        "loser": "P0"
+      },
+      {
+        "winner": "D1",
+        "loser": "P1"
+      }
+    ]
+  },
+  "result": {
+    "status": "REJECTED",
+    "committed": false,
+    "operation": "bounded_refinement",
+    "before_sha256": "636089b5bbcc37171c93000d382b41049334bd8aa47168bb48a18aaf274acc2c",
+    "iterations": [],
+    "checks": {
+      "contract_antecedents": [
+        {
+          "id": "required-denials",
+          "query": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 5.363994999925126,
+            "witness": {
+              "item": 1,
+              "requested": true
+            }
+          }
+        },
+        {
+          "id": "required-access",
+          "query": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.446245000101044,
+            "witness": {
+              "item": 4,
+              "requested": true
+            }
+          }
+        }
+      ],
+      "last_scan": {
+        "label": "UNRESOLVED",
+        "results": [
+          {
+            "status": "UNKNOWN"
+          }
+        ]
+      }
+    },
+    "reason": "UNRESOLVED_OR_INVALID_REQUEST_SPACE",
+    "tentative_steps": 0
+  },
+  "independent_requests": []
+}

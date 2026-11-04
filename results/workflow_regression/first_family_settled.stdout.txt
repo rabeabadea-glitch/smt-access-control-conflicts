@@ -1,0 +1,120 @@
+repair cases 1
+repair cases 21
+repair cases 41
+repair cases 61
+repair cases 81
+repair cases 101
+{
+  "primary_cases": [
+    {
+      "name": "two-conflicts",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "one-step-limit",
+      "status": "REJECTED",
+      "reason": "ITERATION_LIMIT_REACHED",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "stale-approval",
+      "status": "REJECTED",
+      "reason": "STALE_OR_WRONG_POLICY_HASH",
+      "steps": 0,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "missing-direction",
+      "status": "REJECTED",
+      "reason": "NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "repeated-state-injected-identity",
+      "status": "REJECTED",
+      "reason": "REPEATED_STATE",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": "identity-proposal",
+      "input_unchanged": true
+    },
+    {
+      "name": "unresolved-scan-injected-control",
+      "status": "REJECTED",
+      "reason": "UNRESOLVED_OR_INVALID_REQUEST_SPACE",
+      "steps": 0,
+      "independent_request_checks": 0,
+      "injection": "unresolved-scan",
+      "input_unchanged": true
+    },
+    {
+      "name": "protected-wrong-winner",
+      "status": "REJECTED",
+      "reason": "FINAL_CONTRACT_VIOLATION_OR_UNRESOLVED",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "protected-right-winner",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 8,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "incompatible-contracts",
+      "status": "REJECTED",
+      "reason": "FINAL_CONTRACT_VIOLATION_OR_UNRESOLVED",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "unsupported-deep-candidate",
+      "status": "REJECTED",
+      "reason": "CANDIDATE_OUTSIDE_SUPPORTED_FRAGMENT",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "same-source-residual",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true
+    }
+  ],
+  "generated_repair_cases": 120,
+  "generated_repair_accepted": 120,
+  "generated_repair_steps": 420,
+  "generated_repair_independent_requests": 1920,
+  "generated_precedence_cases": 120,
+  "precedence_independent_requests": 1440,
+  "precedence_disagreements": 0,
+  "precedence_remaining_conflicts": 86,
+  "human_approvals": 0,
+  "scope": "Synthetic formal mechanisms only; not natural/regulatory repair effectiveness",
+  "branch_injections": "Two primary cases deliberately inject a no-op proposal or unresolved scan; these are control tests, not naturally observed solver results"
+}

@@ -1,0 +1,1393 @@
+{
+  "inputs": 194,
+  "rule_occurrences": 681,
+  "zero_eligible_inputs": 178,
+  "pair_occurrences": 622,
+  "unique_source_rule_pairs": 608,
+  "unique_semantic_queries": 618,
+  "truncated_rule_occurrences": 0,
+  "representation_errors": 0,
+  "model_load_ms": 1192.694900000788,
+  "strata": {
+    "all": {
+      "pair_occurrences": 622,
+      "SAT": 476,
+      "UNSAT": 146,
+      "unresolved": 0,
+      "modes": {
+        "exhaustive": {
+          "N": 622,
+          "K": 622,
+          "P": 476,
+          "T": 476,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.7652733118971061
+        },
+        "exact": {
+          "N": 622,
+          "K": 575,
+          "P": 476,
+          "T": 476,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.07556270096463025,
+          "candidate_precision": 0.8278260869565217
+        },
+        "attribute_jaccard": {
+          "N": 622,
+          "K": 273,
+          "P": 476,
+          "T": 152,
+          "missed_conflicts": 324,
+          "recall": 0.31932773109243695,
+          "pair_reduction": 0.5610932475884245,
+          "candidate_precision": 0.5567765567765568
+        },
+        "E": {
+          "N": 622,
+          "K": 283,
+          "P": 476,
+          "T": 163,
+          "missed_conflicts": 313,
+          "recall": 0.34243697478991597,
+          "pair_reduction": 0.545016077170418,
+          "candidate_precision": 0.5759717314487632
+        },
+        "N": {
+          "N": 622,
+          "K": 281,
+          "P": 476,
+          "T": 160,
+          "missed_conflicts": 316,
+          "recall": 0.33613445378151263,
+          "pair_reduction": 0.5482315112540193,
+          "candidate_precision": 0.5693950177935944
+        },
+        "G": {
+          "N": 622,
+          "K": 303,
+          "P": 476,
+          "T": 165,
+          "missed_conflicts": 311,
+          "recall": 0.34663865546218486,
+          "pair_reduction": 0.5128617363344051,
+          "candidate_precision": 0.5445544554455446
+        },
+        "E_AND_N": {
+          "N": 622,
+          "K": 250,
+          "P": 476,
+          "T": 130,
+          "missed_conflicts": 346,
+          "recall": 0.27310924369747897,
+          "pair_reduction": 0.5980707395498392,
+          "candidate_precision": 0.52
+        },
+        "E_AND_G": {
+          "N": 622,
+          "K": 255,
+          "P": 476,
+          "T": 135,
+          "missed_conflicts": 341,
+          "recall": 0.28361344537815125,
+          "pair_reduction": 0.590032154340836,
+          "candidate_precision": 0.5294117647058824
+        },
+        "N_AND_G": {
+          "N": 622,
+          "K": 281,
+          "P": 476,
+          "T": 160,
+          "missed_conflicts": 316,
+          "recall": 0.33613445378151263,
+          "pair_reduction": 0.5482315112540193,
+          "candidate_precision": 0.5693950177935944
+        },
+        "E_AND_N_AND_G": {
+          "N": 622,
+          "K": 250,
+          "P": 476,
+          "T": 130,
+          "missed_conflicts": 346,
+          "recall": 0.27310924369747897,
+          "pair_reduction": 0.5980707395498392,
+          "candidate_precision": 0.52
+        },
+        "E_OR_N_OR_G": {
+          "N": 622,
+          "K": 331,
+          "P": 476,
+          "T": 193,
+          "missed_conflicts": 283,
+          "recall": 0.4054621848739496,
+          "pair_reduction": 0.4678456591639871,
+          "candidate_precision": 0.5830815709969789
+        }
+      },
+      "unique_query_modes": {
+        "exhaustive": {
+          "N": 618,
+          "K": 618,
+          "P": 472,
+          "T": 472,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.7637540453074434
+        },
+        "exact": {
+          "N": 618,
+          "K": 571,
+          "P": 472,
+          "T": 472,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.07605177993527512,
+          "candidate_precision": 0.8266199649737302
+        },
+        "attribute_jaccard": {
+          "N": 618,
+          "K": 273,
+          "P": 472,
+          "T": 152,
+          "missed_conflicts": 320,
+          "recall": 0.3220338983050847,
+          "pair_reduction": 0.558252427184466,
+          "candidate_precision": 0.5567765567765568
+        },
+        "E": {
+          "N": 618,
+          "K": 283,
+          "P": 472,
+          "T": 163,
+          "missed_conflicts": 309,
+          "recall": 0.3453389830508475,
+          "pair_reduction": 0.5420711974110033,
+          "candidate_precision": 0.5759717314487632
+        },
+        "N": {
+          "N": 618,
+          "K": 281,
+          "P": 472,
+          "T": 160,
+          "missed_conflicts": 312,
+          "recall": 0.3389830508474576,
+          "pair_reduction": 0.5453074433656958,
+          "candidate_precision": 0.5693950177935944
+        },
+        "G": {
+          "N": 618,
+          "K": 303,
+          "P": 472,
+          "T": 165,
+          "missed_conflicts": 307,
+          "recall": 0.3495762711864407,
+          "pair_reduction": 0.5097087378640777,
+          "candidate_precision": 0.5445544554455446
+        },
+        "E_AND_N": {
+          "N": 618,
+          "K": 250,
+          "P": 472,
+          "T": 130,
+          "missed_conflicts": 342,
+          "recall": 0.2754237288135593,
+          "pair_reduction": 0.5954692556634305,
+          "candidate_precision": 0.52
+        },
+        "E_AND_G": {
+          "N": 618,
+          "K": 255,
+          "P": 472,
+          "T": 135,
+          "missed_conflicts": 337,
+          "recall": 0.2860169491525424,
+          "pair_reduction": 0.587378640776699,
+          "candidate_precision": 0.5294117647058824
+        },
+        "N_AND_G": {
+          "N": 618,
+          "K": 281,
+          "P": 472,
+          "T": 160,
+          "missed_conflicts": 312,
+          "recall": 0.3389830508474576,
+          "pair_reduction": 0.5453074433656958,
+          "candidate_precision": 0.5693950177935944
+        },
+        "E_AND_N_AND_G": {
+          "N": 618,
+          "K": 250,
+          "P": 472,
+          "T": 130,
+          "missed_conflicts": 342,
+          "recall": 0.2754237288135593,
+          "pair_reduction": 0.5954692556634305,
+          "candidate_precision": 0.52
+        },
+        "E_OR_N_OR_G": {
+          "N": 618,
+          "K": 331,
+          "P": 472,
+          "T": 193,
+          "missed_conflicts": 279,
+          "recall": 0.4088983050847458,
+          "pair_reduction": 0.46440129449838186,
+          "candidate_precision": 0.5830815709969789
+        }
+      }
+    },
+    "authzforce_conformance": {
+      "pair_occurrences": 610,
+      "SAT": 469,
+      "UNSAT": 141,
+      "unresolved": 0,
+      "modes": {
+        "exhaustive": {
+          "N": 610,
+          "K": 610,
+          "P": 469,
+          "T": 469,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.7688524590163934
+        },
+        "exact": {
+          "N": 610,
+          "K": 566,
+          "P": 469,
+          "T": 469,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0721311475409836,
+          "candidate_precision": 0.8286219081272085
+        },
+        "attribute_jaccard": {
+          "N": 610,
+          "K": 267,
+          "P": 469,
+          "T": 151,
+          "missed_conflicts": 318,
+          "recall": 0.32196162046908317,
+          "pair_reduction": 0.5622950819672131,
+          "candidate_precision": 0.5655430711610487
+        },
+        "E": {
+          "N": 610,
+          "K": 271,
+          "P": 469,
+          "T": 156,
+          "missed_conflicts": 313,
+          "recall": 0.3326226012793177,
+          "pair_reduction": 0.5557377049180328,
+          "candidate_precision": 0.5756457564575646
+        },
+        "N": {
+          "N": 610,
+          "K": 269,
+          "P": 469,
+          "T": 153,
+          "missed_conflicts": 316,
+          "recall": 0.326226012793177,
+          "pair_reduction": 0.5590163934426229,
+          "candidate_precision": 0.5687732342007435
+        },
+        "G": {
+          "N": 610,
+          "K": 291,
+          "P": 469,
+          "T": 158,
+          "missed_conflicts": 311,
+          "recall": 0.3368869936034115,
+          "pair_reduction": 0.5229508196721311,
+          "candidate_precision": 0.5429553264604811
+        },
+        "E_AND_N": {
+          "N": 610,
+          "K": 238,
+          "P": 469,
+          "T": 123,
+          "missed_conflicts": 346,
+          "recall": 0.2622601279317697,
+          "pair_reduction": 0.6098360655737705,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_AND_G": {
+          "N": 610,
+          "K": 243,
+          "P": 469,
+          "T": 128,
+          "missed_conflicts": 341,
+          "recall": 0.27292110874200426,
+          "pair_reduction": 0.6016393442622952,
+          "candidate_precision": 0.5267489711934157
+        },
+        "N_AND_G": {
+          "N": 610,
+          "K": 269,
+          "P": 469,
+          "T": 153,
+          "missed_conflicts": 316,
+          "recall": 0.326226012793177,
+          "pair_reduction": 0.5590163934426229,
+          "candidate_precision": 0.5687732342007435
+        },
+        "E_AND_N_AND_G": {
+          "N": 610,
+          "K": 238,
+          "P": 469,
+          "T": 123,
+          "missed_conflicts": 346,
+          "recall": 0.2622601279317697,
+          "pair_reduction": 0.6098360655737705,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_OR_N_OR_G": {
+          "N": 610,
+          "K": 319,
+          "P": 469,
+          "T": 186,
+          "missed_conflicts": 283,
+          "recall": 0.39658848614072495,
+          "pair_reduction": 0.4770491803278688,
+          "candidate_precision": 0.5830721003134797
+        }
+      },
+      "unique_query_modes": {
+        "exhaustive": {
+          "N": 606,
+          "K": 606,
+          "P": 465,
+          "T": 465,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.7673267326732673
+        },
+        "exact": {
+          "N": 606,
+          "K": 562,
+          "P": 465,
+          "T": 465,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0726072607260726,
+          "candidate_precision": 0.8274021352313167
+        },
+        "attribute_jaccard": {
+          "N": 606,
+          "K": 267,
+          "P": 465,
+          "T": 151,
+          "missed_conflicts": 314,
+          "recall": 0.3247311827956989,
+          "pair_reduction": 0.5594059405940595,
+          "candidate_precision": 0.5655430711610487
+        },
+        "E": {
+          "N": 606,
+          "K": 271,
+          "P": 465,
+          "T": 156,
+          "missed_conflicts": 309,
+          "recall": 0.33548387096774196,
+          "pair_reduction": 0.5528052805280528,
+          "candidate_precision": 0.5756457564575646
+        },
+        "N": {
+          "N": 606,
+          "K": 269,
+          "P": 465,
+          "T": 153,
+          "missed_conflicts": 312,
+          "recall": 0.32903225806451614,
+          "pair_reduction": 0.5561056105610561,
+          "candidate_precision": 0.5687732342007435
+        },
+        "G": {
+          "N": 606,
+          "K": 291,
+          "P": 465,
+          "T": 158,
+          "missed_conflicts": 307,
+          "recall": 0.33978494623655914,
+          "pair_reduction": 0.5198019801980198,
+          "candidate_precision": 0.5429553264604811
+        },
+        "E_AND_N": {
+          "N": 606,
+          "K": 238,
+          "P": 465,
+          "T": 123,
+          "missed_conflicts": 342,
+          "recall": 0.2645161290322581,
+          "pair_reduction": 0.6072607260726073,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_AND_G": {
+          "N": 606,
+          "K": 243,
+          "P": 465,
+          "T": 128,
+          "missed_conflicts": 337,
+          "recall": 0.2752688172043011,
+          "pair_reduction": 0.599009900990099,
+          "candidate_precision": 0.5267489711934157
+        },
+        "N_AND_G": {
+          "N": 606,
+          "K": 269,
+          "P": 465,
+          "T": 153,
+          "missed_conflicts": 312,
+          "recall": 0.32903225806451614,
+          "pair_reduction": 0.5561056105610561,
+          "candidate_precision": 0.5687732342007435
+        },
+        "E_AND_N_AND_G": {
+          "N": 606,
+          "K": 238,
+          "P": 465,
+          "T": 123,
+          "missed_conflicts": 342,
+          "recall": 0.2645161290322581,
+          "pair_reduction": 0.6072607260726073,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_OR_N_OR_G": {
+          "N": 606,
+          "K": 319,
+          "P": 465,
+          "T": 186,
+          "missed_conflicts": 279,
+          "recall": 0.4,
+          "pair_reduction": 0.4735973597359736,
+          "candidate_precision": 0.5830721003134797
+        }
+      }
+    },
+    "balana_tests": {
+      "pair_occurrences": 6,
+      "SAT": 6,
+      "UNSAT": 0,
+      "unresolved": 0,
+      "modes": {
+        "exhaustive": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "exact": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "attribute_jaccard": {
+          "N": 6,
+          "K": 0,
+          "P": 6,
+          "T": 0,
+          "missed_conflicts": 6,
+          "recall": 0.0,
+          "pair_reduction": 1.0,
+          "candidate_precision": null
+        },
+        "E": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "N": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_AND_N": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_AND_N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_OR_N_OR_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        }
+      },
+      "unique_query_modes": {
+        "exhaustive": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "exact": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "attribute_jaccard": {
+          "N": 6,
+          "K": 0,
+          "P": 6,
+          "T": 0,
+          "missed_conflicts": 6,
+          "recall": 0.0,
+          "pair_reduction": 1.0,
+          "candidate_precision": null
+        },
+        "E": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "N": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_AND_N": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_AND_N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        },
+        "E_OR_N_OR_G": {
+          "N": 6,
+          "K": 6,
+          "P": 6,
+          "T": 6,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 1.0
+        }
+      }
+    },
+    "casbin_examples": {
+      "pair_occurrences": 6,
+      "SAT": 1,
+      "UNSAT": 5,
+      "unresolved": 0,
+      "modes": {
+        "exhaustive": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "exact": {
+          "N": 6,
+          "K": 3,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.5,
+          "candidate_precision": 0.3333333333333333
+        },
+        "attribute_jaccard": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "N": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_AND_N": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_AND_N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_OR_N_OR_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        }
+      },
+      "unique_query_modes": {
+        "exhaustive": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "exact": {
+          "N": 6,
+          "K": 3,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.5,
+          "candidate_precision": 0.3333333333333333
+        },
+        "attribute_jaccard": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "N": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_AND_N": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_AND_N_AND_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E_OR_N_OR_G": {
+          "N": 6,
+          "K": 6,
+          "P": 1,
+          "T": 1,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.16666666666666666
+        }
+      }
+    },
+    "development": {
+      "pair_occurrences": 610,
+      "SAT": 469,
+      "UNSAT": 141,
+      "unresolved": 0,
+      "modes": {
+        "exhaustive": {
+          "N": 610,
+          "K": 610,
+          "P": 469,
+          "T": 469,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.7688524590163934
+        },
+        "exact": {
+          "N": 610,
+          "K": 566,
+          "P": 469,
+          "T": 469,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0721311475409836,
+          "candidate_precision": 0.8286219081272085
+        },
+        "attribute_jaccard": {
+          "N": 610,
+          "K": 267,
+          "P": 469,
+          "T": 151,
+          "missed_conflicts": 318,
+          "recall": 0.32196162046908317,
+          "pair_reduction": 0.5622950819672131,
+          "candidate_precision": 0.5655430711610487
+        },
+        "E": {
+          "N": 610,
+          "K": 271,
+          "P": 469,
+          "T": 156,
+          "missed_conflicts": 313,
+          "recall": 0.3326226012793177,
+          "pair_reduction": 0.5557377049180328,
+          "candidate_precision": 0.5756457564575646
+        },
+        "N": {
+          "N": 610,
+          "K": 269,
+          "P": 469,
+          "T": 153,
+          "missed_conflicts": 316,
+          "recall": 0.326226012793177,
+          "pair_reduction": 0.5590163934426229,
+          "candidate_precision": 0.5687732342007435
+        },
+        "G": {
+          "N": 610,
+          "K": 291,
+          "P": 469,
+          "T": 158,
+          "missed_conflicts": 311,
+          "recall": 0.3368869936034115,
+          "pair_reduction": 0.5229508196721311,
+          "candidate_precision": 0.5429553264604811
+        },
+        "E_AND_N": {
+          "N": 610,
+          "K": 238,
+          "P": 469,
+          "T": 123,
+          "missed_conflicts": 346,
+          "recall": 0.2622601279317697,
+          "pair_reduction": 0.6098360655737705,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_AND_G": {
+          "N": 610,
+          "K": 243,
+          "P": 469,
+          "T": 128,
+          "missed_conflicts": 341,
+          "recall": 0.27292110874200426,
+          "pair_reduction": 0.6016393442622952,
+          "candidate_precision": 0.5267489711934157
+        },
+        "N_AND_G": {
+          "N": 610,
+          "K": 269,
+          "P": 469,
+          "T": 153,
+          "missed_conflicts": 316,
+          "recall": 0.326226012793177,
+          "pair_reduction": 0.5590163934426229,
+          "candidate_precision": 0.5687732342007435
+        },
+        "E_AND_N_AND_G": {
+          "N": 610,
+          "K": 238,
+          "P": 469,
+          "T": 123,
+          "missed_conflicts": 346,
+          "recall": 0.2622601279317697,
+          "pair_reduction": 0.6098360655737705,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_OR_N_OR_G": {
+          "N": 610,
+          "K": 319,
+          "P": 469,
+          "T": 186,
+          "missed_conflicts": 283,
+          "recall": 0.39658848614072495,
+          "pair_reduction": 0.4770491803278688,
+          "candidate_precision": 0.5830721003134797
+        }
+      },
+      "unique_query_modes": {
+        "exhaustive": {
+          "N": 606,
+          "K": 606,
+          "P": 465,
+          "T": 465,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.7673267326732673
+        },
+        "exact": {
+          "N": 606,
+          "K": 562,
+          "P": 465,
+          "T": 465,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0726072607260726,
+          "candidate_precision": 0.8274021352313167
+        },
+        "attribute_jaccard": {
+          "N": 606,
+          "K": 267,
+          "P": 465,
+          "T": 151,
+          "missed_conflicts": 314,
+          "recall": 0.3247311827956989,
+          "pair_reduction": 0.5594059405940595,
+          "candidate_precision": 0.5655430711610487
+        },
+        "E": {
+          "N": 606,
+          "K": 271,
+          "P": 465,
+          "T": 156,
+          "missed_conflicts": 309,
+          "recall": 0.33548387096774196,
+          "pair_reduction": 0.5528052805280528,
+          "candidate_precision": 0.5756457564575646
+        },
+        "N": {
+          "N": 606,
+          "K": 269,
+          "P": 465,
+          "T": 153,
+          "missed_conflicts": 312,
+          "recall": 0.32903225806451614,
+          "pair_reduction": 0.5561056105610561,
+          "candidate_precision": 0.5687732342007435
+        },
+        "G": {
+          "N": 606,
+          "K": 291,
+          "P": 465,
+          "T": 158,
+          "missed_conflicts": 307,
+          "recall": 0.33978494623655914,
+          "pair_reduction": 0.5198019801980198,
+          "candidate_precision": 0.5429553264604811
+        },
+        "E_AND_N": {
+          "N": 606,
+          "K": 238,
+          "P": 465,
+          "T": 123,
+          "missed_conflicts": 342,
+          "recall": 0.2645161290322581,
+          "pair_reduction": 0.6072607260726073,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_AND_G": {
+          "N": 606,
+          "K": 243,
+          "P": 465,
+          "T": 128,
+          "missed_conflicts": 337,
+          "recall": 0.2752688172043011,
+          "pair_reduction": 0.599009900990099,
+          "candidate_precision": 0.5267489711934157
+        },
+        "N_AND_G": {
+          "N": 606,
+          "K": 269,
+          "P": 465,
+          "T": 153,
+          "missed_conflicts": 312,
+          "recall": 0.32903225806451614,
+          "pair_reduction": 0.5561056105610561,
+          "candidate_precision": 0.5687732342007435
+        },
+        "E_AND_N_AND_G": {
+          "N": 606,
+          "K": 238,
+          "P": 465,
+          "T": 123,
+          "missed_conflicts": 342,
+          "recall": 0.2645161290322581,
+          "pair_reduction": 0.6072607260726073,
+          "candidate_precision": 0.5168067226890757
+        },
+        "E_OR_N_OR_G": {
+          "N": 606,
+          "K": 319,
+          "P": 465,
+          "T": 186,
+          "missed_conflicts": 279,
+          "recall": 0.4,
+          "pair_reduction": 0.4735973597359736,
+          "candidate_precision": 0.5830721003134797
+        }
+      }
+    },
+    "held_out_source_library": {
+      "pair_occurrences": 12,
+      "SAT": 7,
+      "UNSAT": 5,
+      "unresolved": 0,
+      "modes": {
+        "exhaustive": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "exact": {
+          "N": 12,
+          "K": 9,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.25,
+          "candidate_precision": 0.7777777777777778
+        },
+        "attribute_jaccard": {
+          "N": 12,
+          "K": 6,
+          "P": 7,
+          "T": 1,
+          "missed_conflicts": 6,
+          "recall": 0.14285714285714285,
+          "pair_reduction": 0.5,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "N": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_AND_N": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_AND_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "N_AND_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_AND_N_AND_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_OR_N_OR_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        }
+      },
+      "unique_query_modes": {
+        "exhaustive": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "exact": {
+          "N": 12,
+          "K": 9,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.25,
+          "candidate_precision": 0.7777777777777778
+        },
+        "attribute_jaccard": {
+          "N": 12,
+          "K": 6,
+          "P": 7,
+          "T": 1,
+          "missed_conflicts": 6,
+          "recall": 0.14285714285714285,
+          "pair_reduction": 0.5,
+          "candidate_precision": 0.16666666666666666
+        },
+        "E": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "N": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_AND_N": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_AND_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "N_AND_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_AND_N_AND_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        },
+        "E_OR_N_OR_G": {
+          "N": 12,
+          "K": 12,
+          "P": 7,
+          "T": 7,
+          "missed_conflicts": 0,
+          "recall": 1.0,
+          "pair_reduction": 0.0,
+          "candidate_precision": 0.5833333333333334
+        }
+      }
+    }
+  }
+}

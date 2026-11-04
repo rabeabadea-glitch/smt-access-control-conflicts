@@ -1,0 +1,408 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "item": {
+      "type": "int",
+      "min": 0,
+      "max": 5
+    },
+    "requested": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "S0": {
+      "kind": "synthetic",
+      "citation": "Constructed formal experiment 2026-10-19",
+      "mapping_status": "Authored finite test, not a regulatory mapping"
+    },
+    "S1": {
+      "kind": "synthetic",
+      "citation": "Constructed formal experiment 2026-10-19",
+      "mapping_status": "Authored finite test, not a regulatory mapping"
+    },
+    "S2": {
+      "kind": "synthetic",
+      "citation": "Constructed formal experiment 2026-10-19",
+      "mapping_status": "Authored finite test, not a regulatory mapping"
+    }
+  },
+  "rules": [
+    {
+      "id": "S0r0",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "ge",
+            "attr": "item",
+            "value": 0
+          },
+          {
+            "op": "le",
+            "attr": "item",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "S0r1",
+      "source": "S0",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "ge",
+            "attr": "item",
+            "value": 3
+          },
+          {
+            "op": "le",
+            "attr": "item",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "S1r0",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 2
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 0
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 3
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 4
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S1r1",
+      "source": "S1",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 3
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 0
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 3
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 4
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S2r0",
+      "source": "S2",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 1
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 0
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 3
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 4
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S2r1",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 1
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 0
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "ge",
+                      "attr": "item",
+                      "value": 3
+                    },
+                    {
+                      "op": "le",
+                      "attr": "item",
+                      "value": 4
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "precedence": [
+    {
+      "higher": "S0",
+      "lower": "S1",
+      "approval_id": "SYNTHETIC_TEST_ONLY"
+    },
+    {
+      "higher": "S0",
+      "lower": "S2",
+      "approval_id": "SYNTHETIC_TEST_ONLY"
+    }
+  ],
+  "validity": true,
+  "invariants": []
+}

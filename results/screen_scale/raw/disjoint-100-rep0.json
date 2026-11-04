@@ -1,0 +1,25 @@
+{
+  "input": "/home/user/pkg/data/scaling_inputs/disjoint-100.json",
+  "rules": 100,
+  "serial_screen_ms": 5540.221106999979,
+  "serial_phase_ms": {
+    "model_loading_embedding_ms": 461.83567199977915,
+    "entity_ms": 0.6705470000269997,
+    "rdf_build_query_ms": 5046.986911999738
+  },
+  "eligible_pairs": 2500,
+  "serial_candidate_ms": 8076.562241000374,
+  "serial_kept": 2500,
+  "exact_screen_and_candidate_ms": 16.34255299995857,
+  "exact_kept": 0,
+  "exhaustive_ms": 7336.872677999963,
+  "sat_pairs": 0,
+  "unresolved_pairs": 0,
+  "serial_retained_sat": 0,
+  "exact_retained_sat": 0,
+  "label_disagreements": 0,
+  "worker_ms": 21129.154176000156,
+  "family": "disjoint",
+  "rep": 0,
+  "outer_wall_ms": 21245.990101999723
+}

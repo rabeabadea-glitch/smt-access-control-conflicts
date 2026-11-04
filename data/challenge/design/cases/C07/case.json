@@ -1,0 +1,68 @@
+{
+  "case_id": "C07",
+  "title": "Denial specification incompatible with authorized direction",
+  "role": "substantive finite challenge",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    }
+  },
+  "source_assets": [
+    {
+      "source_id": "A",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C07/sources/A.json"
+    },
+    {
+      "source_id": "B",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C07/sources/B.json"
+    },
+    {
+      "source_id": "C",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C07/sources/C.json"
+    }
+  ],
+  "request_count": 8,
+  "source_count": 3,
+  "source_rule_count": 3,
+  "anticipated_compiled_rule_count": 3,
+  "independent_priority_specification_high_to_low": [
+    "A",
+    "B",
+    "C"
+  ],
+  "target_specification": "Permit exactly when not p and q; Deny otherwise. This deliberately requires Deny at p despite authorized A(Permit) over B(Deny).",
+  "feasibility": "Truth-table policy exists, but declared direction at p conflicts with the must-Deny specification; conservative governed repair is expected to reject rather than violate requirements.",
+  "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+  "original_union_decision_counts": {
+    "Deny": 2,
+    "Permit": 2,
+    "Conflict": 4
+  },
+  "target_decision_counts": {
+    "Deny": 6,
+    "Permit": 2
+  },
+  "conflict_request_count": 4,
+  "preserved_original_permit_count": 2,
+  "preserved_original_deny_count": 2,
+  "input_path": "cases/C07/input.json",
+  "requirements_path": "cases/C07/requirements.json",
+  "truth_table_path": "cases/C07/expected_truth_table.json",
+  "governance_path": "cases/C07/governance.json",
+  "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+}

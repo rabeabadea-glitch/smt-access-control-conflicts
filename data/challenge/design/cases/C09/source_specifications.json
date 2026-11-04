@@ -1,0 +1,53 @@
+[
+  {
+    "source_id": "A",
+    "format": "cpm",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "A_r1",
+        "effect": "Permit",
+        "when": "p and q"
+      },
+      {
+        "id": "A_r2",
+        "effect": "Deny",
+        "when": "p and not q"
+      }
+    ]
+  },
+  {
+    "source_id": "B",
+    "format": "cpm",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "B_r1",
+        "effect": "Permit",
+        "when": "p and r"
+      },
+      {
+        "id": "B_r2",
+        "effect": "Deny",
+        "when": "not p and r"
+      }
+    ]
+  },
+  {
+    "source_id": "C",
+    "format": "cpm",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "C_r1",
+        "effect": "Permit",
+        "when": "not p and q"
+      },
+      {
+        "id": "C_r2",
+        "effect": "Deny",
+        "when": "not p and not q"
+      }
+    ]
+  }
+]

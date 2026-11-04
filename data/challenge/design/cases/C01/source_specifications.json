@@ -1,0 +1,164 @@
+[
+  {
+    "source_id": "A",
+    "format": "xacml",
+    "combining": "first-applicable",
+    "rules": [
+      {
+        "id": "A_r1",
+        "effect": "Permit",
+        "when": "not p and not q"
+      },
+      {
+        "id": "A_r2",
+        "effect": "Deny",
+        "when": "not p and q"
+      },
+      {
+        "id": "A_r3",
+        "effect": "Permit",
+        "when": "p and r"
+      },
+      {
+        "id": "A_r4",
+        "effect": "Deny",
+        "when": "p and s"
+      }
+    ]
+  },
+  {
+    "source_id": "B",
+    "format": "xacml",
+    "combining": "deny-overrides",
+    "rules": [
+      {
+        "id": "B_r1",
+        "effect": "Permit",
+        "when": "p and t"
+      },
+      {
+        "id": "B_r2",
+        "effect": "Deny",
+        "when": "p and u"
+      },
+      {
+        "id": "B_r3",
+        "effect": "Permit",
+        "when": "p and q and not r"
+      },
+      {
+        "id": "B_r4",
+        "effect": "Deny",
+        "when": "p and not q and not t"
+      }
+    ]
+  },
+  {
+    "source_id": "C",
+    "format": "xacml",
+    "combining": "permit-overrides",
+    "rules": [
+      {
+        "id": "C_r1",
+        "effect": "Deny",
+        "when": "p and r and u"
+      },
+      {
+        "id": "C_r2",
+        "effect": "Permit",
+        "when": "p and not r and t"
+      },
+      {
+        "id": "C_r3",
+        "effect": "Deny",
+        "when": "p and q and not s"
+      },
+      {
+        "id": "C_r4",
+        "effect": "Permit",
+        "when": "p and not q and s"
+      }
+    ]
+  },
+  {
+    "source_id": "D",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "D_r1",
+        "effect": "Deny",
+        "when": "p and r and q"
+      },
+      {
+        "id": "D_r2",
+        "effect": "Permit",
+        "when": "p and r and not q"
+      },
+      {
+        "id": "D_r3",
+        "effect": "Permit",
+        "when": "p and not r and s"
+      },
+      {
+        "id": "D_r4",
+        "effect": "Deny",
+        "when": "p and not r and not s"
+      }
+    ]
+  },
+  {
+    "source_id": "E",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "E_r1",
+        "effect": "Permit",
+        "when": "p and t and q"
+      },
+      {
+        "id": "E_r2",
+        "effect": "Deny",
+        "when": "p and t and not q"
+      },
+      {
+        "id": "E_r3",
+        "effect": "Deny",
+        "when": "p and not t and u"
+      },
+      {
+        "id": "E_r4",
+        "effect": "Permit",
+        "when": "p and not t and not u"
+      }
+    ]
+  },
+  {
+    "source_id": "F",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "F_r1",
+        "effect": "Deny",
+        "when": "p and s and u"
+      },
+      {
+        "id": "F_r2",
+        "effect": "Permit",
+        "when": "p and s and not u"
+      },
+      {
+        "id": "F_r3",
+        "effect": "Permit",
+        "when": "p and not s and r"
+      },
+      {
+        "id": "F_r4",
+        "effect": "Deny",
+        "when": "p and not s and not r"
+      }
+    ]
+  }
+]

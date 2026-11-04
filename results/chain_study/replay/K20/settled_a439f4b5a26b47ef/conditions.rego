@@ -1,0 +1,175 @@
+package thesis
+
+c0 if { true }
+c1 if { input["x"] >= 3 }
+c2 if { input["x"] <= 5 }
+c3 if { input["y"] >= 0 }
+c4 if { input["y"] <= 2 }
+c5 if { c1; c2; c3; c4 }
+rule_0 if { c5 }
+c6 if { input["x"] >= 2 }
+c7 if { input["x"] <= 5 }
+c8 if { input["y"] >= 3 }
+c9 if { input["y"] <= 3 }
+c10 if { input["f"] == false }
+c11 if { c6; c7; c8; c9; c10 }
+rule_1 if { c11 }
+c12 if { input["x"] >= 0 }
+c13 if { input["x"] <= 4 }
+c14 if { input["y"] >= 0 }
+c15 if { input["y"] <= 0 }
+c16 if { c12; c13; c14; c15 }
+rule_2 if { c16 }
+c17 if { input["x"] >= 2 }
+c18 if { input["x"] <= 2 }
+c19 if { input["y"] >= 2 }
+c20 if { input["y"] <= 3 }
+c21 if { c17; c18; c19; c20 }
+c22 if { input["x"] >= 2 }
+c23 if { input["x"] <= 5 }
+c24 if { input["y"] >= 3 }
+c25 if { input["y"] <= 3 }
+c26 if { input["f"] == false }
+c27 if { c22; c23; c24; c25; c26 }
+c28 if { not c27 }
+c29 if { c21; c28 }
+rule_3 if { c29 }
+c30 if { input["x"] >= 2 }
+c31 if { input["x"] <= 3 }
+c32 if { input["y"] >= 3 }
+c33 if { input["y"] <= 4 }
+c34 if { input["f"] == false }
+c35 if { c30; c31; c32; c33; c34 }
+rule_4 if { c35 }
+c36 if { input["x"] == 0 }
+c37 if { input["y"] == 0 }
+c38 if { input["f"] == false }
+c39 if { c36; c37; c38 }
+c40 if { input["x"] == 0 }
+c41 if { input["y"] == 0 }
+c42 if { input["f"] == true }
+c43 if { c40; c41; c42 }
+c44 if { input["x"] == 1 }
+c45 if { input["y"] == 0 }
+c46 if { input["f"] == false }
+c47 if { c44; c45; c46 }
+c48 if { input["x"] == 1 }
+c49 if { input["y"] == 0 }
+c50 if { input["f"] == true }
+c51 if { c48; c49; c50 }
+c52 if { input["x"] == 2 }
+c53 if { input["y"] == 0 }
+c54 if { input["f"] == false }
+c55 if { c52; c53; c54 }
+c56 if { input["x"] == 2 }
+c57 if { input["y"] == 0 }
+c58 if { input["f"] == true }
+c59 if { c56; c57; c58 }
+c60 if { input["x"] == 2 }
+c61 if { input["y"] == 2 }
+c62 if { input["f"] == false }
+c63 if { c60; c61; c62 }
+c64 if { input["x"] == 2 }
+c65 if { input["y"] == 2 }
+c66 if { input["f"] == true }
+c67 if { c64; c65; c66 }
+c68 if { input["x"] == 2 }
+c69 if { input["y"] == 3 }
+c70 if { input["f"] == false }
+c71 if { c68; c69; c70 }
+c72 if { input["x"] == 2 }
+c73 if { input["y"] == 3 }
+c74 if { input["f"] == true }
+c75 if { c72; c73; c74 }
+c76 if { input["x"] == 2 }
+c77 if { input["y"] == 4 }
+c78 if { input["f"] == false }
+c79 if { c76; c77; c78 }
+c80 if { input["x"] == 3 }
+c81 if { input["y"] == 0 }
+c82 if { input["f"] == false }
+c83 if { c80; c81; c82 }
+c84 if { input["x"] == 3 }
+c85 if { input["y"] == 0 }
+c86 if { input["f"] == true }
+c87 if { c84; c85; c86 }
+c88 if { input["x"] == 3 }
+c89 if { input["y"] == 1 }
+c90 if { input["f"] == false }
+c91 if { c88; c89; c90 }
+c92 if { input["x"] == 3 }
+c93 if { input["y"] == 1 }
+c94 if { input["f"] == true }
+c95 if { c92; c93; c94 }
+c96 if { input["x"] == 3 }
+c97 if { input["y"] == 2 }
+c98 if { input["f"] == false }
+c99 if { c96; c97; c98 }
+c100 if { input["x"] == 3 }
+c101 if { input["y"] == 2 }
+c102 if { input["f"] == true }
+c103 if { c100; c101; c102 }
+c104 if { input["x"] == 3 }
+c105 if { input["y"] == 3 }
+c106 if { input["f"] == false }
+c107 if { c104; c105; c106 }
+c108 if { input["x"] == 3 }
+c109 if { input["y"] == 4 }
+c110 if { input["f"] == false }
+c111 if { c108; c109; c110 }
+c112 if { input["x"] == 4 }
+c113 if { input["y"] == 0 }
+c114 if { input["f"] == false }
+c115 if { c112; c113; c114 }
+c116 if { input["x"] == 4 }
+c117 if { input["y"] == 0 }
+c118 if { input["f"] == true }
+c119 if { c116; c117; c118 }
+c120 if { input["x"] == 4 }
+c121 if { input["y"] == 1 }
+c122 if { input["f"] == false }
+c123 if { c120; c121; c122 }
+c124 if { input["x"] == 4 }
+c125 if { input["y"] == 1 }
+c126 if { input["f"] == true }
+c127 if { c124; c125; c126 }
+c128 if { input["x"] == 4 }
+c129 if { input["y"] == 2 }
+c130 if { input["f"] == false }
+c131 if { c128; c129; c130 }
+c132 if { input["x"] == 4 }
+c133 if { input["y"] == 2 }
+c134 if { input["f"] == true }
+c135 if { c132; c133; c134 }
+c136 if { input["x"] == 4 }
+c137 if { input["y"] == 3 }
+c138 if { input["f"] == false }
+c139 if { c136; c137; c138 }
+c140 if { input["x"] == 5 }
+c141 if { input["y"] == 0 }
+c142 if { input["f"] == false }
+c143 if { c140; c141; c142 }
+c144 if { input["x"] == 5 }
+c145 if { input["y"] == 0 }
+c146 if { input["f"] == true }
+c147 if { c144; c145; c146 }
+c148 if { input["x"] == 5 }
+c149 if { input["y"] == 1 }
+c150 if { input["f"] == false }
+c151 if { c148; c149; c150 }
+c152 if { input["x"] == 5 }
+c153 if { input["y"] == 1 }
+c154 if { input["f"] == true }
+c155 if { c152; c153; c154 }
+c156 if { input["x"] == 5 }
+c157 if { input["y"] == 2 }
+c158 if { input["f"] == false }
+c159 if { c156; c157; c158 }
+c160 if { input["x"] == 5 }
+c161 if { input["y"] == 2 }
+c162 if { input["f"] == true }
+c163 if { c160; c161; c162 }
+c164 if { input["x"] == 5 }
+c165 if { input["y"] == 3 }
+c166 if { input["f"] == false }
+c167 if { c164; c165; c166 }

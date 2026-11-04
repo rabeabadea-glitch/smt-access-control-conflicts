@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="urn:research:generated:cpm" RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides" Version="1.0">
+  <Description>{"domains": {"p": {"type": "bool"}, "q": {"type": "bool"}, "r": {"type": "bool"}, "s": {"type": "bool"}}, "profile": "total-singleton deny-overrides", "rules": [{"effect": "Permit", "id": "A_r1", "source": "A"}, {"effect": "Deny", "id": "A_r2", "source": "A"}, {"effect": "Permit", "id": "B_r1", "source": "B"}, {"effect": "Deny", "id": "B_r2", "source": "B"}, {"effect": "Permit", "id": "C_r1", "source": "C"}, {"effect": "Deny", "id": "C_r2", "source": "C"}, {"effect": "Permit", "id": "D_r1", "source": "D"}, {"effect": "Deny", "id": "D_r2", "source": "D"}], "sources": {"A": {"citation": "Manually authored challenge C11", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "B": {"citation": "Manually authored challenge C11", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "C": {"citation": "Manually authored challenge C11", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "D": {"citation": "Manually authored challenge C11", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}}}</Description>
+  <Target />
+  <Rule RuleId="urn:research:cpm-rule:e5eab9176809444e14f308350ae50ca96d62bd4cbf8a83753fa1e378f5ba8370" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:a030cdfc31f7f6a595346e2e8ea7963ac0704f0eced8d7a79f9f18f577a30e8b" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:aba733a58942a38fdba47bc510093e98318a17225aa471809132aee1e567628d" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:research:cpm" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:02d8d4df85111e927b793a63a09a110d79dcbb9ccf17c68968b60bc29820737c" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:6813ed5f3e46cf07dbff6f5a1cdb63e8a45578500855a6b5e3be05b91e16bb14" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:research:cpm" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:665b425a9daf8df9cf2846154043b6fef9576e0e1eb711aeb5f9af457eb726a8" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:6927cecbebd38ae94d75548aa479f596493e4f4c06f862747950112db34982a4" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:research:cpm" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:b4853021f46eb7e86e8be65343e76d517aaddeacce08912cafd40ab395aa68a3" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+</Policy>

@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-sort Req 0)
+(declare-fun a (Req) Int)
+(declare-const k Int)
+(define-fun enc ((n Int)) Int n)
+(assert (exists ((x Req)) (not (= (>= (a x) k) (>= (enc (a x)) (enc k))))))
+(check-sat)

@@ -1,0 +1,785 @@
+{
+  "totals": {
+    "listed": {
+      "runs": 240,
+      "accepted_runs": 223,
+      "cases_accepted_in_every_order": 17,
+      "cases_accepted_in_some_but_not_all_orders": 3,
+      "cases_never_accepted": 0,
+      "accepted_with_any_failure": 0,
+      "cases_with_one_accepted_output": 0,
+      "highest_first_accepted": 20,
+      "lowest_first_accepted": 17,
+      "refusal_reasons": {
+        "REPAIR_REMOVES_ALL_LOSER_BEHAVIOR_OR_UNRESOLVED": 17
+      },
+      "cases_with_a_refusal": [
+        "K03",
+        "K05",
+        "K06"
+      ],
+      "accepted_orders_in_cases_with_a_refusal": {
+        "K03": 6,
+        "K05": 6,
+        "K06": 7
+      },
+      "attempted_edits_before_refusal": [
+        1,
+        8
+      ],
+      "cases_whose_edit_count_varies_with_order": [
+        "K01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K08",
+        "K10",
+        "K12",
+        "K16",
+        "K20"
+      ],
+      "edits_per_accepted_run": [
+        1,
+        12
+      ],
+      "distinct_accepted_outputs_per_case": [
+        2,
+        11
+      ],
+      "cases_whose_accepted_runs_differ_in_decisions": 0,
+      "median_seconds_per_accepted_run_diagnostic": 2.38
+    },
+    "settled": {
+      "runs": 240,
+      "accepted_runs": 240,
+      "cases_accepted_in_every_order": 20,
+      "cases_accepted_in_some_but_not_all_orders": 0,
+      "cases_never_accepted": 0,
+      "accepted_with_any_failure": 0,
+      "cases_with_one_accepted_output": 20,
+      "highest_first_accepted": 20,
+      "lowest_first_accepted": 20,
+      "refusal_reasons": {},
+      "cases_with_a_refusal": [],
+      "accepted_orders_in_cases_with_a_refusal": {},
+      "attempted_edits_before_refusal": null,
+      "cases_whose_edit_count_varies_with_order": [],
+      "edits_per_accepted_run": [
+        1,
+        9
+      ],
+      "distinct_accepted_outputs_per_case": [
+        1,
+        1
+      ],
+      "cases_whose_accepted_runs_differ_in_decisions": 0,
+      "median_seconds_per_accepted_run_diagnostic": 2.4
+    },
+    "cases_with_a_shadowed_loser": [
+      "K03",
+      "K05",
+      "K06"
+    ],
+    "cases": {
+      "n": 20,
+      "sources": [
+        3,
+        5
+      ],
+      "rules": [
+        4,
+        9
+      ],
+      "conflicting_pairs": [
+        2,
+        14
+      ],
+      "cases_with_a_shadowed_loser": 3,
+      "generation_attempts": 47,
+      "discarded": {
+        "FORCED_RETIREMENT": 7,
+        "NO_CHAIN": 20
+      }
+    },
+    "replay": {
+      "outputs": 144,
+      "opa_model_mismatches": 0,
+      "opa_target_mismatches": 0,
+      "exported_to_xacml": 144,
+      "balana_model_mismatches": 0,
+      "balana_target_mismatches": 0,
+      "requests_per_output": 72
+    }
+  },
+  "cases": {
+    "K01": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 6,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          5,
+          6
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          5
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K02": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 3,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K03": {
+      "listed": {
+        "accepted_orders": 6,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 4,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 6,
+          "REJECTED/REPAIR_REMOVES_ALL_LOSER_BEHAVIOR_OR_UNRESOLVED": 6
+        },
+        "steps": [
+          2,
+          3,
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "REJECTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K04": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 8,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4,
+          5,
+          6
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K05": {
+      "listed": {
+        "accepted_orders": 6,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 5,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 6,
+          "REJECTED/REPAIR_REMOVES_ALL_LOSER_BEHAVIOR_OR_UNRESOLVED": 6
+        },
+        "steps": [
+          1,
+          3,
+          5,
+          8,
+          9,
+          10,
+          11
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "REJECTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          9
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K06": {
+      "listed": {
+        "accepted_orders": 7,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 7,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 7,
+          "REJECTED/REPAIR_REMOVES_ALL_LOSER_BEHAVIOR_OR_UNRESOLVED": 5
+        },
+        "steps": [
+          2,
+          3,
+          7,
+          8,
+          9,
+          11,
+          12
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "REJECTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          8
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K07": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 4,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K08": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 10,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3,
+          4,
+          5
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K09": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 4,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K10": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 4,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          2,
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K11": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 4,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K12": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 9,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4,
+          5,
+          6
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K13": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 9,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          5
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          5
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K14": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 6,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          3
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K15": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 11,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          6
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          6
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K16": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 8,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          5,
+          6,
+          7
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          7
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K17": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 8,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          4
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K18": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 10,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          8
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          8
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K19": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 2,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          2
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          2
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    },
+    "K20": {
+      "listed": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 2,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          1,
+          2
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      },
+      "settled": {
+        "accepted_orders": 12,
+        "orders": 12,
+        "accepted_with_any_failure": 0,
+        "distinct_accepted_outputs": 1,
+        "distinct_decision_signatures_accepted": 1,
+        "outcomes": {
+          "ACCEPTED/BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED": 12
+        },
+        "steps": [
+          1
+        ],
+        "highest_first": "ACCEPTED",
+        "lowest_first": "ACCEPTED"
+      }
+    }
+  }
+}

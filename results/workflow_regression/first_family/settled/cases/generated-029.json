@@ -1,0 +1,2459 @@
+{
+  "name": "generated-029",
+  "expected": "ACCEPTED",
+  "expectation_origin": "Authored case before execution",
+  "injection": null,
+  "elapsed_ms": 984.7194709998348,
+  "input_unchanged": true,
+  "input": {
+    "schema_version": "cpm-1",
+    "attributes": {
+      "item": {
+        "type": "int",
+        "min": 0,
+        "max": 12
+      },
+      "requested": {
+        "type": "bool"
+      }
+    },
+    "sources": {
+      "permit": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      },
+      "deny": {
+        "kind": "synthetic",
+        "citation": "Constructed formal experiment 2026-10-19",
+        "mapping_status": "Authored finite test, not a regulatory mapping"
+      }
+    },
+    "rules": [
+      {
+        "id": "P4",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 5
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "D2",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "SAFE",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "D1",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 12
+            }
+          ]
+        }
+      },
+      {
+        "id": "P2",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 4
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "D3",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 9
+            }
+          ]
+        }
+      },
+      {
+        "id": "P5",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 7
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 11
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "D4",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "P0",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 8
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 6
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "D5",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 11
+            }
+          ]
+        }
+      },
+      {
+        "id": "D0",
+        "source": "deny",
+        "effect": "Deny",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 6
+            }
+          ]
+        }
+      },
+      {
+        "id": "P3",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 3
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 9
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "P1",
+        "source": "permit",
+        "effect": "Permit",
+        "condition": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 10
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "invariants": [
+      {
+        "id": "required-denials",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "or",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 6
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 12
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 2
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 9
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 1
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 11
+                }
+              ]
+            }
+          ]
+        },
+        "required": "Deny"
+      },
+      {
+        "id": "required-access",
+        "when": {
+          "op": "and",
+          "args": [
+            {
+              "op": "eq",
+              "attr": "requested",
+              "value": true
+            },
+            {
+              "op": "eq",
+              "attr": "item",
+              "value": 0
+            }
+          ]
+        },
+        "required": "Permit"
+      }
+    ],
+    "validity": true,
+    "precedence": []
+  },
+  "approval": {
+    "approval_id": "SYNTHETIC_TEST_ONLY_NO_ORGANIZATIONAL_AUTHORITY",
+    "policy_sha256": "ebd057328b053a62f5d33408b512af53824a870f9f058e329ba0492165d3a5dd",
+    "operation": "bounded_refinement",
+    "choices": [
+      {
+        "winner": "D0",
+        "loser": "P0"
+      },
+      {
+        "winner": "D1",
+        "loser": "P1"
+      },
+      {
+        "winner": "D2",
+        "loser": "P2"
+      },
+      {
+        "winner": "D3",
+        "loser": "P3"
+      },
+      {
+        "winner": "D4",
+        "loser": "P4"
+      },
+      {
+        "winner": "D5",
+        "loser": "P5"
+      }
+    ]
+  },
+  "result": {
+    "status": "ACCEPTED",
+    "committed": true,
+    "operation": "bounded_refinement",
+    "selection_rule": "settled_winner_then_smallest_identifier",
+    "before_sha256": "ebd057328b053a62f5d33408b512af53824a870f9f058e329ba0492165d3a5dd",
+    "iterations": [
+      {
+        "iteration": 1,
+        "choice": {
+          "winner": "D0",
+          "loser": "P0"
+        },
+        "before_sha256": "ebd057328b053a62f5d33408b512af53824a870f9f058e329ba0492165d3a5dd",
+        "overlap_before": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 2.299174999961906,
+          "witness": {
+            "item": 6,
+            "requested": true
+          },
+          "pair": [
+            "P0",
+            "D0"
+          ],
+          "governed": false
+        },
+        "checks": {
+          "loser_nonempty": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.402566000000661,
+            "witness": {
+              "item": 8,
+              "requested": true
+            }
+          },
+          "outside_overlap_removed": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.315723000037906,
+            "witness": null
+          },
+          "pair_after": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1546410000610194,
+            "witness": null,
+            "pair": [
+              "P0",
+              "D0"
+            ],
+            "governed": false
+          },
+          "contract_violation_nonexpansion": [
+            {
+              "id": "required-denials",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.492460999974355,
+                "witness": null
+              }
+            },
+            {
+              "id": "required-access",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.3220499999752064,
+                "witness": null
+              }
+            }
+          ]
+        },
+        "after_sha256": "ea1ece3174922168dabb707fe9d31ea834340bb4d5f2f9b42af2511d854d4307"
+      },
+      {
+        "iteration": 2,
+        "choice": {
+          "winner": "D1",
+          "loser": "P1"
+        },
+        "before_sha256": "ea1ece3174922168dabb707fe9d31ea834340bb4d5f2f9b42af2511d854d4307",
+        "overlap_before": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 2.545636000149898,
+          "witness": {
+            "item": 12,
+            "requested": true
+          },
+          "pair": [
+            "D1",
+            "P1"
+          ],
+          "governed": false
+        },
+        "checks": {
+          "loser_nonempty": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.340270000104283,
+            "witness": {
+              "item": 10,
+              "requested": true
+            }
+          },
+          "outside_overlap_removed": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1667920000254526,
+            "witness": null
+          },
+          "pair_after": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.254088000199772,
+            "witness": null,
+            "pair": [
+              "P1",
+              "D1"
+            ],
+            "governed": false
+          },
+          "contract_violation_nonexpansion": [
+            {
+              "id": "required-denials",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.3104669999156613,
+                "witness": null
+              }
+            },
+            {
+              "id": "required-access",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.362694000112242,
+                "witness": null
+              }
+            }
+          ]
+        },
+        "after_sha256": "816792872730027b88177722f04a78c203853d8f33f6c545337705d0d1eea3d5"
+      },
+      {
+        "iteration": 3,
+        "choice": {
+          "winner": "D2",
+          "loser": "P2"
+        },
+        "before_sha256": "816792872730027b88177722f04a78c203853d8f33f6c545337705d0d1eea3d5",
+        "overlap_before": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 2.452986999969653,
+          "witness": {
+            "item": 2,
+            "requested": true
+          },
+          "pair": [
+            "D2",
+            "P2"
+          ],
+          "governed": false
+        },
+        "checks": {
+          "loser_nonempty": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.5022639999860985,
+            "witness": {
+              "item": 4,
+              "requested": true
+            }
+          },
+          "outside_overlap_removed": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 5.182748999914111,
+            "witness": null
+          },
+          "pair_after": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.488463999952728,
+            "witness": null,
+            "pair": [
+              "P2",
+              "D2"
+            ],
+            "governed": false
+          },
+          "contract_violation_nonexpansion": [
+            {
+              "id": "required-denials",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.4583739998433884,
+                "witness": null
+              }
+            },
+            {
+              "id": "required-access",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 5.067162000159442,
+                "witness": null
+              }
+            }
+          ]
+        },
+        "after_sha256": "89074e2332148eb6014f0216d5c3a4a1e42abdc53d1bb7a8ee6ab6faf73e327d"
+      },
+      {
+        "iteration": 4,
+        "choice": {
+          "winner": "D3",
+          "loser": "P3"
+        },
+        "before_sha256": "89074e2332148eb6014f0216d5c3a4a1e42abdc53d1bb7a8ee6ab6faf73e327d",
+        "overlap_before": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 2.7303540000502835,
+          "witness": {
+            "item": 9,
+            "requested": true
+          },
+          "pair": [
+            "D3",
+            "P3"
+          ],
+          "governed": false
+        },
+        "checks": {
+          "loser_nonempty": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.9013849998591468,
+            "witness": {
+              "item": 3,
+              "requested": true
+            }
+          },
+          "outside_overlap_removed": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.4546070001179032,
+            "witness": null
+          },
+          "pair_after": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.8821600001265324,
+            "witness": null,
+            "pair": [
+              "P3",
+              "D3"
+            ],
+            "governed": false
+          },
+          "contract_violation_nonexpansion": [
+            {
+              "id": "required-denials",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 3.188834999946266,
+                "witness": null
+              }
+            },
+            {
+              "id": "required-access",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 3.210486999932982,
+                "witness": null
+              }
+            }
+          ]
+        },
+        "after_sha256": "3f7c8486c952187e69fe304c9ef55798d868191d7b61a5b82c161709ea77a80e"
+      },
+      {
+        "iteration": 5,
+        "choice": {
+          "winner": "D4",
+          "loser": "P4"
+        },
+        "before_sha256": "3f7c8486c952187e69fe304c9ef55798d868191d7b61a5b82c161709ea77a80e",
+        "overlap_before": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 2.6084020000780583,
+          "witness": {
+            "item": 1,
+            "requested": true
+          },
+          "pair": [
+            "P4",
+            "D4"
+          ],
+          "governed": false
+        },
+        "checks": {
+          "loser_nonempty": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.6510569998663414,
+            "witness": {
+              "item": 5,
+              "requested": true
+            }
+          },
+          "outside_overlap_removed": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.437085000110528,
+            "witness": null
+          },
+          "pair_after": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.5835799999640585,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D4"
+            ],
+            "governed": false
+          },
+          "contract_violation_nonexpansion": [
+            {
+              "id": "required-denials",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.554956999802016,
+                "witness": null
+              }
+            },
+            {
+              "id": "required-access",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.4643310000556085,
+                "witness": null
+              }
+            }
+          ]
+        },
+        "after_sha256": "d94cb2c2b7a91cb253b68271c2d739551ffe0d4cb61d8cf57cabe1113aaae96b"
+      },
+      {
+        "iteration": 6,
+        "choice": {
+          "winner": "D5",
+          "loser": "P5"
+        },
+        "before_sha256": "d94cb2c2b7a91cb253b68271c2d739551ffe0d4cb61d8cf57cabe1113aaae96b",
+        "overlap_before": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 2.4561509999330156,
+          "witness": {
+            "item": 11,
+            "requested": true
+          },
+          "pair": [
+            "P5",
+            "D5"
+          ],
+          "governed": false
+        },
+        "checks": {
+          "loser_nonempty": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.5967579999814916,
+            "witness": {
+              "item": 7,
+              "requested": true
+            }
+          },
+          "outside_overlap_removed": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2820310000497557,
+            "witness": null
+          },
+          "pair_after": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2134259997983463,
+            "witness": null,
+            "pair": [
+              "P5",
+              "D5"
+            ],
+            "governed": false
+          },
+          "contract_violation_nonexpansion": [
+            {
+              "id": "required-denials",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.3597849999532627,
+                "witness": null
+              }
+            },
+            {
+              "id": "required-access",
+              "new_violation_region": {
+                "status": "UNSAT",
+                "reason": "",
+                "elapsed_ms": 2.3046339999837073,
+                "witness": null
+              }
+            }
+          ]
+        },
+        "after_sha256": "c111024cba7f80c9e95411046538393c609afe7d1eef643c9f48684ece5356db"
+      }
+    ],
+    "checks": {
+      "contract_antecedents": [
+        {
+          "id": "required-denials",
+          "query": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 4.502744000092207,
+            "witness": {
+              "item": 1,
+              "requested": true
+            }
+          }
+        },
+        {
+          "id": "required-access",
+          "query": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.524431999972876,
+            "witness": {
+              "item": 0,
+              "requested": true
+            }
+          }
+        }
+      ],
+      "final": {
+        "label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE",
+        "screening": "exhaustive",
+        "validity": {
+          "status": "SAT",
+          "reason": "",
+          "elapsed_ms": 4.831666999962181,
+          "witness": {
+            "item": 0,
+            "requested": false
+          }
+        },
+        "eligible_pairs": 42,
+        "checked_pairs": 42,
+        "discarded_pairs": [],
+        "results": [
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.5050870001450676,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D2"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.713273000154004,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1768970000266563,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1405960001175117,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D4"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.213512999787781,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2391360000710847,
+            "witness": null,
+            "pair": [
+              "P4",
+              "D0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.16619200000423,
+            "witness": null,
+            "pair": [
+              "D2",
+              "SAFE"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2010279999449267,
+            "witness": null,
+            "pair": [
+              "D2",
+              "P2"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.244148000045243,
+            "witness": null,
+            "pair": [
+              "D2",
+              "P5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1313100000952545,
+            "witness": null,
+            "pair": [
+              "D2",
+              "P0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.126353999983621,
+            "witness": null,
+            "pair": [
+              "D2",
+              "P3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1243420001155755,
+            "witness": null,
+            "pair": [
+              "D2",
+              "P1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.205871999876763,
+            "witness": null,
+            "pair": [
+              "SAFE",
+              "D1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1847300001809344,
+            "witness": null,
+            "pair": [
+              "SAFE",
+              "D3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.329228000007788,
+            "witness": null,
+            "pair": [
+              "SAFE",
+              "D4"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2049670001251798,
+            "witness": null,
+            "pair": [
+              "SAFE",
+              "D5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1544150001773232,
+            "witness": null,
+            "pair": [
+              "SAFE",
+              "D0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.219022999952358,
+            "witness": null,
+            "pair": [
+              "D1",
+              "P2"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.3083739999947284,
+            "witness": null,
+            "pair": [
+              "D1",
+              "P5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.135821999900145,
+            "witness": null,
+            "pair": [
+              "D1",
+              "P0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.169107000099757,
+            "witness": null,
+            "pair": [
+              "D1",
+              "P3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2147869999571412,
+            "witness": null,
+            "pair": [
+              "D1",
+              "P1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.112433000093006,
+            "witness": null,
+            "pair": [
+              "P2",
+              "D3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.160236999998233,
+            "witness": null,
+            "pair": [
+              "P2",
+              "D4"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.171476000057737,
+            "witness": null,
+            "pair": [
+              "P2",
+              "D5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.3174980001385848,
+            "witness": null,
+            "pair": [
+              "P2",
+              "D0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2237700000005134,
+            "witness": null,
+            "pair": [
+              "D3",
+              "P5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.143950999879962,
+            "witness": null,
+            "pair": [
+              "D3",
+              "P0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1917110000231332,
+            "witness": null,
+            "pair": [
+              "D3",
+              "P3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.143169999953898,
+            "witness": null,
+            "pair": [
+              "D3",
+              "P1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.3586459999478393,
+            "witness": null,
+            "pair": [
+              "P5",
+              "D4"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.4347460000626597,
+            "witness": null,
+            "pair": [
+              "P5",
+              "D5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.4136019999332348,
+            "witness": null,
+            "pair": [
+              "P5",
+              "D0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1645120000357565,
+            "witness": null,
+            "pair": [
+              "D4",
+              "P0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.361566999979914,
+            "witness": null,
+            "pair": [
+              "D4",
+              "P3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.256982999824686,
+            "witness": null,
+            "pair": [
+              "D4",
+              "P1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.156503999913184,
+            "witness": null,
+            "pair": [
+              "P0",
+              "D5"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2708760000114125,
+            "witness": null,
+            "pair": [
+              "P0",
+              "D0"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.151577999939036,
+            "witness": null,
+            "pair": [
+              "D5",
+              "P3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.211915000088993,
+            "witness": null,
+            "pair": [
+              "D5",
+              "P1"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.30339300014748,
+            "witness": null,
+            "pair": [
+              "D0",
+              "P3"
+            ],
+            "governed": false
+          },
+          {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.1989499998653628,
+            "witness": null,
+            "pair": [
+              "D0",
+              "P1"
+            ],
+            "governed": false
+          }
+        ],
+        "elapsed_ms": 112.02016500010359
+      },
+      "contracts": [
+        {
+          "id": "required-denials",
+          "nonvacuous": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 4.553927999950247,
+            "witness": {
+              "item": 1,
+              "requested": true
+            }
+          },
+          "violation": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 4.79953200010641,
+            "witness": null
+          },
+          "passed": true
+        },
+        {
+          "id": "required-access",
+          "nonvacuous": {
+            "status": "SAT",
+            "reason": "",
+            "elapsed_ms": 2.3545030001059786,
+            "witness": {
+              "item": 0,
+              "requested": true
+            }
+          },
+          "violation": {
+            "status": "UNSAT",
+            "reason": "",
+            "elapsed_ms": 2.2730450000381097,
+            "witness": null
+          },
+          "passed": true
+        }
+      ],
+      "diagnostic_overlap": {
+        "status": "UNSAT",
+        "reason": "",
+        "elapsed_ms": 4.874528000073042,
+        "witness": null
+      }
+    },
+    "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+    "approval_id": "SYNTHETIC_TEST_ONLY_NO_ORGANIZATIONAL_AUTHORITY",
+    "after_sha256": "c111024cba7f80c9e95411046538393c609afe7d1eef643c9f48684ece5356db",
+    "policy": {
+      "schema_version": "cpm-1",
+      "attributes": {
+        "item": {
+          "type": "int",
+          "min": 0,
+          "max": 12
+        },
+        "requested": {
+          "type": "bool"
+        }
+      },
+      "sources": {
+        "permit": {
+          "kind": "synthetic",
+          "citation": "Constructed formal experiment 2026-10-19",
+          "mapping_status": "Authored finite test, not a regulatory mapping"
+        },
+        "deny": {
+          "kind": "synthetic",
+          "citation": "Constructed formal experiment 2026-10-19",
+          "mapping_status": "Authored finite test, not a regulatory mapping"
+        }
+      },
+      "rules": [
+        {
+          "id": "P4",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "or",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 5
+                      },
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "item",
+                      "value": 1
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "D2",
+          "source": "deny",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "SAFE",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "D1",
+          "source": "deny",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 12
+              }
+            ]
+          }
+        },
+        {
+          "id": "P2",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "or",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 4
+                      },
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "item",
+                      "value": 2
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "D3",
+          "source": "deny",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "P5",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "or",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 7
+                      },
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 11
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "item",
+                      "value": 11
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "D4",
+          "source": "deny",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "P0",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "or",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 8
+                      },
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 6
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "item",
+                      "value": 6
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "D5",
+          "source": "deny",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 11
+              }
+            ]
+          }
+        },
+        {
+          "id": "D0",
+          "source": "deny",
+          "effect": "Deny",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "P3",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "or",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 3
+                      },
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 9
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "item",
+                      "value": 9
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "P1",
+          "source": "permit",
+          "effect": "Permit",
+          "condition": {
+            "op": "and",
+            "args": [
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "requested",
+                    "value": true
+                  },
+                  {
+                    "op": "or",
+                    "args": [
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 10
+                      },
+                      {
+                        "op": "eq",
+                        "attr": "item",
+                        "value": 12
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "requested",
+                      "value": true
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "item",
+                      "value": 12
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "invariants": [
+        {
+          "id": "required-denials",
+          "when": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "or",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 6
+                  },
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 12
+                  },
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 2
+                  },
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 9
+                  },
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 1
+                  },
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 11
+                  }
+                ]
+              }
+            ]
+          },
+          "required": "Deny"
+        },
+        {
+          "id": "required-access",
+          "when": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 0
+              }
+            ]
+          },
+          "required": "Permit"
+        }
+      ],
+      "validity": true,
+      "precedence": []
+    },
+    "tentative_steps": 6
+  },
+  "independent_requests": [
+    {
+      "request": {
+        "item": 0,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 0,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "SAFE"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "SAFE"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 1,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 1,
+        "requested": true
+      },
+      "before": {
+        "decision": "Conflict",
+        "matched": [
+          "D4",
+          "P4"
+        ]
+      },
+      "after": {
+        "decision": "Deny",
+        "matched": [
+          "D4"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 2,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 2,
+        "requested": true
+      },
+      "before": {
+        "decision": "Conflict",
+        "matched": [
+          "D2",
+          "P2"
+        ]
+      },
+      "after": {
+        "decision": "Deny",
+        "matched": [
+          "D2"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 3,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 3,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "P3"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "P3"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 4,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 4,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "P2"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "P2"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 5,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 5,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "P4"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "P4"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 6,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 6,
+        "requested": true
+      },
+      "before": {
+        "decision": "Conflict",
+        "matched": [
+          "D0",
+          "P0"
+        ]
+      },
+      "after": {
+        "decision": "Deny",
+        "matched": [
+          "D0"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 7,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 7,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "P5"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "P5"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 8,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 8,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "P0"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "P0"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 9,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 9,
+        "requested": true
+      },
+      "before": {
+        "decision": "Conflict",
+        "matched": [
+          "D3",
+          "P3"
+        ]
+      },
+      "after": {
+        "decision": "Deny",
+        "matched": [
+          "D3"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 10,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 10,
+        "requested": true
+      },
+      "before": {
+        "decision": "Permit",
+        "matched": [
+          "P1"
+        ]
+      },
+      "after": {
+        "decision": "Permit",
+        "matched": [
+          "P1"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 11,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 11,
+        "requested": true
+      },
+      "before": {
+        "decision": "Conflict",
+        "matched": [
+          "D5",
+          "P5"
+        ]
+      },
+      "after": {
+        "decision": "Deny",
+        "matched": [
+          "D5"
+        ]
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 12,
+        "requested": false
+      },
+      "before": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "after": {
+        "decision": "NotApplicable",
+        "matched": []
+      },
+      "contracts_hold": true
+    },
+    {
+      "request": {
+        "item": 12,
+        "requested": true
+      },
+      "before": {
+        "decision": "Conflict",
+        "matched": [
+          "D1",
+          "P1"
+        ]
+      },
+      "after": {
+        "decision": "Deny",
+        "matched": [
+          "D1"
+        ]
+      },
+      "contracts_hold": true
+    }
+  ]
+}

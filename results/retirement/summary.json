@@ -1,0 +1,640 @@
+{
+  "C01": {
+    "rules": 18,
+    "empty_before": [],
+    "forced_to_retire": [
+      "D_r1",
+      "D_r3"
+    ],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 30,
+        "ordinary_label_differences": 30,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "D_r1",
+          "D_r2",
+          "D_r3",
+          "D_r4",
+          "E_r1",
+          "E_r2",
+          "E_r3",
+          "E_r4",
+          "F_r1",
+          "F_r2",
+          "F_r3",
+          "F_r4",
+          "urn:challenge:C::Deny",
+          "urn:challenge:C::Permit"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "D_r1",
+          "D_r3"
+        ]
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 30,
+        "ordinary_label_differences": 30,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 30,
+        "ordinary_label_differences": 30,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [
+      "D_r1",
+      "D_r3"
+    ],
+    "unchecked_steps": 19
+  },
+  "C02": {
+    "rules": 18,
+    "empty_before": [],
+    "forced_to_retire": [
+      "F_r1"
+    ],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 29,
+        "ordinary_label_differences": 29,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "D_r1",
+          "D_r2",
+          "D_r3",
+          "E_r1",
+          "E_r2",
+          "E_r3",
+          "E_r4",
+          "F_r1",
+          "F_r2",
+          "F_r3",
+          "F_r4",
+          "urn:challenge:C::Deny",
+          "urn:challenge:C::Permit"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "F_r1"
+        ]
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 29,
+        "ordinary_label_differences": 29,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 29,
+        "ordinary_label_differences": 29,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [
+      "F_r1"
+    ],
+    "unchecked_steps": 19
+  },
+  "C03": {
+    "rules": 24,
+    "empty_before": [],
+    "forced_to_retire": [
+      "F_r1",
+      "F_r3",
+      "urn:challenge:C::Permit"
+    ],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 32,
+        "ordinary_label_differences": 32,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "E_r1",
+          "E_r2",
+          "E_r3",
+          "E_r4",
+          "F_r1",
+          "F_r2",
+          "F_r3",
+          "F_r4",
+          "G_r1",
+          "G_r2",
+          "G_r3",
+          "G_r4",
+          "H_r1",
+          "H_r2",
+          "H_r3",
+          "H_r4",
+          "urn:challenge:C::Deny",
+          "urn:challenge:C::Permit",
+          "urn:challenge:D::Deny"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "F_r1",
+          "F_r3",
+          "urn:challenge:C::Permit"
+        ]
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 32,
+        "ordinary_label_differences": 32,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 32,
+        "ordinary_label_differences": 32,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [
+      "F_r1",
+      "F_r3",
+      "urn:challenge:C::Permit"
+    ],
+    "unchecked_steps": 35
+  },
+  "C04": {
+    "rules": 24,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 32,
+        "ordinary_label_differences": 32,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "E_r1",
+          "E_r2",
+          "E_r3",
+          "E_r4",
+          "F_r1",
+          "F_r2",
+          "F_r3",
+          "F_r4",
+          "G_r1",
+          "G_r2",
+          "G_r3",
+          "G_r4",
+          "H_r1",
+          "H_r2",
+          "H_r3",
+          "H_r4",
+          "urn:challenge:C::Deny",
+          "urn:challenge:D::Deny",
+          "urn:challenge:D::Permit"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 36
+  },
+  "C05": {
+    "rules": 6,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "B_r1"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 2
+  },
+  "C06": {
+    "rules": 3,
+    "empty_before": [],
+    "forced_to_retire": [
+      "A_r1"
+    ],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 1
+  },
+  "C07": {
+    "rules": 3,
+    "empty_before": [],
+    "forced_to_retire": [
+      "A_r1"
+    ],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 1
+  },
+  "C08": {
+    "rules": 3,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "unchecked": {
+        "status": "UNFINISHED",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 0
+  },
+  "C09": {
+    "rules": 6,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 3,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": false,
+        "target_mismatches": 1,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "B_r1"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": false,
+        "target_mismatches": 1,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 3,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 3,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 2
+  },
+  "C10": {
+    "rules": 4,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "REJECTED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 0
+  },
+  "C11": {
+    "rules": 8,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 4,
+        "ordinary_label_differences": 4,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": [
+          "B_r1",
+          "C_r1",
+          "D_r1"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": true,
+        "target_mismatches": 0,
+        "ordinary_label_differences": 0,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 3
+  },
+  "C12": {
+    "rules": 4,
+    "empty_before": [],
+    "forced_to_retire": [],
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "source_order": {
+        "status": "APPLIED",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": [
+          "B_r2"
+        ]
+      },
+      "unchecked": {
+        "status": "OUTPUT",
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "checked_listed": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      },
+      "checked_settled": {
+        "status": null,
+        "meets_full_target": false,
+        "target_mismatches": 2,
+        "ordinary_label_differences": 2,
+        "newly_retired": []
+      }
+    },
+    "unchecked_emitted_newly_retired": [],
+    "unchecked_steps": 0
+  }
+}

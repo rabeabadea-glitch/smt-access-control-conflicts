@@ -1,0 +1,76 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "x": {
+      "type": "int",
+      "min": 0,
+      "max": 3
+    }
+  },
+  "sources": {
+    "A": {
+      "kind": "synthetic",
+      "citation": "Adversarial probe fixture A",
+      "mapping_status": "synthetic; no real authorization or mapping approval"
+    },
+    "B": {
+      "kind": "synthetic",
+      "citation": "Adversarial probe fixture B",
+      "mapping_status": "synthetic; no real authorization or mapping approval"
+    }
+  },
+  "rules": [
+    {
+      "id": "deny_loser",
+      "effect": "Deny",
+      "condition": {
+        "op": "or",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "x",
+            "value": 0
+          },
+          {
+            "op": "eq",
+            "attr": "x",
+            "value": 2
+          }
+        ]
+      },
+      "source": "A"
+    },
+    {
+      "id": "permit_winner",
+      "effect": "Permit",
+      "condition": {
+        "op": "le",
+        "attr": "x",
+        "value": 1
+      },
+      "source": "B"
+    }
+  ],
+  "validity": true,
+  "invariants": [
+    {
+      "id": "must_deny_two",
+      "when": {
+        "op": "eq",
+        "attr": "x",
+        "value": 2
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "must_permit_one",
+      "when": {
+        "op": "eq",
+        "attr": "x",
+        "value": 1
+      },
+      "required": "Permit"
+    }
+  ],
+  "precedence": []
+}

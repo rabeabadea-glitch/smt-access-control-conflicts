@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-sort Req 0)
+(declare-fun A (Req) Bool)
+(declare-fun B (Req) Bool)
+(assert (exists ((x Req)) (and (A x) (B x) (not (A x)))))
+(check-sat)

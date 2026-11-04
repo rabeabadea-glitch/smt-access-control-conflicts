@@ -1,0 +1,460 @@
+{
+  "A_all_25_rules": {
+    "rules": 25,
+    "sources": 7,
+    "request_space": 31492800,
+    "eligible_pairs": 131,
+    "sat_pairs": [
+      [
+        "GDPR-17-erase-ungoverned",
+        "AMLD-40-retain-txn"
+      ],
+      [
+        "GDPR-15-subject-access-ungoverned",
+        "AMLD-39-tipping-off"
+      ],
+      [
+        "GDPR-5c-minimisation",
+        "PCI-10-2-log-access"
+      ],
+      [
+        "GDPR-5e-storage-purge",
+        "SOX-802-retain-audit"
+      ],
+      [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "DORA-19-report-incident"
+      ],
+      [
+        "AMLD-investigator-full-pan",
+        "PCI-3-3-mask-pan"
+      ],
+      [
+        "PCI-8-3-9-rotate-password",
+        "NIST-63B-no-forced-rotation"
+      ]
+    ],
+    "authorized_choices": 65,
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "reason": null,
+        "committed": false,
+        "steps": 0,
+        "elapsed_seconds_diagnostic": 0.0,
+        "decision_counts": {
+          "NotApplicable": 27074088,
+          "Permit": 2008152,
+          "Deny": 2103408,
+          "Conflict": 307152
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 58320,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 7776,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 46656,
+          "F3-log-chd-access": 58320,
+          "F6-retain-audit-workpapers": 58320,
+          "F7-report-incident": 38880,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 0,
+        "changed_from_conflict": 0,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2007,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "export": "REJECTED",
+          "reason": "Unsupported: Standard XACML export rejects possible/unresolved CPM Conflict: SAT"
+        }
+      },
+      "configured_precedence": {
+        "status": "APPLIED",
+        "reason": "AUTHORIZED_ORDER_COMPILED",
+        "committed": true,
+        "steps": 0,
+        "elapsed_seconds_diagnostic": 0.53,
+        "decision_counts": {
+          "NotApplicable": 27074088,
+          "Permit": 2152008,
+          "Deny": 2227824,
+          "Conflict": 38880
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 0,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 0,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 0,
+          "F3-log-chd-access": 0,
+          "F6-retain-audit-workpapers": 0,
+          "F7-report-incident": 0,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 268272,
+        "changed_from_conflict": 268272,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2007,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "export": "REJECTED",
+          "reason": "Unsupported: Standard XACML export rejects possible/unresolved CPM Conflict: SAT"
+        }
+      },
+      "unchecked_subtraction": {
+        "status": "UNFINISHED",
+        "reason": "NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS",
+        "committed": false,
+        "steps": 6,
+        "elapsed_seconds_diagnostic": 2.91,
+        "decision_counts": {
+          "NotApplicable": 27074088,
+          "Permit": 2152008,
+          "Deny": 2227824,
+          "Conflict": 38880
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 0,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 0,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 0,
+          "F3-log-chd-access": 0,
+          "F6-retain-audit-workpapers": 0,
+          "F7-report-incident": 0,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 268272,
+        "changed_from_conflict": 268272,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2007,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "export": "REJECTED",
+          "reason": "Unsupported: Standard XACML export rejects possible/unresolved CPM Conflict: SAT"
+        }
+      },
+      "checked_listed": {
+        "status": "REJECTED",
+        "reason": "NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS",
+        "committed": false,
+        "steps": 6,
+        "elapsed_seconds_diagnostic": 3.1,
+        "decision_counts": {
+          "NotApplicable": 27074088,
+          "Permit": 2008152,
+          "Deny": 2103408,
+          "Conflict": 307152
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 58320,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 7776,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 46656,
+          "F3-log-chd-access": 58320,
+          "F6-retain-audit-workpapers": 58320,
+          "F7-report-incident": 38880,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 0,
+        "changed_from_conflict": 0,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2007,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "export": "REJECTED",
+          "reason": "Unsupported: Standard XACML export rejects possible/unresolved CPM Conflict: SAT"
+        }
+      },
+      "checked_settled": {
+        "status": "REJECTED",
+        "reason": "NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS",
+        "committed": false,
+        "steps": 6,
+        "elapsed_seconds_diagnostic": 2.98,
+        "decision_counts": {
+          "NotApplicable": 27074088,
+          "Permit": 2008152,
+          "Deny": 2103408,
+          "Conflict": 307152
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 58320,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 7776,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 46656,
+          "F3-log-chd-access": 58320,
+          "F6-retain-audit-workpapers": 58320,
+          "F7-report-incident": 38880,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 0,
+        "changed_from_conflict": 0,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2007,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "export": "REJECTED",
+          "reason": "Unsupported: Standard XACML export rejects possible/unresolved CPM Conflict: SAT"
+        }
+      }
+    }
+  },
+  "B_F2_retranslated": {
+    "rules": 23,
+    "sources": 7,
+    "request_space": 31492800,
+    "eligible_pairs": 109,
+    "sat_pairs": [
+      [
+        "GDPR-17-erase-ungoverned",
+        "AMLD-40-retain-txn"
+      ],
+      [
+        "GDPR-15-subject-access-ungoverned",
+        "AMLD-39-tipping-off"
+      ],
+      [
+        "GDPR-5c-minimisation",
+        "PCI-10-2-log-access"
+      ],
+      [
+        "GDPR-5e-storage-purge",
+        "SOX-802-retain-audit"
+      ],
+      [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "DORA-19-report-incident"
+      ],
+      [
+        "AMLD-investigator-full-pan",
+        "PCI-3-3-mask-pan"
+      ]
+    ],
+    "authorized_choices": 59,
+    "methods": {
+      "no_edit": {
+        "status": "BASELINE_UNCHANGED",
+        "reason": null,
+        "committed": false,
+        "steps": 0,
+        "elapsed_seconds_diagnostic": 0.0,
+        "decision_counts": {
+          "NotApplicable": 27229608,
+          "Permit": 1969272,
+          "Deny": 2025648,
+          "Conflict": 268272
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 58320,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 7776,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 46656,
+          "F3-log-chd-access": 58320,
+          "F6-retain-audit-workpapers": 58320,
+          "F7-report-incident": 38880,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 0,
+        "changed_from_conflict": 0,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2006,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "export": "REJECTED",
+          "reason": "Unsupported: Standard XACML export rejects possible/unresolved CPM Conflict: SAT"
+        }
+      },
+      "configured_precedence": {
+        "status": "APPLIED",
+        "reason": "AUTHORIZED_ORDER_COMPILED",
+        "committed": true,
+        "steps": 0,
+        "elapsed_seconds_diagnostic": 0.38,
+        "decision_counts": {
+          "NotApplicable": 27229608,
+          "Permit": 2113128,
+          "Deny": 2150064,
+          "Conflict": 0
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 0,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 0,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 0,
+          "F3-log-chd-access": 0,
+          "F6-retain-audit-workpapers": 0,
+          "F7-report-incident": 0,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 268272,
+        "changed_from_conflict": 268272,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2006,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "requests": 2006,
+          "mismatches": 0,
+          "xacml_roundtrip_mismatches": 0
+        }
+      },
+      "unchecked_subtraction": {
+        "status": "OUTPUT",
+        "reason": "NO_CROSS_SOURCE_OVERLAPS_LEFT",
+        "committed": false,
+        "steps": 6,
+        "elapsed_seconds_diagnostic": 2.44,
+        "decision_counts": {
+          "NotApplicable": 27229608,
+          "Permit": 2113128,
+          "Deny": 2150064,
+          "Conflict": 0
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 0,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 0,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 0,
+          "F3-log-chd-access": 0,
+          "F6-retain-audit-workpapers": 0,
+          "F7-report-incident": 0,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 268272,
+        "changed_from_conflict": 268272,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2006,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "requests": 2006,
+          "mismatches": 0,
+          "xacml_roundtrip_mismatches": 0
+        }
+      },
+      "checked_listed": {
+        "status": "ACCEPTED",
+        "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+        "committed": true,
+        "steps": 6,
+        "elapsed_seconds_diagnostic": 2.75,
+        "decision_counts": {
+          "NotApplicable": 27229608,
+          "Permit": 2113128,
+          "Deny": 2150064,
+          "Conflict": 0
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 0,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 0,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 0,
+          "F3-log-chd-access": 0,
+          "F6-retain-audit-workpapers": 0,
+          "F7-report-incident": 0,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 268272,
+        "changed_from_conflict": 268272,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2006,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "requests": 2006,
+          "mismatches": 0,
+          "xacml_roundtrip_mismatches": 0
+        }
+      },
+      "checked_settled": {
+        "status": "ACCEPTED",
+        "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+        "committed": true,
+        "steps": 6,
+        "elapsed_seconds_diagnostic": 2.92,
+        "decision_counts": {
+          "NotApplicable": 27229608,
+          "Permit": 2113128,
+          "Deny": 2150064,
+          "Conflict": 0
+        },
+        "contract_violation_requests": {
+          "F1-retain-transaction-records": 0,
+          "F1-erase-after-retention": 0,
+          "F4-no-tipping-off": 0,
+          "F4-subject-access": 0,
+          "F5-investigator-full-pan": 0,
+          "F3-log-chd-access": 0,
+          "F6-retain-audit-workpapers": 0,
+          "F7-report-incident": 0,
+          "INT-guest-no-config-write": 0
+        },
+        "changed_requests": 268272,
+        "changed_from_conflict": 268272,
+        "pure_decisions_changed": 0,
+        "retired_rules": [],
+        "opa": {
+          "requests": 2006,
+          "returncode": 0,
+          "mismatches": 0,
+          "rego_roundtrip_mismatches": 0
+        },
+        "balana": {
+          "requests": 2006,
+          "mismatches": 0,
+          "xacml_roundtrip_mismatches": 0
+        }
+      }
+    }
+  }
+}

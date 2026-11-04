@@ -1,0 +1,218 @@
+[
+  {
+    "source_id": "A",
+    "format": "xacml",
+    "combining": "permit-overrides",
+    "rules": [
+      {
+        "id": "A_r1",
+        "effect": "Permit",
+        "when": "not r and p"
+      },
+      {
+        "id": "A_r2",
+        "effect": "Deny",
+        "when": "not r and not p"
+      },
+      {
+        "id": "A_r3",
+        "effect": "Permit",
+        "when": "r and q and u"
+      },
+      {
+        "id": "A_r4",
+        "effect": "Deny",
+        "when": "r and s"
+      }
+    ]
+  },
+  {
+    "source_id": "B",
+    "format": "xacml",
+    "combining": "first-applicable",
+    "rules": [
+      {
+        "id": "B_r1",
+        "effect": "Deny",
+        "when": "r and t"
+      },
+      {
+        "id": "B_r2",
+        "effect": "Permit",
+        "when": "r and u"
+      },
+      {
+        "id": "B_r3",
+        "effect": "Deny",
+        "when": "r and p and not s"
+      },
+      {
+        "id": "B_r4",
+        "effect": "Permit",
+        "when": "r and not p and q"
+      }
+    ]
+  },
+  {
+    "source_id": "C",
+    "format": "xacml",
+    "combining": "deny-overrides",
+    "rules": [
+      {
+        "id": "C_r1",
+        "effect": "Permit",
+        "when": "r and p and s"
+      },
+      {
+        "id": "C_r2",
+        "effect": "Deny",
+        "when": "r and q"
+      },
+      {
+        "id": "C_r3",
+        "effect": "Permit",
+        "when": "r and not q and t"
+      },
+      {
+        "id": "C_r4",
+        "effect": "Deny",
+        "when": "r and not p and u"
+      }
+    ]
+  },
+  {
+    "source_id": "D",
+    "format": "xacml",
+    "combining": "first-applicable",
+    "rules": [
+      {
+        "id": "D_r1",
+        "effect": "Permit",
+        "when": "r and not u and s"
+      },
+      {
+        "id": "D_r2",
+        "effect": "Deny",
+        "when": "r and t and q"
+      },
+      {
+        "id": "D_r3",
+        "effect": "Deny",
+        "when": "r and not t and p"
+      },
+      {
+        "id": "D_r4",
+        "effect": "Permit",
+        "when": "r and not s and not q"
+      }
+    ]
+  },
+  {
+    "source_id": "E",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "E_r1",
+        "effect": "Permit",
+        "when": "r and p and t"
+      },
+      {
+        "id": "E_r2",
+        "effect": "Deny",
+        "when": "r and p and not t"
+      },
+      {
+        "id": "E_r3",
+        "effect": "Deny",
+        "when": "r and not p and u"
+      },
+      {
+        "id": "E_r4",
+        "effect": "Permit",
+        "when": "r and not p and not u"
+      }
+    ]
+  },
+  {
+    "source_id": "F",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "F_r1",
+        "effect": "Deny",
+        "when": "r and q and u"
+      },
+      {
+        "id": "F_r2",
+        "effect": "Permit",
+        "when": "r and q and not u"
+      },
+      {
+        "id": "F_r3",
+        "effect": "Permit",
+        "when": "r and not q and s"
+      },
+      {
+        "id": "F_r4",
+        "effect": "Deny",
+        "when": "r and not q and not s"
+      }
+    ]
+  },
+  {
+    "source_id": "G",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "G_r1",
+        "effect": "Permit",
+        "when": "r and t and q"
+      },
+      {
+        "id": "G_r2",
+        "effect": "Deny",
+        "when": "r and t and not q"
+      },
+      {
+        "id": "G_r3",
+        "effect": "Deny",
+        "when": "r and not t and s"
+      },
+      {
+        "id": "G_r4",
+        "effect": "Permit",
+        "when": "r and not t and not s"
+      }
+    ]
+  },
+  {
+    "source_id": "H",
+    "format": "rego",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "H_r1",
+        "effect": "Deny",
+        "when": "r and u and p"
+      },
+      {
+        "id": "H_r2",
+        "effect": "Permit",
+        "when": "r and u and not p"
+      },
+      {
+        "id": "H_r3",
+        "effect": "Permit",
+        "when": "r and not u and q"
+      },
+      {
+        "id": "H_r4",
+        "effect": "Deny",
+        "when": "r and not u and not q"
+      }
+    ]
+  }
+]

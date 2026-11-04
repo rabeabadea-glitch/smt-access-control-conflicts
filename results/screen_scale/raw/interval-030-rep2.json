@@ -1,0 +1,25 @@
+{
+  "input": "/home/user/pkg/data/scaling_inputs/interval-030.json",
+  "rules": 30,
+  "serial_screen_ms": 889.6185030000652,
+  "serial_phase_ms": {
+    "model_loading_embedding_ms": 320.69616200010387,
+    "entity_ms": 0.30686099989907234,
+    "rdf_build_query_ms": 565.3845780000211
+  },
+  "eligible_pairs": 225,
+  "serial_candidate_ms": 1043.6596609999924,
+  "serial_kept": 225,
+  "exact_screen_and_candidate_ms": 1054.6422360000633,
+  "exact_kept": 225,
+  "exhaustive_ms": 970.8388639999157,
+  "sat_pairs": 176,
+  "unresolved_pairs": 0,
+  "serial_retained_sat": 176,
+  "exact_retained_sat": 176,
+  "label_disagreements": 0,
+  "worker_ms": 4095.1964329999555,
+  "family": "interval",
+  "rep": 2,
+  "outer_wall_ms": 4231.206034000024
+}

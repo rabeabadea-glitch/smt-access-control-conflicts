@@ -1,0 +1,3058 @@
+{
+  "primary_cases": [
+    {
+      "name": "two-conflicts",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "one-step-limit",
+      "status": "REJECTED",
+      "reason": "ITERATION_LIMIT_REACHED",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "stale-approval",
+      "status": "REJECTED",
+      "reason": "STALE_OR_WRONG_POLICY_HASH",
+      "steps": 0,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "missing-direction",
+      "status": "REJECTED",
+      "reason": "NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "repeated-state-injected-identity",
+      "status": "REJECTED",
+      "reason": "REPEATED_STATE",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": "identity-proposal",
+      "input_unchanged": true
+    },
+    {
+      "name": "unresolved-scan-injected-control",
+      "status": "REJECTED",
+      "reason": "UNRESOLVED_OR_INVALID_REQUEST_SPACE",
+      "steps": 0,
+      "independent_request_checks": 0,
+      "injection": "unresolved-scan",
+      "input_unchanged": true
+    },
+    {
+      "name": "protected-wrong-winner",
+      "status": "REJECTED",
+      "reason": "FINAL_CONTRACT_VIOLATION_OR_UNRESOLVED",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "protected-right-winner",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 8,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "incompatible-contracts",
+      "status": "REJECTED",
+      "reason": "FINAL_CONTRACT_VIOLATION_OR_UNRESOLVED",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "unsupported-deep-candidate",
+      "status": "REJECTED",
+      "reason": "CANDIDATE_OUTSIDE_SUPPORTED_FRAGMENT",
+      "steps": 1,
+      "independent_request_checks": 0,
+      "injection": null,
+      "input_unchanged": true
+    },
+    {
+      "name": "same-source-residual",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true
+    }
+  ],
+  "generated_repair_cases": 120,
+  "generated_repair_accepted": 120,
+  "generated_repair_steps": 420,
+  "generated_repair_independent_requests": 1920,
+  "generated_precedence_cases": 120,
+  "precedence_independent_requests": 1440,
+  "precedence_disagreements": 0,
+  "precedence_remaining_conflicts": 86,
+  "human_approvals": 0,
+  "scope": "Synthetic formal mechanisms only; not natural/regulatory repair effectiveness",
+  "branch_injections": "Two primary cases deliberately inject a no-op proposal or unresolved scan; these are control tests, not naturally observed solver results",
+  "generated_rows": [
+    {
+      "name": "generated-000",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-001",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          3
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-002",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          2,
+          5
+        ],
+        "safe_item": 0,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-003",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          2,
+          1,
+          7
+        ],
+        "safe_item": 3,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-004",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          6,
+          8,
+          7,
+          5
+        ],
+        "safe_item": 0,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-005",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          8,
+          12,
+          10,
+          3,
+          4
+        ],
+        "safe_item": 5,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-006",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 1,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-007",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-008",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          3,
+          5
+        ],
+        "safe_item": 4,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-009",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          8,
+          2,
+          0,
+          5
+        ],
+        "safe_item": 3,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-010",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          7,
+          6,
+          4,
+          9,
+          2
+        ],
+        "safe_item": 8,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-011",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          12,
+          9,
+          3,
+          10,
+          2,
+          6
+        ],
+        "safe_item": 1,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-012",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-013",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-014",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          3,
+          5
+        ],
+        "safe_item": 4,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-015",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          2,
+          8,
+          7
+        ],
+        "safe_item": 1,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-016",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          8,
+          10,
+          7,
+          4
+        ],
+        "safe_item": 2,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-017",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          10,
+          3,
+          6,
+          9,
+          11,
+          5
+        ],
+        "safe_item": 8,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-018",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-019",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-020",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          0,
+          5
+        ],
+        "safe_item": 6,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-021",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          0,
+          6,
+          7
+        ],
+        "safe_item": 4,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-022",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          8,
+          0,
+          1,
+          2
+        ],
+        "safe_item": 5,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-023",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          7,
+          10,
+          4,
+          6,
+          3,
+          2
+        ],
+        "safe_item": 9,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-024",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 1,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-025",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-026",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          3,
+          5
+        ],
+        "safe_item": 4,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-027",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          8,
+          0,
+          5
+        ],
+        "safe_item": 3,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-028",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          10,
+          9,
+          2,
+          3
+        ],
+        "safe_item": 5,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-029",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          12,
+          2,
+          9,
+          1,
+          11
+        ],
+        "safe_item": 0,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-030",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-031",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2,
+          1
+        ],
+        "safe_item": 3,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-032",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          6,
+          4
+        ],
+        "safe_item": 3,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-033",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          8,
+          6,
+          7
+        ],
+        "safe_item": 2,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-034",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          9,
+          5,
+          0,
+          3,
+          6
+        ],
+        "safe_item": 2,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-035",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          9,
+          6,
+          5,
+          8,
+          12,
+          10
+        ],
+        "safe_item": 4,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-036",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-037",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          3
+        ],
+        "safe_item": 2,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-038",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          3,
+          0
+        ],
+        "safe_item": 6,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-039",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          6,
+          1,
+          5
+        ],
+        "safe_item": 8,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-040",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          10,
+          0,
+          2,
+          6
+        ],
+        "safe_item": 5,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-041",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          9,
+          0,
+          7,
+          1,
+          5,
+          2
+        ],
+        "safe_item": 12,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-042",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1
+        ],
+        "safe_item": 0,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-043",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          3
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-044",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          4,
+          5
+        ],
+        "safe_item": 3,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-045",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          3,
+          7,
+          6
+        ],
+        "safe_item": 1,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-046",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          9,
+          4,
+          2,
+          6
+        ],
+        "safe_item": 3,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-047",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          8,
+          5,
+          1,
+          9,
+          3,
+          7
+        ],
+        "safe_item": 2,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-048",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-049",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          4
+        ],
+        "safe_item": 2,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-050",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          5,
+          2
+        ],
+        "safe_item": 4,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-051",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          1,
+          7,
+          8
+        ],
+        "safe_item": 6,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-052",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          8,
+          1,
+          7,
+          4
+        ],
+        "safe_item": 2,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-053",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          1,
+          2,
+          11,
+          8,
+          10
+        ],
+        "safe_item": 5,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-054",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-055",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-056",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          2,
+          0
+        ],
+        "safe_item": 3,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-057",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "safe_item": 3,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-058",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          9,
+          6,
+          5,
+          10,
+          1
+        ],
+        "safe_item": 2,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-059",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          9,
+          4,
+          6,
+          7,
+          12
+        ],
+        "safe_item": 8,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-060",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-061",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          3
+        ],
+        "safe_item": 2,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-062",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2,
+          5,
+          6
+        ],
+        "safe_item": 3,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-063",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          8,
+          5,
+          2
+        ],
+        "safe_item": 6,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-064",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          1,
+          0,
+          4,
+          9
+        ],
+        "safe_item": 8,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-065",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          7,
+          10,
+          4,
+          8,
+          1
+        ],
+        "safe_item": 12,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-066",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-067",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          1
+        ],
+        "safe_item": 0,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-068",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          1,
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-069",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2,
+          1,
+          6,
+          0
+        ],
+        "safe_item": 3,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-070",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          3,
+          10,
+          2,
+          7
+        ],
+        "safe_item": 8,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-071",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          4,
+          2,
+          0,
+          5,
+          10
+        ],
+        "safe_item": 6,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-072",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-073",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-074",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          2,
+          5
+        ],
+        "safe_item": 3,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-075",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          6,
+          8,
+          7
+        ],
+        "safe_item": 2,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-076",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          0,
+          6,
+          4,
+          7
+        ],
+        "safe_item": 9,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-077",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          3,
+          4,
+          11,
+          8,
+          9
+        ],
+        "safe_item": 12,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-078",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-079",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2,
+          1
+        ],
+        "safe_item": 3,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-080",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          3,
+          4
+        ],
+        "safe_item": 0,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-081",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          8,
+          7,
+          2,
+          1
+        ],
+        "safe_item": 6,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-082",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          4,
+          6,
+          1,
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-083",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          11,
+          1,
+          3,
+          9,
+          0,
+          4
+        ],
+        "safe_item": 8,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-084",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1
+        ],
+        "safe_item": 0,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-085",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          0
+        ],
+        "safe_item": 3,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-086",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2,
+          4,
+          1
+        ],
+        "safe_item": 0,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-087",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          7,
+          6,
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-088",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          2,
+          9,
+          4,
+          8
+        ],
+        "safe_item": 7,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-089",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          8,
+          2,
+          6,
+          7,
+          10,
+          11
+        ],
+        "safe_item": 4,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-090",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-091",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          3
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-092",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          0,
+          1
+        ],
+        "safe_item": 4,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-093",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          8,
+          7,
+          6
+        ],
+        "safe_item": 5,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-094",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          0,
+          7,
+          6,
+          10
+        ],
+        "safe_item": 1,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-095",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          7,
+          2,
+          12,
+          4,
+          5,
+          8
+        ],
+        "safe_item": 0,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-096",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-097",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-098",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          1,
+          4
+        ],
+        "safe_item": 6,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-099",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          4,
+          7,
+          2
+        ],
+        "safe_item": 6,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-100",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          8,
+          6,
+          9,
+          2,
+          1
+        ],
+        "safe_item": 7,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-101",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          8,
+          2,
+          7,
+          6,
+          1
+        ],
+        "safe_item": 10,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-102",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-103",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          2
+        ],
+        "safe_item": 3,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-104",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          5,
+          4
+        ],
+        "safe_item": 2,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-105",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          7,
+          1,
+          5
+        ],
+        "safe_item": 0,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-106",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          5,
+          7,
+          9,
+          2,
+          4
+        ],
+        "safe_item": 0,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-107",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2,
+          3,
+          8,
+          7,
+          1,
+          12
+        ],
+        "safe_item": 5,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-108",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1
+        ],
+        "safe_item": 2,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-109",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          2
+        ],
+        "safe_item": 1,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-110",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          5,
+          6
+        ],
+        "safe_item": 3,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-111",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          7,
+          3,
+          5,
+          4
+        ],
+        "safe_item": 6,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-112",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          4,
+          8,
+          5,
+          2,
+          6
+        ],
+        "safe_item": 1,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-113",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          12,
+          1,
+          4,
+          9,
+          3
+        ],
+        "safe_item": 0,
+        "conflicts": 6
+      }
+    },
+    {
+      "name": "generated-114",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 1,
+      "independent_request_checks": 6,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          2
+        ],
+        "safe_item": 0,
+        "conflicts": 1
+      }
+    },
+    {
+      "name": "generated-115",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 2,
+      "independent_request_checks": 10,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          0
+        ],
+        "safe_item": 2,
+        "conflicts": 2
+      }
+    },
+    {
+      "name": "generated-116",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 3,
+      "independent_request_checks": 14,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          3,
+          1,
+          4
+        ],
+        "safe_item": 2,
+        "conflicts": 3
+      }
+    },
+    {
+      "name": "generated-117",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 4,
+      "independent_request_checks": 18,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          1,
+          7,
+          3,
+          5
+        ],
+        "safe_item": 0,
+        "conflicts": 4
+      }
+    },
+    {
+      "name": "generated-118",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 5,
+      "independent_request_checks": 22,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          6,
+          10,
+          2,
+          9,
+          5
+        ],
+        "safe_item": 3,
+        "conflicts": 5
+      }
+    },
+    {
+      "name": "generated-119",
+      "status": "ACCEPTED",
+      "reason": "BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED",
+      "steps": 6,
+      "independent_request_checks": 26,
+      "injection": null,
+      "input_unchanged": true,
+      "design": {
+        "denied_items": [
+          0,
+          8,
+          9,
+          12,
+          3,
+          10
+        ],
+        "safe_item": 6,
+        "conflicts": 6
+      }
+    }
+  ],
+  "precedence_rows": [
+    {
+      "case": 0,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 1,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 2,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 3,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 4,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 5,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 6,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 7,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 8,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 9,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 10,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 11,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 12,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 13,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 14,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 15,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 16,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 17,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 18,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 19,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 20,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 21,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 22,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 23,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 24,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 25,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 26,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 27,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 28,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 29,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 30,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 31,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 32,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 33,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 34,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 35,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 36,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 37,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 38,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 39,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 40,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 41,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 42,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 43,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 44,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 45,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 46,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 47,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 48,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 49,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 50,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 51,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 52,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 53,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 54,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 55,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 56,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 57,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 58,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 59,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 60,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 61,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 62,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 63,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 64,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 65,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 66,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 67,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 68,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 69,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 70,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 71,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 72,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 73,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 74,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 75,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 76,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 77,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 78,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 79,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 80,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 81,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 82,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 83,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 84,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 85,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 86,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 87,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 88,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 89,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 90,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 91,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 92,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 93,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 94,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 95,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 96,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 97,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 98,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 99,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 100,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 101,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 102,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 103,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 104,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 105,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 106,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 107,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 108,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 109,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 110,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 111,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 112,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 113,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 114,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 115,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 116,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE"
+    },
+    {
+      "case": 117,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 118,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    },
+    {
+      "case": 119,
+      "requests": 12,
+      "disagreements": 0,
+      "final_scoped_label": "CONFLICTS_PRESENT"
+    }
+  ]
+}

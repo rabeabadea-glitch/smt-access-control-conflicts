@@ -1,0 +1,209 @@
+{
+  "purpose": "Does settled-winner selection accept fresh chained-priority cases in every rule order, and does the listed order?",
+  "written_utc": "2026-11-01T08:30:27+00:00",
+  "seed": 20261101,
+  "cases": 20,
+  "generation_attempts": 47,
+  "discarded": {
+    "FORCED_RETIREMENT": 7,
+    "NO_CHAIN": 20
+  },
+  "acceptance_rules": [
+    "every rule nonempty",
+    "a three-source alternating chain with a common request",
+    "no forced retirement (closed form leaves every rule nonempty)",
+    "closed form equals the independent target on every request"
+  ],
+  "target": "highest source with an applying rule decides; NotApplicable if none (independent of the repair code)",
+  "requirements": "one must-Permit or must-Deny requirement for every request whose target is Permit or Deny",
+  "authorized_choices": "every cross-source opposite-effect pair, winner from the higher source",
+  "orders": [
+    "highest_first",
+    "lowest_first",
+    "random_0",
+    "random_1",
+    "random_2",
+    "random_3",
+    "random_4",
+    "random_5",
+    "random_6",
+    "random_7",
+    "random_8",
+    "random_9"
+  ],
+  "modes": {
+    "listed": "research.workflow.refine_bounded",
+    "settled": "extensions.settled_refinement.refine_settled"
+  },
+  "max_iterations": 100,
+  "timeout_ms": 10000,
+  "requests_per_case": 72,
+  "case_sha256": {
+    "K01": "ff0ee2bfdcc511af48a2062c1e36df635359331fc165da84da09b69d97f6422e",
+    "K02": "e5d8f37a0337e1e31da8b47031d34cbc291b5d6ad179ef32b9c73d2c5354144c",
+    "K03": "07c78d5c572e4e66e8065b9646252f4df58ce48a72d587039e50c0eb8fbbb1c7",
+    "K04": "5605a75827fb7a9dfaead34964e76647a7b1554e693f3b69075a460ff8a67cca",
+    "K05": "96f6da2dda54a307c12e138f902cef3e5b4e9284fec069c1ea44500b7baaa6a9",
+    "K06": "a635b84220638d9dc378b8a37d39b1ee83ca5fe78f9c773ce5fa8ea524f4e12d",
+    "K07": "1a0f6727c8d7304e176a7d2e2d2fd545f20fe7a061d1ca36b65e6415a831baad",
+    "K08": "e572c32b24b4548d3c265d825122596bcfa19c5cd7b3a01f00e0070ba30f7efa",
+    "K09": "61197c8e0b531b76b1098257b9ff5eff0b8dc880600437b62caa90f2855fb98f",
+    "K10": "a035e70a594a19783729b0f5a39a05b573a1cb8d913f32201e3c093d6725e184",
+    "K11": "bd6dc61a7172f6bb8ebe6c22185ba429a636e030069438b0d598182d3f23e3a5",
+    "K12": "4e9e8e33e7bf78d5f29c0b203ad042a4b7c7ca34c1ba5f1647d3f09d0281ab2d",
+    "K13": "4f1a946a518fde64c4d6c3532886e14e9dceea2cacda8faa27fcb22741aa41ec",
+    "K14": "0c6d7817e6456b893945e315c27e27bfaa326296566c061584dfd839e476c548",
+    "K15": "be7293fcc0d2685407c50e4bd553bcd3c36627ee08ffb451c476755910f0b8c5",
+    "K16": "70c8225e41fba5a00d3574cca287863229cf18bed350e7d33d55ba4eda02cee8",
+    "K17": "6a5cb29cc291fb3ddaca7cb3b3f35724b5ab1bba98d0d9d6ffcc4cb3e416adbc",
+    "K18": "8ce460ef98d19a0117d9bdd40a387c866e13244e086465057b095d9ede643478",
+    "K19": "cff98e36afb1d221131c72f66a39fce81dec08a86b5ad0f86457fbb449ab7e5e",
+    "K20": "fdc64fc66a7161008ca905e0fc5dbc74d5b4b16709e022e923f76bddab108868"
+  },
+  "case_facts": {
+    "K01": {
+      "sources": 5,
+      "rules": 7,
+      "conflicting_pairs": 6,
+      "shadowed_losers": []
+    },
+    "K02": {
+      "sources": 3,
+      "rules": 5,
+      "conflicting_pairs": 3,
+      "shadowed_losers": []
+    },
+    "K03": {
+      "sources": 5,
+      "rules": 8,
+      "conflicting_pairs": 4,
+      "shadowed_losers": [
+        "S5_r1"
+      ]
+    },
+    "K04": {
+      "sources": 5,
+      "rules": 7,
+      "conflicting_pairs": 6,
+      "shadowed_losers": []
+    },
+    "K05": {
+      "sources": 5,
+      "rules": 8,
+      "conflicting_pairs": 14,
+      "shadowed_losers": [
+        "S5_r2"
+      ]
+    },
+    "K06": {
+      "sources": 5,
+      "rules": 9,
+      "conflicting_pairs": 12,
+      "shadowed_losers": [
+        "S5_r1"
+      ]
+    },
+    "K07": {
+      "sources": 5,
+      "rules": 6,
+      "conflicting_pairs": 3,
+      "shadowed_losers": []
+    },
+    "K08": {
+      "sources": 5,
+      "rules": 7,
+      "conflicting_pairs": 5,
+      "shadowed_losers": []
+    },
+    "K09": {
+      "sources": 3,
+      "rules": 4,
+      "conflicting_pairs": 3,
+      "shadowed_losers": []
+    },
+    "K10": {
+      "sources": 4,
+      "rules": 6,
+      "conflicting_pairs": 3,
+      "shadowed_losers": []
+    },
+    "K11": {
+      "sources": 5,
+      "rules": 5,
+      "conflicting_pairs": 4,
+      "shadowed_losers": []
+    },
+    "K12": {
+      "sources": 4,
+      "rules": 7,
+      "conflicting_pairs": 6,
+      "shadowed_losers": []
+    },
+    "K13": {
+      "sources": 5,
+      "rules": 6,
+      "conflicting_pairs": 5,
+      "shadowed_losers": []
+    },
+    "K14": {
+      "sources": 3,
+      "rules": 5,
+      "conflicting_pairs": 3,
+      "shadowed_losers": []
+    },
+    "K15": {
+      "sources": 5,
+      "rules": 7,
+      "conflicting_pairs": 6,
+      "shadowed_losers": []
+    },
+    "K16": {
+      "sources": 4,
+      "rules": 7,
+      "conflicting_pairs": 7,
+      "shadowed_losers": []
+    },
+    "K17": {
+      "sources": 3,
+      "rules": 5,
+      "conflicting_pairs": 4,
+      "shadowed_losers": []
+    },
+    "K18": {
+      "sources": 4,
+      "rules": 7,
+      "conflicting_pairs": 8,
+      "shadowed_losers": []
+    },
+    "K19": {
+      "sources": 3,
+      "rules": 4,
+      "conflicting_pairs": 2,
+      "shadowed_losers": []
+    },
+    "K20": {
+      "sources": 3,
+      "rules": 5,
+      "conflicting_pairs": 2,
+      "shadowed_losers": []
+    }
+  },
+  "source_hashes": {
+    "src/pcproof/__init__.py": "9d8b19dcc808bb299849fa1572d3a0702d4782b375d3b53f7996f0b9fcfabc12",
+    "src/pcproof/__main__.py": "15f9089517095cc69f5ae0a608500f988ff0e73c20e13a31bef9d281f0d9bfa8",
+    "src/pcproof/export.py": "85531bc9b7235b6e71132f29f63e8c4f3816a1c3a58e0ddce41f1134090eb965",
+    "src/pcproof/model.py": "f047d19f5f8e418a602ae591bb31b6784ffbf901bce819934fbeba61859083b4",
+    "src/pcproof/native_z3.py": "c5664153439c1636c559a034b49e0c173222ea0ab8c2b4846a7d22d5e08a0dbf",
+    "src/pcproof/repair.py": "9b44214c013770c31fb88f6a49eefb6f9662ed9bb102cc205707e1e48f540ced",
+    "src/pcproof/verify.py": "39426035aa38c0aa7953d16ea99f3b9d2cc604ad0e5db764e484c597a4d77d17",
+    "src/research/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/research/rego.py": "2f0ce6c468bdeb0f9c0dafeee4988d5d6269191767f977c1dbd827f2e220973c",
+    "src/research/screening.py": "5d95d064d4161c17374aea94c57572647ab63731de2f37c1ee6e67b0aeb01ab1",
+    "src/research/temporal.py": "6038ce431f53f2140adac3d3a6a4fc90964b8a1e2b146cea5a545bd76b1a0e15",
+    "src/research/workflow.py": "0017e9655d3aa6260a2b12905725abd351ef5c14d95f9b4ae9fa09b68a55d8f6",
+    "src/research/xacml.py": "078028ae5815c6f87a9c4c46f6fb74c305cde88da8fe600c64fad6eff7419ff8",
+    "src/extensions/__init__.py": "7999ecb40cc2501a3a7ea4d3fcacf065768556b5b7ba1fc26bad19dc7451c169",
+    "src/extensions/settled_refinement.py": "76b4d3b2e438c7146b62591d3b3b87d0e842e30f0bcc1507c3058a600a13d686"
+  },
+  "note": "Designed on 1 November 2026, after the settled-winner rule and Proposition 4.6; the generator, seed and acceptance rules were fixed before any repair was run."
+}

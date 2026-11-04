@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-datatypes ((E 0)) (((v0) (v1) (v2))))
+(define-fun code ((x E)) Int (ite (= x v0) 0 (ite (= x v1) 1 (ite (= x v2) 2 0))))
+(declare-const z Int)
+(assert (and (<= 0 z) (<= z 2)))
+(assert (forall ((v E)) (not (= (code v) z))))
+(check-sat)

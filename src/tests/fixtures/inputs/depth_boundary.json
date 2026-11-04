@@ -1,0 +1,186 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "x": {
+      "type": "int",
+      "min": 0,
+      "max": 3
+    }
+  },
+  "sources": {
+    "A": {
+      "kind": "synthetic",
+      "citation": "Adversarial probe fixture A",
+      "mapping_status": "synthetic; no real authorization or mapping approval"
+    },
+    "B": {
+      "kind": "synthetic",
+      "citation": "Adversarial probe fixture B",
+      "mapping_status": "synthetic; no real authorization or mapping approval"
+    }
+  },
+  "rules": [
+    {
+      "id": "loser",
+      "effect": "Permit",
+      "condition": {
+        "op": "not",
+        "arg": {
+          "op": "not",
+          "arg": {
+            "op": "not",
+            "arg": {
+              "op": "not",
+              "arg": {
+                "op": "not",
+                "arg": {
+                  "op": "not",
+                  "arg": {
+                    "op": "not",
+                    "arg": {
+                      "op": "not",
+                      "arg": {
+                        "op": "not",
+                        "arg": {
+                          "op": "not",
+                          "arg": {
+                            "op": "not",
+                            "arg": {
+                              "op": "not",
+                              "arg": {
+                                "op": "not",
+                                "arg": {
+                                  "op": "not",
+                                  "arg": {
+                                    "op": "not",
+                                    "arg": {
+                                      "op": "not",
+                                      "arg": {
+                                        "op": "not",
+                                        "arg": {
+                                          "op": "not",
+                                          "arg": {
+                                            "op": "not",
+                                            "arg": {
+                                              "op": "not",
+                                              "arg": {
+                                                "op": "not",
+                                                "arg": {
+                                                  "op": "not",
+                                                  "arg": {
+                                                    "op": "not",
+                                                    "arg": {
+                                                      "op": "not",
+                                                      "arg": {
+                                                        "op": "not",
+                                                        "arg": {
+                                                          "op": "not",
+                                                          "arg": {
+                                                            "op": "not",
+                                                            "arg": {
+                                                              "op": "not",
+                                                              "arg": {
+                                                                "op": "not",
+                                                                "arg": {
+                                                                  "op": "not",
+                                                                  "arg": {
+                                                                    "op": "not",
+                                                                    "arg": {
+                                                                      "op": "not",
+                                                                      "arg": {
+                                                                        "op": "not",
+                                                                        "arg": {
+                                                                          "op": "not",
+                                                                          "arg": {
+                                                                            "op": "not",
+                                                                            "arg": {
+                                                                              "op": "not",
+                                                                              "arg": {
+                                                                                "op": "not",
+                                                                                "arg": {
+                                                                                  "op": "not",
+                                                                                  "arg": {
+                                                                                    "op": "not",
+                                                                                    "arg": {
+                                                                                      "op": "not",
+                                                                                      "arg": {
+                                                                                        "op": "le",
+                                                                                        "attr": "x",
+                                                                                        "value": 2
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "source": "A"
+    },
+    {
+      "id": "winner",
+      "effect": "Deny",
+      "condition": {
+        "op": "eq",
+        "attr": "x",
+        "value": 0
+      },
+      "source": "B"
+    }
+  ],
+  "validity": true,
+  "invariants": [
+    {
+      "id": "deny_zero",
+      "when": {
+        "op": "eq",
+        "attr": "x",
+        "value": 0
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "permit_two",
+      "when": {
+        "op": "eq",
+        "attr": "x",
+        "value": 2
+      },
+      "required": "Permit"
+    }
+  ],
+  "precedence": []
+}

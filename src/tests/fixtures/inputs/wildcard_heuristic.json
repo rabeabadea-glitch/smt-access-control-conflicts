@@ -1,0 +1,43 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "x": {
+      "type": "int",
+      "min": 0,
+      "max": 3
+    }
+  },
+  "sources": {
+    "A": {
+      "kind": "synthetic",
+      "citation": "Adversarial probe fixture A",
+      "mapping_status": "synthetic; no real authorization or mapping approval"
+    },
+    "B": {
+      "kind": "synthetic",
+      "citation": "Adversarial probe fixture B",
+      "mapping_status": "synthetic; no real authorization or mapping approval"
+    }
+  },
+  "rules": [
+    {
+      "id": "permit",
+      "effect": "Permit",
+      "condition": {
+        "op": "eq",
+        "attr": "x",
+        "value": 0
+      },
+      "source": "A"
+    },
+    {
+      "id": "default_deny",
+      "effect": "Deny",
+      "condition": true,
+      "source": "B"
+    }
+  ],
+  "validity": true,
+  "invariants": [],
+  "precedence": []
+}

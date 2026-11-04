@@ -1,0 +1,12 @@
+{
+  "source_id": "B",
+  "format": "cpm",
+  "combining": "union",
+  "rules": [
+    {
+      "id": "B_r1",
+      "effect": "Deny",
+      "when": "q"
+    }
+  ]
+}

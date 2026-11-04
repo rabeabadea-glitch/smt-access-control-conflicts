@@ -1,0 +1,25 @@
+[
+ {
+  "file": "contrib/wasm/cloudflare-worker/example.rego",
+  "rules": 1,
+  "effects": [
+   "Permit"
+  ],
+  "audit_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE",
+  "eligible_pairs": 0
+ },
+ {
+  "file": "contrib/opa-aws-cloudformation-hook/examples/policy/authz.rego",
+  "rules": 1,
+  "effects": [
+   "Permit"
+  ],
+  "audit_label": "CROSS_SOURCE_CONFLICT_FREE_WITHIN_SCOPE",
+  "eligible_pairs": 0
+ },
+ {
+  "file": "contrib/opa-aws-cloudformation-hook/examples/policy/aws.rego",
+  "rules": 0,
+  "note": "package without rules"
+ }
+]

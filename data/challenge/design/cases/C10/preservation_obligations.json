@@ -1,0 +1,82 @@
+[
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false
+    },
+    "original": "Deny",
+    "required": "Deny",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true
+    },
+    "original": "Permit",
+    "required": "Permit",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false
+    },
+    "original": "Deny",
+    "required": "Deny",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true
+    },
+    "original": "Permit",
+    "required": "Permit",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false
+    },
+    "original": "Deny",
+    "required": "Deny",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true
+    },
+    "original": "Deny",
+    "required": "Deny",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false
+    },
+    "original": "Permit",
+    "required": "Permit",
+    "included_in_frozen_target": true
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true
+    },
+    "original": "Permit",
+    "required": "Permit",
+    "included_in_frozen_target": true
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "result": [
+    {
+      "expressions": [
+        {
+          "value": [
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "C_r2"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "B_r2",
+                "C_r2"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "C_r1"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "B_r2",
+                "C_r1"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "A_r2"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "A_r2",
+                "B_r1"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "A_r1"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "A_r1",
+                "B_r1"
+              ]
+            }
+          ],
+          "text": "[r | x := data.cases[_]; r := data.thesis.result with input as x]",
+          "location": {
+            "row": 1,
+            "col": 1
+          }
+        }
+      ]
+    }
+  ]
+}

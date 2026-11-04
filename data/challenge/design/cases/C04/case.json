@@ -1,0 +1,297 @@
+{
+  "case_id": "C04",
+  "title": "Mixed six-attribute multi-source priority case 4",
+  "role": "substantive finite challenge",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    },
+    "s": {
+      "type": "bool"
+    },
+    "t": {
+      "type": "bool"
+    },
+    "u": {
+      "type": "bool"
+    }
+  },
+  "source_assets": [
+    {
+      "source_id": "A",
+      "format": "xacml",
+      "rule_count": 4,
+      "combining": "first-applicable",
+      "path": "cases/C04/sources/A.xml",
+      "descriptors": {
+        "p": {
+          "name": "p",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "p",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "q": {
+          "name": "q",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "q",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "r": {
+          "name": "r",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "r",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "s": {
+          "name": "s",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "s",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "t": {
+          "name": "t",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "t",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "u": {
+          "name": "u",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "u",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        }
+      }
+    },
+    {
+      "source_id": "B",
+      "format": "xacml",
+      "rule_count": 4,
+      "combining": "deny-overrides",
+      "path": "cases/C04/sources/B.xml",
+      "descriptors": {
+        "p": {
+          "name": "p",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "p",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "q": {
+          "name": "q",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "q",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "r": {
+          "name": "r",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "r",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "s": {
+          "name": "s",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "s",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "t": {
+          "name": "t",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "t",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "u": {
+          "name": "u",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "u",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        }
+      }
+    },
+    {
+      "source_id": "C",
+      "format": "xacml",
+      "rule_count": 4,
+      "combining": "first-applicable",
+      "path": "cases/C04/sources/C.xml",
+      "descriptors": {
+        "p": {
+          "name": "p",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "p",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "q": {
+          "name": "q",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "q",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "r": {
+          "name": "r",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "r",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "s": {
+          "name": "s",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "s",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "t": {
+          "name": "t",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "t",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "u": {
+          "name": "u",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "u",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        }
+      }
+    },
+    {
+      "source_id": "D",
+      "format": "xacml",
+      "rule_count": 4,
+      "combining": "permit-overrides",
+      "path": "cases/C04/sources/D.xml",
+      "descriptors": {
+        "p": {
+          "name": "p",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "p",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "q": {
+          "name": "q",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "q",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "r": {
+          "name": "r",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "r",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "s": {
+          "name": "s",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "s",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "t": {
+          "name": "t",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "t",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        },
+        "u": {
+          "name": "u",
+          "Category": "urn:thesis:frozen-challenge:request",
+          "AttributeId": "u",
+          "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+          "Issuer": ""
+        }
+      }
+    },
+    {
+      "source_id": "E",
+      "format": "rego",
+      "rule_count": 4,
+      "combining": "union",
+      "path": "cases/C04/sources/E.rego",
+      "manifest_path": "cases/C04/sources/E.manifest.json"
+    },
+    {
+      "source_id": "F",
+      "format": "rego",
+      "rule_count": 4,
+      "combining": "union",
+      "path": "cases/C04/sources/F.rego",
+      "manifest_path": "cases/C04/sources/F.manifest.json"
+    },
+    {
+      "source_id": "G",
+      "format": "rego",
+      "rule_count": 4,
+      "combining": "union",
+      "path": "cases/C04/sources/G.rego",
+      "manifest_path": "cases/C04/sources/G.manifest.json"
+    },
+    {
+      "source_id": "H",
+      "format": "rego",
+      "rule_count": 4,
+      "combining": "union",
+      "path": "cases/C04/sources/H.rego",
+      "manifest_path": "cases/C04/sources/H.manifest.json"
+    }
+  ],
+  "request_count": 64,
+  "source_count": 8,
+  "source_rule_count": 32,
+  "anticipated_compiled_rule_count": 24,
+  "independent_priority_specification_high_to_low": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "target_specification": "At each complete Boolean request, take the first non-NotApplicable source decision in the listed high-to-low order. This is an independent source-priority specification, not a repair-region formula.",
+  "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+  "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+  "original_union_decision_counts": {
+    "Deny": 16,
+    "Permit": 16,
+    "Conflict": 32
+  },
+  "target_decision_counts": {
+    "Deny": 32,
+    "Permit": 32
+  },
+  "conflict_request_count": 32,
+  "preserved_original_permit_count": 16,
+  "preserved_original_deny_count": 16,
+  "input_path": null,
+  "requirements_path": "cases/C04/requirements.json",
+  "truth_table_path": "cases/C04/expected_truth_table.json",
+  "governance_path": "cases/C04/governance.json",
+  "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+}

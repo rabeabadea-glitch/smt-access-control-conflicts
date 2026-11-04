@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "seed": 20261020,
+  "losing_deny_policies": 60,
+  "losing_deny_steps": 210,
+  "losing_deny_request_checks": 960,
+  "interacting_case": {
+    "case": "interacting-overlaps",
+    "steps": 2,
+    "requests": 10,
+    "mismatches": 0
+  },
+  "incomplete_contract_counterexample": {
+    "case": "incomplete-contract-access-expansion",
+    "steps": 1,
+    "requests": 8,
+    "mismatches": 0
+  },
+  "human_approvals": 0,
+  "disagreements_with_declared_expected_behavior": 0,
+  "limitation": "The counterexample changes Conflict (allow=false) to Permit (allow=true) at an unprotected request while all supplied contracts pass. Do not call contract acceptance general safety.",
+  "protocol_sha256": "original protocol hash not recomputed in this rerun"
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "NotApplicable",
+      "C": "Deny"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Deny"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "NotApplicable",
+      "C": "Permit"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Permit",
+      "C": "NotApplicable"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Permit",
+      "C": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  }
+]

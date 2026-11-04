@@ -1,0 +1,41 @@
+{
+  "completed_utc": "2026-10-20T22:40:10.991974+00:00",
+  "status": "COMPLETED_WITH_PRIOR_TOOL_BOUNDARIES",
+  "cases": 24,
+  "finite_request_comparisons": 240,
+  "native_label_mismatches": 0,
+  "native_invalid_SAT_witnesses": 0,
+  "prior_status_counts": {
+    "SAT": 6,
+    "UNSAT": 6,
+    "ERROR": 12,
+    "TIMEOUT": 0,
+    "UNRESOLVED": 0
+  },
+  "prior_resolved_labels_matching_finite": 12,
+  "prior_invalid_or_incomplete_SAT_witnesses": 0,
+  "OPA_requests": 240,
+  "OPA_mismatches": 0,
+  "Balana_evaluations": 480,
+  "Balana_mismatches": 0,
+  "Balana_returncode": 0,
+  "Balana_command": [
+    "C:\\Users\\rabea\\Desktop\\master degree\\paper to publish\\thesis\\Full thesis\\06_Thesis_Development\\Research_Completion\\tools\\xacml\\azul_jdk\\zulu21.52.203-ca-jdk21.0.12.1-win_x64\\bin\\java.exe",
+    "-Xmx1024m",
+    "-cp",
+    "C:\\Users\\rabea\\Desktop\\master degree\\paper to publish\\thesis\\Full thesis\\06_Thesis_Development\\Research_Completion\\tools\\xacml\\classes;C:\\Users\\rabea\\Desktop\\master degree\\paper to publish\\thesis\\Full thesis\\06_Thesis_Development\\Research_Completion\\tools\\xacml\\lib\\*",
+    "BalanaBatch",
+    "C:\\Users\\rabea\\Desktop\\master degree\\paper to publish\\thesis\\Full thesis\\06_Thesis_Development\\Research_Completion\\Revision_2026_10_21\\prior_comparison\\primary_v2\\Balana_manifest.tsv"
+  ],
+  "prior_tool_jar_sha256": "f0bba4089f6bf09838a3978b19aac40c8129f218a3c0e9e2462a14e9258f99e7",
+  "current_Z3_library_sha256": "88b20513993816cf71e29969c5232a8eb03dda05deefce71879ecc1e3519b2aa",
+  "source_core_unchanged": true,
+  "performance_comparison": false,
+  "human_source_validation": false,
+  "limitations": [
+    "24 generated shared-semantics controls are not an external population benchmark",
+    "Original tool artifact may use uninterpreted-function abstraction; SAT without valid concrete replay is not confirmed conflict",
+    "Tool errors and abstraction boundaries do not establish defects in the published general algorithm",
+    "This task is bounded inter-policy opposition, not full XACML conformance, policy repair or legal interpretation"
+  ]
+}

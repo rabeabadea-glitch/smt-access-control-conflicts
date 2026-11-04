@@ -1,0 +1,25 @@
+{
+  "precedence": [
+    {
+      "higher": "A",
+      "lower": "B",
+      "approval_id": "frozen-research-direction-A-over-B"
+    },
+    {
+      "higher": "A",
+      "lower": "C",
+      "approval_id": "frozen-research-direction-A-over-C"
+    },
+    {
+      "higher": "B",
+      "lower": "D",
+      "approval_id": "frozen-research-direction-B-over-D"
+    },
+    {
+      "higher": "C",
+      "lower": "D",
+      "approval_id": "frozen-research-direction-C-over-D"
+    }
+  ],
+  "meaning": "Research specification only: declared permissible automated source directions, not deployment authority."
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "repo": "policy-conflict-detection/datasets",
+    "name": "GEYSERS.xml",
+    "sha256": "b955aa160d2e9a29a94c6c7a9b2ce05d647cd28157a709a34bfc31a3b9aa24ae",
+    "tags": {
+      "PolicySet": 1,
+      "Policy": 7,
+      "Target": 22,
+      "Rule": 15,
+      "AnyOf": 22,
+      "AllOf": 43,
+      "Match": 55,
+      "AttributeValue": 55,
+      "AttributeDesignator": 55,
+      "Description": 7
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 55
+    },
+    "missing": "Counter({('Category', 'AttributeDesignator'): 55, ('MustBePresent', 'AttributeDesignator'): 55})"
+  },
+  {
+    "repo": "policy-conflict-detection/datasets",
+    "name": "KMarket.xml",
+    "sha256": "7c2ae84a0a16867f9919e51fd9fd9a51b1320366154c3bedd1b5b35d800a7ca1",
+    "tags": {
+      "PolicySet": 1,
+      "Description": 2,
+      "Target": 5,
+      "Policy": 1,
+      "AnyOf": 4,
+      "AllOf": 4,
+      "Match": 4,
+      "AttributeValue": 12,
+      "AttributeDesignator": 7,
+      "Rule": 5,
+      "Condition": 3,
+      "Apply": 6,
+      "AdviceExpressions": 4,
+      "AdviceExpression": 4,
+      "AttributeAssignmentExpression": 5,
+      "ObligationExpressions": 1,
+      "ObligationExpression": 1
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 4,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-greater-than": 3,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only": 3
+    },
+    "missing": "Counter()"
+  },
+  {
+    "repo": "policy-conflict-detection/datasets",
+    "name": "continue-a-xacml3.xml",
+    "sha256": "707929794d451e7075304262c9030332a7842e1698921bc5bb6c3d708088e30f",
+    "tags": {
+      "PolicySet": 111,
+      "Target": 675,
+      "AnyOf": 518,
+      "AllOf": 583,
+      "Match": 671,
+      "AttributeValue": 671,
+      "AttributeDesignator": 671,
+      "Policy": 266,
+      "Rule": 298
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 671
+    },
+    "missing": "Counter()"
+  },
+  {
+    "repo": "policy-conflict-detection/datasets",
+    "name": "synthetic360.xml",
+    "sha256": "6c8cf3fa8b249a4c7e278753eb1179624df9e76ad2ba9ccdc4aaa7b7e2f13cb9",
+    "tags": {
+      "PolicySet": 31,
+      "Target": 463,
+      "AnyOf": 1370,
+      "AllOf": 4131,
+      "Match": 12478,
+      "AttributeValue": 12478,
+      "AttributeDesignator": 12478,
+      "Policy": 72,
+      "Rule": 360
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 3046,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-less-than": 299,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-equal": 4955,
+      "urn:oasis:names:tc:xacml:1.0:function:double-equal": 1926,
+      "urn:oasis:names:tc:xacml:1.0:function:string-greater-than": 204,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-greater-than": 322,
+      "urn:oasis:names:tc:xacml:1.0:function:double-greater-than-or-equal": 135,
+      "urn:oasis:names:tc:xacml:1.0:function:double-greater-than": 130,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal": 298,
+      "urn:oasis:names:tc:xacml:1.0:function:string-less-than": 195,
+      "urn:oasis:names:tc:xacml:1.0:function:double-less-than": 125,
+      "urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal": 191,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal": 334,
+      "urn:oasis:names:tc:xacml:1.0:function:string-less-than-or-equal": 186,
+      "urn:oasis:names:tc:xacml:1.0:function:double-less-than-or-equal": 132
+    },
+    "missing": "Counter()"
+  },
+  {
+    "repo": "xuansonha17031991__XACs-DyPol/data",
+    "name": "GEYSERS.xml",
+    "sha256": "ab841f9e194f4a48f4115d020b309e0835ec8226f276b182694666031024bb0e",
+    "tags": {
+      "PolicySet": 1,
+      "Policy": 7,
+      "Target": 22,
+      "Rule": 15,
+      "AnyOf": 22,
+      "AllOf": 43,
+      "Match": 55,
+      "AttributeValue": 55,
+      "AttributeDesignator": 55,
+      "Description": 7
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 55
+    },
+    "missing": "Counter({('Category', 'AttributeDesignator'): 55, ('MustBePresent', 'AttributeDesignator'): 55})"
+  },
+  {
+    "repo": "xuansonha17031991__XACs-DyPol/data",
+    "name": "KMarket.xml",
+    "sha256": "791c7e1797aaaa30c8aaf4ad0d734ac1814bf113c5714a3df22f06ba9c2266e7",
+    "tags": {
+      "PolicySet": 1,
+      "Description": 2,
+      "Target": 5,
+      "Policy": 1,
+      "AnyOf": 4,
+      "AllOf": 4,
+      "Match": 4,
+      "AttributeValue": 12,
+      "AttributeDesignator": 7,
+      "Rule": 5,
+      "Condition": 3,
+      "Apply": 6,
+      "AdviceExpressions": 4,
+      "AdviceExpression": 4,
+      "AttributeAssignmentExpression": 5,
+      "ObligationExpressions": 1,
+      "ObligationExpression": 1
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 4,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-greater-than": 3,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only": 3
+    },
+    "missing": "Counter()"
+  },
+  {
+    "repo": "xuansonha17031991__XACs-DyPol/data",
+    "name": "continue-a-xacml3.xml",
+    "sha256": "707929794d451e7075304262c9030332a7842e1698921bc5bb6c3d708088e30f",
+    "tags": {
+      "PolicySet": 111,
+      "Target": 675,
+      "AnyOf": 518,
+      "AllOf": 583,
+      "Match": 671,
+      "AttributeValue": 671,
+      "AttributeDesignator": 671,
+      "Policy": 266,
+      "Rule": 298
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 671
+    },
+    "missing": "Counter()"
+  },
+  {
+    "repo": "xuansonha17031991__XACs-DyPol/data",
+    "name": "synthetic360.xml",
+    "sha256": "6c8cf3fa8b249a4c7e278753eb1179624df9e76ad2ba9ccdc4aaa7b7e2f13cb9",
+    "tags": {
+      "PolicySet": 31,
+      "Target": 463,
+      "AnyOf": 1370,
+      "AllOf": 4131,
+      "Match": 12478,
+      "AttributeValue": 12478,
+      "AttributeDesignator": 12478,
+      "Policy": 72,
+      "Rule": 360
+    },
+    "functions": {
+      "urn:oasis:names:tc:xacml:1.0:function:string-equal": 3046,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-less-than": 299,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-equal": 4955,
+      "urn:oasis:names:tc:xacml:1.0:function:double-equal": 1926,
+      "urn:oasis:names:tc:xacml:1.0:function:string-greater-than": 204,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-greater-than": 322,
+      "urn:oasis:names:tc:xacml:1.0:function:double-greater-than-or-equal": 135,
+      "urn:oasis:names:tc:xacml:1.0:function:double-greater-than": 130,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal": 298,
+      "urn:oasis:names:tc:xacml:1.0:function:string-less-than": 195,
+      "urn:oasis:names:tc:xacml:1.0:function:double-less-than": 125,
+      "urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal": 191,
+      "urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal": 334,
+      "urn:oasis:names:tc:xacml:1.0:function:string-less-than-or-equal": 186,
+      "urn:oasis:names:tc:xacml:1.0:function:double-less-than-or-equal": 132
+    },
+    "missing": "Counter()"
+  }
+]

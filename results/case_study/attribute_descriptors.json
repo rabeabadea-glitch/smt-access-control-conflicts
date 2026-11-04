@@ -1,0 +1,80 @@
+{
+  "action": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:action",
+    "AttributeId": "urn:oasis:names:tc:xacml:1.0:action:action-id",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "record_type": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
+    "AttributeId": "urn:corp:resource:record-type",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "contains_pii": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
+    "AttributeId": "urn:corp:resource:contains-pii",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "legal_hold": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
+    "AttributeId": "urn:corp:resource:under-legal-hold",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "role": {
+    "Category": "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
+    "AttributeId": "urn:corp:subject:role",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "str_flag": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
+    "AttributeId": "urn:corp:resource:str-flag",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "documented_purpose": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+    "AttributeId": "urn:corp:env:documented-purpose",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "retention_age_years": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
+    "AttributeId": "urn:corp:resource:retention-age-years",
+    "DataType": "http://www.w3.org/2001/XMLSchema#integer",
+    "Issuer": ""
+  },
+  "legal_basis": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+    "AttributeId": "urn:corp:env:legal-basis",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "legitimate_need": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+    "AttributeId": "urn:corp:env:legitimate-need",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "password_age_days": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+    "AttributeId": "urn:corp:env:password-age-days",
+    "DataType": "http://www.w3.org/2001/XMLSchema#integer",
+    "Issuer": ""
+  },
+  "sole_factor": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+    "AttributeId": "urn:corp:env:sole-factor",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  },
+  "compromise_evidence": {
+    "Category": "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+    "AttributeId": "urn:corp:env:compromise-evidence",
+    "DataType": "http://www.w3.org/2001/XMLSchema#string",
+    "Issuer": ""
+  }
+}

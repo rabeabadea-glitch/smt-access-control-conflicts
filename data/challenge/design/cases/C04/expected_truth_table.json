@@ -1,0 +1,1602 @@
+[
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "Deny",
+      "F": "Permit",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "NotApplicable",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "NotApplicable",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "NotApplicable",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "NotApplicable",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Permit",
+      "C": "NotApplicable",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Permit",
+      "C": "Permit",
+      "D": "Deny",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Deny",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Permit",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Permit",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": false,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Deny",
+      "D": "NotApplicable",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Permit",
+      "C": "Deny",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "NotApplicable",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "NotApplicable",
+      "D": "Permit",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Permit",
+      "C": "Deny",
+      "D": "Permit",
+      "E": "Deny",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": false,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "Deny",
+      "C": "NotApplicable",
+      "D": "Permit",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "Deny",
+      "D": "NotApplicable",
+      "E": "Permit",
+      "F": "Deny",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Deny",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Permit",
+      "C": "Deny",
+      "D": "NotApplicable",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": false,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Deny",
+      "C": "Permit",
+      "D": "Permit",
+      "E": "Permit",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Deny",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": false,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Permit",
+      "B": "NotApplicable",
+      "C": "NotApplicable",
+      "D": "NotApplicable",
+      "E": "NotApplicable",
+      "F": "NotApplicable",
+      "G": "NotApplicable",
+      "H": "NotApplicable"
+    },
+    "original_union_decision": "Permit",
+    "expected_final_decision": "Permit",
+    "required": [
+      "Permit"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "NotApplicable",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Permit",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": false,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Deny",
+      "C": "Deny",
+      "D": "Permit",
+      "E": "Deny",
+      "F": "Deny",
+      "G": "Deny",
+      "H": "Deny"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": false
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Permit",
+      "C": "Deny",
+      "D": "Deny",
+      "E": "Deny",
+      "F": "Permit",
+      "G": "Permit",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  },
+  {
+    "request": {
+      "p": true,
+      "q": true,
+      "r": true,
+      "s": true,
+      "t": true,
+      "u": true
+    },
+    "source_decisions": {
+      "A": "Deny",
+      "B": "Deny",
+      "C": "Deny",
+      "D": "Permit",
+      "E": "Deny",
+      "F": "Permit",
+      "G": "Deny",
+      "H": "Permit"
+    },
+    "original_union_decision": "Conflict",
+    "expected_final_decision": "Deny",
+    "required": [
+      "Deny"
+    ]
+  }
+]

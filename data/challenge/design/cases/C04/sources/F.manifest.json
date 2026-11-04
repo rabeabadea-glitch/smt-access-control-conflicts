@@ -1,0 +1,57 @@
+{
+  "schema_version": "cpm-1",
+  "package": "challenge_F",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    },
+    "s": {
+      "type": "bool"
+    },
+    "t": {
+      "type": "bool"
+    },
+    "u": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "F": {
+      "kind": "synthetic",
+      "citation": "Frozen manually authored challenge F",
+      "mapping_status": "synthetic structured source; no regulatory interpretation"
+    }
+  },
+  "rules": [
+    {
+      "id": "F_r1",
+      "source": "F",
+      "effect": "Permit",
+      "entry": "entry_F_r1"
+    },
+    {
+      "id": "F_r2",
+      "source": "F",
+      "effect": "Deny",
+      "entry": "entry_F_r2"
+    },
+    {
+      "id": "F_r3",
+      "source": "F",
+      "effect": "Deny",
+      "entry": "entry_F_r3"
+    },
+    {
+      "id": "F_r4",
+      "source": "F",
+      "effect": "Permit",
+      "entry": "entry_F_r4"
+    }
+  ]
+}

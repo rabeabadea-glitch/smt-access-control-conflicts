@@ -1,0 +1,25 @@
+{
+  "input": "/home/user/pkg/results/screen_scale/heterogeneous_inputs/heterogeneous-030.json",
+  "rules": 30,
+  "serial_screen_ms": 1009.7181770001953,
+  "serial_phase_ms": {
+    "model_loading_embedding_ms": 416.06088100002125,
+    "entity_ms": 0.2908360002038535,
+    "rdf_build_query_ms": 588.7797339998997
+  },
+  "eligible_pairs": 173,
+  "serial_candidate_ms": 61.96353999985149,
+  "serial_kept": 16,
+  "exact_screen_and_candidate_ms": 474.70518899990566,
+  "exact_kept": 119,
+  "exhaustive_ms": 686.448928000118,
+  "sat_pairs": 105,
+  "unresolved_pairs": 0,
+  "serial_retained_sat": 6,
+  "exact_retained_sat": 105,
+  "label_disagreements": 0,
+  "worker_ms": 2417.273493000266,
+  "family": "heterogeneous",
+  "rep": 1,
+  "outer_wall_ms": 2561.386801000026
+}

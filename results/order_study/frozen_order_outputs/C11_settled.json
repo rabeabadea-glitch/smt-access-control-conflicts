@@ -1,0 +1,802 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    },
+    "s": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "A": {
+      "kind": "synthetic",
+      "citation": "Manually authored challenge C11",
+      "mapping_status": "synthetic structured source; no external interpretation"
+    },
+    "B": {
+      "kind": "synthetic",
+      "citation": "Manually authored challenge C11",
+      "mapping_status": "synthetic structured source; no external interpretation"
+    },
+    "C": {
+      "kind": "synthetic",
+      "citation": "Manually authored challenge C11",
+      "mapping_status": "synthetic structured source; no external interpretation"
+    },
+    "D": {
+      "kind": "synthetic",
+      "citation": "Manually authored challenge C11",
+      "mapping_status": "synthetic structured source; no external interpretation"
+    }
+  },
+  "rules": [
+    {
+      "id": "A_r1",
+      "source": "A",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A_r2",
+      "source": "A",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "eq",
+              "attr": "q",
+              "value": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "B_r1",
+      "source": "B",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "p",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "r",
+                "value": true
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "p",
+                  "value": true
+                },
+                {
+                  "op": "not",
+                  "arg": {
+                    "op": "eq",
+                    "attr": "q",
+                    "value": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "B_r2",
+      "source": "B",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "not",
+            "arg": {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            }
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "C_r1",
+      "source": "C",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "p",
+                "value": true
+              },
+              {
+                "op": "eq",
+                "attr": "s",
+                "value": true
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "p",
+                  "value": true
+                },
+                {
+                  "op": "not",
+                  "arg": {
+                    "op": "eq",
+                    "attr": "q",
+                    "value": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "C_r2",
+      "source": "C",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "not",
+            "arg": {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            }
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "D_r1",
+      "source": "D",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "p",
+                "value": true
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "eq",
+                  "attr": "r",
+                  "value": true
+                }
+              },
+              {
+                "op": "not",
+                "arg": {
+                  "op": "eq",
+                  "attr": "s",
+                  "value": true
+                }
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "p",
+                  "value": true
+                },
+                {
+                  "op": "not",
+                  "arg": {
+                    "op": "eq",
+                    "attr": "q",
+                    "value": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "D_r2",
+      "source": "D",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "not",
+            "arg": {
+              "op": "eq",
+              "attr": "p",
+              "value": true
+            }
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "eq",
+              "attr": "r",
+              "value": true
+            }
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "eq",
+              "attr": "s",
+              "value": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "precedence": [
+    {
+      "higher": "A",
+      "lower": "B",
+      "approval_id": "frozen-research-direction-A-over-B"
+    },
+    {
+      "higher": "A",
+      "lower": "C",
+      "approval_id": "frozen-research-direction-A-over-C"
+    },
+    {
+      "higher": "B",
+      "lower": "D",
+      "approval_id": "frozen-research-direction-B-over-D"
+    },
+    {
+      "higher": "C",
+      "lower": "D",
+      "approval_id": "frozen-research-direction-C-over-D"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "C11_request_0_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_1_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_2_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_3_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_4_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_5_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_6_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_7_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_8_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_9_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_10_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_11_must_Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "C11_request_12_must_Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Permit"
+    },
+    {
+      "id": "C11_request_13_must_Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": false
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Permit"
+    },
+    {
+      "id": "C11_request_14_must_Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": false
+          }
+        ]
+      },
+      "required": "Permit"
+    },
+    {
+      "id": "C11_request_15_must_Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "p",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "q",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "r",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "s",
+            "value": true
+          }
+        ]
+      },
+      "required": "Permit"
+    }
+  ],
+  "validity": true
+}

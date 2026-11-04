@@ -1,0 +1,663 @@
+{
+  "result": [
+    {
+      "expressions": [
+        {
+          "value": [
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r4",
+                "G_r4",
+                "H_r4",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r4",
+                "G_r4",
+                "H_r2",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r4",
+                "G_r2",
+                "H_r4",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r4",
+                "G_r2",
+                "H_r2",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r3",
+                "G_r3",
+                "H_r4",
+                "urn:challenge:A::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r3",
+                "G_r3",
+                "H_r2",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r3",
+                "G_r2",
+                "H_r4",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r3",
+                "G_r2",
+                "H_r2",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Deny",
+              "matched": [
+                "urn:challenge:A::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r2",
+                "G_r4",
+                "H_r3",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r1",
+                "G_r4",
+                "H_r2",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r2",
+                "G_r1",
+                "H_r3",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r1",
+                "G_r1",
+                "H_r2",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r2",
+                "G_r3",
+                "H_r3",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r1",
+                "G_r3",
+                "H_r2",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r4",
+                "F_r2",
+                "G_r1",
+                "H_r3",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r3",
+                "F_r1",
+                "G_r1",
+                "H_r2",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r4",
+                "G_r4",
+                "H_r4",
+                "urn:challenge:B::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r4",
+                "G_r4",
+                "H_r1",
+                "urn:challenge:B::Permit",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r4",
+                "G_r2",
+                "H_r4",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r4",
+                "G_r2",
+                "H_r1",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r3",
+                "G_r3",
+                "H_r4",
+                "urn:challenge:A::Deny",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r3",
+                "G_r3",
+                "H_r1",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r3",
+                "G_r2",
+                "H_r4",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Permit",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r3",
+                "G_r2",
+                "H_r1",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": true,
+              "decision": "Permit",
+              "matched": [
+                "urn:challenge:A::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r2",
+                "G_r4",
+                "H_r3",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r1",
+                "G_r4",
+                "H_r1",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r2",
+                "G_r1",
+                "H_r3",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r1",
+                "G_r1",
+                "H_r1",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r2",
+                "G_r3",
+                "H_r3",
+                "urn:challenge:A::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r2",
+                "F_r1",
+                "G_r3",
+                "H_r1",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Permit",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r2",
+                "G_r1",
+                "H_r3",
+                "urn:challenge:A::Deny",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Permit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "E_r1",
+                "F_r1",
+                "G_r1",
+                "H_r1",
+                "urn:challenge:A::Permit",
+                "urn:challenge:B::Deny",
+                "urn:challenge:C::Deny",
+                "urn:challenge:D::Deny"
+              ]
+            }
+          ],
+          "text": "[r | x := data.cases[_]; r := data.thesis.result with input as x]",
+          "location": {
+            "row": 1,
+            "col": 1
+          }
+        }
+      ]
+    }
+  ]
+}

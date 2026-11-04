@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="urn:challenge:C" Version="1.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides">
+  <Description>Manually authored finite challenge source. Not an external real-world policy.</Description>
+  <Target />
+  <Rule RuleId="urn:challenge:C_r1" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:challenge:C_r2" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:challenge:C_r3" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:challenge:C_r4" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="q" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="s" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="t" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                  <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="r" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="p" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+              <AttributeDesignator Category="urn:thesis:frozen-challenge:request" AttributeId="u" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+</Policy>

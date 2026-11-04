@@ -1,0 +1,2353 @@
+{
+  "C01": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C01",
+      "policy_sha256": "f9a9bd91cb29db7af6c0fbf45b10137ee8083442337982ebbb0d7333d84c5c32",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "A",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-A-over-D"
+        },
+        {
+          "higher": "A",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-A-over-E"
+        },
+        {
+          "higher": "A",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-A-over-F"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-B-over-D"
+        },
+        {
+          "higher": "B",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-B-over-E"
+        },
+        {
+          "higher": "B",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-B-over-F"
+        },
+        {
+          "higher": "C",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-C-over-D"
+        },
+        {
+          "higher": "C",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-C-over-E"
+        },
+        {
+          "higher": "C",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-C-over-F"
+        },
+        {
+          "higher": "D",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-D-over-E"
+        },
+        {
+          "higher": "D",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-D-over-F"
+        },
+        {
+          "higher": "E",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-E-over-F"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C01",
+      "policy_sha256": "f9a9bd91cb29db7af6c0fbf45b10137ee8083442337982ebbb0d7333d84c5c32",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:B::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "D_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:B::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "D_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "D_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "D_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "D_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "D_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r4"
+        }
+      ]
+    }
+  },
+  "C02": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C02",
+      "policy_sha256": "658298a3762b6a146b5780eda83788bcde5b642ee4efce7a6dd13d6f2a0d61e1",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "A",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-A-over-D"
+        },
+        {
+          "higher": "A",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-A-over-E"
+        },
+        {
+          "higher": "A",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-A-over-F"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-B-over-D"
+        },
+        {
+          "higher": "B",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-B-over-E"
+        },
+        {
+          "higher": "B",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-B-over-F"
+        },
+        {
+          "higher": "C",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-C-over-D"
+        },
+        {
+          "higher": "C",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-C-over-E"
+        },
+        {
+          "higher": "C",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-C-over-F"
+        },
+        {
+          "higher": "D",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-D-over-E"
+        },
+        {
+          "higher": "D",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-D-over-F"
+        },
+        {
+          "higher": "E",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-E-over-F"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C02",
+      "policy_sha256": "658298a3762b6a146b5780eda83788bcde5b642ee4efce7a6dd13d6f2a0d61e1",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:B::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "D_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:B::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "D_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "D_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "D_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "D_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "D_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "D_r1",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "D_r2",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "D_r3",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "D_r4",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r4"
+        }
+      ]
+    }
+  },
+  "C03": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C03",
+      "policy_sha256": "fecfa179ffc45f2d3b4702cb5bd11231d315e04802c30c4588c85aa3806b3161",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "A",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-A-over-D"
+        },
+        {
+          "higher": "A",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-A-over-E"
+        },
+        {
+          "higher": "A",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-A-over-F"
+        },
+        {
+          "higher": "A",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-A-over-G"
+        },
+        {
+          "higher": "A",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-A-over-H"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-B-over-D"
+        },
+        {
+          "higher": "B",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-B-over-E"
+        },
+        {
+          "higher": "B",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-B-over-F"
+        },
+        {
+          "higher": "B",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-B-over-G"
+        },
+        {
+          "higher": "B",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-B-over-H"
+        },
+        {
+          "higher": "C",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-C-over-D"
+        },
+        {
+          "higher": "C",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-C-over-E"
+        },
+        {
+          "higher": "C",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-C-over-F"
+        },
+        {
+          "higher": "C",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-C-over-G"
+        },
+        {
+          "higher": "C",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-C-over-H"
+        },
+        {
+          "higher": "D",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-D-over-E"
+        },
+        {
+          "higher": "D",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-D-over-F"
+        },
+        {
+          "higher": "D",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-D-over-G"
+        },
+        {
+          "higher": "D",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-D-over-H"
+        },
+        {
+          "higher": "E",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-E-over-F"
+        },
+        {
+          "higher": "E",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-E-over-G"
+        },
+        {
+          "higher": "E",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-E-over-H"
+        },
+        {
+          "higher": "F",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-F-over-G"
+        },
+        {
+          "higher": "F",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-F-over-H"
+        },
+        {
+          "higher": "G",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-G-over-H"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C03",
+      "policy_sha256": "fecfa179ffc45f2d3b4702cb5bd11231d315e04802c30c4588c85aa3806b3161",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:B::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:D::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:B::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:D::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "urn:challenge:D::Deny"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "urn:challenge:D::Permit"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "urn:challenge:D::Deny"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "urn:challenge:D::Permit"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "G_r1",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "G_r1",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "G_r2",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "G_r2",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "G_r3",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "G_r3",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "G_r4",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "G_r4",
+          "loser": "H_r4"
+        }
+      ]
+    }
+  },
+  "C04": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C04",
+      "policy_sha256": "419e4f3d53e74395b30a0df331159f61717e594f7ae811ac1f8b13bf8f135546",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "A",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-A-over-D"
+        },
+        {
+          "higher": "A",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-A-over-E"
+        },
+        {
+          "higher": "A",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-A-over-F"
+        },
+        {
+          "higher": "A",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-A-over-G"
+        },
+        {
+          "higher": "A",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-A-over-H"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-B-over-D"
+        },
+        {
+          "higher": "B",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-B-over-E"
+        },
+        {
+          "higher": "B",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-B-over-F"
+        },
+        {
+          "higher": "B",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-B-over-G"
+        },
+        {
+          "higher": "B",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-B-over-H"
+        },
+        {
+          "higher": "C",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-C-over-D"
+        },
+        {
+          "higher": "C",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-C-over-E"
+        },
+        {
+          "higher": "C",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-C-over-F"
+        },
+        {
+          "higher": "C",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-C-over-G"
+        },
+        {
+          "higher": "C",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-C-over-H"
+        },
+        {
+          "higher": "D",
+          "lower": "E",
+          "approval_id": "frozen-research-direction-D-over-E"
+        },
+        {
+          "higher": "D",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-D-over-F"
+        },
+        {
+          "higher": "D",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-D-over-G"
+        },
+        {
+          "higher": "D",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-D-over-H"
+        },
+        {
+          "higher": "E",
+          "lower": "F",
+          "approval_id": "frozen-research-direction-E-over-F"
+        },
+        {
+          "higher": "E",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-E-over-G"
+        },
+        {
+          "higher": "E",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-E-over-H"
+        },
+        {
+          "higher": "F",
+          "lower": "G",
+          "approval_id": "frozen-research-direction-F-over-G"
+        },
+        {
+          "higher": "F",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-F-over-H"
+        },
+        {
+          "higher": "G",
+          "lower": "H",
+          "approval_id": "frozen-research-direction-G-over-H"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C04",
+      "policy_sha256": "419e4f3d53e74395b30a0df331159f61717e594f7ae811ac1f8b13bf8f135546",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:B::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "urn:challenge:D::Deny"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Permit",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:B::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "urn:challenge:D::Permit"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:A::Deny",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "urn:challenge:C::Deny"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "urn:challenge:D::Deny"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Permit",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "urn:challenge:C::Permit"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "urn:challenge:D::Permit"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:B::Deny",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "urn:challenge:D::Deny"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Permit",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "urn:challenge:D::Permit"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:C::Deny",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "E_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "E_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Permit",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "E_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "E_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "urn:challenge:D::Deny",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "E_r1",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "E_r2",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r2"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "F_r3"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "E_r3",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r1"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "F_r4"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "E_r4",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "F_r1",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "F_r2",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "G_r2"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "G_r3"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "F_r3",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "G_r1"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "G_r4"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "F_r4",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "G_r1",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "G_r1",
+          "loser": "H_r4"
+        },
+        {
+          "winner": "G_r2",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "G_r2",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "G_r3",
+          "loser": "H_r2"
+        },
+        {
+          "winner": "G_r3",
+          "loser": "H_r3"
+        },
+        {
+          "winner": "G_r4",
+          "loser": "H_r1"
+        },
+        {
+          "winner": "G_r4",
+          "loser": "H_r4"
+        }
+      ]
+    }
+  },
+  "C05": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C05",
+      "policy_sha256": "367e7e663e8ddeb33846e2f5a97e1026c245d1db4bffa74e348312ee267c3867",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C05",
+      "policy_sha256": "367e7e663e8ddeb33846e2f5a97e1026c245d1db4bffa74e348312ee267c3867",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "A_r1",
+          "loser": "B_r2"
+        },
+        {
+          "winner": "A_r1",
+          "loser": "C_r2"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "B_r1"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "C_r1"
+        },
+        {
+          "winner": "B_r1",
+          "loser": "C_r2"
+        },
+        {
+          "winner": "B_r2",
+          "loser": "C_r1"
+        }
+      ]
+    }
+  },
+  "C06": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C06",
+      "policy_sha256": "5c26d83a533ff185ddbf5418ad8a1cb5e25c47269417b5c30621bf3f96895972",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C06",
+      "policy_sha256": "5c26d83a533ff185ddbf5418ad8a1cb5e25c47269417b5c30621bf3f96895972",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "A_r1",
+          "loser": "B_r1"
+        },
+        {
+          "winner": "B_r1",
+          "loser": "C_r1"
+        }
+      ]
+    }
+  },
+  "C07": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C07",
+      "policy_sha256": "cb52cf19507fe2bf65baa708120e336a79d1fd5502bd11fd7a00bd5ba830b129",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C07",
+      "policy_sha256": "cb52cf19507fe2bf65baa708120e336a79d1fd5502bd11fd7a00bd5ba830b129",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "A_r1",
+          "loser": "B_r1"
+        },
+        {
+          "winner": "B_r1",
+          "loser": "C_r1"
+        }
+      ]
+    }
+  },
+  "C08": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C08",
+      "policy_sha256": "fe3dd7212885ddeecd7943c00e1f9caad960174222c6e6b13c315ccc96d0f7cf",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C08",
+      "policy_sha256": "fe3dd7212885ddeecd7943c00e1f9caad960174222c6e6b13c315ccc96d0f7cf",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "B_r1",
+          "loser": "C_r1"
+        }
+      ]
+    }
+  },
+  "C09": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C09",
+      "policy_sha256": "39ca112e730905cccfa85bd498ba85681de05ee1e9ca0f4cfcfda7c148a28408",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-B-over-C"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C09",
+      "policy_sha256": "39ca112e730905cccfa85bd498ba85681de05ee1e9ca0f4cfcfda7c148a28408",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "A_r1",
+          "loser": "B_r2"
+        },
+        {
+          "winner": "A_r1",
+          "loser": "C_r2"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "B_r1"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "C_r1"
+        },
+        {
+          "winner": "B_r1",
+          "loser": "C_r2"
+        },
+        {
+          "winner": "B_r2",
+          "loser": "C_r1"
+        }
+      ]
+    }
+  },
+  "C10": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C10",
+      "policy_sha256": "b9bc776f00d8f3e2d9c8fc5ee75d7fc529058e25c56cf78866bf91d448965aa9",
+      "operation": "apply_precedence",
+      "edges": []
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C10",
+      "policy_sha256": "b9bc776f00d8f3e2d9c8fc5ee75d7fc529058e25c56cf78866bf91d448965aa9",
+      "operation": "bounded_refinement",
+      "choices": []
+    }
+  },
+  "C11": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C11",
+      "policy_sha256": "f35b50a8ad6db73d222e2f2dc6381f2d9fc74316a449ffbf693ed11bdb65c3be",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        },
+        {
+          "higher": "A",
+          "lower": "C",
+          "approval_id": "frozen-research-direction-A-over-C"
+        },
+        {
+          "higher": "B",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-B-over-D"
+        },
+        {
+          "higher": "C",
+          "lower": "D",
+          "approval_id": "frozen-research-direction-C-over-D"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C11",
+      "policy_sha256": "f35b50a8ad6db73d222e2f2dc6381f2d9fc74316a449ffbf693ed11bdb65c3be",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "A_r1",
+          "loser": "B_r2"
+        },
+        {
+          "winner": "A_r1",
+          "loser": "C_r2"
+        },
+        {
+          "winner": "A_r1",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "B_r1"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "C_r1"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "B_r1",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "B_r2",
+          "loser": "D_r1"
+        },
+        {
+          "winner": "C_r1",
+          "loser": "D_r2"
+        },
+        {
+          "winner": "C_r2",
+          "loser": "D_r1"
+        }
+      ]
+    }
+  },
+  "C12": {
+    "precedence": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C12",
+      "policy_sha256": "6962f8436fab46b0d678c065a9a9f091266c6c5ef7ab55c1f5cbd074e9c1efb5",
+      "operation": "apply_precedence",
+      "edges": [
+        {
+          "higher": "A",
+          "lower": "B",
+          "approval_id": "frozen-research-direction-A-over-B"
+        }
+      ]
+    },
+    "refinement": {
+      "approval_id": "FROZEN_SYNTHETIC_CHALLENGE_C12",
+      "policy_sha256": "6962f8436fab46b0d678c065a9a9f091266c6c5ef7ab55c1f5cbd074e9c1efb5",
+      "operation": "bounded_refinement",
+      "choices": [
+        {
+          "winner": "A_r1",
+          "loser": "B_r2"
+        },
+        {
+          "winner": "A_r2",
+          "loser": "B_r1"
+        }
+      ]
+    }
+  }
+}

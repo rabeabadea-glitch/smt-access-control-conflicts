@@ -1,0 +1,1623 @@
+[
+  {
+    "case_id": "C01",
+    "title": "Mixed six-attribute multi-source priority case 1",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      },
+      "s": {
+        "type": "bool"
+      },
+      "t": {
+        "type": "bool"
+      },
+      "u": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "first-applicable",
+        "path": "cases/C01/sources/A.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "B",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "deny-overrides",
+        "path": "cases/C01/sources/B.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "C",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "permit-overrides",
+        "path": "cases/C01/sources/C.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "D",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C01/sources/D.rego",
+        "manifest_path": "cases/C01/sources/D.manifest.json"
+      },
+      {
+        "source_id": "E",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C01/sources/E.rego",
+        "manifest_path": "cases/C01/sources/E.manifest.json"
+      },
+      {
+        "source_id": "F",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C01/sources/F.rego",
+        "manifest_path": "cases/C01/sources/F.manifest.json"
+      }
+    ],
+    "request_count": 64,
+    "source_count": 6,
+    "source_rule_count": 24,
+    "anticipated_compiled_rule_count": 18,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "target_specification": "At each complete Boolean request, take the first non-NotApplicable source decision in the listed high-to-low order. This is an independent source-priority specification, not a repair-region formula.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Permit": 16,
+      "Deny": 18,
+      "Conflict": 30
+    },
+    "target_decision_counts": {
+      "Permit": 35,
+      "Deny": 29
+    },
+    "conflict_request_count": 30,
+    "preserved_original_permit_count": 16,
+    "preserved_original_deny_count": 18,
+    "input_path": null,
+    "requirements_path": "cases/C01/requirements.json",
+    "truth_table_path": "cases/C01/expected_truth_table.json",
+    "governance_path": "cases/C01/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C02",
+    "title": "Mixed six-attribute multi-source priority case 2",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      },
+      "s": {
+        "type": "bool"
+      },
+      "t": {
+        "type": "bool"
+      },
+      "u": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "deny-overrides",
+        "path": "cases/C02/sources/A.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "B",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "first-applicable",
+        "path": "cases/C02/sources/B.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "C",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "permit-overrides",
+        "path": "cases/C02/sources/C.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "D",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C02/sources/D.rego",
+        "manifest_path": "cases/C02/sources/D.manifest.json"
+      },
+      {
+        "source_id": "E",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C02/sources/E.rego",
+        "manifest_path": "cases/C02/sources/E.manifest.json"
+      },
+      {
+        "source_id": "F",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C02/sources/F.rego",
+        "manifest_path": "cases/C02/sources/F.manifest.json"
+      }
+    ],
+    "request_count": 64,
+    "source_count": 6,
+    "source_rule_count": 24,
+    "anticipated_compiled_rule_count": 18,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "target_specification": "At each complete Boolean request, take the first non-NotApplicable source decision in the listed high-to-low order. This is an independent source-priority specification, not a repair-region formula.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Permit": 17,
+      "Conflict": 29,
+      "Deny": 18
+    },
+    "target_decision_counts": {
+      "Permit": 29,
+      "Deny": 35
+    },
+    "conflict_request_count": 29,
+    "preserved_original_permit_count": 17,
+    "preserved_original_deny_count": 18,
+    "input_path": null,
+    "requirements_path": "cases/C02/requirements.json",
+    "truth_table_path": "cases/C02/expected_truth_table.json",
+    "governance_path": "cases/C02/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C03",
+    "title": "Mixed six-attribute multi-source priority case 3",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      },
+      "s": {
+        "type": "bool"
+      },
+      "t": {
+        "type": "bool"
+      },
+      "u": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "permit-overrides",
+        "path": "cases/C03/sources/A.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "B",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "first-applicable",
+        "path": "cases/C03/sources/B.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "C",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "deny-overrides",
+        "path": "cases/C03/sources/C.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "D",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "first-applicable",
+        "path": "cases/C03/sources/D.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "E",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C03/sources/E.rego",
+        "manifest_path": "cases/C03/sources/E.manifest.json"
+      },
+      {
+        "source_id": "F",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C03/sources/F.rego",
+        "manifest_path": "cases/C03/sources/F.manifest.json"
+      },
+      {
+        "source_id": "G",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C03/sources/G.rego",
+        "manifest_path": "cases/C03/sources/G.manifest.json"
+      },
+      {
+        "source_id": "H",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C03/sources/H.rego",
+        "manifest_path": "cases/C03/sources/H.manifest.json"
+      }
+    ],
+    "request_count": 64,
+    "source_count": 8,
+    "source_rule_count": 32,
+    "anticipated_compiled_rule_count": 24,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "target_specification": "At each complete Boolean request, take the first non-NotApplicable source decision in the listed high-to-low order. This is an independent source-priority specification, not a repair-region formula.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 16,
+      "Conflict": 32,
+      "Permit": 16
+    },
+    "target_decision_counts": {
+      "Deny": 36,
+      "Permit": 28
+    },
+    "conflict_request_count": 32,
+    "preserved_original_permit_count": 16,
+    "preserved_original_deny_count": 16,
+    "input_path": null,
+    "requirements_path": "cases/C03/requirements.json",
+    "truth_table_path": "cases/C03/expected_truth_table.json",
+    "governance_path": "cases/C03/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C04",
+    "title": "Mixed six-attribute multi-source priority case 4",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      },
+      "s": {
+        "type": "bool"
+      },
+      "t": {
+        "type": "bool"
+      },
+      "u": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "first-applicable",
+        "path": "cases/C04/sources/A.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "B",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "deny-overrides",
+        "path": "cases/C04/sources/B.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "C",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "first-applicable",
+        "path": "cases/C04/sources/C.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "D",
+        "format": "xacml",
+        "rule_count": 4,
+        "combining": "permit-overrides",
+        "path": "cases/C04/sources/D.xml",
+        "descriptors": {
+          "p": {
+            "name": "p",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "p",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "q": {
+            "name": "q",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "q",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "r": {
+            "name": "r",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "r",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "s": {
+            "name": "s",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "s",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "t": {
+            "name": "t",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "t",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          },
+          "u": {
+            "name": "u",
+            "Category": "urn:thesis:frozen-challenge:request",
+            "AttributeId": "u",
+            "DataType": "http://www.w3.org/2001/XMLSchema#boolean",
+            "Issuer": ""
+          }
+        }
+      },
+      {
+        "source_id": "E",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C04/sources/E.rego",
+        "manifest_path": "cases/C04/sources/E.manifest.json"
+      },
+      {
+        "source_id": "F",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C04/sources/F.rego",
+        "manifest_path": "cases/C04/sources/F.manifest.json"
+      },
+      {
+        "source_id": "G",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C04/sources/G.rego",
+        "manifest_path": "cases/C04/sources/G.manifest.json"
+      },
+      {
+        "source_id": "H",
+        "format": "rego",
+        "rule_count": 4,
+        "combining": "union",
+        "path": "cases/C04/sources/H.rego",
+        "manifest_path": "cases/C04/sources/H.manifest.json"
+      }
+    ],
+    "request_count": 64,
+    "source_count": 8,
+    "source_rule_count": 32,
+    "anticipated_compiled_rule_count": 24,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "target_specification": "At each complete Boolean request, take the first non-NotApplicable source decision in the listed high-to-low order. This is an independent source-priority specification, not a repair-region formula.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 16,
+      "Permit": 16,
+      "Conflict": 32
+    },
+    "target_decision_counts": {
+      "Deny": 32,
+      "Permit": 32
+    },
+    "conflict_request_count": 32,
+    "preserved_original_permit_count": 16,
+    "preserved_original_deny_count": 16,
+    "input_path": null,
+    "requirements_path": "cases/C04/requirements.json",
+    "truth_table_path": "cases/C04/expected_truth_table.json",
+    "governance_path": "cases/C04/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C05",
+    "title": "Three-source intersecting conflicts",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C05/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C05/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C05/sources/C.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 3,
+    "source_rule_count": 6,
+    "anticipated_compiled_rule_count": 6,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C"
+    ],
+    "target_specification": "First applicable source in A > B > C order; preserve every originally pure Permit and Deny point.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 3,
+      "Permit": 3,
+      "Conflict": 2
+    },
+    "target_decision_counts": {
+      "Deny": 5,
+      "Permit": 3
+    },
+    "conflict_request_count": 2,
+    "preserved_original_permit_count": 3,
+    "preserved_original_deny_count": 3,
+    "input_path": "cases/C05/input.json",
+    "requirements_path": "cases/C05/requirements.json",
+    "truth_table_path": "cases/C05/expected_truth_table.json",
+    "governance_path": "cases/C05/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C06",
+    "title": "Permission specification incompatible with authorized direction",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C06/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C06/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C06/sources/C.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 3,
+    "source_rule_count": 3,
+    "anticipated_compiled_rule_count": 3,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C"
+    ],
+    "target_specification": "Deny exactly when not p and q; Permit otherwise. This deliberately requires Permit at p despite authorized A(Deny) over B(Permit).",
+    "feasibility": "Truth-table policy exists, but declared direction at p conflicts with the must-Permit specification; conservative governed repair is expected to reject rather than violate requirements.",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Permit": 2,
+      "Deny": 2,
+      "Conflict": 4
+    },
+    "target_decision_counts": {
+      "Permit": 6,
+      "Deny": 2
+    },
+    "conflict_request_count": 4,
+    "preserved_original_permit_count": 2,
+    "preserved_original_deny_count": 2,
+    "input_path": "cases/C06/input.json",
+    "requirements_path": "cases/C06/requirements.json",
+    "truth_table_path": "cases/C06/expected_truth_table.json",
+    "governance_path": "cases/C06/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C07",
+    "title": "Denial specification incompatible with authorized direction",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C07/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C07/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C07/sources/C.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 3,
+    "source_rule_count": 3,
+    "anticipated_compiled_rule_count": 3,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C"
+    ],
+    "target_specification": "Permit exactly when not p and q; Deny otherwise. This deliberately requires Deny at p despite authorized A(Permit) over B(Deny).",
+    "feasibility": "Truth-table policy exists, but declared direction at p conflicts with the must-Deny specification; conservative governed repair is expected to reject rather than violate requirements.",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 2,
+      "Permit": 2,
+      "Conflict": 4
+    },
+    "target_decision_counts": {
+      "Deny": 6,
+      "Permit": 2
+    },
+    "conflict_request_count": 4,
+    "preserved_original_permit_count": 2,
+    "preserved_original_deny_count": 2,
+    "input_path": "cases/C07/input.json",
+    "requirements_path": "cases/C07/requirements.json",
+    "truth_table_path": "cases/C07/expected_truth_table.json",
+    "governance_path": "cases/C07/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C08",
+    "title": "Missing direction on a real overlap",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C08/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C08/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C08/sources/C.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 3,
+    "source_rule_count": 3,
+    "anticipated_compiled_rule_count": 3,
+    "independent_priority_specification_high_to_low": [
+      "B",
+      "A",
+      "C"
+    ],
+    "target_specification": "Deny at q and Permit otherwise; no A/B precedence is authorized.",
+    "feasibility": "Truth-table policy exists, but resolving the A/B overlap would require an undeclared direction; automated rejection is acceptable and expected.",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Permit": 4,
+      "Deny": 2,
+      "Conflict": 2
+    },
+    "target_decision_counts": {
+      "Permit": 4,
+      "Deny": 4
+    },
+    "conflict_request_count": 2,
+    "preserved_original_permit_count": 4,
+    "preserved_original_deny_count": 2,
+    "input_path": "cases/C08/input.json",
+    "requirements_path": "cases/C08/requirements.json",
+    "truth_table_path": "cases/C08/expected_truth_table.json",
+    "governance_path": "cases/C08/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C09",
+    "title": "Contradictory preservation requirements",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C09/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C09/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C09/sources/C.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 3,
+    "source_rule_count": 6,
+    "anticipated_compiled_rule_count": 6,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C"
+    ],
+    "target_specification": "Use A > B > C except the all-false request is simultaneously required to Permit and Deny. No single-decision policy satisfies both.",
+    "feasibility": "Logically infeasible: one complete request has simultaneous must-Permit and must-Deny requirements. Acceptance as satisfying all requirements would be a bug.",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 3,
+      "Permit": 3,
+      "Conflict": 2
+    },
+    "target_decision_counts": {
+      "None": 1,
+      "Deny": 4,
+      "Permit": 3
+    },
+    "conflict_request_count": 2,
+    "preserved_original_permit_count": 3,
+    "preserved_original_deny_count": 3,
+    "input_path": "cases/C09/input.json",
+    "requirements_path": "cases/C09/requirements.json",
+    "truth_table_path": "cases/C09/expected_truth_table.json",
+    "governance_path": "cases/C09/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C10",
+    "title": "Already consistent decision partition",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C10/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C10/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C10/sources/C.json"
+      },
+      {
+        "source_id": "D",
+        "format": "cpm",
+        "rule_count": 1,
+        "combining": "union",
+        "path": "cases/C10/sources/D.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 4,
+    "source_rule_count": 4,
+    "anticipated_compiled_rule_count": 4,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "target_specification": "Four disjoint source regions already provide the complete required table; a correct result preserves both effects without inventing conflicts.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 4,
+      "Permit": 4
+    },
+    "target_decision_counts": {
+      "Deny": 4,
+      "Permit": 4
+    },
+    "conflict_request_count": 0,
+    "preserved_original_permit_count": 4,
+    "preserved_original_deny_count": 4,
+    "input_path": "cases/C10/input.json",
+    "requirements_path": "cases/C10/requirements.json",
+    "truth_table_path": "cases/C10/expected_truth_table.json",
+    "governance_path": "cases/C10/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C11",
+    "title": "Four-source diamond precedence",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      },
+      "s": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C11/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C11/sources/B.json"
+      },
+      {
+        "source_id": "C",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C11/sources/C.json"
+      },
+      {
+        "source_id": "D",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C11/sources/D.json"
+      }
+    ],
+    "request_count": 16,
+    "source_count": 4,
+    "source_rule_count": 8,
+    "anticipated_compiled_rule_count": 8,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "target_specification": "A dominates B and C, both dominate D. B and C are intentionally incomparable but agree on their intersection.",
+    "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Deny": 8,
+      "Conflict": 4,
+      "Permit": 4
+    },
+    "target_decision_counts": {
+      "Deny": 12,
+      "Permit": 4
+    },
+    "conflict_request_count": 4,
+    "preserved_original_permit_count": 4,
+    "preserved_original_deny_count": 8,
+    "input_path": "cases/C11/input.json",
+    "requirements_path": "cases/C11/requirements.json",
+    "truth_table_path": "cases/C11/expected_truth_table.json",
+    "governance_path": "cases/C11/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  },
+  {
+    "case_id": "C12",
+    "title": "Unresolved conflict inside one source",
+    "role": "substantive finite challenge",
+    "attributes": {
+      "p": {
+        "type": "bool"
+      },
+      "q": {
+        "type": "bool"
+      },
+      "r": {
+        "type": "bool"
+      }
+    },
+    "source_assets": [
+      {
+        "source_id": "A",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C12/sources/A.json"
+      },
+      {
+        "source_id": "B",
+        "format": "cpm",
+        "rule_count": 2,
+        "combining": "union",
+        "path": "cases/C12/sources/B.json"
+      }
+    ],
+    "request_count": 8,
+    "source_count": 2,
+    "source_rule_count": 4,
+    "anticipated_compiled_rule_count": 4,
+    "independent_priority_specification_high_to_low": [
+      "A",
+      "B"
+    ],
+    "target_specification": "Deny exactly at q and Permit otherwise. The p-and-q overlap is inside source A; an A/B edge supplies no authority to rank A against itself.",
+    "feasibility": "Truth-table policy exists, but same-source opposing rules have no valid source-precedence direction; conservative governed repair is expected to reject.",
+    "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+    "original_union_decision_counts": {
+      "Permit": 4,
+      "Deny": 2,
+      "Conflict": 2
+    },
+    "target_decision_counts": {
+      "Permit": 4,
+      "Deny": 4
+    },
+    "conflict_request_count": 2,
+    "preserved_original_permit_count": 4,
+    "preserved_original_deny_count": 2,
+    "input_path": "cases/C12/input.json",
+    "requirements_path": "cases/C12/requirements.json",
+    "truth_table_path": "cases/C12/expected_truth_table.json",
+    "governance_path": "cases/C12/governance.json",
+    "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+  }
+]

@@ -1,0 +1,3846 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "action": {
+      "type": "enum",
+      "values": [
+        "display-full-pan",
+        "erase",
+        "force-password-change",
+        "log",
+        "purge",
+        "read",
+        "transmit",
+        "write",
+        "__OTHER__"
+      ]
+    },
+    "record_type": {
+      "type": "enum",
+      "values": [
+        "audit-workpaper",
+        "cardholder-data",
+        "cdd-record",
+        "chd-access-event",
+        "credential",
+        "customer-file",
+        "incident-report",
+        "kyc-file",
+        "leave-request",
+        "major-incident-report",
+        "payment-card-record",
+        "svc-credential",
+        "system-config",
+        "transaction-record",
+        "__OTHER__"
+      ]
+    },
+    "contains_pii": {
+      "type": "enum",
+      "values": [
+        "true",
+        "__OTHER__"
+      ]
+    },
+    "legal_hold": {
+      "type": "enum",
+      "values": [
+        "false",
+        "true",
+        "__OTHER__"
+      ]
+    },
+    "role": {
+      "type": "enum",
+      "values": [
+        "data-subject",
+        "guest",
+        "hr-manager",
+        "investigator",
+        "__OTHER__"
+      ]
+    },
+    "str_flag": {
+      "type": "enum",
+      "values": [
+        "false",
+        "true",
+        "__OTHER__"
+      ]
+    },
+    "documented_purpose": {
+      "type": "enum",
+      "values": [
+        "false",
+        "__OTHER__"
+      ]
+    },
+    "retention_age_years": {
+      "type": "int",
+      "min": 1,
+      "max": 8
+    },
+    "legal_basis": {
+      "type": "enum",
+      "values": [
+        "false",
+        "true",
+        "__OTHER__"
+      ]
+    },
+    "legitimate_need": {
+      "type": "enum",
+      "values": [
+        "false",
+        "true",
+        "__OTHER__"
+      ]
+    },
+    "password_age_days": {
+      "type": "int",
+      "min": 89,
+      "max": 91
+    },
+    "sole_factor": {
+      "type": "enum",
+      "values": [
+        "false",
+        "true",
+        "__OTHER__"
+      ]
+    },
+    "compromise_evidence": {
+      "type": "enum",
+      "values": [
+        "false",
+        "__OTHER__"
+      ]
+    }
+  },
+  "sources": {
+    "GDPR": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy GDPR",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    },
+    "AMLD": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy AMLD",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    },
+    "PCI_DSS": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy PCI_DSS",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    },
+    "NIST_63B": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy NIST_63B",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    },
+    "SOX": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy SOX",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    },
+    "DORA": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy DORA",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    },
+    "INTERNAL": {
+      "kind": "internal",
+      "citation": "cross_source_corpus.xml Policy INTERNAL",
+      "mapping_status": "author-written clause translation; see docs/regulatory_mapping.md"
+    }
+  },
+  "rules": [
+    {
+      "id": "GDPR-17-erase-ungoverned",
+      "source": "GDPR",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "erase"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "transaction-record"
+              },
+              {
+                "op": "eq",
+                "attr": "contains_pii",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GDPR-17-erase-governed",
+      "source": "GDPR",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "erase"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "cdd-record"
+              },
+              {
+                "op": "eq",
+                "attr": "contains_pii",
+                "value": "true"
+              },
+              {
+                "op": "eq",
+                "attr": "legal_hold",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GDPR-15-subject-access-ungoverned",
+      "source": "GDPR",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "role",
+                "value": "data-subject"
+              },
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "read"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "customer-file"
+              },
+              {
+                "op": "eq",
+                "attr": "contains_pii",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GDPR-15-subject-access-governed",
+      "source": "GDPR",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "role",
+                "value": "data-subject"
+              },
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "read"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "kyc-file"
+              },
+              {
+                "op": "eq",
+                "attr": "str_flag",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GDPR-5c-minimisation",
+      "source": "GDPR",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "log"
+              },
+              {
+                "op": "eq",
+                "attr": "contains_pii",
+                "value": "true"
+              },
+              {
+                "op": "eq",
+                "attr": "documented_purpose",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GDPR-5e-storage-purge",
+      "source": "GDPR",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "purge"
+              },
+              {
+                "op": "eq",
+                "attr": "contains_pii",
+                "value": "true"
+              },
+              {
+                "op": "gt",
+                "attr": "retention_age_years",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GDPR-6-restrict-transfer-ungoverned",
+      "source": "GDPR",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "transmit"
+              },
+              {
+                "op": "eq",
+                "attr": "contains_pii",
+                "value": "true"
+              },
+              {
+                "op": "eq",
+                "attr": "legal_basis",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "credential"
+                    },
+                    {
+                      "op": "gt",
+                      "attr": "password_age_days",
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "force-password-change"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "svc-credential"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "sole_factor",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "log"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "chd-access-event"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "false"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "purge"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "audit-workpaper"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 7
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "incident-report"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "transmit"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "major-incident-report"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_basis",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "AMLD-40-retain-txn",
+      "source": "AMLD",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "erase"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "transaction-record"
+          },
+          {
+            "op": "lt",
+            "attr": "retention_age_years",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "AMLD-40-retain-cdd-governed",
+      "source": "AMLD",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "erase"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "cdd-record"
+          },
+          {
+            "op": "eq",
+            "attr": "legal_hold",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AMLD-39-tipping-off",
+      "source": "AMLD",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "data-subject"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "read"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "customer-file"
+          },
+          {
+            "op": "eq",
+            "attr": "str_flag",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AMLD-39-tipping-off-governed",
+      "source": "AMLD",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "data-subject"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "read"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "kyc-file"
+          },
+          {
+            "op": "eq",
+            "attr": "str_flag",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AMLD-investigator-full-pan",
+      "source": "AMLD",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "investigator"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "display-full-pan"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "cardholder-data"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AMLD-investigator-full-pan-governed",
+      "source": "AMLD",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "investigator"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "display-full-pan"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "payment-card-record"
+          },
+          {
+            "op": "eq",
+            "attr": "legitimate_need",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "PCI-8-3-9-rotate-password",
+      "source": "PCI_DSS",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "force-password-change"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "credential"
+              },
+              {
+                "op": "gt",
+                "attr": "password_age_days",
+                "value": 90
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "PCI-8-3-9-rotate-password-governed",
+      "source": "PCI_DSS",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "force-password-change"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "svc-credential"
+              },
+              {
+                "op": "eq",
+                "attr": "sole_factor",
+                "value": "true"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "PCI-10-2-log-access",
+      "source": "PCI_DSS",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "log"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "chd-access-event"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "PCI-3-3-mask-pan",
+      "source": "PCI_DSS",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "display-full-pan"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "cardholder-data"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "PCI-3-3-mask-pan-governed",
+      "source": "PCI_DSS",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "action",
+                "value": "display-full-pan"
+              },
+              {
+                "op": "eq",
+                "attr": "record_type",
+                "value": "payment-card-record"
+              },
+              {
+                "op": "eq",
+                "attr": "legitimate_need",
+                "value": "false"
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "or",
+              "args": [
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "transaction-record"
+                    },
+                    {
+                      "op": "lt",
+                      "attr": "retention_age_years",
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "erase"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cdd-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legal_hold",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "customer-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "data-subject"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "read"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "kyc-file"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "str_flag",
+                      "value": "true"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "cardholder-data"
+                    }
+                  ]
+                },
+                {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "attr": "role",
+                      "value": "investigator"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "action",
+                      "value": "display-full-pan"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "record_type",
+                      "value": "payment-card-record"
+                    },
+                    {
+                      "op": "eq",
+                      "attr": "legitimate_need",
+                      "value": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "NIST-63B-no-forced-rotation",
+      "source": "NIST_63B",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "force-password-change"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "credential"
+          },
+          {
+            "op": "eq",
+            "attr": "compromise_evidence",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "id": "NIST-63B-no-forced-rotation-governed",
+      "source": "NIST_63B",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "force-password-change"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "svc-credential"
+          },
+          {
+            "op": "eq",
+            "attr": "sole_factor",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SOX-802-retain-audit",
+      "source": "SOX",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "purge"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "audit-workpaper"
+          },
+          {
+            "op": "lt",
+            "attr": "retention_age_years",
+            "value": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "DORA-19-report-incident",
+      "source": "DORA",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "transmit"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "incident-report"
+          }
+        ]
+      }
+    },
+    {
+      "id": "DORA-19-report-incident-governed",
+      "source": "DORA",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "transmit"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "major-incident-report"
+          },
+          {
+            "op": "eq",
+            "attr": "legal_basis",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "INT-hr-view-leave",
+      "source": "INTERNAL",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "hr-manager"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "read"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "leave-request"
+          }
+        ]
+      }
+    },
+    {
+      "id": "INT-deny-guest-write-config",
+      "source": "INTERNAL",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "guest"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "write"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "system-config"
+          }
+        ]
+      }
+    }
+  ],
+  "precedence": [
+    {
+      "higher": "AMLD",
+      "lower": "GDPR",
+      "approval_id": "CASE_STUDY_CONFIGURATION_NOT_AN_APPROVAL"
+    },
+    {
+      "higher": "AMLD",
+      "lower": "PCI_DSS",
+      "approval_id": "CASE_STUDY_CONFIGURATION_NOT_AN_APPROVAL"
+    },
+    {
+      "higher": "PCI_DSS",
+      "lower": "GDPR",
+      "approval_id": "CASE_STUDY_CONFIGURATION_NOT_AN_APPROVAL"
+    },
+    {
+      "higher": "SOX",
+      "lower": "GDPR",
+      "approval_id": "CASE_STUDY_CONFIGURATION_NOT_AN_APPROVAL"
+    },
+    {
+      "higher": "DORA",
+      "lower": "GDPR",
+      "approval_id": "CASE_STUDY_CONFIGURATION_NOT_AN_APPROVAL"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "F1-retain-transaction-records",
+      "required": "Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "erase"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "transaction-record"
+          },
+          {
+            "op": "lt",
+            "attr": "retention_age_years",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "F1-erase-after-retention",
+      "required": "Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "erase"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "transaction-record"
+          },
+          {
+            "op": "eq",
+            "attr": "contains_pii",
+            "value": "true"
+          },
+          {
+            "op": "ge",
+            "attr": "retention_age_years",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "F4-no-tipping-off",
+      "required": "Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "data-subject"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "read"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "customer-file"
+          },
+          {
+            "op": "eq",
+            "attr": "str_flag",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F4-subject-access",
+      "required": "Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "data-subject"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "read"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "customer-file"
+          },
+          {
+            "op": "eq",
+            "attr": "contains_pii",
+            "value": "true"
+          },
+          {
+            "op": "eq",
+            "attr": "str_flag",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F5-investigator-full-pan",
+      "required": "Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "investigator"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "display-full-pan"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "cardholder-data"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F3-log-chd-access",
+      "required": "Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "log"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "chd-access-event"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F6-retain-audit-workpapers",
+      "required": "Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "purge"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "audit-workpaper"
+          },
+          {
+            "op": "lt",
+            "attr": "retention_age_years",
+            "value": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "F7-report-incident",
+      "required": "Permit",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "transmit"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "incident-report"
+          }
+        ]
+      }
+    },
+    {
+      "id": "INT-guest-no-config-write",
+      "required": "Deny",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "role",
+            "value": "guest"
+          },
+          {
+            "op": "eq",
+            "attr": "action",
+            "value": "write"
+          },
+          {
+            "op": "eq",
+            "attr": "record_type",
+            "value": "system-config"
+          }
+        ]
+      }
+    }
+  ],
+  "validity": true
+}

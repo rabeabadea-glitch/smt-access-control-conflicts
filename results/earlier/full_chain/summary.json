@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-20T22:50:01.604371+00:00",
+  "planned_runs": 30,
+  "recorded_runs": 30,
+  "passed_runs": 30,
+  "OPA_evaluations": 210,
+  "Balana_evaluations": 210,
+  "conditions": [
+    {
+      "groups": 1,
+      "mode": "EXHAUSTIVE",
+      "planned": 5,
+      "completed": 5,
+      "passed": 5,
+      "wall_median_ms": 2572.161399999459,
+      "wall_min_ms": 2471.8250000005355,
+      "wall_max_ms": 3431.131800000003,
+      "sampled_memory_median_MiB": 89.0234375,
+      "final_hashes": [
+        "6e6cd70375228d08cdf778e2875f05a9f25344f9f5b7385860bbb18be4241981"
+      ]
+    },
+    {
+      "groups": 1,
+      "mode": "E_AND_N_AND_G",
+      "planned": 5,
+      "completed": 5,
+      "passed": 5,
+      "wall_median_ms": 5100.567699999374,
+      "wall_min_ms": 4944.365399998787,
+      "wall_max_ms": 6844.990199999302,
+      "sampled_memory_median_MiB": 196.15625,
+      "final_hashes": [
+        "6e6cd70375228d08cdf778e2875f05a9f25344f9f5b7385860bbb18be4241981"
+      ]
+    },
+    {
+      "groups": 2,
+      "mode": "EXHAUSTIVE",
+      "planned": 5,
+      "completed": 5,
+      "passed": 5,
+      "wall_median_ms": 3319.4401000000653,
+      "wall_min_ms": 3134.6857999997155,
+      "wall_max_ms": 3845.0030000021798,
+      "sampled_memory_median_MiB": 91.1015625,
+      "final_hashes": [
+        "e69c1ef60854d088e56072a237321528eee0e0732694c92af0edf4fc215da470"
+      ]
+    },
+    {
+      "groups": 2,
+      "mode": "E_AND_N_AND_G",
+      "planned": 5,
+      "completed": 5,
+      "passed": 5,
+      "wall_median_ms": 5682.518500001606,
+      "wall_min_ms": 5218.77570000288,
+      "wall_max_ms": 6552.179499998601,
+      "sampled_memory_median_MiB": 200.8203125,
+      "final_hashes": [
+        "e69c1ef60854d088e56072a237321528eee0e0732694c92af0edf4fc215da470"
+      ]
+    },
+    {
+      "groups": 4,
+      "mode": "EXHAUSTIVE",
+      "planned": 5,
+      "completed": 5,
+      "passed": 5,
+      "wall_median_ms": 6466.591999997036,
+      "wall_min_ms": 6135.581499998807,
+      "wall_max_ms": 7274.552599999879,
+      "sampled_memory_median_MiB": 94.32421875,
+      "final_hashes": [
+        "c307a804a4ca904cfd0f8a74e339d0a17a7813b8f331d01147c61113b59679f9"
+      ]
+    },
+    {
+      "groups": 4,
+      "mode": "E_AND_N_AND_G",
+      "planned": 5,
+      "completed": 5,
+      "passed": 5,
+      "wall_median_ms": 10941.642100002355,
+      "wall_min_ms": 8763.695600002393,
+      "wall_max_ms": 13909.726699999737,
+      "sampled_memory_median_MiB": 208.0234375,
+      "final_hashes": [
+        "c307a804a4ca904cfd0f8a74e339d0a17a7813b8f331d01147c61113b59679f9"
+      ]
+    }
+  ],
+  "memory_measure": "Sampled maximum sum of worker+descendant Windows working sets at25ms target interval; not exact peak or unique physical-memory use",
+  "input_files_unchanged": true
+}

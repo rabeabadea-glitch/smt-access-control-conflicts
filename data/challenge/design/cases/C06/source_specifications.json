@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "A",
+    "format": "cpm",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "A_r1",
+        "effect": "Deny",
+        "when": "p"
+      }
+    ]
+  },
+  {
+    "source_id": "B",
+    "format": "cpm",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "B_r1",
+        "effect": "Permit",
+        "when": "p or not q"
+      }
+    ]
+  },
+  {
+    "source_id": "C",
+    "format": "cpm",
+    "combining": "union",
+    "rules": [
+      {
+        "id": "C_r1",
+        "effect": "Deny",
+        "when": "not p and q"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+<Response xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"><Result><Decision>Deny</Decision><Status><StatusCode Value="urn:oasis:names:tc:xacml:1.0:status:ok"/></Status><AssociatedAdvice><Advice AdviceId="deny-liquor-medicine-advice" ><AttributeAssignment  AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:text" DataType="http://www.w3.org/2001/XMLSchema#string">You are not allowed to do more than $200 purchase
+    from KMarket on-line trading system</AttributeAssignment>
+</Advice></AssociatedAdvice></Result></Response>

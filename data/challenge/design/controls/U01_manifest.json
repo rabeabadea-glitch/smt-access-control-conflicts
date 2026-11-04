@@ -1,0 +1,26 @@
+{
+  "schema_version": "cpm-1",
+  "package": "challenge_unsupported",
+  "attributes": {
+    "score": {
+      "type": "int",
+      "min": 0,
+      "max": 3
+    }
+  },
+  "sources": {
+    "U": {
+      "kind": "synthetic",
+      "citation": "Frozen unsupported syntax control",
+      "mapping_status": "synthetic"
+    }
+  },
+  "rules": [
+    {
+      "id": "U_allow",
+      "source": "U",
+      "effect": "Permit",
+      "entry": "allow"
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+ "note": "Medians over fresh-process repetitions on one Linux container (2 vCPU). Triage = serial screen (model loading, embeddings, entity gate, RDF/SPARQL gate) + SMT checks of the kept pairs only; no certificate. Certified use needs the exhaustive audit in addition.",
+ "rows": [
+  {
+   "rules": 30,
+   "eligible_pairs": 225,
+   "serial_kept": 225,
+   "exact_kept": 0,
+   "sat_pairs": 0,
+   "serial_retained_sat": 0,
+   "exact_retained_sat": 0,
+   "family": "disjoint",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 0.867,
+   "model_loading_embedding_s": 0.285,
+   "rdf_build_query_s": 0.579,
+   "serial_candidate_s": 0.66,
+   "triage_s": 1.517,
+   "triage_range_s": [
+    1.478,
+    2.042
+   ],
+   "exhaustive_s": 0.684,
+   "exhaustive_range_s": [
+    0.635,
+    0.704
+   ],
+   "equality_screen_and_candidates_s": 0.001,
+   "certified_with_screen_s": 2.181,
+   "conflicts_missed_by_serial_screen": 0,
+   "missed_percent": null,
+   "pairs_removed_percent": 0.0
+  },
+  {
+   "rules": 100,
+   "eligible_pairs": 2500,
+   "serial_kept": 2500,
+   "exact_kept": 0,
+   "sat_pairs": 0,
+   "serial_retained_sat": 0,
+   "exact_retained_sat": 0,
+   "family": "disjoint",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 5.54,
+   "model_loading_embedding_s": 0.525,
+   "rdf_build_query_s": 5.047,
+   "serial_candidate_s": 7.814,
+   "triage_s": 13.141,
+   "triage_range_s": [
+    13.132,
+    13.617
+   ],
+   "exhaustive_s": 7.552,
+   "exhaustive_range_s": [
+    7.337,
+    7.627
+   ],
+   "equality_screen_and_candidates_s": 0.01,
+   "certified_with_screen_s": 20.768,
+   "conflicts_missed_by_serial_screen": 0,
+   "missed_percent": null,
+   "pairs_removed_percent": 0.0
+  },
+  {
+   "rules": 300,
+   "eligible_pairs": 22500,
+   "serial_kept": 22498,
+   "exact_kept": 0,
+   "sat_pairs": 0,
+   "serial_retained_sat": 0,
+   "exact_retained_sat": 0,
+   "family": "disjoint",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 42.414,
+   "model_loading_embedding_s": 0.998,
+   "rdf_build_query_s": 41.16,
+   "serial_candidate_s": 68.4,
+   "triage_s": 110.928,
+   "triage_range_s": [
+    110.195,
+    111.129
+   ],
+   "exhaustive_s": 69.284,
+   "exhaustive_range_s": [
+    67.297,
+    70.79
+   ],
+   "equality_screen_and_candidates_s": 0.134,
+   "certified_with_screen_s": 180.212,
+   "conflicts_missed_by_serial_screen": 0,
+   "missed_percent": null,
+   "pairs_removed_percent": 0.01
+  },
+  {
+   "rules": 30,
+   "eligible_pairs": 173,
+   "serial_kept": 16,
+   "exact_kept": 119,
+   "sat_pairs": 105,
+   "serial_retained_sat": 6,
+   "exact_retained_sat": 105,
+   "family": "heterogeneous",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 1.035,
+   "model_loading_embedding_s": 0.446,
+   "rdf_build_query_s": 0.589,
+   "serial_candidate_s": 0.062,
+   "triage_s": 1.11,
+   "triage_range_s": [
+    1.072,
+    1.243
+   ],
+   "exhaustive_s": 0.738,
+   "exhaustive_range_s": [
+    0.686,
+    0.765
+   ],
+   "equality_screen_and_candidates_s": 0.475,
+   "certified_with_screen_s": 1.848,
+   "conflicts_missed_by_serial_screen": 99,
+   "missed_percent": 94.29,
+   "pairs_removed_percent": 90.75
+  },
+  {
+   "rules": 100,
+   "eligible_pairs": 1884,
+   "serial_kept": 154,
+   "exact_kept": 1373,
+   "sat_pairs": 1272,
+   "serial_retained_sat": 73,
+   "exact_retained_sat": 1272,
+   "family": "heterogeneous",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 5.901,
+   "model_loading_embedding_s": 0.99,
+   "rdf_build_query_s": 4.841,
+   "serial_candidate_s": 0.572,
+   "triage_s": 6.473,
+   "triage_range_s": [
+    6.232,
+    6.514
+   ],
+   "exhaustive_s": 7.227,
+   "exhaustive_range_s": [
+    7.224,
+    8.302
+   ],
+   "equality_screen_and_candidates_s": 5.655,
+   "certified_with_screen_s": 13.7,
+   "conflicts_missed_by_serial_screen": 1199,
+   "missed_percent": 94.26,
+   "pairs_removed_percent": 91.83
+  },
+  {
+   "rules": 300,
+   "eligible_pairs": 16878,
+   "serial_kept": 1291,
+   "exact_kept": 12073,
+   "sat_pairs": 11133,
+   "serial_retained_sat": 626,
+   "exact_retained_sat": 11133,
+   "family": "heterogeneous",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 45.418,
+   "model_loading_embedding_s": 2.672,
+   "rdf_build_query_s": 42.406,
+   "serial_candidate_s": 4.802,
+   "triage_s": 50.201,
+   "triage_range_s": [
+    48.323,
+    50.22
+   ],
+   "exhaustive_s": 67.064,
+   "exhaustive_range_s": [
+    65.028,
+    70.838
+   ],
+   "equality_screen_and_candidates_s": 53.594,
+   "certified_with_screen_s": 117.265,
+   "conflicts_missed_by_serial_screen": 10507,
+   "missed_percent": 94.38,
+   "pairs_removed_percent": 92.35
+  },
+  {
+   "rules": 30,
+   "eligible_pairs": 225,
+   "serial_kept": 225,
+   "exact_kept": 225,
+   "sat_pairs": 176,
+   "serial_retained_sat": 176,
+   "exact_retained_sat": 176,
+   "family": "interval",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 0.876,
+   "model_loading_embedding_s": 0.31,
+   "rdf_build_query_s": 0.563,
+   "serial_candidate_s": 1.069,
+   "triage_s": 1.946,
+   "triage_range_s": [
+    1.933,
+    1.993
+   ],
+   "exhaustive_s": 1.05,
+   "exhaustive_range_s": [
+    0.971,
+    1.362
+   ],
+   "equality_screen_and_candidates_s": 1.136,
+   "certified_with_screen_s": 3.043,
+   "conflicts_missed_by_serial_screen": 0,
+   "missed_percent": 0.0,
+   "pairs_removed_percent": 0.0
+  },
+  {
+   "rules": 100,
+   "eligible_pairs": 2500,
+   "serial_kept": 2500,
+   "exact_kept": 2500,
+   "sat_pairs": 1161,
+   "serial_retained_sat": 1161,
+   "exact_retained_sat": 1161,
+   "family": "interval",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 5.532,
+   "model_loading_embedding_s": 0.716,
+   "rdf_build_query_s": 4.804,
+   "serial_candidate_s": 10.985,
+   "triage_s": 16.356,
+   "triage_range_s": [
+    16.254,
+    16.777
+   ],
+   "exhaustive_s": 10.76,
+   "exhaustive_range_s": [
+    10.677,
+    11.382
+   ],
+   "equality_screen_and_candidates_s": 11.122,
+   "certified_with_screen_s": 27.033,
+   "conflicts_missed_by_serial_screen": 0,
+   "missed_percent": 0.0,
+   "pairs_removed_percent": 0.0
+  },
+  {
+   "rules": 300,
+   "eligible_pairs": 22500,
+   "serial_kept": 22500,
+   "exact_kept": 22500,
+   "sat_pairs": 9903,
+   "serial_retained_sat": 9903,
+   "exact_retained_sat": 9903,
+   "family": "interval",
+   "repetitions": 3,
+   "unresolved_pairs": 0,
+   "label_disagreements": 0,
+   "serial_screen_s": 42.77,
+   "model_loading_embedding_s": 1.624,
+   "rdf_build_query_s": 40.862,
+   "serial_candidate_s": 104.299,
+   "triage_s": 147.069,
+   "triage_range_s": [
+    140.922,
+    153.041
+   ],
+   "exhaustive_s": 103.145,
+   "exhaustive_range_s": [
+    102.572,
+    106.93
+   ],
+   "equality_screen_and_candidates_s": 102.584,
+   "certified_with_screen_s": 253.999,
+   "conflicts_missed_by_serial_screen": 0,
+   "missed_percent": 0.0,
+   "pairs_removed_percent": 0.0
+  }
+ ]
+}

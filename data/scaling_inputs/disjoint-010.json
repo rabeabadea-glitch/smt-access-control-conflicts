@@ -1,0 +1,237 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "item": {
+      "type": "int",
+      "min": 0,
+      "max": 999
+    },
+    "requested": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "S0": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    },
+    "S1": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    },
+    "S2": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    },
+    "S3": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    }
+  },
+  "rules": [
+    {
+      "id": "r0000",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0001",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0002",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0003",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0004",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0005",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0006",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0007",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0008",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0009",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 9
+          }
+        ]
+      }
+    }
+  ]
+}

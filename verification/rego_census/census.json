@@ -1,0 +1,2492 @@
+{
+ "summary": {
+  "files": 203,
+  "by_repo": {
+   "gatekeeper-library": 91,
+   "conftest": 46,
+   "contrib": 66
+  },
+  "accepted_by_mapper": 3,
+  "opa_parsed": 203,
+  "rejection_classes": {
+   "syntax outside the profile (e.g., brackets, strings, operators)": 185,
+   "other: body terms require a semicolon or line boundary": 1,
+   "pre-1.0 rule syntax (no \"if\")": 7,
+   "comparison that is not attribute against literal": 4,
+   "other: expected :=, got [": 1,
+   "imports or reserved keywords": 2
+  },
+  "files_using_feature": {
+   "user-defined function": 105,
+   "partial set or object rule": 123,
+   "negation": 106,
+   "comprehension": 22,
+   "iteration over collections": 102,
+   "function or built-in call": 130,
+   "import of external data or libraries": 38,
+   "else branch": 4,
+   "reference to external data": 15,
+   "with modifier": 3
+  }
+ },
+ "rows": [
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/volumes/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/volumes/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 2,
+    "comprehension": 1,
+    "iteration over collections": 4,
+    "function or built-in call": 1,
+    "user-defined function": 2,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/selinux/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/selinux/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/selinux/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 168",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 5,
+    "negation": 6,
+    "function or built-in call": 2,
+    "iteration over collections": 8,
+    "user-defined function": 4,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/users/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/users/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/users/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 129",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 11,
+    "iteration over collections": 11,
+    "function or built-in call": 17,
+    "user-defined function": 20,
+    "comprehension": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-process/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-process/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-process/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 128",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 5,
+    "negation": 3,
+    "function or built-in call": 2,
+    "iteration over collections": 4,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-network-ports/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-network-ports/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-network-ports/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 136",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 5,
+    "function or built-in call": 1,
+    "user-defined function": 3,
+    "iteration over collections": 5,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/read-only-root-filesystem/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/read-only-root-filesystem/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/read-only-root-filesystem/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 139",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 4,
+    "iteration over collections": 5,
+    "function or built-in call": 1,
+    "user-defined function": 3,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-probes-lifecycle/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-probes-lifecycle/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-probes-lifecycle/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 136",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 7,
+    "negation": 8,
+    "iteration over collections": 7,
+    "function or built-in call": 8,
+    "user-defined function": 5,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/allow-privilege-escalation/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/allow-privilege-escalation/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/allow-privilege-escalation/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 150",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 4,
+    "iteration over collections": 5,
+    "function or built-in call": 1,
+    "user-defined function": 3,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/forbidden-sysctls/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/forbidden-sysctls/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 111",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 5,
+    "iteration over collections": 8,
+    "function or built-in call": 5,
+    "user-defined function": 7,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/seccomp/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/seccomp/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 99",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 6,
+    "negation": 15,
+    "iteration over collections": 20,
+    "function or built-in call": 15,
+    "user-defined function": 13,
+    "else branch": 2,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/capabilities/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/capabilities/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/capabilities/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 123",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 6,
+    "negation": 15,
+    "iteration over collections": 12,
+    "function or built-in call": 19,
+    "user-defined function": 4,
+    "comprehension": 4,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/proc-mount/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/proc-mount/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/proc-mount/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 126",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 6,
+    "iteration over collections": 4,
+    "function or built-in call": 6,
+    "user-defined function": 8,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/apparmor/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/apparmor/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 84",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "iteration over collections": 5,
+    "negation": 3,
+    "function or built-in call": 11,
+    "user-defined function": 8,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/fsgroup/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/fsgroup/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 81",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 4,
+    "function or built-in call": 3,
+    "user-defined function": 7,
+    "iteration over collections": 3,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/flexvolume-drivers/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/flexvolume-drivers/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2,
+    "iteration over collections": 4,
+    "function or built-in call": 1,
+    "user-defined function": 2,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-filesystem/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-filesystem/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 88",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 5,
+    "negation": 8,
+    "iteration over collections": 12,
+    "function or built-in call": 9,
+    "user-defined function": 14,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/seccompv2/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/seccompv2/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 83",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 6,
+    "negation": 6,
+    "iteration over collections": 11,
+    "function or built-in call": 7,
+    "user-defined function": 10,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/privileged-containers/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/privileged-containers/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/privileged-containers/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 127",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 2,
+    "iteration over collections": 4,
+    "function or built-in call": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-namespaces/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/pod-security-policy/host-namespaces/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 87",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1,
+    "user-defined function": 2,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/rego/lib_exclude_update/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/rego/lib_exempt_container/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/block-wildcard-ingress/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 50",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 2,
+    "partial set or object rule": 1,
+    "function or built-in call": 2,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/disallowanonymous/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 46",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2,
+    "function or built-in call": 5,
+    "iteration over collections": 4,
+    "user-defined function": 3
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/allowedreposv2/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 43",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "iteration over collections": 5,
+    "negation": 4,
+    "function or built-in call": 4,
+    "user-defined function": 2
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/noupdateserviceaccount/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 42",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 10,
+    "function or built-in call": 9,
+    "iteration over collections": 3,
+    "comprehension": 2,
+    "partial set or object rule": 3,
+    "negation": 3
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerresourceratios/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerresourceratios/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 79",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 28,
+    "negation": 31,
+    "iteration over collections": 15,
+    "function or built-in call": 59,
+    "partial set or object rule": 15,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/verifydeprecatedapi/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 45",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "iteration over collections": 2,
+    "function or built-in call": 3,
+    "user-defined function": 3,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/block-loadbalancer-services/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 46",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerrequests/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerrequests/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 81",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 27,
+    "negation": 21,
+    "iteration over collections": 10,
+    "function or built-in call": 43,
+    "partial set or object rule": 10,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/requiredprobes/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/requiredprobes/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 84",
+   "opa_syntax": "v0",
+   "features": {
+    "comprehension": 2,
+    "iteration over collections": 5,
+    "partial set or object rule": 1,
+    "negation": 2,
+    "function or built-in call": 5,
+    "user-defined function": 4,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/poddisruptionbudget/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 48",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "negation": 3,
+    "function or built-in call": 9,
+    "reference to external data": 2,
+    "iteration over collections": 6,
+    "comprehension": 4,
+    "user-defined function": 2
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/storageclass/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 31",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 7,
+    "partial set or object rule": 5,
+    "negation": 6,
+    "reference to external data": 8,
+    "function or built-in call": 15,
+    "iteration over collections": 12,
+    "else branch": 3,
+    "comprehension": 6
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/automount-serviceaccount-token/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/automount-serviceaccount-token/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 99",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "negation": 2,
+    "function or built-in call": 1,
+    "user-defined function": 3,
+    "iteration over collections": 4,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/disallowedtags/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/disallowedtags/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 87",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 5,
+    "iteration over collections": 6,
+    "negation": 3,
+    "comprehension": 1,
+    "function or built-in call": 6,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/requiredannotations/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 48",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "comprehension": 2,
+    "iteration over collections": 4,
+    "function or built-in call": 4,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerresources/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerresources/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 90",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "iteration over collections": 6,
+    "negation": 2,
+    "comprehension": 4,
+    "function or built-in call": 6,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/httpsonly/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 38",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 3,
+    "function or built-in call": 5,
+    "user-defined function": 2
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/externalip/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 40",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "comprehension": 2,
+    "iteration over collections": 2,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/imagedigests/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/imagedigests/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "iteration over collections": 3,
+    "negation": 6,
+    "function or built-in call": 3,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/disallowinteractive/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/disallowinteractive/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 95",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "iteration over collections": 5,
+    "negation": 3,
+    "function or built-in call": 1,
+    "user-defined function": 3,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/replicalimits/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 38",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 2,
+    "user-defined function": 2,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/requiredlabels/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 38",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 2,
+    "negation": 2,
+    "partial set or object rule": 2,
+    "comprehension": 2,
+    "iteration over collections": 4,
+    "function or built-in call": 6
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/uniqueingresshost/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1,
+    "partial set or object rule": 1,
+    "iteration over collections": 3,
+    "reference to external data": 1,
+    "negation": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/ephemeralstoragelimit/lib_exclude_update.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 37",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/ephemeralstoragelimit/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/ephemeralstoragelimit/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 135",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 25,
+    "negation": 16,
+    "iteration over collections": 8,
+    "function or built-in call": 33,
+    "partial set or object rule": 7,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerlimits/lib_exempt_container.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 39",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "function or built-in call": 3,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/containerlimits/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 79",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 27,
+    "negation": 21,
+    "iteration over collections": 10,
+    "function or built-in call": 43,
+    "partial set or object rule": 10,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/block-nodeport-services/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 42",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/uniqueserviceselector/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 49",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 4,
+    "function or built-in call": 8,
+    "comprehension": 1,
+    "iteration over collections": 2,
+    "partial set or object rule": 1,
+    "reference to external data": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/block-endpoint-edit-default-role/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 57",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "iteration over collections": 5,
+    "user-defined function": 4
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/allowedrepos/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 41",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "iteration over collections": 3,
+    "negation": 3,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/disallowedrepos/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 44",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "iteration over collections": 6,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "gatekeeper-library",
+   "file": "gatekeeper-library/src/general/horizontalpodautoscaler/src.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 52",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "negation": 3,
+    "function or built-in call": 6,
+    "reference to external data": 1,
+    "user-defined function": 3,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/configfile/test/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 165",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/configfile/test/kubernetes.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 63",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/ignore/dockerignore/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Body terms require a semicolon or line boundary",
+   "opa_syntax": "v0",
+   "features": {
+    "iteration over collections": 1,
+    "partial set or object rule": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/ignore/gitignore/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 175",
+   "opa_syntax": "v0",
+   "features": {
+    "iteration over collections": 1,
+    "partial set or object rule": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/xml/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 223",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "iteration over collections": 9,
+    "negation": 3,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/hcl2/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 38",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 2,
+    "iteration over collections": 6,
+    "partial set or object rule": 4,
+    "function or built-in call": 10,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/spdx/policy/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 166",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/traefik/policy/base.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 129",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 1,
+    "user-defined function": 1,
+    "iteration over collections": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/report/policy/labels.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 230",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/report/policy_print/labels.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 288",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/compose/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 49",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/awssam/policy/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 83",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3,
+    "iteration over collections": 14,
+    "partial set or object rule": 7,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/docker/policy/commands.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 53",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "iteration over collections": 4,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/docker/policy/images.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 141",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "iteration over collections": 4,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/strict-rules/policy/lenient.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 105",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 2,
+    "else branch": 2,
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/builtin-errors/invalid-dns.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 107",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/capabilities/malicious.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 71",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/exceptions/policy/exception.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 71",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/exceptions/policy/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 60",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kubernetes/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 196",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2,
+    "function or built-in call": 2,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kubernetes/policy/kubernetes.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 63",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kubernetes/policy/labels.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 518",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kubernetes/policy/violation.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 102",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kubernetes/policy/warn.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 133",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kubernetes/combine/combine.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 170",
+   "opa_syntax": "v0",
+   "features": {
+    "iteration over collections": 4,
+    "negation": 1,
+    "function or built-in call": 1,
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/ts/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 109",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/data/policy/base.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 290",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "iteration over collections": 4,
+    "function or built-in call": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/serverless/policy/base.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 76",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "iteration over collections": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/nginx/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 366",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "function or built-in call": 5,
+    "user-defined function": 2,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/codeowners/policy/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 284",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "function or built-in call": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/properties/policy/test.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 107",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "iteration over collections": 3,
+    "function or built-in call": 5,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/combine/policy/duplicate.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 179",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "iteration over collections": 12,
+    "comprehension": 5,
+    "function or built-in call": 9
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/dotenv/policy/dotenv.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/hcl1/policy/base.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 56",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 2,
+    "user-defined function": 1,
+    "iteration over collections": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/hcl1/policy/gke.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 50",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/hcl1/policy/gke_combine.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got contains",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/edn/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 67",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/cue/policy/base.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 74",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 4,
+    "negation": 2,
+    "function or built-in call": 3,
+    "iteration over collections": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/kustomize/policy/base.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 64",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 3,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/textproto/policy/over_9000.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 49",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/vcl/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 88",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "iteration over collections": 1,
+    "negation": 2,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/cyclonedx/policy/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 225",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/hocon/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/jsonnet/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/ini/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 80",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 6,
+    "negation": 6
+   }
+  },
+  {
+   "repo": "conftest",
+   "file": "conftest/examples/jenkins/policy/deny.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 72",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "user-defined function": 1,
+    "comprehension": 1,
+    "function or built-in call": 5,
+    "reference to external data": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/image_enforcer/policies/default.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 261",
+   "opa_syntax": "v0",
+   "features": {
+    "negation": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/image_enforcer/policies/scan.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 228",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 6,
+    "partial set or object rule": 2,
+    "reference to external data": 2,
+    "iteration over collections": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/image_enforcer/policies/mock/input.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 117",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/simplecov/simplecov.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 58",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 20,
+    "user-defined function": 6,
+    "comprehension": 4,
+    "iteration over collections": 4,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/simplecov/example/policy.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got contains",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/sonarcloud/example/policy.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got contains",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cobertura/example/policy.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got contains",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/data_filter_mongodb/example.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 350",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 3,
+    "reference to external data": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/api_authz/docker/policy/example-hr.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 131",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/api_authz/docker/policy/example-jwt.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 167",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/api_authz/docker/policy/example.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 113",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/dart_authz/policies/example.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 134",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/pam_opa/docker/policy/display.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 212",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/pam_opa/docker/policy/pull.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got :=",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/pam_opa/docker/policy/sshd_authz.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 468",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/pam_opa/docker/policy/sudo_authz.rego",
+   "mapper": "rejected",
+   "reason": "Comparison required",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/data_filter_azure/example_documentdb.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 85",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 11,
+    "partial set or object rule": 4,
+    "reference to external data": 7,
+    "iteration over collections": 4
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/data_filter_azure/example_tablestorage.rego",
+   "mapper": "rejected",
+   "reason": "Comparison required",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/data_filter_elasticsearch/example-conditions.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 62",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 3,
+    "reference to external data": 1,
+    "user-defined function": 5,
+    "negation": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/data_filter_elasticsearch/policy/example.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 200",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 12,
+    "partial set or object rule": 7,
+    "reference to external data": 7
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cloud-foundry/polices/pshelpers/compare_numbers.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 49",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cloud-foundry/polices/pshelpers/object_matchers.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 51",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cloud-foundry/polices/pas/cipher/check_cipher.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 34",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1,
+    "partial set or object rule": 1,
+    "function or built-in call": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cloud-foundry/polices/pas/cert/certificate.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 47",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 4,
+    "function or built-in call": 23,
+    "comprehension": 4,
+    "iteration over collections": 1,
+    "partial set or object rule": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cloud-foundry/polices/pas/credhub-key/credhub_key.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 105",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "comprehension": 1,
+    "function or built-in call": 8
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/cloud-foundry/polices/pas/diego/diego.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 42",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1,
+    "comprehension": 1,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/k8s_node_selector/authz.rego",
+   "mapper": "rejected",
+   "reason": "Literal comparison required",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/k8s_node_selector/data_input.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 91",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/k8s_node_selector/main.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 103",
+   "opa_syntax": "v0",
+   "features": {
+    "else branch": 1,
+    "function or built-in call": 2,
+    "user-defined function": 1,
+    "reference to external data": 2,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/graphql-apollo-example/docker/policy/example-hr.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 82",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 1,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/graphql-apollo-example/docker/policy/example-jwt.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 108",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 8,
+    "function or built-in call": 8,
+    "iteration over collections": 2,
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/graphql-apollo-example/docker/policy/example.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 95",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 7,
+    "function or built-in call": 7,
+    "iteration over collections": 2,
+    "partial set or object rule": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/puppet_example/puppet_authz.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 161",
+   "opa_syntax": "v0",
+   "features": {
+    "negation": 3,
+    "function or built-in call": 5,
+    "iteration over collections": 3,
+    "partial set or object rule": 1,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/wasm/cloudflare-worker/example.rego",
+   "mapper": "accepted",
+   "reason": "",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/kong_api_authz/integration/testdata/opa/bundle/httpapi/authz/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 178",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/k8s_authorization/policy/policy.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 300",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "comprehension": 1,
+    "function or built-in call": 7,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/kafka_authorizer/src/test/resources/kafka_authz.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 667",
+   "opa_syntax": "v0",
+   "features": {
+    "negation": 3,
+    "iteration over collections": 2,
+    "function or built-in call": 3,
+    "user-defined function": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/k8s_api_client/policy/api_client.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 273",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 4
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/authzen/authzen-interop/policy/authzen/authzen.rego",
+   "mapper": "rejected",
+   "reason": "Expected :=, got [",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 6,
+    "reference to external data": 4
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/custom_bundle_signing/policy/awesome.rego",
+   "mapper": "rejected",
+   "reason": "Comparison required",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-performance/lab-2/v0.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 89",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 6,
+    "comprehension": 2,
+    "with modifier": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-performance/lab-2/guided/v1.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 59",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "function or built-in call": 4,
+    "comprehension": 1,
+    "with modifier": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-performance/profiling-examples/example1/rule.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got {",
+   "opa_syntax": "v0",
+   "features": {
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-performance/profiling-examples/example2/v1/rule.rego",
+   "mapper": "rejected",
+   "reason": "Expected if, got {",
+   "opa_syntax": "v0",
+   "features": {
+    "iteration over collections": 2,
+    "reference to external data": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-performance/profiling-examples/example2/v2/rule.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 45",
+   "opa_syntax": "v0",
+   "features": {
+    "iteration over collections": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-by-example/review_authz_example/rules_and_data/policy/role/rules.rego",
+   "mapper": "rejected",
+   "reason": "Expected rego, got future",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-by-example/review_authz_example/rules_and_data/test/test.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 75",
+   "opa_syntax": "v0",
+   "features": {
+    "with modifier": 6,
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/academy-samples/opa-by-example/review_authz_example/rules_and_data/main/rules.rego",
+   "mapper": "rejected",
+   "reason": "Expected rego, got future",
+   "opa_syntax": "v0",
+   "features": {
+    "import of external data or libraries": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/ci/resourcetypes.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 382",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "function or built-in call": 7
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/assertions.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 287",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 13,
+    "function or built-in call": 11,
+    "negation": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/authz.rego",
+   "mapper": "accepted",
+   "reason": "",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/aws.rego",
+   "mapper": "accepted",
+   "reason": "",
+   "opa_syntax": "v0",
+   "features": {}
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/main.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 256",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 2,
+    "partial set or object rule": 5,
+    "negation": 4,
+    "user-defined function": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/test_helpers.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 60",
+   "opa_syntax": "v0",
+   "features": {
+    "user-defined function": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/ec2/security_group/security_group.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 159",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "function or built-in call": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/rds/db/encryption.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 112",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/eks/cluster/logging_enabled.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 108",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/eks/cluster/public_api.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 109",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 2,
+    "function or built-in call": 2
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/iam/user/have_policies.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 102",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 1,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/iam/user/no_admin.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 124",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 2,
+    "function or built-in call": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/iam/user/principal_boundary.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 80",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 4,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/iam/role/principal_boundary.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 80",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 4,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/s3/bucket/encryption.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 138",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 4,
+    "function or built-in call": 3
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/s3/bucket/logging.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 132",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 2,
+    "negation": 5,
+    "function or built-in call": 4
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/opa-aws-cloudformation-hook/examples/policy/s3/bucket/public_access.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 133",
+   "opa_syntax": "v0",
+   "features": {
+    "partial set or object rule": 1,
+    "negation": 2,
+    "function or built-in call": 2,
+    "iteration over collections": 1
+   }
+  },
+  {
+   "repo": "contrib",
+   "file": "contrib/data_filter_example/example.rego",
+   "mapper": "rejected",
+   "reason": "Unsupported Rego syntax at 319",
+   "opa_syntax": "v0",
+   "features": {
+    "function or built-in call": 5,
+    "reference to external data": 4,
+    "iteration over collections": 1,
+    "partial set or object rule": 3
+   }
+  }
+ ]
+}

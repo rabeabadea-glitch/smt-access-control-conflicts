@@ -1,0 +1,42 @@
+[
+ {
+  "control": "P4.7 without \"the target never asks for Conflict\" (the version corrected on 27 October)",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "refuted": true
+ },
+ {
+  "control": "P4.4 reversed: D(l) minus D(w) inside every disjoint subregion",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "refuted": true
+ },
+ {
+  "control": "P4.3 without the two values being different",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "refuted": true
+ },
+ {
+  "control": "P4.1 equality atom without an injective coding",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "refuted": true
+ }
+]

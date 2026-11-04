@@ -1,0 +1,75 @@
+{
+  "case_id": "C10",
+  "title": "Already consistent decision partition",
+  "role": "substantive finite challenge",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    }
+  },
+  "source_assets": [
+    {
+      "source_id": "A",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C10/sources/A.json"
+    },
+    {
+      "source_id": "B",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C10/sources/B.json"
+    },
+    {
+      "source_id": "C",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C10/sources/C.json"
+    },
+    {
+      "source_id": "D",
+      "format": "cpm",
+      "rule_count": 1,
+      "combining": "union",
+      "path": "cases/C10/sources/D.json"
+    }
+  ],
+  "request_count": 8,
+  "source_count": 4,
+  "source_rule_count": 4,
+  "anticipated_compiled_rule_count": 4,
+  "independent_priority_specification_high_to_low": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "target_specification": "Four disjoint source regions already provide the complete required table; a correct result preserves both effects without inventing conflicts.",
+  "feasibility": "finite specification satisfiable; configured repair acceptance unspecified",
+  "expected_acceptance": "Not preassigned; acceptance/rejection and specification satisfaction will both be reported.",
+  "original_union_decision_counts": {
+    "Deny": 4,
+    "Permit": 4
+  },
+  "target_decision_counts": {
+    "Deny": 4,
+    "Permit": 4
+  },
+  "conflict_request_count": 0,
+  "preserved_original_permit_count": 4,
+  "preserved_original_deny_count": 4,
+  "input_path": "cases/C10/input.json",
+  "requirements_path": "cases/C10/requirements.json",
+  "truth_table_path": "cases/C10/expected_truth_table.json",
+  "governance_path": "cases/C10/governance.json",
+  "origin": "New manually authored challenge, designed retrospectively with knowledge of earlier thesis results. No external corpus or untouched confirmatory claim."
+}

@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="urn:research:generated:cpm" RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides" Version="1.0">
+  <Description>{"domains": {"f": {"type": "bool"}, "x": {"max": 5, "min": 0, "type": "int"}, "y": {"max": 5, "min": 0, "type": "int"}}, "profile": "total-singleton deny-overrides", "rules": [{"effect": "Deny", "id": "S3_r1", "source": "S3"}, {"effect": "Permit", "id": "S2_r1", "source": "S2"}, {"effect": "Permit", "id": "S4_r1", "source": "S4"}, {"effect": "Deny", "id": "S1_r1", "source": "S1"}, {"effect": "Deny", "id": "S5_r1", "source": "S5"}], "sources": {"S1": {"citation": "Generated chained-priority case K11 (seed 20261101)", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "S2": {"citation": "Generated chained-priority case K11 (seed 20261101)", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "S3": {"citation": "Generated chained-priority case K11 (seed 20261101)", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "S4": {"citation": "Generated chained-priority case K11 (seed 20261101)", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}, "S5": {"citation": "Generated chained-priority case K11 (seed 20261101)", "kind": "synthetic", "mapping_status": "synthetic structured source; no external interpretation"}}}</Description>
+  <Target />
+  <Rule RuleId="urn:research:cpm-rule:6f80ecd688a569819950a47feac35ee602de07de6839d54666b39a37f799d4d6" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="f" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:c67f1836d0b3fec64abd41c94be0a840f0aba6c010c9e393643cb3fb7ebd81e2" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="f" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:a54caf89ac3ef63aa5c1c3ffa48d1d4d59fc9d335da35266c8326421df6db7b8" Effect="Permit">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="f" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                    <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                  </Apply>
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                    <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                  </Apply>
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                    <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                  </Apply>
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                    <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                  </Apply>
+                  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+                </Apply>
+              </Apply>
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                      <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+                  </Apply>
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                      <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+                  </Apply>
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                      <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+                  </Apply>
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                      <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+                  </Apply>
+                  <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                      <AttributeDesignator Category="urn:research:cpm" AttributeId="f" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+                  </Apply>
+                </Apply>
+              </Apply>
+            </Apply>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">3</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+            </Apply>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:b1c8e67ad1de38a04bc58f18b17ba68fd8369ce1086fb7c2116ffeeda9cb94b8" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">3</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">4</AttributeValue>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="urn:research:cpm-rule:71001e8bac609d3c0be5319055f5fa69636a092402bd3f29b6a1898855dc4b62" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">3</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+          </Apply>
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+          </Apply>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">0</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="x" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">1</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="y" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+              <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                <AttributeDesignator Category="urn:research:cpm" AttributeId="f" DataType="http://www.w3.org/2001/XMLSchema#boolean" MustBePresent="true" />
+              </Apply>
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+            </Apply>
+          </Apply>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+</Policy>

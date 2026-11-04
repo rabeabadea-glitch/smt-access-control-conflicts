@@ -1,0 +1,167 @@
+{
+  "conditions": 80,
+  "groups": [
+    {
+      "rules": 10,
+      "family": "disjoint",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 1083.5705999925267,
+      "min_wall_ms": 910.3068999975221,
+      "max_wall_ms": 1350.4130000073928
+    },
+    {
+      "rules": 10,
+      "family": "disjoint",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 1005.4435000056401,
+      "min_wall_ms": 929.2077999998583,
+      "max_wall_ms": 1063.2015000010142
+    },
+    {
+      "rules": 10,
+      "family": "interval",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 1191.987899990636,
+      "min_wall_ms": 1071.5656000102172,
+      "max_wall_ms": 2554.132799996296
+    },
+    {
+      "rules": 10,
+      "family": "interval",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 1628.2376000017393,
+      "min_wall_ms": 1522.8713999968022,
+      "max_wall_ms": 2398.047199996654
+    },
+    {
+      "rules": 30,
+      "family": "disjoint",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 3495.885799988173,
+      "min_wall_ms": 3321.2790999969,
+      "max_wall_ms": 4536.740099996678
+    },
+    {
+      "rules": 30,
+      "family": "disjoint",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 3534.4112000020687,
+      "min_wall_ms": 3298.9949000038905,
+      "max_wall_ms": 5094.3103000026895
+    },
+    {
+      "rules": 30,
+      "family": "interval",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 6138.601600003312,
+      "min_wall_ms": 4516.773099996499,
+      "max_wall_ms": 6963.40500000224
+    },
+    {
+      "rules": 30,
+      "family": "interval",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 8200.975100000505,
+      "min_wall_ms": 7928.6892999953125,
+      "max_wall_ms": 8589.344500011066
+    },
+    {
+      "rules": 100,
+      "family": "disjoint",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 29407.33449999243,
+      "min_wall_ms": 28142.50170000014,
+      "max_wall_ms": 43369.23789999855
+    },
+    {
+      "rules": 100,
+      "family": "disjoint",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 37181.99320000713,
+      "min_wall_ms": 33884.6240999992,
+      "max_wall_ms": 46842.18769999279
+    },
+    {
+      "rules": 100,
+      "family": "interval",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 45038.58389999368,
+      "min_wall_ms": 40382.53450000775,
+      "max_wall_ms": 52924.32310000004
+    },
+    {
+      "rules": 100,
+      "family": "interval",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 70213.9557999908,
+      "min_wall_ms": 68209.29890000843,
+      "max_wall_ms": 97966.0140999913
+    },
+    {
+      "rules": 300,
+      "family": "disjoint",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 250579.2114999931,
+      "min_wall_ms": 235919.8058000038,
+      "max_wall_ms": 349505.75109999045
+    },
+    {
+      "rules": 300,
+      "family": "disjoint",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 244718.01690000575,
+      "min_wall_ms": 241195.42889999866,
+      "max_wall_ms": 328421.84490000363
+    },
+    {
+      "rules": 300,
+      "family": "interval",
+      "mode": "exhaustive",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 313629.9554000143,
+      "min_wall_ms": 299978.1575000088,
+      "max_wall_ms": 433064.22759999987
+    },
+    {
+      "rules": 300,
+      "family": "interval",
+      "mode": "exact",
+      "attempted": 5,
+      "completed_passed": 5,
+      "median_wall_ms": 615239.2156999995,
+      "min_wall_ms": 575749.1740000114,
+      "max_wall_ms": 717799.3037999986
+    }
+  ],
+  "all_completed_passed": true,
+  "claims": "Controlled workload scaling only. Five repetitions describe median/range; no production or statistical-significance inference."
+}

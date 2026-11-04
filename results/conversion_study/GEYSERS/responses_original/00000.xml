@@ -1,0 +1,21 @@
+<EngineError>org.wso2.balana.ParsingException: Required Category missing in AttributeDesignator
+	at org.wso2.balana.attr.xacml3.AttributeDesignator.getInstance(AttributeDesignator.java:127)
+	at org.wso2.balana.attr.AttributeDesignatorFactory.getAbstractDesignator(AttributeDesignatorFactory.java:38)
+	at org.wso2.balana.TargetMatch.getInstance(TargetMatch.java:247)
+	at org.wso2.balana.TargetMatch.getInstance(TargetMatch.java:191)
+	at org.wso2.balana.xacml3.AllOfSelection.getInstance(AllOfSelection.java:68)
+	at org.wso2.balana.xacml3.AnyOfSelection.getInstance(AnyOfSelection.java:76)
+	at org.wso2.balana.xacml3.Target.getInstance(Target.java:78)
+	at org.wso2.balana.TargetFactory.getTarget(TargetFactory.java:43)
+	at org.wso2.balana.Rule.getInstance(Rule.java:235)
+	at org.wso2.balana.Policy.&lt;init&gt;(Policy.java:303)
+	at org.wso2.balana.Policy.getInstance(Policy.java:382)
+	at org.wso2.balana.PolicySet.&lt;init&gt;(PolicySet.java:246)
+	at org.wso2.balana.PolicySet.getInstance(PolicySet.java:371)
+	at BalanaBatch$SingleRoot.&lt;init&gt;(BalanaBatch.java:22)
+	at BalanaBatch.load(BalanaBatch.java:36)
+	at BalanaBatch.main(BalanaBatch.java:48)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.w3c.dom.Node.getNodeValue()" because the return value of "org.w3c.dom.NamedNodeMap.getNamedItem(String)" is null
+	at org.wso2.balana.attr.xacml3.AttributeDesignator.getInstance(AttributeDesignator.java:125)
+	... 15 more
+</EngineError>

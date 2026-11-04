@@ -1,0 +1,57 @@
+{
+  "schema_version": "cpm-1",
+  "package": "challenge_E",
+  "attributes": {
+    "p": {
+      "type": "bool"
+    },
+    "q": {
+      "type": "bool"
+    },
+    "r": {
+      "type": "bool"
+    },
+    "s": {
+      "type": "bool"
+    },
+    "t": {
+      "type": "bool"
+    },
+    "u": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "E": {
+      "kind": "synthetic",
+      "citation": "Frozen manually authored challenge E",
+      "mapping_status": "synthetic structured source; no regulatory interpretation"
+    }
+  },
+  "rules": [
+    {
+      "id": "E_r1",
+      "source": "E",
+      "effect": "Permit",
+      "entry": "entry_E_r1"
+    },
+    {
+      "id": "E_r2",
+      "source": "E",
+      "effect": "Deny",
+      "entry": "entry_E_r2"
+    },
+    {
+      "id": "E_r3",
+      "source": "E",
+      "effect": "Deny",
+      "entry": "entry_E_r3"
+    },
+    {
+      "id": "E_r4",
+      "source": "E",
+      "effect": "Permit",
+      "entry": "entry_E_r4"
+    }
+  ]
+}

@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  Cross-Source Regulatory Conflict Corpus
+  ========================================
+  Hand-crafted XACML 3.0 encoding of access-control rules derived from real
+  regulatory and standards clauses. Each rule cites its source clause in the
+  Description element. The corpus contains seven conflict families:
+
+    F1  GDPR Art. 17(1) right to erasure        vs  AMLD Art. 40 record retention
+    F2  PCI DSS 8.3.9 periodic password change  vs  NIST SP 800-63B no forced rotation
+    F3  PCI DSS Req 10.2 log all CHD access     vs  GDPR Art. 5(1)(c) data minimisation
+    F4  GDPR Art. 15 right of access            vs  AMLD Art. 39 tipping-off prohibition
+    F5  AML investigation full-PAN need         vs  PCI DSS Req 3.3 PAN masking
+    F6  GDPR Art. 5(1)(e) storage limitation    vs  SOX Sec. 802 audit record retention
+    F7  DORA Art. 19 incident reporting         vs  GDPR Art. 6 lawful-basis transfer restriction
+
+  For families F1, F2, F4, F5, F7 the corpus also contains a GOVERNED variant:
+  the same two source clauses translated correctly, with the legal exception
+  preserved (GDPR Art. 17(3)(b), PCI sole-factor scope, GDPR Art. 23 restriction,
+  PCI legitimate-business-need, GDPR Art. 6(1)(c) legal obligation). Governed
+  pairs are provably conflict-free: Z3 must return UNSAT.
+
+  Ungoverned pairs use different resource record-type values from their
+  governed counterparts so the two scenarios cannot cross-contaminate.
+
+  Expected solver outcomes over all cross-effect pairs:
+    SAT   = 7   (one reachable conflict per family, each with a witness)
+    UNSAT = all remaining pairs, including the 5 governed pairs
+-->
+<PolicySet xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+    PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:first-applicable"
+    PolicySetId="cross-source-corpus" Version="1.0">
+  <Description>Cross-source corpus: operational access-control rules translated from GDPR, AMLD, PCI DSS, NIST SP 800-63B, SOX and DORA.</Description>
+  <Target/>
+
+  <!-- ================================================================ -->
+  <!-- GDPR-derived rules                                                -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="GDPR"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Rules translated from Regulation (EU) 2016/679 (GDPR).</Description>
+    <Target/>
+
+    <!-- F1 ungoverned: Art. 17(1) translated WITHOUT the Art. 17(3)(b)
+         legal-obligation exception. Conflicts with AMLD-40-retain-txn. -->
+    <Rule RuleId="GDPR-17-erase-ungoverned" Effect="Permit">
+      <Description>GDPR Art. 17(1): the data subject has the right to erasure of personal data. Translation drops the Art. 17(3)(b) exception for legal retention obligations.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">erase</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">transaction-record</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:contains-pii"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F1 governed: Art. 17(1) WITH the Art. 17(3)(b) exception preserved
+         as an under-legal-hold guard. Provably conflict-free against
+         AMLD-40-retain-cdd-governed. -->
+    <Rule RuleId="GDPR-17-erase-governed" Effect="Permit">
+      <Description>GDPR Art. 17(1) with Art. 17(3)(b) preserved: erasure permitted only when the record is not under a legal retention hold.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">erase</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">cdd-record</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:contains-pii"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:under-legal-hold"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F4 ungoverned: Art. 15 subject access translated WITHOUT the
+         Art. 23 restriction hook. Conflicts with AMLD-39-tipping-off. -->
+    <Rule RuleId="GDPR-15-subject-access-ungoverned" Effect="Permit">
+      <Description>GDPR Art. 15: the data subject may read personal data held about them. Translation drops the Art. 23(1)(e) restriction that shields AML investigations.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">data-subject</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">customer-file</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:contains-pii"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F4 governed: Art. 15 access scoped away from STR-flagged records
+         (GDPR Art. 23(1)(e) restriction preserved). -->
+    <Rule RuleId="GDPR-15-subject-access-governed" Effect="Permit">
+      <Description>GDPR Art. 15 with Art. 23(1)(e) preserved: subject access permitted only for records not flagged by a suspicious transaction report.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">data-subject</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">kyc-file</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:str-flag"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F3: Art. 5(1)(c) data minimisation. Conflicts with PCI-10-2-log-access. -->
+    <Rule RuleId="GDPR-5c-minimisation" Effect="Deny">
+      <Description>GDPR Art. 5(1)(c): personal data must be adequate, relevant and limited to what is necessary. Deny logging events that contain personal data without a documented purpose.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">log</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:contains-pii"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:documented-purpose"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F6: Art. 5(1)(e) storage limitation implemented as a scheduled
+         PII purge. Conflicts with SOX-802-retain-audit. -->
+    <Rule RuleId="GDPR-5e-storage-purge" Effect="Permit">
+      <Description>GDPR Art. 5(1)(e): personal data kept no longer than necessary. Organisational translation: permit purge of PII-bearing records older than 2 years.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">purge</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:contains-pii"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+      <Condition>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator AttributeId="urn:corp:resource:retention-age-years"
+                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true"/>
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">2</AttributeValue>
+        </Apply>
+      </Condition>
+    </Rule>
+
+    <!-- F7 ungoverned: Art. 6 lawful-basis check on outbound transfers,
+         translated without recognising Art. 6(1)(c) legal obligation.
+         Conflicts with DORA-19-report-incident. -->
+    <Rule RuleId="GDPR-6-restrict-transfer-ungoverned" Effect="Deny">
+      <Description>GDPR Art. 6: deny transmission of personal data without a recorded lawful basis. Translation fails to recognise Art. 6(1)(c) legal obligation as a basis.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">transmit</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:contains-pii"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:legal-basis"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+  </Policy>
+
+  <!-- ================================================================ -->
+  <!-- AMLD-derived rules (Directive (EU) 2015/849)                      -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="AMLD"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Rules translated from the EU Anti-Money-Laundering Directive 2015/849.</Description>
+    <Target/>
+
+    <!-- F1 ungoverned counterpart: Art. 40 five-year retention. -->
+    <Rule RuleId="AMLD-40-retain-txn" Effect="Deny">
+      <Description>AMLD Art. 40: transaction records must be retained for five years after the business relationship ends. Deny erasure inside the retention window.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">erase</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">transaction-record</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+      <Condition>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator AttributeId="urn:corp:resource:retention-age-years"
+                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true"/>
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+        </Apply>
+      </Condition>
+    </Rule>
+
+    <!-- F1 governed counterpart: retention expressed as a legal hold flag,
+         matching the governed GDPR erasure rule. -->
+    <Rule RuleId="AMLD-40-retain-cdd-governed" Effect="Deny">
+      <Description>AMLD Art. 40 governed translation: customer-due-diligence records inside the retention window carry a legal hold; deny erasure while the hold is active.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">erase</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">cdd-record</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:under-legal-hold"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F4 ungoverned counterpart: Art. 39 tipping-off prohibition. -->
+    <Rule RuleId="AMLD-39-tipping-off" Effect="Deny">
+      <Description>AMLD Art. 39: the institution must not disclose to the customer that a suspicious transaction report has been filed. Deny data-subject reads of STR-flagged records.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">data-subject</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">customer-file</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:str-flag"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F4 governed counterpart. -->
+    <Rule RuleId="AMLD-39-tipping-off-governed" Effect="Deny">
+      <Description>AMLD Art. 39 governed translation: deny reads of STR-flagged KYC files. Pairs with the governed GDPR Art. 15 rule, which is scoped to non-flagged files.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">data-subject</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">kyc-file</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:str-flag"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F5 ungoverned: AML investigators need the full PAN.
+         Conflicts with PCI-3-3-mask-pan. -->
+    <Rule RuleId="AMLD-investigator-full-pan" Effect="Permit">
+      <Description>AML investigation practice under AMLD Art. 32: financial-intelligence investigators may view full card numbers in flagged transactions.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">investigator</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">display-full-pan</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">cardholder-data</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F5 governed counterpart. -->
+    <Rule RuleId="AMLD-investigator-full-pan-governed" Effect="Permit">
+      <Description>Governed translation: investigator access to full card numbers requires a recorded legitimate business need (aligns with PCI DSS Req 3.3 exception).</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">investigator</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">display-full-pan</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">payment-card-record</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:legitimate-need"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+  </Policy>
+
+  <!-- ================================================================ -->
+  <!-- PCI DSS-derived rules                                             -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="PCI_DSS"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Rules translated from PCI DSS v4.0.</Description>
+    <Target/>
+
+    <!-- F2 ungoverned: Req 8.3.9 periodic password change, translated
+         without the "passwords are the only factor" scope.
+         Conflicts with NIST-63B-no-forced-rotation. -->
+    <Rule RuleId="PCI-8-3-9-rotate-password" Effect="Permit">
+      <Description>PCI DSS Req 8.3.9: passwords must be changed at least every 90 days. Translation drops the sole-authentication-factor scope condition.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">force-password-change</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">credential</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+      <Condition>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator AttributeId="urn:corp:env:password-age-days"
+                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true"/>
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">90</AttributeValue>
+        </Apply>
+      </Condition>
+    </Rule>
+
+    <!-- F2 governed: Req 8.3.9 correctly scoped to sole-factor credentials. -->
+    <Rule RuleId="PCI-8-3-9-rotate-password-governed" Effect="Permit">
+      <Description>PCI DSS Req 8.3.9 governed translation: forced rotation applies only where the password is the sole authentication factor.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">force-password-change</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">svc-credential</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:sole-factor"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F3 counterpart: Req 10.2 log all access to cardholder data. -->
+    <Rule RuleId="PCI-10-2-log-access" Effect="Permit">
+      <Description>PCI DSS Req 10.2: all individual user access to cardholder data must be logged. The log event necessarily records the user identity.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">log</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">chd-access-event</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F5 ungoverned counterpart: Req 3.3 PAN masking, translated
+         without the legitimate-business-need exception. -->
+    <Rule RuleId="PCI-3-3-mask-pan" Effect="Deny">
+      <Description>PCI DSS Req 3.3: mask the PAN when displayed. Translation drops the exception for personnel with a legitimate business need.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">display-full-pan</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">cardholder-data</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F5 governed counterpart. -->
+    <Rule RuleId="PCI-3-3-mask-pan-governed" Effect="Deny">
+      <Description>PCI DSS Req 3.3 governed translation: deny full-PAN display only when no legitimate business need is recorded.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">display-full-pan</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">payment-card-record</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:legitimate-need"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+  </Policy>
+
+  <!-- ================================================================ -->
+  <!-- NIST SP 800-63B-derived rules                                     -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="NIST_63B"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Rules translated from NIST SP 800-63B digital identity guidelines.</Description>
+    <Target/>
+
+    <!-- F2 ungoverned counterpart: Sec. 5.1.1.2 - verifiers SHOULD NOT
+         require periodic password changes absent evidence of compromise. -->
+    <Rule RuleId="NIST-63B-no-forced-rotation" Effect="Deny">
+      <Description>NIST SP 800-63B Sec. 5.1.1.2: do not force periodic password changes unless there is evidence of compromise.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">force-password-change</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">credential</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:compromise-evidence"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F2 governed counterpart: scoped to multi-factor credentials only,
+         complementing the sole-factor scope of the governed PCI rule. -->
+    <Rule RuleId="NIST-63B-no-forced-rotation-governed" Effect="Deny">
+      <Description>NIST SP 800-63B governed translation: the no-forced-rotation rule applies only to credentials that are not the sole authentication factor.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">force-password-change</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">svc-credential</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:sole-factor"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+  </Policy>
+
+  <!-- ================================================================ -->
+  <!-- SOX-derived rules                                                 -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="SOX"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Rules translated from the Sarbanes-Oxley Act.</Description>
+    <Target/>
+
+    <!-- F6 counterpart: Sec. 802 seven-year retention of audit workpapers. -->
+    <Rule RuleId="SOX-802-retain-audit" Effect="Deny">
+      <Description>SOX Sec. 802: audit workpapers must be retained for seven years. Deny purge inside the retention window.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">purge</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">audit-workpaper</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+      <Condition>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-less-than">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+            <AttributeDesignator AttributeId="urn:corp:resource:retention-age-years"
+                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="true"/>
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">7</AttributeValue>
+        </Apply>
+      </Condition>
+    </Rule>
+  </Policy>
+
+  <!-- ================================================================ -->
+  <!-- DORA-derived rules                                                -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="DORA"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Rules translated from Regulation (EU) 2022/2554 (DORA).</Description>
+    <Target/>
+
+    <!-- F7 ungoverned counterpart: Art. 19 major-incident reporting. -->
+    <Rule RuleId="DORA-19-report-incident" Effect="Permit">
+      <Description>DORA Art. 19: financial entities must report major ICT incidents to the competent authority. Incident reports routinely contain personal data of affected users.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">transmit</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">incident-report</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <!-- F7 governed counterpart: the reporting rule records the GDPR
+         Art. 6(1)(c) legal obligation as its lawful basis. -->
+    <Rule RuleId="DORA-19-report-incident-governed" Effect="Permit">
+      <Description>DORA Art. 19 governed translation: transmission proceeds under GDPR Art. 6(1)(c) legal obligation, recorded as the lawful basis.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">transmit</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">major-incident-report</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:env:legal-basis"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+  </Policy>
+
+  <!-- ================================================================ -->
+  <!-- Internal organisational rules (benign controls)                   -->
+  <!-- ================================================================ -->
+  <Policy PolicyId="INTERNAL"
+      RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+      Version="1.0">
+    <Description>Internal rules with no cross-source counterpart. Included so the corpus contains true negatives.</Description>
+    <Target/>
+
+    <Rule RuleId="INT-hr-view-leave" Effect="Permit">
+      <Description>HR managers may read employee leave requests.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">hr-manager</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">leave-request</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+
+    <Rule RuleId="INT-deny-guest-write-config" Effect="Deny">
+      <Description>Guest accounts may not modify system configuration.</Description>
+      <Target>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">guest</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:subject:role"
+                  Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">write</AttributeValue>
+              <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+        <AnyOf>
+          <AllOf>
+            <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+              <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">system-config</AttributeValue>
+              <AttributeDesignator AttributeId="urn:corp:resource:record-type"
+                  Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                  DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+            </Match>
+          </AllOf>
+        </AnyOf>
+      </Target>
+    </Rule>
+  </Policy>
+</PolicySet>

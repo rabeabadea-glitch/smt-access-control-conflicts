@@ -1,0 +1,511 @@
+{
+ "solvers": {
+  "z3": "Z3 version 4.15.4 - 64 bit",
+  "cvc5": "1.4.2"
+ },
+ "lemmas": [
+  {
+   "lemma": "P4.1 equality atom over an injective coding",
+   "file": "smt/P4_1_equality_atom_over_an_injective_coding.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 1.0,
+   "cvc5_s": 0.26,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 inequality atom over an injective coding",
+   "file": "smt/P4_1_inequality_atom_over_an_injective_coding.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.1,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 Boolean coding false=0, true=1 is injective",
+   "file": "smt/P4_1_Boolean_coding_false_0_true_1_is_injective.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.02,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 integer order atom < (identity coding)",
+   "file": "smt/P4_1_integer_order_atom_lt_identity_coding.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 integer order atom <= (identity coding)",
+   "file": "smt/P4_1_integer_order_atom_le_identity_coding.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 integer order atom > (identity coding)",
+   "file": "smt/P4_1_integer_order_atom_gt_identity_coding.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 integer order atom >= (identity coding)",
+   "file": "smt/P4_1_integer_order_atom_ge_identity_coding.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.1 negation, conjunction and disjunction preserve equivalence",
+   "file": "smt/P4_1_negation_conjunction_and_disjunction_preserve_equivalence.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 1-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_1_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.02,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 2-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_2_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.12,
+   "cvc5_s": 0.01,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 3-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_3_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.02,
+   "cvc5_s": 0.01,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 5-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_5_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.02,
+   "cvc5_s": 0.01,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 8-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_8_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.03,
+   "cvc5_s": 0.01,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 13-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_13_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.03,
+   "cvc5_s": 0.02,
+   "holds": true
+  },
+  {
+   "lemma": "P4.2 consecutive coding of a 21-value enumeration can be decoded",
+   "file": "smt/P4_2_consecutive_coding_of_a_21_value_enumeration_can_be_decoded.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.04,
+   "cvc5_s": 0.04,
+   "holds": true
+  },
+  {
+   "lemma": "Theorem 4.1 overlap implies the query is satisfiable",
+   "file": "smt/Theorem_4_1_overlap_implies_the_query_is_satisfiable.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.02,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "Theorem 4.1 a satisfying model is a real overlap",
+   "file": "smt/Theorem_4_1_a_satisfying_model_is_a_real_overlap.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.3 a collected equality holds whenever its conjunction holds",
+   "file": "smt/P4_3_a_collected_equality_holds_whenever_its_conjunction_holds.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.3 contradictory necessary equalities rule out an overlap",
+   "file": "smt/P4_3_contradictory_necessary_equalities_rule_out_an_overlap.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "Eq. 4.7 the narrowed pair no longer overlaps",
+   "file": "smt/Eq_4_7_the_narrowed_pair_no_longer_overlaps.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.03,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "Eq. 4.7 the loser gains no request",
+   "file": "smt/Eq_4_7_the_loser_gains_no_request.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "Eq. 4.7 everything removed lies in the winner region",
+   "file": "smt/Eq_4_7_everything_removed_lies_in_the_winner_region.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "Eq. 4.7 no new overlap with a third rule",
+   "file": "smt/Eq_4_7_no_new_overlap_with_a_third_rule.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.4 every disjoint subregion lies inside D(l) minus D(w)",
+   "file": "smt/P4_4_every_disjoint_subregion_lies_inside_D_l_minus_D_w.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.4 D(l) minus D(w) is itself admissible (inside D(l), disjoint from D(w))",
+   "file": "smt/P4_4_D_l_minus_D_w_is_itself_admissible_inside_D_l_disjoint_from_D_w.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.5 an accepted step check gives containment",
+   "file": "smt/P4_5_an_accepted_step_check_gives_containment.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.5 induction step: containment in the input is preserved",
+   "file": "smt/P4_5_induction_step_containment_in_the_input_is_preserved.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(a) narrowing never makes an unsatisfiable pair satisfiable",
+   "file": "smt/P4_6_a_narrowing_never_makes_an_unsatisfiable_pair_satisfiable.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(b) subtracting a disjoint winner changes nothing",
+   "file": "smt/P4_6_b_subtracting_a_disjoint_winner_changes_nothing.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(b) 2 successive subtractions equal one subtraction of the union",
+   "file": "smt/P4_6_b_2_successive_subtractions_equal_one_subtraction_of_the_union.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(b) 3 successive subtractions equal one subtraction of the union",
+   "file": "smt/P4_6_b_3_successive_subtractions_equal_one_subtraction_of_the_union.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(b) 4 successive subtractions equal one subtraction of the union",
+   "file": "smt/P4_6_b_4_successive_subtractions_equal_one_subtraction_of_the_union.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(b) 5 successive subtractions equal one subtraction of the union",
+   "file": "smt/P4_6_b_5_successive_subtractions_equal_one_subtraction_of_the_union.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.6(b) 6 successive subtractions equal one subtraction of the union",
+   "file": "smt/P4_6_b_6_successive_subtractions_equal_one_subtraction_of_the_union.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "lemma": "P4.7 a forced-to-retire rule that is kept nonempty misses the target",
+   "file": "smt/P4_7_a_forced_to_retire_rule_that_is_kept_nonempty_misses_the_target.smt2",
+   "z3": [
+    "unsat"
+   ],
+   "cvc5": [
+    "unsat"
+   ],
+   "z3_s": 0.02,
+   "cvc5_s": 0.01,
+   "holds": true
+  }
+ ],
+ "closed_form_uniqueness": [
+  {
+   "rules": 1,
+   "acyclic_relations": 1,
+   "z3_unsat": 1,
+   "cvc5_unsat": 1,
+   "z3_s": 0.01,
+   "cvc5_s": 0.0,
+   "holds": true
+  },
+  {
+   "rules": 2,
+   "acyclic_relations": 3,
+   "z3_unsat": 3,
+   "cvc5_unsat": 3,
+   "z3_s": 0.01,
+   "cvc5_s": 0.01,
+   "holds": true
+  },
+  {
+   "rules": 3,
+   "acyclic_relations": 25,
+   "z3_unsat": 25,
+   "cvc5_unsat": 25,
+   "z3_s": 0.02,
+   "cvc5_s": 0.06,
+   "holds": true
+  },
+  {
+   "rules": 4,
+   "acyclic_relations": 543,
+   "z3_unsat": 543,
+   "cvc5_unsat": 543,
+   "z3_s": 0.25,
+   "cvc5_s": 2.17,
+   "holds": true
+  },
+  {
+   "rules": 5,
+   "acyclic_relations": 29281,
+   "z3_unsat": 29281,
+   "cvc5_unsat": 29281,
+   "z3_s": 19.88,
+   "cvc5_s": 252.32,
+   "holds": true
+  }
+ ],
+ "all_hold": true
+}

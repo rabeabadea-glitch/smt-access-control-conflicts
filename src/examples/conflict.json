@@ -1,0 +1,155 @@
+{
+  "attributes": {
+    "action": {
+      "type": "enum",
+      "values": [
+        "erase",
+        "read"
+      ]
+    },
+    "grounds": {
+      "type": "bool"
+    },
+    "retention_active": {
+      "type": "bool"
+    },
+    "role": {
+      "type": "enum",
+      "values": [
+        "subject",
+        "other"
+      ]
+    }
+  },
+  "description": "Illustrative implementation-error case, not a legal compliance model. Retention and grounds are external determinations. Approvals are synthetic fixtures.",
+  "invariants": [
+    {
+      "id": "mandatory_retention",
+      "required": "Deny",
+      "when": {
+        "args": [
+          {
+            "attr": "role",
+            "op": "eq",
+            "value": "subject"
+          },
+          {
+            "attr": "action",
+            "op": "eq",
+            "value": "erase"
+          },
+          {
+            "attr": "retention_active",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "op": "and"
+      }
+    },
+    {
+      "id": "legitimate_erasure",
+      "required": "Permit",
+      "when": {
+        "args": [
+          {
+            "attr": "role",
+            "op": "eq",
+            "value": "subject"
+          },
+          {
+            "attr": "action",
+            "op": "eq",
+            "value": "erase"
+          },
+          {
+            "attr": "grounds",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "attr": "retention_active",
+            "op": "eq",
+            "value": false
+          }
+        ],
+        "op": "and"
+      }
+    }
+  ],
+  "precedence": [],
+  "rules": [
+    {
+      "condition": {
+        "args": [
+          {
+            "attr": "role",
+            "op": "eq",
+            "value": "subject"
+          },
+          {
+            "attr": "action",
+            "op": "eq",
+            "value": "erase"
+          },
+          {
+            "attr": "grounds",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "op": "and"
+      },
+      "effect": "Permit",
+      "id": "erase",
+      "provenance": {
+        "clause": "17(1)",
+        "variant": "deliberately omitted retention exception"
+      },
+      "source": "GDPR"
+    },
+    {
+      "condition": {
+        "args": [
+          {
+            "attr": "role",
+            "op": "eq",
+            "value": "subject"
+          },
+          {
+            "attr": "action",
+            "op": "eq",
+            "value": "erase"
+          },
+          {
+            "attr": "retention_active",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "op": "and"
+      },
+      "effect": "Deny",
+      "id": "retain",
+      "provenance": {
+        "clause": "40",
+        "variant": "deletion blocked while a separately determined obligation remains active"
+      },
+      "source": "AMLD"
+    }
+  ],
+  "schema_version": "cpm-1",
+  "sources": {
+    "AMLD": {
+      "citation": "Directive (EU) 2015/849, Article 40; EUR-Lex CELEX 32015L0849",
+      "kind": "regulation",
+      "mapping_status": "researcher-interpreted; national applicability not assessed"
+    },
+    "GDPR": {
+      "citation": "Regulation (EU) 2016/679, Article 17(1), Article 17(3)(b); EUR-Lex CELEX 32016R0679",
+      "kind": "regulation",
+      "mapping_status": "researcher-interpreted; independent human review pending"
+    }
+  },
+  "validity": true
+}

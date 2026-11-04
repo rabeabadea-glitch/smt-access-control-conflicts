@@ -1,0 +1,71 @@
+{
+  "manual_families": 4,
+  "large_mixed_cases": [
+    {
+      "case": "C01",
+      "sources": 6,
+      "source_rules": 24,
+      "compiled_rules": 18,
+      "requests": 64,
+      "original_counts": {
+        "Permit": 16,
+        "Deny": 18,
+        "Conflict": 30
+      }
+    },
+    {
+      "case": "C02",
+      "sources": 6,
+      "source_rules": 24,
+      "compiled_rules": 18,
+      "requests": 64,
+      "original_counts": {
+        "Permit": 17,
+        "Conflict": 29,
+        "Deny": 18
+      }
+    },
+    {
+      "case": "C03",
+      "sources": 8,
+      "source_rules": 32,
+      "compiled_rules": 24,
+      "requests": 64,
+      "original_counts": {
+        "Deny": 16,
+        "Conflict": 32,
+        "Permit": 16
+      }
+    },
+    {
+      "case": "C04",
+      "sources": 8,
+      "source_rules": 32,
+      "compiled_rules": 24,
+      "requests": 64,
+      "original_counts": {
+        "Deny": 16,
+        "Permit": 16,
+        "Conflict": 32
+      }
+    }
+  ],
+  "coverage": [
+    "intersecting multi-rule/multi-source conflicts",
+    "local XACML first-applicable/deny-overrides/permit-overrides semantics",
+    "mixed XACML and Rego source imports",
+    "positive and negative preservation regions",
+    "partial-order diamond",
+    "missing authorization",
+    "opposing preservation constraints",
+    "internally conflicting source",
+    "already consistent input",
+    "unsupported/stale/iteration/cyclic controls separated"
+  ],
+  "manual_checks": [
+    "Each large case has 16 originally pure Permit and 16 originally pure Deny requests by its explicit non-contested half-domain.",
+    "Each large case has 32 requests in the contested half-domain, within which different rule effects may intersect.",
+    "C09 all-false request is explicitly required to Permit and Deny, so no ordinary single-decision policy can satisfy it."
+  ],
+  "limitation": "This strengthens adversarial finite workflow coverage. It does not establish novelty, completeness over all feasible repairs, real-world representativeness, broad language conformance, or large-scale performance."
+}

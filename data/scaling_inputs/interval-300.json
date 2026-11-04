@@ -1,0 +1,9037 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "item": {
+      "type": "int",
+      "min": 0,
+      "max": 999
+    },
+    "requested": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "S0": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    },
+    "S1": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    },
+    "S2": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    },
+    "S3": {
+      "kind": "synthetic",
+      "citation": "Controlled scaling design 2026-10-19",
+      "mapping_status": "Constructed workload, not natural policy prevalence"
+    }
+  },
+  "rules": [
+    {
+      "id": "r0000",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 0
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0001",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 3
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 53
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0002",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 6
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 56
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0003",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 9
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 59
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0004",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 12
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 62
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0005",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 15
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 65
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0006",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 18
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 68
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0007",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 21
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 71
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0008",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 24
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 74
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0009",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 27
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 77
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0010",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 30
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 80
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0011",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 33
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 83
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0012",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 36
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 86
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0013",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 39
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 89
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0014",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 42
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 92
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0015",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 45
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 95
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0016",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 48
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 98
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0017",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 51
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 101
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0018",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 54
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 104
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0019",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 57
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 107
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0020",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 60
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 110
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0021",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 63
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 113
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0022",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 66
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 116
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0023",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 69
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 119
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0024",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 72
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 122
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0025",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 75
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 125
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0026",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 78
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 128
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0027",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 81
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 131
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0028",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 84
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 134
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0029",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 87
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 137
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0030",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 90
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 140
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0031",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 93
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 143
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0032",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 96
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 146
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0033",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 99
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 149
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0034",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 102
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 152
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0035",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 105
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 155
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0036",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 108
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 158
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0037",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 111
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 161
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0038",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 114
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 164
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0039",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 117
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 167
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0040",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 120
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 170
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0041",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 123
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 173
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0042",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 126
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 176
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0043",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 129
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 179
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0044",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 132
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 182
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0045",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 135
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 185
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0046",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 138
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 188
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0047",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 141
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 191
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0048",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 144
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 194
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0049",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 147
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 197
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0050",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 150
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0051",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 153
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 203
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0052",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 156
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 206
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0053",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 159
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 209
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0054",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 162
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 212
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0055",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 165
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 215
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0056",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 168
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 218
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0057",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 171
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 221
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0058",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 174
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 224
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0059",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 177
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 227
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0060",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 180
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 230
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0061",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 183
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 233
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0062",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 186
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 236
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0063",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 189
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 239
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0064",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 192
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 242
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0065",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 195
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 245
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0066",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 198
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 248
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0067",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 1
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 51
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0068",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 4
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 54
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0069",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 7
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 57
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0070",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 10
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 60
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0071",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 13
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 63
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0072",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 16
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 66
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0073",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 19
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 69
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0074",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 22
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 72
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0075",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 25
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 75
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0076",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 28
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 78
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0077",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 31
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 81
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0078",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 34
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 84
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0079",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 37
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 87
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0080",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 40
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 90
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0081",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 43
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 93
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0082",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 46
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 96
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0083",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 49
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 99
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0084",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 52
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 102
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0085",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 55
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 105
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0086",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 58
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 108
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0087",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 61
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 111
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0088",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 64
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 114
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0089",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 67
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 117
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0090",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 70
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 120
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0091",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 73
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 123
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0092",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 76
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 126
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0093",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 79
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 129
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0094",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 82
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 132
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0095",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 85
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 135
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0096",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 88
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 138
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0097",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 91
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 141
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0098",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 94
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 144
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0099",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 97
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 147
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0100",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 100
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 150
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0101",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 103
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 153
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0102",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 106
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 156
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0103",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 109
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 159
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0104",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 112
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 162
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0105",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 115
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 165
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0106",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 118
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 168
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0107",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 121
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 171
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0108",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 124
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 174
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0109",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 127
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 177
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0110",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 130
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 180
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0111",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 133
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 183
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0112",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 136
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 186
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0113",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 139
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 189
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0114",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 142
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 192
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0115",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 145
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 195
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0116",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 148
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 198
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0117",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 151
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 201
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0118",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 154
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 204
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0119",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 157
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 207
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0120",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 160
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 210
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0121",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 163
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 213
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0122",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 166
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 216
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0123",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 169
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 219
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0124",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 172
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 222
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0125",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 175
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 225
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0126",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 178
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 228
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0127",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 181
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 231
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0128",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 184
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 234
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0129",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 187
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 237
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0130",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 190
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 240
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0131",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 193
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 243
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0132",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 196
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 246
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0133",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 199
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 249
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0134",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 2
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 52
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0135",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 5
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 55
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0136",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 8
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 58
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0137",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 11
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 61
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0138",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 14
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 64
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0139",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 17
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 67
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0140",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 20
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 70
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0141",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 23
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 73
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0142",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 26
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 76
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0143",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 29
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 79
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0144",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 32
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 82
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0145",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 35
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 85
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0146",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 38
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 88
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0147",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 41
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 91
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0148",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 44
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 94
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0149",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 47
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 97
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0150",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 50
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0151",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 53
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 103
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0152",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 56
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 106
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0153",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 59
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 109
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0154",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 62
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 112
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0155",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 65
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 115
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0156",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 68
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 118
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0157",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 71
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 121
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0158",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 74
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 124
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0159",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 77
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 127
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0160",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 80
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 130
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0161",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 83
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 133
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0162",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 86
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 136
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0163",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 89
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 139
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0164",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 92
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 142
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0165",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 95
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 145
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0166",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 98
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 148
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0167",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 101
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 151
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0168",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 104
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 154
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0169",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 107
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 157
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0170",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 110
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 160
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0171",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 113
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 163
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0172",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 116
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 166
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0173",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 119
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 169
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0174",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 122
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 172
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0175",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 125
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 175
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0176",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 128
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 178
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0177",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 131
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 181
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0178",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 134
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 184
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0179",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 137
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 187
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0180",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 140
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 190
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0181",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 143
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 193
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0182",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 146
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 196
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0183",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 149
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 199
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0184",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 152
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 202
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0185",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 155
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 205
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0186",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 158
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 208
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0187",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 161
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 211
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0188",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 164
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 214
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0189",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 167
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 217
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0190",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 170
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 220
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0191",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 173
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 223
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0192",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 176
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 226
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0193",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 179
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 229
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0194",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 182
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 232
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0195",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 185
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 235
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0196",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 188
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 238
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0197",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 191
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 241
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0198",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 194
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 244
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0199",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 197
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 247
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0200",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 0
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0201",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 3
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 53
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0202",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 6
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 56
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0203",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 9
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 59
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0204",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 12
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 62
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0205",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 15
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 65
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0206",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 18
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 68
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0207",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 21
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 71
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0208",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 24
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 74
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0209",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 27
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 77
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0210",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 30
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 80
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0211",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 33
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 83
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0212",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 36
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 86
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0213",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 39
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 89
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0214",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 42
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 92
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0215",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 45
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 95
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0216",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 48
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 98
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0217",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 51
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 101
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0218",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 54
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 104
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0219",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 57
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 107
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0220",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 60
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 110
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0221",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 63
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 113
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0222",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 66
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 116
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0223",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 69
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 119
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0224",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 72
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 122
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0225",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 75
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 125
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0226",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 78
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 128
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0227",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 81
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 131
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0228",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 84
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 134
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0229",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 87
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 137
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0230",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 90
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 140
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0231",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 93
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 143
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0232",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 96
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 146
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0233",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 99
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 149
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0234",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 102
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 152
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0235",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 105
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 155
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0236",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 108
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 158
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0237",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 111
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 161
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0238",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 114
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 164
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0239",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 117
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 167
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0240",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 120
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 170
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0241",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 123
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 173
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0242",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 126
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 176
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0243",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 129
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 179
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0244",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 132
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 182
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0245",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 135
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 185
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0246",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 138
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 188
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0247",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 141
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 191
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0248",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 144
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 194
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0249",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 147
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 197
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0250",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 150
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0251",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 153
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 203
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0252",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 156
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 206
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0253",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 159
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 209
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0254",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 162
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 212
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0255",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 165
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 215
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0256",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 168
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 218
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0257",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 171
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 221
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0258",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 174
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 224
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0259",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 177
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 227
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0260",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 180
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 230
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0261",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 183
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 233
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0262",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 186
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 236
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0263",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 189
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 239
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0264",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 192
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 242
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0265",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 195
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 245
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0266",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 198
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 248
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0267",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 1
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 51
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0268",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 4
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 54
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0269",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 7
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 57
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0270",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 10
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 60
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0271",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 13
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 63
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0272",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 16
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 66
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0273",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 19
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 69
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0274",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 22
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 72
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0275",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 25
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 75
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0276",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 28
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 78
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0277",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 31
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 81
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0278",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 34
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 84
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0279",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 37
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 87
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0280",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 40
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 90
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0281",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 43
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 93
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0282",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 46
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 96
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0283",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 49
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 99
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0284",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 52
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 102
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0285",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 55
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 105
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0286",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 58
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 108
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0287",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 61
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 111
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0288",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 64
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 114
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0289",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 67
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 117
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0290",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 70
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 120
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0291",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 73
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 123
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0292",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 76
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 126
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0293",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 79
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 129
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0294",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 82
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 132
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0295",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 85
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 135
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0296",
+      "source": "S0",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 88
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 138
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0297",
+      "source": "S1",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 91
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 141
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0298",
+      "source": "S2",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 94
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 144
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "r0299",
+      "source": "S3",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "ge",
+                "attr": "item",
+                "value": 97
+              },
+              {
+                "op": "le",
+                "attr": "item",
+                "value": 147
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

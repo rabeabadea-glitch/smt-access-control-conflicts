@@ -1,0 +1,2579 @@
+{
+ "schema_version": "cpm-1",
+ "attributes": {
+  "field_0": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_1": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_2": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_3": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_4": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_5": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_6": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "field_7": {
+   "type": "enum",
+   "values": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+   ]
+  },
+  "level": {
+   "type": "int",
+   "min": 0,
+   "max": 20
+  },
+  "age": {
+   "type": "int",
+   "min": 0,
+   "max": 20
+  }
+ },
+ "sources": {
+  "S0": {
+   "kind": "synthetic",
+   "citation": "heterogeneous scaling family, seed 20261027",
+   "mapping_status": "constructed"
+  },
+  "S1": {
+   "kind": "synthetic",
+   "citation": "heterogeneous scaling family, seed 20261027",
+   "mapping_status": "constructed"
+  },
+  "S2": {
+   "kind": "synthetic",
+   "citation": "heterogeneous scaling family, seed 20261027",
+   "mapping_status": "constructed"
+  },
+  "S3": {
+   "kind": "synthetic",
+   "citation": "heterogeneous scaling family, seed 20261027",
+   "mapping_status": "constructed"
+  }
+ },
+ "rules": [
+  {
+   "id": "h0000",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0001",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0002",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0003",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0004",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0005",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0006",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 16
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0007",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 17
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0008",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 3
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 15
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0009",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0010",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 3
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 13
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0011",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_6",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_7",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0012",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 10
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0013",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0014",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0015",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0016",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0017",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 15
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 15
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0018",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 17
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0019",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0020",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0021",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0022",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0023",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v1"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 13
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 19
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0024",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 1
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 3
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0025",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 10
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 12
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v1"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 2
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 13
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0026",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 5
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 19
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0027",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v1"
+     },
+     {
+      "op": "ne",
+      "attr": "field_3",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0028",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 0
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 16
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0029",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 7
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 19
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0030",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0031",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v1"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 4
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 9
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0032",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0033",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_6",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0034",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_5",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0035",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_6",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v2"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0036",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_2",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v4"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0037",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v3"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 10
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 11
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0038",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 13
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v1"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 11
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 12
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0039",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0040",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0041",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 12
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0042",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0043",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v1"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 15
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 19
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0044",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 12
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 15
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0045",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0046",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 17
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 20
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0047",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0048",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 18
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0049",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0050",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 17
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0051",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 6
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 11
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0052",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 0
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 0
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0053",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v2"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0054",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 5
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 10
+     },
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0055",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v4"
+     },
+     {
+      "op": "ne",
+      "attr": "field_3",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0056",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v2"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0057",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v1"
+     },
+     {
+      "op": "ne",
+      "attr": "field_3",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0058",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0059",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_5",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0060",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v4"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0061",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v0"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 8
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0062",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 0
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0063",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0064",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_7",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0065",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0066",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v3"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 6
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 18
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0067",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0068",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0069",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0070",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 1
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 5
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0071",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_0",
+      "value": "v2"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0072",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_3",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v3"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 13
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0073",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v4"
+     },
+     {
+      "op": "ne",
+      "attr": "field_0",
+      "value": "v0"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 0
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 10
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0074",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0075",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 5
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "ne",
+      "attr": "field_1",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0076",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ne",
+      "attr": "field_0",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v2"
+     },
+     {
+      "op": "ne",
+      "attr": "field_7",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0077",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0078",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v2"
+     },
+     {
+      "op": "ne",
+      "attr": "field_4",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0079",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 4
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 15
+     },
+     {
+      "op": "ne",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 16
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0080",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 1
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 1
+     },
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0081",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0082",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0083",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0084",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v3"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 14
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 20
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0085",
+   "source": "S1",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0086",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v3"
+     },
+     {
+      "op": "ne",
+      "attr": "field_3",
+      "value": "v4"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 11
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 19
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0087",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0088",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_1",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0089",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 7
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 9
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0090",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 13
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 16
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0091",
+   "source": "S3",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_3",
+      "value": "v4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0092",
+   "source": "S0",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v1"
+     },
+     {
+      "op": "ne",
+      "attr": "field_4",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0093",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v0"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 14
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 16
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0094",
+   "source": "S2",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v0"
+     },
+     {
+      "op": "ne",
+      "attr": "field_6",
+      "value": "v3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0095",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v1"
+     },
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0096",
+   "source": "S0",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_6",
+      "value": "v1"
+     },
+     {
+      "op": "ge",
+      "attr": "age",
+      "value": 0
+     },
+     {
+      "op": "le",
+      "attr": "age",
+      "value": 17
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0097",
+   "source": "S1",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_0",
+      "value": "v0"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 10
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 14
+     },
+     {
+      "op": "eq",
+      "attr": "field_4",
+      "value": "v1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0098",
+   "source": "S2",
+   "effect": "Permit",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_3",
+      "value": "v2"
+     },
+     {
+      "op": "ge",
+      "attr": "level",
+      "value": 6
+     },
+     {
+      "op": "le",
+      "attr": "level",
+      "value": 18
+     },
+     {
+      "op": "eq",
+      "attr": "field_7",
+      "value": "v2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "h0099",
+   "source": "S3",
+   "effect": "Deny",
+   "condition": {
+    "op": "and",
+    "args": [
+     {
+      "op": "eq",
+      "attr": "field_5",
+      "value": "v3"
+     },
+     {
+      "op": "eq",
+      "attr": "field_2",
+      "value": "v0"
+     },
+     {
+      "op": "eq",
+      "attr": "field_1",
+      "value": "v1"
+     }
+    ]
+   }
+  }
+ ]
+}

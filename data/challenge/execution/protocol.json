@@ -1,0 +1,39 @@
+{
+  "prepared_utc": "2026-10-21T12:04:56.968188+00:00",
+  "kind": "Fresh frozen finite challenge, internal ablations only",
+  "methods": [
+    "no_edit",
+    "configured_precedence",
+    "unchecked_subtraction",
+    "checked_refinement"
+  ],
+  "max_iterations": 100,
+  "solver_timeout_ms_per_query": 10000,
+  "directions": "All opposite-effect cross-source rule pairs whose source direction is in the transitive closure of frozen governance edges. No direction inferred from outcomes or expected labels. Incomparable and same-source pairs receive no direction.",
+  "unchecked_sequence": "At each step run the same fresh exhaustive cross-source scan, choose the first SAT pair authorized by the frozen choices, narrow loser by NOT(current winner), and continue. Omit loser nonempty, locality, invariant and final-contract safety guards. Stops are retained, not called successful repairs.",
+  "no_edit": "Retain original model; no accepted repair transaction claimed.",
+  "precedence": "Execute current workflow.apply_precedence with exact frozen edges and current model fingerprint. Its status is reported separately from externally evaluated specification satisfaction.",
+  "checked": "Execute current workflow.refine_bounded unchanged. Rejection returns original as committed output; tentative states are retained only within trace.",
+  "outputs": "All four resulting committed/retained models receive exhaustive finite comparison and Rego export/reimport/native replay. Every output attempts XACML export; possible Conflict receives explicit unsupported outcome. Native outputs compare both with the actual model and frozen target, so rejected retention is never counted as target success.",
+  "native_source": "For four mixed cases, evaluate every actual XACML source in Balana and every actual source Rego definition in OPA on all64 complete case requests. Rego decision wrapper observes frozen entry endpoints; it does not substitute imported CPM predicates.",
+  "classification": "Commit with zero target mismatch/requirements violation/conflict/pure-change=correct acceptance. Commit with any endpoint failure=wrong acceptance. Rejection on C06/C07/C08/C09/C12=justified refusal under frozen requirements/direction restrictions; other refusal=conservative rejection. Baseline output statuses separate. Native import/export correctness separately recorded.",
+  "limits": "Synthetic retrospectively designed challenge; no published-method replication, novelty proof, performance/scalability claim or independent population accuracy.",
+  "runner_sha256": "a68ed9c01ccac7dabff36a09b3e118e41d179ed348fd9eca666ea7b992708a64",
+  "current_source_hashes": {
+    "src\\pcproof\\__init__.py": "9d8b19dcc808bb299849fa1572d3a0702d4782b375d3b53f7996f0b9fcfabc12",
+    "src\\pcproof\\__main__.py": "15f9089517095cc69f5ae0a608500f988ff0e73c20e13a31bef9d281f0d9bfa8",
+    "src\\pcproof\\export.py": "85531bc9b7235b6e71132f29f63e8c4f3816a1c3a58e0ddce41f1134090eb965",
+    "src\\pcproof\\model.py": "f047d19f5f8e418a602ae591bb31b6784ffbf901bce819934fbeba61859083b4",
+    "src\\pcproof\\native_z3.py": "c5664153439c1636c559a034b49e0c173222ea0ab8c2b4846a7d22d5e08a0dbf",
+    "src\\pcproof\\repair.py": "9b44214c013770c31fb88f6a49eefb6f9662ed9bb102cc205707e1e48f540ced",
+    "src\\pcproof\\verify.py": "39426035aa38c0aa7953d16ea99f3b9d2cc604ad0e5db764e484c597a4d77d17",
+    "src\\research\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src\\research\\rego.py": "2f0ce6c468bdeb0f9c0dafeee4988d5d6269191767f977c1dbd827f2e220973c",
+    "src\\research\\screening.py": "5d95d064d4161c17374aea94c57572647ab63731de2f37c1ee6e67b0aeb01ab1",
+    "src\\research\\temporal.py": "6038ce431f53f2140adac3d3a6a4fc90964b8a1e2b146cea5a545bd76b1a0e15",
+    "src\\research\\workflow.py": "0017e9655d3aa6260a2b12905725abd351ef5c14d95f9b4ae9fa09b68a55d8f6",
+    "src\\research\\xacml.py": "078028ae5815c6f87a9c4c46f6fb74c305cde88da8fe600c64fad6eff7419ff8"
+  },
+  "design_manifest_sha256": "fdc370d209eb38052253a723b4610524627006290489e777245d9f986448ef7d",
+  "design_FREEZE_sha256": "c9877f74856d42e5f28245294747f36e09be20254dde19f8842929a34ccd1a2d"
+}

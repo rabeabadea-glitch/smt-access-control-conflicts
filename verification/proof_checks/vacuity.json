@@ -1,0 +1,358 @@
+[
+ {
+  "lemma": "P4.1 equality atom over an injective coding",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 inequality atom over an injective coding",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 Boolean coding false=0, true=1 is injective",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 integer order atom < (identity coding)",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 integer order atom <= (identity coding)",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 integer order atom > (identity coding)",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 integer order atom >= (identity coding)",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.1 negation, conjunction and disjunction preserve equivalence",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 1-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 2-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 3-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 5-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 8-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 13-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.2 consecutive coding of a 21-value enumeration can be decoded",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "Theorem 4.1 overlap implies the query is satisfiable",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "Theorem 4.1 a satisfying model is a real overlap",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.3 a collected equality holds whenever its conjunction holds",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.3 contradictory necessary equalities rule out an overlap",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "Eq. 4.7 the narrowed pair no longer overlaps",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "Eq. 4.7 the loser gains no request",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "Eq. 4.7 everything removed lies in the winner region",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "Eq. 4.7 no new overlap with a third rule",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.4 every disjoint subregion lies inside D(l) minus D(w)",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.4 D(l) minus D(w) is itself admissible (inside D(l), disjoint from D(w))",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.5 an accepted step check gives containment",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.5 induction step: containment in the input is preserved",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(a) narrowing never makes an unsatisfiable pair satisfiable",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(b) subtracting a disjoint winner changes nothing",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(b) 2 successive subtractions equal one subtraction of the union",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(b) 3 successive subtractions equal one subtraction of the union",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(b) 4 successive subtractions equal one subtraction of the union",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(b) 5 successive subtractions equal one subtraction of the union",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.6(b) 6 successive subtractions equal one subtraction of the union",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "P4.7 a forced-to-retire rule that is kept nonempty misses the target",
+  "z3": [
+   "sat"
+  ],
+  "cvc5": [
+   "sat"
+  ],
+  "assumptions_satisfiable": true
+ },
+ {
+  "lemma": "closed form: both families definable (n = 3, all relations)",
+  "z3_sat": 25,
+  "cvc5_sat": 25,
+  "assumptions_satisfiable": true
+ }
+]

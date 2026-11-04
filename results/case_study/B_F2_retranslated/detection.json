@@ -1,0 +1,1313 @@
+{
+  "label": "CONFLICTS_PRESENT",
+  "screening": "exhaustive",
+  "validity": {
+    "status": "SAT",
+    "reason": "",
+    "elapsed_ms": 5.289280000170038,
+    "witness": {
+      "action": "display-full-pan",
+      "record_type": "audit-workpaper",
+      "contains_pii": "true",
+      "legal_hold": "false",
+      "role": "data-subject",
+      "str_flag": "false",
+      "documented_purpose": "false",
+      "retention_age_years": 1,
+      "legal_basis": "false",
+      "legitimate_need": "false",
+      "password_age_days": 89,
+      "sole_factor": "false",
+      "compromise_evidence": "false"
+    }
+  },
+  "eligible_pairs": 109,
+  "checked_pairs": 109,
+  "discarded_pairs": [],
+  "results": [
+    {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 4.912405999903058,
+      "witness": {
+        "action": "erase",
+        "record_type": "transaction-record",
+        "contains_pii": "true",
+        "legal_hold": "false",
+        "role": "data-subject",
+        "str_flag": "false",
+        "documented_purpose": "false",
+        "retention_age_years": 1,
+        "legal_basis": "false",
+        "legitimate_need": "false",
+        "password_age_days": 89,
+        "sole_factor": "false",
+        "compromise_evidence": "false"
+      },
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "AMLD-40-retain-txn"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 3.181359999871347,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "AMLD-40-retain-cdd-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.929838000000018,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "AMLD-39-tipping-off"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.5835989999904996,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "AMLD-39-tipping-off-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 3.041300999939267,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.519453000104477,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.324559999806297,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4117739999383048,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "SOX-802-retain-audit"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3262039999281114,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-ungoverned",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.2921120000773954,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "AMLD-40-retain-txn"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3818560000563593,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "AMLD-40-retain-cdd-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.252989999988131,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "AMLD-39-tipping-off"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3930830000153946,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "AMLD-39-tipping-off-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.360214999953314,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6435780000610976,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4751109999670007,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.711731000090367,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "SOX-802-retain-audit"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.721506999932899,
+      "witness": null,
+      "pair": [
+        "GDPR-17-erase-governed",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.5542980001773685,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "AMLD-40-retain-txn"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.405108999937511,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "AMLD-40-retain-cdd-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 4.244064999966213,
+      "witness": {
+        "action": "read",
+        "record_type": "customer-file",
+        "contains_pii": "true",
+        "legal_hold": "false",
+        "role": "data-subject",
+        "str_flag": "true",
+        "documented_purpose": "false",
+        "retention_age_years": 1,
+        "legal_basis": "false",
+        "legitimate_need": "false",
+        "password_age_days": 89,
+        "sole_factor": "false",
+        "compromise_evidence": "false"
+      },
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "AMLD-39-tipping-off"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.421278999918286,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "AMLD-39-tipping-off-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3785030000453844,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4199110000608925,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3517710001215164,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.361811000128,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "SOX-802-retain-audit"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7124520001962082,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-ungoverned",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.377383000066402,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "AMLD-40-retain-txn"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.414878000081444,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "AMLD-40-retain-cdd-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3423019999881944,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "AMLD-39-tipping-off"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.684704000103011,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "AMLD-39-tipping-off-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.9384739998477016,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.345246999993833,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3288439999760158,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3142160000588774,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "SOX-802-retain-audit"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.468755999871064,
+      "witness": null,
+      "pair": [
+        "GDPR-15-subject-access-governed",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.650616999972044,
+      "witness": null,
+      "pair": [
+        "GDPR-5c-minimisation",
+        "AMLD-investigator-full-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.737005999961184,
+      "witness": null,
+      "pair": [
+        "GDPR-5c-minimisation",
+        "AMLD-investigator-full-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6725700001861696,
+      "witness": null,
+      "pair": [
+        "GDPR-5c-minimisation",
+        "PCI-8-3-9-rotate-password-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 3.8405600000714912,
+      "witness": {
+        "action": "log",
+        "record_type": "chd-access-event",
+        "contains_pii": "true",
+        "legal_hold": "false",
+        "role": "data-subject",
+        "str_flag": "false",
+        "documented_purpose": "false",
+        "retention_age_years": 1,
+        "legal_basis": "false",
+        "legitimate_need": "false",
+        "password_age_days": 89,
+        "sole_factor": "false",
+        "compromise_evidence": "false"
+      },
+      "pair": [
+        "GDPR-5c-minimisation",
+        "PCI-10-2-log-access"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6078240000515507,
+      "witness": null,
+      "pair": [
+        "GDPR-5c-minimisation",
+        "DORA-19-report-incident"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6192440000158967,
+      "witness": null,
+      "pair": [
+        "GDPR-5c-minimisation",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6564999998299754,
+      "witness": null,
+      "pair": [
+        "GDPR-5c-minimisation",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6738480000858544,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "AMLD-40-retain-txn"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.5847150000117836,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "AMLD-40-retain-cdd-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7013270000679768,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "AMLD-39-tipping-off"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6905019999503565,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "AMLD-39-tipping-off-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6952010000513837,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6713530000961327,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6561930001207656,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 4.180832999963968,
+      "witness": {
+        "action": "purge",
+        "record_type": "audit-workpaper",
+        "contains_pii": "true",
+        "legal_hold": "false",
+        "role": "data-subject",
+        "str_flag": "false",
+        "documented_purpose": "false",
+        "retention_age_years": 3,
+        "legal_basis": "false",
+        "legitimate_need": "false",
+        "password_age_days": 89,
+        "sole_factor": "false",
+        "compromise_evidence": "false"
+      },
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "SOX-802-retain-audit"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.727988000060577,
+      "witness": null,
+      "pair": [
+        "GDPR-5e-storage-purge",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.778000000034808,
+      "witness": null,
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "AMLD-investigator-full-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7658650001285423,
+      "witness": null,
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "AMLD-investigator-full-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7342140001564985,
+      "witness": null,
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "PCI-8-3-9-rotate-password-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6702579998527654,
+      "witness": null,
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "PCI-10-2-log-access"
+      ],
+      "governed": true
+    },
+    {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 3.9781760001460498,
+      "witness": {
+        "action": "transmit",
+        "record_type": "incident-report",
+        "contains_pii": "true",
+        "legal_hold": "false",
+        "role": "data-subject",
+        "str_flag": "false",
+        "documented_purpose": "false",
+        "retention_age_years": 1,
+        "legal_basis": "false",
+        "legitimate_need": "false",
+        "password_age_days": 89,
+        "sole_factor": "false",
+        "compromise_evidence": "false"
+      },
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "DORA-19-report-incident"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7540210001006926,
+      "witness": null,
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.8187469999920722,
+      "witness": null,
+      "pair": [
+        "GDPR-6-restrict-transfer-ungoverned",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.8094570000121166,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-txn",
+        "PCI-8-3-9-rotate-password-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7243600000019796,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-txn",
+        "PCI-10-2-log-access"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.69823799999358,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-txn",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.662749999899461,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-txn",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7036950000365323,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-txn",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6978780001627456,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-cdd-governed",
+        "PCI-8-3-9-rotate-password-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6718180001807923,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-cdd-governed",
+        "PCI-10-2-log-access"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.680636000150116,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-cdd-governed",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.728560999912588,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-cdd-governed",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.7684140000019397,
+      "witness": null,
+      "pair": [
+        "AMLD-40-retain-cdd-governed",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6789880000706034,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off",
+        "PCI-8-3-9-rotate-password-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.299624999977823,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off",
+        "PCI-10-2-log-access"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.39670400014802,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.31044500014832,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3196399999960704,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3802129999239696,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off-governed",
+        "PCI-8-3-9-rotate-password-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.5334140000268235,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off-governed",
+        "PCI-10-2-log-access"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3488050001105876,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off-governed",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.304086999856736,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off-governed",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6484320001145534,
+      "witness": null,
+      "pair": [
+        "AMLD-39-tipping-off-governed",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "SAT",
+      "reason": "",
+      "elapsed_ms": 3.468265999799769,
+      "witness": {
+        "action": "display-full-pan",
+        "record_type": "cardholder-data",
+        "contains_pii": "true",
+        "legal_hold": "false",
+        "role": "investigator",
+        "str_flag": "false",
+        "documented_purpose": "false",
+        "retention_age_years": 1,
+        "legal_basis": "false",
+        "legitimate_need": "false",
+        "password_age_days": 89,
+        "sole_factor": "false",
+        "compromise_evidence": "false"
+      },
+      "pair": [
+        "AMLD-investigator-full-pan",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4563700001181132,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.359781999984989,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3713949999546458,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan",
+        "SOX-802-retain-audit"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.428198000188786,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.2823950000656623,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan-governed",
+        "PCI-3-3-mask-pan"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.373302000023614,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan-governed",
+        "PCI-3-3-mask-pan-governed"
+      ],
+      "governed": true
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.517357999977321,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan-governed",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.393832999814549,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan-governed",
+        "SOX-802-retain-audit"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.51822300015192,
+      "witness": null,
+      "pair": [
+        "AMLD-investigator-full-pan-governed",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3923549999835814,
+      "witness": null,
+      "pair": [
+        "PCI-8-3-9-rotate-password-governed",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.6529870001468225,
+      "witness": null,
+      "pair": [
+        "PCI-8-3-9-rotate-password-governed",
+        "SOX-802-retain-audit"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.425424999955794,
+      "witness": null,
+      "pair": [
+        "PCI-8-3-9-rotate-password-governed",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3955220001425914,
+      "witness": null,
+      "pair": [
+        "PCI-10-2-log-access",
+        "NIST-63B-no-forced-rotation-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4063079999905312,
+      "witness": null,
+      "pair": [
+        "PCI-10-2-log-access",
+        "SOX-802-retain-audit"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.356640000016341,
+      "witness": null,
+      "pair": [
+        "PCI-10-2-log-access",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.318359000128112,
+      "witness": null,
+      "pair": [
+        "PCI-3-3-mask-pan",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.36553200011258,
+      "witness": null,
+      "pair": [
+        "PCI-3-3-mask-pan",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.463368000007904,
+      "witness": null,
+      "pair": [
+        "PCI-3-3-mask-pan",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3689150000336667,
+      "witness": null,
+      "pair": [
+        "PCI-3-3-mask-pan-governed",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.343096999993577,
+      "witness": null,
+      "pair": [
+        "PCI-3-3-mask-pan-governed",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4908750001486624,
+      "witness": null,
+      "pair": [
+        "PCI-3-3-mask-pan-governed",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4663589999818214,
+      "witness": null,
+      "pair": [
+        "NIST-63B-no-forced-rotation-governed",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.5708809998832294,
+      "witness": null,
+      "pair": [
+        "NIST-63B-no-forced-rotation-governed",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.584932999980083,
+      "witness": null,
+      "pair": [
+        "NIST-63B-no-forced-rotation-governed",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.549388000034014,
+      "witness": null,
+      "pair": [
+        "SOX-802-retain-audit",
+        "DORA-19-report-incident"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.5287070000103995,
+      "witness": null,
+      "pair": [
+        "SOX-802-retain-audit",
+        "DORA-19-report-incident-governed"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.3923349999677157,
+      "witness": null,
+      "pair": [
+        "SOX-802-retain-audit",
+        "INT-hr-view-leave"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.4077020000277116,
+      "witness": null,
+      "pair": [
+        "DORA-19-report-incident",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    },
+    {
+      "status": "UNSAT",
+      "reason": "",
+      "elapsed_ms": 2.382361999934801,
+      "witness": null,
+      "pair": [
+        "DORA-19-report-incident-governed",
+        "INT-deny-guest-write-config"
+      ],
+      "governed": false
+    }
+  ],
+  "elapsed_ms": 332.9190300000846
+}

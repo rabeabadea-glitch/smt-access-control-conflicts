@@ -1,0 +1,30 @@
+[
+  {
+    "control_id": "U01",
+    "kind": "unsupported mapping",
+    "input": "controls/U01_unsupported.rego",
+    "manifest": "controls/U01_manifest.json",
+    "required_behavior": "Explicit unsupported rejection; do not silently drop arithmetic or claim mapped equivalence."
+  },
+  {
+    "control_id": "S01",
+    "kind": "stale binding",
+    "base_case": "C05",
+    "procedure": "Bind approval/configuration to the exact original C05 input hash; change A_r1 effect from Permit to Deny after binding; invoke the implementation stale-binding guard. Keep original binding unchanged.",
+    "frozen_original_file_sha256": "dcce74b68ba6c55633db4c70d3415d6e5d4b4b64c6e585b094bf77bc28b5274d",
+    "required_behavior": "Reject the stale binding before presenting an approved repaired result. Record the actual implementation canonical fingerprint separately from file SHA; they are not interchangeable."
+  },
+  {
+    "control_id": "I01",
+    "kind": "iteration budget",
+    "base_case": "C01",
+    "procedure": "Assemble the unchanged frozen input and requirements; set maximum repair iterations to zero.",
+    "required_behavior": "Report an explicit unfinished/rejected result or retain unresolved status; must not claim a conflict-free accepted output while known conflicts remain."
+  },
+  {
+    "control_id": "G01",
+    "kind": "cyclic direction metadata",
+    "input": "controls/G01_cyclic_input.json",
+    "required_behavior": "Explicit invalid-input rejection; a precedence cycle must not confer repair authority."
+  }
+]

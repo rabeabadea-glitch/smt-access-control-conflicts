@@ -1,0 +1,7 @@
+(set-logic ALL)
+(declare-datatypes ((E 0)) (((v0) (v1) (v2) (v3) (v4) (v5) (v6) (v7) (v8) (v9) (v10) (v11) (v12))))
+(define-fun code ((x E)) Int (ite (= x v0) 0 (ite (= x v1) 1 (ite (= x v2) 2 (ite (= x v3) 3 (ite (= x v4) 4 (ite (= x v5) 5 (ite (= x v6) 6 (ite (= x v7) 7 (ite (= x v8) 8 (ite (= x v9) 9 (ite (= x v10) 10 (ite (= x v11) 11 (ite (= x v12) 12 0))))))))))))))
+(declare-const z Int)
+(assert (and (<= 0 z) (<= z 12)))
+(assert (forall ((v E)) (not (= (code v) z))))
+(check-sat)

@@ -1,0 +1,167 @@
+{
+  "schema_version": "cpm-1",
+  "attributes": {
+    "item": {
+      "type": "int",
+      "min": 0,
+      "max": 2
+    },
+    "requested": {
+      "type": "bool"
+    }
+  },
+  "sources": {
+    "permit": {
+      "kind": "synthetic",
+      "citation": "Constructed formal experiment 2026-10-19",
+      "mapping_status": "Authored finite test, not a regulatory mapping"
+    },
+    "deny": {
+      "kind": "synthetic",
+      "citation": "Constructed formal experiment 2026-10-19",
+      "mapping_status": "Authored finite test, not a regulatory mapping"
+    }
+  },
+  "rules": [
+    {
+      "id": "D0",
+      "source": "deny",
+      "effect": "Deny",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "P0",
+      "source": "permit",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "requested",
+                "value": true
+              },
+              {
+                "op": "or",
+                "args": [
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 2
+                  },
+                  {
+                    "op": "eq",
+                    "attr": "item",
+                    "value": 0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "op": "not",
+            "arg": {
+              "op": "and",
+              "args": [
+                {
+                  "op": "eq",
+                  "attr": "requested",
+                  "value": true
+                },
+                {
+                  "op": "eq",
+                  "attr": "item",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "SAFE",
+      "source": "permit",
+      "effect": "Permit",
+      "condition": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 1
+          }
+        ]
+      }
+    }
+  ],
+  "invariants": [
+    {
+      "id": "required-denials",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "or",
+            "args": [
+              {
+                "op": "eq",
+                "attr": "item",
+                "value": 0
+              }
+            ]
+          }
+        ]
+      },
+      "required": "Deny"
+    },
+    {
+      "id": "required-access",
+      "when": {
+        "op": "and",
+        "args": [
+          {
+            "op": "eq",
+            "attr": "requested",
+            "value": true
+          },
+          {
+            "op": "eq",
+            "attr": "item",
+            "value": 1
+          }
+        ]
+      },
+      "required": "Permit"
+    }
+  ],
+  "validity": true,
+  "precedence": []
+}
