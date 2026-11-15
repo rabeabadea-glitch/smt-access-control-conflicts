@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="urn:v3:replay" Version="1.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"><Target><AnyOf>
+				<AllOf>
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">pcMember-assignments_rc</AttributeValue>
+						<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" Category="unknown" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false" />
+					</Match>
+				</AllOf>
+			</AnyOf>
+		<AnyOf>
+						<AllOf>
+							<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+								<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">pc-member</AttributeValue>
+								<AttributeDesignator AttributeId="role" Category="unknown" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false" />
+							</Match>
+							<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+								<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+								<AttributeDesignator AttributeId="isEq-subjUserId-resUserId" Category="unknown" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false" />
+							</Match>
+						</AllOf>
+					</AnyOf>
+					<AnyOf>
+						<AllOf>
+							<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+								<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+								<AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" Category="unknown" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false" />
+							</Match>
+						</AllOf>
+					</AnyOf>
+				</Target><Rule RuleId="urn:v3:replay:rule" Effect="Permit"><Target /></Rule></Policy>

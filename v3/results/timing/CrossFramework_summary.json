@@ -1,0 +1,171 @@
+{
+ "dataset": "CrossFramework",
+ "repetitions": 5,
+ "pairs": 131,
+ "intake_seconds": 0.003,
+ "variants": {
+  "exhaustive": {
+   "steps": [],
+   "solver_calls": 131,
+   "conflicts_found": 7,
+   "filter_seconds": 0.0,
+   "solver_seconds": 0.362,
+   "total_seconds": 0.362,
+   "total_seconds_min_max": [
+    0.352,
+    0.504
+   ]
+  },
+  "similarity": {
+   "steps": [
+    {
+     "stage": "similarity",
+     "kept": 42,
+     "seconds": 0.363
+    }
+   ],
+   "solver_calls": 42,
+   "conflicts_found": 7,
+   "filter_seconds": 0.363,
+   "solver_seconds": 0.113,
+   "total_seconds": 0.476,
+   "total_seconds_min_max": [
+    0.435,
+    0.555
+   ]
+  },
+  "entity": {
+   "steps": [
+    {
+     "stage": "entity",
+     "kept": 43,
+     "seconds": 0.0
+    }
+   ],
+   "solver_calls": 43,
+   "conflicts_found": 7,
+   "filter_seconds": 0.0,
+   "solver_seconds": 0.111,
+   "total_seconds": 0.111,
+   "total_seconds_min_max": [
+    0.092,
+    0.14
+   ]
+  },
+  "scope": {
+   "steps": [
+    {
+     "stage": "scope",
+     "kept": 7,
+     "seconds": 0.13
+    }
+   ],
+   "solver_calls": 7,
+   "conflicts_found": 7,
+   "filter_seconds": 0.13,
+   "solver_seconds": 0.031,
+   "total_seconds": 0.157,
+   "total_seconds_min_max": [
+    0.149,
+    0.176
+   ]
+  },
+  "no_similarity": {
+   "steps": [
+    {
+     "stage": "entity",
+     "kept": 43,
+     "seconds": 0.0
+    },
+    {
+     "stage": "scope",
+     "kept": 7,
+     "seconds": 0.066
+    }
+   ],
+   "solver_calls": 7,
+   "conflicts_found": 7,
+   "filter_seconds": 0.067,
+   "solver_seconds": 0.03,
+   "total_seconds": 0.096,
+   "total_seconds_min_max": [
+    0.091,
+    0.11
+   ]
+  },
+  "no_entity": {
+   "steps": [
+    {
+     "stage": "similarity",
+     "kept": 42,
+     "seconds": 0.357
+    },
+    {
+     "stage": "scope",
+     "kept": 7,
+     "seconds": 0.063
+    }
+   ],
+   "solver_calls": 7,
+   "conflicts_found": 7,
+   "filter_seconds": 0.419,
+   "solver_seconds": 0.039,
+   "total_seconds": 0.46,
+   "total_seconds_min_max": [
+    0.42,
+    0.516
+   ]
+  },
+  "no_scope": {
+   "steps": [
+    {
+     "stage": "similarity",
+     "kept": 42,
+     "seconds": 0.374
+    },
+    {
+     "stage": "entity",
+     "kept": 29,
+     "seconds": 0.0
+    }
+   ],
+   "solver_calls": 29,
+   "conflicts_found": 7,
+   "filter_seconds": 0.375,
+   "solver_seconds": 0.104,
+   "total_seconds": 0.474,
+   "total_seconds_min_max": [
+    0.409,
+    0.556
+   ]
+  },
+  "original": {
+   "steps": [
+    {
+     "stage": "similarity",
+     "kept": 42,
+     "seconds": 0.387
+    },
+    {
+     "stage": "entity",
+     "kept": 29,
+     "seconds": 0.0
+    },
+    {
+     "stage": "scope",
+     "kept": 7,
+     "seconds": 0.061
+    }
+   ],
+   "solver_calls": 7,
+   "conflicts_found": 7,
+   "filter_seconds": 0.459,
+   "solver_seconds": 0.036,
+   "total_seconds": 0.494,
+   "total_seconds_min_max": [
+    0.419,
+    0.497
+   ]
+  }
+ }
+}

@@ -30,6 +30,7 @@ This package holds the code, inputs, study scripts and raw outputs behind the fi
 | `tools` | Balana batch runner (`BalanaBatch.java`, Balana 1.2.24 jars) and the OPA 1.21.2 release record with checksums |
 | `models` | The all-MiniLM-L6-v2 embedding model used by the screening stage (revision recorded in `manifest.json`) |
 | `verification` | Solver checks of the Chapter 4 proofs (Table C.4) and the census of public Rego policies (Section 6.7.5), with their own README |
+| `v3` | Pipeline, experiments and results of the IEEE Software article *Don't Trust Similarity, Verify It* (resubmission of SW-2026-04-0177). `bash v3/run_all.sh` reproduces every number; see `v3/README.md` |
 
 ## Environment used for the final-revision studies
 

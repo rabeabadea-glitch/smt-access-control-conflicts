@@ -1,0 +1,37 @@
+{
+ "dataset": "Continue-A",
+ "seed": 20261112,
+ "per_kind": 100,
+ "kinds": {
+  "twin": {
+   "planted": 100,
+   "conflict_by_construction": true,
+   "solver_correct": 100,
+   "enumerator_correct": 100,
+   "kept_by_scope_query": 100,
+   "kept_by_entity_overlap": 100,
+   "kept_by_similarity": 100,
+   "kept_by_all_three": 100
+  },
+  "pinned": {
+   "planted": 100,
+   "conflict_by_construction": true,
+   "solver_correct": 100,
+   "enumerator_correct": 100,
+   "kept_by_scope_query": 100,
+   "kept_by_entity_overlap": 44,
+   "kept_by_similarity": 72,
+   "kept_by_all_three": 44
+  },
+  "nearmiss": {
+   "planted": 100,
+   "conflict_by_construction": false,
+   "solver_correct": 100,
+   "enumerator_correct": 100,
+   "kept_by_scope_query": 4,
+   "kept_by_entity_overlap": 16,
+   "kept_by_similarity": 60,
+   "kept_by_all_three": 0
+  }
+ }
+}

@@ -1,0 +1,8 @@
+dataset,rules,all_pairs,eligible_pairs,conflicts,filters_kept,filters_conflicts_kept,filters_recall,filters_precision,filters_f1,scope_kept,scope_recall,tfidf_kept,tfidf_recall,tfidf_f1,keyword_kept,keyword_recall,keyword_f1,exhaustive_solver_seconds
+GEYSERS,15,105,0,0,,,,,,0,,0,,,0,,,0.0
+KMarket,5,10,4,4,4,4,1.0,1.0,1.0,4,1.0,4,1.0,1.0,4,1.0,1.0,0.02
+Continue-A,298,44253,14280,482,358,354,0.7344398340248963,0.9888268156424581,0.842857142857143,486,1.0,1326,1.0,0.5331858407079646,2746,0.9875518672199171,0.2949194547707559,82.52
+Pluto,21,210,20,20,0,0,0.0,,,20,1.0,0,0.0,,0,0.0,,0.05
+Fedora,12,66,35,13,1,0,0.0,0.0,0.0,23,1.0,2,0.0,0.0,2,0.0,0.0,0.07
+Synthetic360,360,64620,32399,0,1145,0,,0.0,,1145,,32399,,,32399,,,89.59
+CrossFramework,25,300,131,7,7,7,1.0,1.0,1.0,7,1.0,17,0.7142857142857143,0.4166666666666667,25,1.0,0.43750000000000006,0.27

@@ -1,0 +1,2975 @@
+{
+ "thresholds": {
+  "similarity": 0.65,
+  "entity_overlap": 0.25,
+  "tfidf": 0.3,
+  "keyword": 0.2,
+  "solver_budget_ms": 2000
+ },
+ "datasets": {
+  "GEYSERS": {
+   "rules": 15,
+   "permit": 15,
+   "deny": 0,
+   "all_pairs": 105,
+   "eligible_pairs": 0,
+   "conflicts": 0,
+   "dead_rules": 0,
+   "sources": 1,
+   "attributes": 2,
+   "skipped_elements": {
+    "Description": 7,
+    "ObligationExpressions": 0,
+    "AdviceExpressions": 0
+   },
+   "designators_without_category": 55,
+   "rank_coded_attributes": 0,
+   "solver": {
+    "calls": 0,
+    "seconds": 0.0,
+    "median_ms": null,
+    "max_ms": null,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    },
+    "entity overlap only": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    },
+    "scope query only": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    },
+    "without similarity (entity + scope)": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    },
+    "TF-IDF baseline": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    },
+    "keyword baseline": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": null,
+     "solver_seconds": 0.0
+    }
+   },
+   "model_file": null,
+   "z3": "4.15.4.0",
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 0,
+     "conflicts_kept": 0
+    }
+   ]
+  },
+  "KMarket": {
+   "rules": 5,
+   "permit": 1,
+   "deny": 4,
+   "all_pairs": 10,
+   "eligible_pairs": 4,
+   "conflicts": 4,
+   "dead_rules": 0,
+   "sources": 1,
+   "attributes": 4,
+   "skipped_elements": {
+    "Description": 2,
+    "ObligationExpressions": 1,
+    "AdviceExpressions": 4
+   },
+   "designators_without_category": 0,
+   "rank_coded_attributes": 0,
+   "solver": {
+    "calls": 4,
+    "seconds": 0.02,
+    "median_ms": 5.33,
+    "max_ms": 7.49,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "similarity only": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "entity overlap only": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "scope query only": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "without scope query (similarity + entity)": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "without entity overlap (similarity + scope)": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "without similarity (entity + scope)": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "all three filters": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "TF-IDF baseline": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "keyword baseline": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 4,
+     "conflicts_kept": 4,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.02
+    }
+   },
+   "model_file": {
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "matches_manifest": true
+   },
+   "z3": "4.15.4.0",
+   "cascade_original": [
+    {
+     "stage": "similarity",
+     "kept": 4,
+     "conflicts_kept": 4
+    },
+    {
+     "stage": "entity overlap",
+     "kept": 4,
+     "conflicts_kept": 4
+    },
+    {
+     "stage": "scope query",
+     "kept": 4,
+     "conflicts_kept": 4
+    }
+   ],
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 4,
+     "conflicts_kept": 4
+    }
+   ],
+   "cosine": {
+    "conflict_min": 0.719,
+    "conflict_median": 0.768,
+    "conflict_max": 0.802,
+    "non_conflict_median": null,
+    "non_conflict_max": null,
+    "largest_threshold_keeping_every_conflict": 0.719
+   },
+   "jaccard": {
+    "conflict_min": 0.333,
+    "conflict_median": 0.417,
+    "conflict_max": 0.5
+   }
+  },
+  "Continue-A": {
+   "rules": 298,
+   "permit": 238,
+   "deny": 60,
+   "all_pairs": 44253,
+   "eligible_pairs": 14280,
+   "conflicts": 482,
+   "dead_rules": 0,
+   "sources": 1,
+   "attributes": 14,
+   "skipped_elements": {
+    "Description": 0,
+    "ObligationExpressions": 0,
+    "AdviceExpressions": 0
+   },
+   "designators_without_category": 0,
+   "rank_coded_attributes": 0,
+   "solver": {
+    "calls": 14280,
+    "seconds": 82.52,
+    "median_ms": 5.75,
+    "max_ms": 40.73,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 14280,
+     "conflicts_kept": 482,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.03375350140056022,
+     "f1": 0.06530280449803548,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 82.52
+    },
+    "similarity only": {
+     "kept": 6855,
+     "conflicts_kept": 453,
+     "conflicts_lost": 29,
+     "recall": 0.9398340248962656,
+     "precision": 0.06608315098468272,
+     "f1": 0.12348371268911,
+     "pairs_removed_percent": 52.0,
+     "solver_seconds": 40.27
+    },
+    "entity overlap only": {
+     "kept": 3206,
+     "conflicts_kept": 367,
+     "conflicts_lost": 115,
+     "recall": 0.7614107883817427,
+     "precision": 0.11447286338116032,
+     "f1": 0.19902386117136658,
+     "pairs_removed_percent": 77.55,
+     "solver_seconds": 19.46
+    },
+    "scope query only": {
+     "kept": 486,
+     "conflicts_kept": 482,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.9917695473251029,
+     "f1": 0.9958677685950413,
+     "pairs_removed_percent": 96.6,
+     "solver_seconds": 4.01
+    },
+    "without scope query (similarity + entity)": {
+     "kept": 3129,
+     "conflicts_kept": 354,
+     "conflicts_lost": 128,
+     "recall": 0.7344398340248963,
+     "precision": 0.11313518696069032,
+     "f1": 0.19606757130988645,
+     "pairs_removed_percent": 78.09,
+     "solver_seconds": 18.95
+    },
+    "without entity overlap (similarity + scope)": {
+     "kept": 457,
+     "conflicts_kept": 453,
+     "conflicts_lost": 29,
+     "recall": 0.9398340248962656,
+     "precision": 0.9912472647702407,
+     "f1": 0.964856230031949,
+     "pairs_removed_percent": 96.8,
+     "solver_seconds": 3.75
+    },
+    "without similarity (entity + scope)": {
+     "kept": 371,
+     "conflicts_kept": 367,
+     "conflicts_lost": 115,
+     "recall": 0.7614107883817427,
+     "precision": 0.9892183288409704,
+     "f1": 0.8604923798358733,
+     "pairs_removed_percent": 97.4,
+     "solver_seconds": 3.25
+    },
+    "all three filters": {
+     "kept": 358,
+     "conflicts_kept": 354,
+     "conflicts_lost": 128,
+     "recall": 0.7344398340248963,
+     "precision": 0.9888268156424581,
+     "f1": 0.842857142857143,
+     "pairs_removed_percent": 97.49,
+     "solver_seconds": 3.12
+    },
+    "TF-IDF baseline": {
+     "kept": 1326,
+     "conflicts_kept": 482,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.363499245852187,
+     "f1": 0.5331858407079646,
+     "pairs_removed_percent": 90.71,
+     "solver_seconds": 8.84
+    },
+    "keyword baseline": {
+     "kept": 2746,
+     "conflicts_kept": 476,
+     "conflicts_lost": 6,
+     "recall": 0.9875518672199171,
+     "precision": 0.1733430444282593,
+     "f1": 0.2949194547707559,
+     "pairs_removed_percent": 80.77,
+     "solver_seconds": 17.01
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 14280,
+     "conflicts_kept": 482,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.03375350140056022,
+     "f1": 0.06530280449803548,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 82.52
+    }
+   },
+   "model_file": {
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "matches_manifest": true
+   },
+   "z3": "4.15.4.0",
+   "cascade_original": [
+    {
+     "stage": "similarity",
+     "kept": 6855,
+     "conflicts_kept": 453
+    },
+    {
+     "stage": "entity overlap",
+     "kept": 3129,
+     "conflicts_kept": 354
+    },
+    {
+     "stage": "scope query",
+     "kept": 358,
+     "conflicts_kept": 354
+    }
+   ],
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 486,
+     "conflicts_kept": 482
+    }
+   ],
+   "cosine": {
+    "conflict_min": 0.597,
+    "conflict_median": 0.739,
+    "conflict_max": 0.988,
+    "non_conflict_median": 0.642,
+    "non_conflict_max": 0.977,
+    "largest_threshold_keeping_every_conflict": 0.597
+   },
+   "jaccard": {
+    "conflict_min": 0.167,
+    "conflict_median": 0.286,
+    "conflict_max": 0.8
+   }
+  },
+  "Pluto": {
+   "rules": 21,
+   "permit": 20,
+   "deny": 1,
+   "all_pairs": 210,
+   "eligible_pairs": 20,
+   "conflicts": 20,
+   "dead_rules": 0,
+   "sources": 1,
+   "attributes": 3,
+   "skipped_elements": {
+    "Description": 21,
+    "ObligationExpressions": 0,
+    "AdviceExpressions": 0
+   },
+   "designators_without_category": 0,
+   "rank_coded_attributes": 0,
+   "solver": {
+    "calls": 20,
+    "seconds": 0.05,
+    "median_ms": 2.46,
+    "max_ms": 2.79,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 20,
+     "conflicts_kept": 20,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.05
+    },
+    "similarity only": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 20,
+     "recall": 0.0,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": 100.0,
+     "solver_seconds": 0.0
+    },
+    "entity overlap only": {
+     "kept": 20,
+     "conflicts_kept": 20,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.05
+    },
+    "scope query only": {
+     "kept": 20,
+     "conflicts_kept": 20,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.05
+    },
+    "without scope query (similarity + entity)": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 20,
+     "recall": 0.0,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": 100.0,
+     "solver_seconds": 0.0
+    },
+    "without entity overlap (similarity + scope)": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 20,
+     "recall": 0.0,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": 100.0,
+     "solver_seconds": 0.0
+    },
+    "without similarity (entity + scope)": {
+     "kept": 20,
+     "conflicts_kept": 20,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.05
+    },
+    "all three filters": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 20,
+     "recall": 0.0,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": 100.0,
+     "solver_seconds": 0.0
+    },
+    "TF-IDF baseline": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 20,
+     "recall": 0.0,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": 100.0,
+     "solver_seconds": 0.0
+    },
+    "keyword baseline": {
+     "kept": 0,
+     "conflicts_kept": 0,
+     "conflicts_lost": 20,
+     "recall": 0.0,
+     "precision": null,
+     "f1": null,
+     "pairs_removed_percent": 100.0,
+     "solver_seconds": 0.0
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 20,
+     "conflicts_kept": 20,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.05
+    }
+   },
+   "model_file": {
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "matches_manifest": true
+   },
+   "z3": "4.15.4.0",
+   "cascade_original": [
+    {
+     "stage": "similarity",
+     "kept": 0,
+     "conflicts_kept": 0
+    },
+    {
+     "stage": "entity overlap",
+     "kept": 0,
+     "conflicts_kept": 0
+    },
+    {
+     "stage": "scope query",
+     "kept": 0,
+     "conflicts_kept": 0
+    }
+   ],
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 20,
+     "conflicts_kept": 20
+    }
+   ],
+   "cosine": {
+    "conflict_min": 0.054,
+    "conflict_median": 0.131,
+    "conflict_max": 0.15,
+    "non_conflict_median": null,
+    "non_conflict_max": null,
+    "largest_threshold_keeping_every_conflict": 0.054
+   },
+   "jaccard": {
+    "conflict_min": 1.0,
+    "conflict_median": 1.0,
+    "conflict_max": 1.0
+   }
+  },
+  "Fedora": {
+   "rules": 12,
+   "permit": 5,
+   "deny": 7,
+   "all_pairs": 66,
+   "eligible_pairs": 35,
+   "conflicts": 13,
+   "dead_rules": 0,
+   "sources": 1,
+   "attributes": 4,
+   "skipped_elements": {
+    "Description": 0,
+    "ObligationExpressions": 0,
+    "AdviceExpressions": 0
+   },
+   "designators_without_category": 0,
+   "rank_coded_attributes": 0,
+   "solver": {
+    "calls": 35,
+    "seconds": 0.07,
+    "median_ms": 1.74,
+    "max_ms": 3.26,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 35,
+     "conflicts_kept": 13,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.37142857142857144,
+     "f1": 0.5416666666666666,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.07
+    },
+    "similarity only": {
+     "kept": 16,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 54.29,
+     "solver_seconds": 0.03
+    },
+    "entity overlap only": {
+     "kept": 2,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 94.29,
+     "solver_seconds": 0.0
+    },
+    "scope query only": {
+     "kept": 23,
+     "conflicts_kept": 13,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.5652173913043478,
+     "f1": 0.7222222222222222,
+     "pairs_removed_percent": 34.29,
+     "solver_seconds": 0.04
+    },
+    "without scope query (similarity + entity)": {
+     "kept": 1,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 97.14,
+     "solver_seconds": 0.0
+    },
+    "without entity overlap (similarity + scope)": {
+     "kept": 4,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 88.57,
+     "solver_seconds": 0.01
+    },
+    "without similarity (entity + scope)": {
+     "kept": 2,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 94.29,
+     "solver_seconds": 0.0
+    },
+    "all three filters": {
+     "kept": 1,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 97.14,
+     "solver_seconds": 0.0
+    },
+    "TF-IDF baseline": {
+     "kept": 2,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 94.29,
+     "solver_seconds": 0.0
+    },
+    "keyword baseline": {
+     "kept": 2,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 94.29,
+     "solver_seconds": 0.0
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 22,
+     "conflicts_kept": 0,
+     "conflicts_lost": 13,
+     "recall": 0.0,
+     "precision": 0.0,
+     "f1": 0.0,
+     "pairs_removed_percent": 37.14,
+     "solver_seconds": 0.04
+    }
+   },
+   "model_file": {
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "matches_manifest": true
+   },
+   "z3": "4.15.4.0",
+   "cascade_original": [
+    {
+     "stage": "similarity",
+     "kept": 16,
+     "conflicts_kept": 0
+    },
+    {
+     "stage": "entity overlap",
+     "kept": 1,
+     "conflicts_kept": 0
+    },
+    {
+     "stage": "scope query",
+     "kept": 1,
+     "conflicts_kept": 0
+    }
+   ],
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 23,
+     "conflicts_kept": 13
+    }
+   ],
+   "cosine": {
+    "conflict_min": 0.177,
+    "conflict_median": 0.243,
+    "conflict_max": 0.356,
+    "non_conflict_median": 0.718,
+    "non_conflict_max": 0.847,
+    "largest_threshold_keeping_every_conflict": 0.177
+   },
+   "jaccard": {
+    "conflict_min": 0.0,
+    "conflict_median": 0.0,
+    "conflict_max": 0.0
+   }
+  },
+  "Synthetic360": {
+   "rules": 360,
+   "permit": 179,
+   "deny": 181,
+   "all_pairs": 64620,
+   "eligible_pairs": 32399,
+   "conflicts": 0,
+   "dead_rules": 360,
+   "sources": 1,
+   "attributes": 10,
+   "skipped_elements": {
+    "Description": 0,
+    "ObligationExpressions": 0,
+    "AdviceExpressions": 0
+   },
+   "designators_without_category": 0,
+   "rank_coded_attributes": 5,
+   "solver": {
+    "calls": 32399,
+    "seconds": 89.59,
+    "median_ms": 2.67,
+    "max_ms": 12.9,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    },
+    "similarity only": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    },
+    "entity overlap only": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    },
+    "scope query only": {
+     "kept": 1145,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 96.47,
+     "solver_seconds": 3.35
+    },
+    "without scope query (similarity + entity)": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    },
+    "without entity overlap (similarity + scope)": {
+     "kept": 1145,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 96.47,
+     "solver_seconds": 3.35
+    },
+    "without similarity (entity + scope)": {
+     "kept": 1145,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 96.47,
+     "solver_seconds": 3.35
+    },
+    "all three filters": {
+     "kept": 1145,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 96.47,
+     "solver_seconds": 3.35
+    },
+    "TF-IDF baseline": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    },
+    "keyword baseline": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 32399,
+     "conflicts_kept": 0,
+     "conflicts_lost": 0,
+     "recall": null,
+     "precision": 0.0,
+     "f1": null,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 89.59
+    }
+   },
+   "model_file": {
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "matches_manifest": true
+   },
+   "z3": "4.15.4.0",
+   "cascade_original": [
+    {
+     "stage": "similarity",
+     "kept": 32399,
+     "conflicts_kept": 0
+    },
+    {
+     "stage": "entity overlap",
+     "kept": 32399,
+     "conflicts_kept": 0
+    },
+    {
+     "stage": "scope query",
+     "kept": 1145,
+     "conflicts_kept": 0
+    }
+   ],
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 1145,
+     "conflicts_kept": 0
+    }
+   ]
+  },
+  "CrossFramework": {
+   "rules": 25,
+   "permit": 13,
+   "deny": 12,
+   "all_pairs": 300,
+   "eligible_pairs": 131,
+   "conflicts": 7,
+   "dead_rules": 0,
+   "sources": 7,
+   "attributes": 13,
+   "skipped_elements": {
+    "Description": 33,
+    "ObligationExpressions": 0,
+    "AdviceExpressions": 0
+   },
+   "designators_without_category": 0,
+   "rank_coded_attributes": 0,
+   "solver": {
+    "calls": 131,
+    "seconds": 0.27,
+    "median_ms": 1.85,
+    "max_ms": 3.78,
+    "not_sat_or_unsat": 0
+   },
+   "variants": {
+    "exhaustive (no filter)": {
+     "kept": 131,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.05343511450381679,
+     "f1": 0.10144927536231885,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.27
+    },
+    "similarity only": {
+     "kept": 42,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.16666666666666666,
+     "f1": 0.2857142857142857,
+     "pairs_removed_percent": 67.94,
+     "solver_seconds": 0.09
+    },
+    "entity overlap only": {
+     "kept": 43,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.16279069767441862,
+     "f1": 0.28,
+     "pairs_removed_percent": 67.18,
+     "solver_seconds": 0.09
+    },
+    "scope query only": {
+     "kept": 7,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 94.66,
+     "solver_seconds": 0.02
+    },
+    "without scope query (similarity + entity)": {
+     "kept": 29,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.2413793103448276,
+     "f1": 0.3888888888888889,
+     "pairs_removed_percent": 77.86,
+     "solver_seconds": 0.06
+    },
+    "without entity overlap (similarity + scope)": {
+     "kept": 7,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 94.66,
+     "solver_seconds": 0.02
+    },
+    "without similarity (entity + scope)": {
+     "kept": 7,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 94.66,
+     "solver_seconds": 0.02
+    },
+    "all three filters": {
+     "kept": 7,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 1.0,
+     "f1": 1.0,
+     "pairs_removed_percent": 94.66,
+     "solver_seconds": 0.02
+    },
+    "TF-IDF baseline": {
+     "kept": 17,
+     "conflicts_kept": 5,
+     "conflicts_lost": 2,
+     "recall": 0.7142857142857143,
+     "precision": 0.29411764705882354,
+     "f1": 0.4166666666666667,
+     "pairs_removed_percent": 87.02,
+     "solver_seconds": 0.04
+    },
+    "keyword baseline": {
+     "kept": 25,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.28,
+     "f1": 0.43750000000000006,
+     "pairs_removed_percent": 80.92,
+     "solver_seconds": 0.06
+    },
+    "older shared-attribute SPARQL gate": {
+     "kept": 131,
+     "conflicts_kept": 7,
+     "conflicts_lost": 0,
+     "recall": 1.0,
+     "precision": 0.05343511450381679,
+     "f1": 0.10144927536231885,
+     "pairs_removed_percent": 0.0,
+     "solver_seconds": 0.27
+    }
+   },
+   "model_file": {
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "matches_manifest": true
+   },
+   "z3": "4.15.4.0",
+   "cascade_original": [
+    {
+     "stage": "similarity",
+     "kept": 42,
+     "conflicts_kept": 7
+    },
+    {
+     "stage": "entity overlap",
+     "kept": 29,
+     "conflicts_kept": 7
+    },
+    {
+     "stage": "scope query",
+     "kept": 7,
+     "conflicts_kept": 7
+    }
+   ],
+   "intro_witness": {
+    "action-id": "erase",
+    "record-type": "transaction-record",
+    "contains-pii": "true",
+    "retention-age-years": 1
+   },
+   "intro_witness_status": "SAT",
+   "governed_pairs": [
+    {
+     "pair": [
+      "GDPR-17-erase-governed",
+      "AMLD-40-retain-cdd-governed"
+     ],
+     "status": "UNSAT",
+     "cosine": 0.9515683650970459,
+     "scope": false
+    },
+    {
+     "pair": [
+      "PCI-8-3-9-rotate-password-governed",
+      "NIST-63B-no-forced-rotation-governed"
+     ],
+     "status": "UNSAT",
+     "cosine": 0.9974240660667419,
+     "scope": false
+    },
+    {
+     "pair": [
+      "GDPR-15-subject-access-governed",
+      "AMLD-39-tipping-off-governed"
+     ],
+     "status": "UNSAT",
+     "cosine": 0.9971551895141602,
+     "scope": false
+    },
+    {
+     "pair": [
+      "AMLD-investigator-full-pan-governed",
+      "PCI-3-3-mask-pan-governed"
+     ],
+     "status": "UNSAT",
+     "cosine": 0.7275941967964172,
+     "scope": false
+    },
+    {
+     "pair": [
+      "GDPR-6-restrict-transfer-ungoverned",
+      "DORA-19-report-incident-governed"
+     ],
+     "status": "UNSAT",
+     "cosine": 0.8205145597457886,
+     "scope": false
+    }
+   ],
+   "most_similar_pairs": [
+    {
+     "pair": [
+      "PCI-8-3-9-rotate-password-governed",
+      "NIST-63B-no-forced-rotation-governed"
+     ],
+     "cosine": 0.997,
+     "status": "UNSAT"
+    },
+    {
+     "pair": [
+      "GDPR-15-subject-access-governed",
+      "AMLD-39-tipping-off-governed"
+     ],
+     "cosine": 0.997,
+     "status": "UNSAT"
+    },
+    {
+     "pair": [
+      "GDPR-17-erase-governed",
+      "AMLD-40-retain-cdd-governed"
+     ],
+     "cosine": 0.952,
+     "status": "UNSAT"
+    },
+    {
+     "pair": [
+      "GDPR-15-subject-access-ungoverned",
+      "AMLD-39-tipping-off"
+     ],
+     "cosine": 0.933,
+     "status": "SAT"
+    },
+    {
+     "pair": [
+      "GDPR-15-subject-access-governed",
+      "AMLD-39-tipping-off"
+     ],
+     "cosine": 0.925,
+     "status": "UNSAT"
+    }
+   ],
+   "cascade_reordered": [
+    {
+     "stage": "scope query",
+     "kept": 7,
+     "conflicts_kept": 7
+    }
+   ],
+   "cosine": {
+    "conflict_min": 0.74,
+    "conflict_median": 0.808,
+    "conflict_max": 0.933,
+    "non_conflict_median": 0.609,
+    "non_conflict_max": 0.997,
+    "largest_threshold_keeping_every_conflict": 0.74
+   },
+   "jaccard": {
+    "conflict_min": 0.25,
+    "conflict_median": 0.5,
+    "conflict_max": 0.667
+   }
+  }
+ },
+ "solver_all_datasets": {
+  "calls": 46869,
+  "statuses": {
+   "SAT": 526,
+   "UNSAT": 46343
+  },
+  "median_ms": 2.95,
+  "p99_ms": 8.1,
+  "max_ms": 40.73,
+  "seconds": 172.5
+ },
+ "replay": {
+  "KMarket": {
+   "dataset": "KMarket",
+   "witnesses": 4,
+   "balana": {
+    "evaluations": 8,
+    "returncode": 0,
+    "pairs_confirmed": 4,
+    "pairs_not_confirmed": 0,
+    "decisions": {
+     "Deny": 4,
+     "Permit": 4
+    }
+   },
+   "opa": {
+    "evaluations": 4,
+    "returncode": 0,
+    "pairs_confirmed": 4,
+    "pairs_not_confirmed": 0
+   }
+  },
+  "CrossFramework": {
+   "dataset": "CrossFramework",
+   "witnesses": 7,
+   "balana": {
+    "evaluations": 14,
+    "returncode": 0,
+    "pairs_confirmed": 7,
+    "pairs_not_confirmed": 0,
+    "decisions": {
+     "Deny": 7,
+     "Permit": 7
+    }
+   },
+   "opa": {
+    "evaluations": 7,
+    "returncode": 0,
+    "pairs_confirmed": 7,
+    "pairs_not_confirmed": 0
+   }
+  },
+  "Continue-A": {
+   "dataset": "Continue-A",
+   "witnesses": 482,
+   "balana": {
+    "evaluations": 964,
+    "returncode": 0,
+    "pairs_confirmed": 482,
+    "pairs_not_confirmed": 0,
+    "decisions": {
+     "Deny": 482,
+     "Permit": 482
+    }
+   },
+   "opa": {
+    "evaluations": 482,
+    "returncode": 0,
+    "pairs_confirmed": 482,
+    "pairs_not_confirmed": 0
+   }
+  },
+  "Pluto": {
+   "dataset": "Pluto",
+   "witnesses": 20,
+   "balana": {
+    "evaluations": 40,
+    "returncode": 0,
+    "pairs_confirmed": 20,
+    "pairs_not_confirmed": 0,
+    "decisions": {
+     "Deny": 20,
+     "Permit": 20
+    }
+   },
+   "opa": {
+    "evaluations": 20,
+    "returncode": 0,
+    "pairs_confirmed": 20,
+    "pairs_not_confirmed": 0
+   }
+  },
+  "Fedora": {
+   "dataset": "Fedora",
+   "witnesses": 13,
+   "balana": {
+    "evaluations": 26,
+    "returncode": 0,
+    "pairs_confirmed": 13,
+    "pairs_not_confirmed": 0,
+    "decisions": {
+     "Deny": 13,
+     "Permit": 13
+    }
+   },
+   "opa": {
+    "evaluations": 13,
+    "returncode": 0,
+    "pairs_confirmed": 13,
+    "pairs_not_confirmed": 0
+   }
+  }
+ },
+ "independent": {
+  "GEYSERS": {
+   "dataset": "GEYSERS",
+   "request_space": 589,
+   "rules": 15,
+   "pairs": 0,
+   "enumerated_pairs": 0,
+   "enumeration_disagreements": [],
+   "searched_pairs": 0,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 0,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 0,
+   "seconds": 0.0
+  },
+  "KMarket": {
+   "dataset": "KMarket",
+   "request_space": 120,
+   "rules": 5,
+   "pairs": 4,
+   "enumerated_pairs": 4,
+   "enumeration_disagreements": [],
+   "searched_pairs": 4,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 0,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 0,
+   "seconds": 0.0
+  },
+  "Continue-A": {
+   "dataset": "Continue-A",
+   "request_space": 1996800,
+   "rules": 298,
+   "pairs": 14280,
+   "enumerated_pairs": 14280,
+   "enumeration_disagreements": [],
+   "searched_pairs": 14280,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 0,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 0,
+   "seconds": 0.2
+  },
+  "Pluto": {
+   "dataset": "Pluto",
+   "request_space": 910,
+   "rules": 21,
+   "pairs": 20,
+   "enumerated_pairs": 20,
+   "enumeration_disagreements": [],
+   "searched_pairs": 20,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 0,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 0,
+   "seconds": 0.0
+  },
+  "Fedora": {
+   "dataset": "Fedora",
+   "request_space": 200,
+   "rules": 12,
+   "pairs": 35,
+   "enumerated_pairs": 35,
+   "enumeration_disagreements": [],
+   "searched_pairs": 35,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 0,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 0,
+   "seconds": 0.0
+  },
+  "Synthetic360": {
+   "dataset": "Synthetic360",
+   "request_space": 1016255020032,
+   "rules": 360,
+   "pairs": 32399,
+   "enumerated_pairs": 0,
+   "enumeration_disagreements": [],
+   "searched_pairs": 32399,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 360,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 360,
+   "seconds": 1.0
+  },
+  "CrossFramework": {
+   "dataset": "CrossFramework",
+   "request_space": 27556200,
+   "rules": 25,
+   "pairs": 131,
+   "enumerated_pairs": 131,
+   "enumeration_disagreements": [],
+   "searched_pairs": 131,
+   "search_disagreements": [],
+   "search_undecided": 0,
+   "dead_rules_by_search": 0,
+   "dead_rules_undecided": 0,
+   "dead_rules_by_solver": 0,
+   "seconds": 0.0
+  }
+ },
+ "injection": {
+  "Continue-A": {
+   "dataset": "Continue-A",
+   "seed": 20261112,
+   "per_kind": 100,
+   "kinds": {
+    "twin": {
+     "planted": 100,
+     "conflict_by_construction": true,
+     "solver_correct": 100,
+     "enumerator_correct": 100,
+     "kept_by_scope_query": 100,
+     "kept_by_entity_overlap": 100,
+     "kept_by_similarity": 100,
+     "kept_by_all_three": 100
+    },
+    "pinned": {
+     "planted": 100,
+     "conflict_by_construction": true,
+     "solver_correct": 100,
+     "enumerator_correct": 100,
+     "kept_by_scope_query": 100,
+     "kept_by_entity_overlap": 44,
+     "kept_by_similarity": 72,
+     "kept_by_all_three": 44
+    },
+    "nearmiss": {
+     "planted": 100,
+     "conflict_by_construction": false,
+     "solver_correct": 100,
+     "enumerator_correct": 100,
+     "kept_by_scope_query": 4,
+     "kept_by_entity_overlap": 16,
+     "kept_by_similarity": 60,
+     "kept_by_all_three": 0
+    }
+   }
+  },
+  "CrossFramework": {
+   "dataset": "CrossFramework",
+   "seed": 20261112,
+   "per_kind": 100,
+   "kinds": {
+    "twin": {
+     "planted": 100,
+     "conflict_by_construction": true,
+     "solver_correct": 100,
+     "enumerator_correct": 100,
+     "kept_by_scope_query": 100,
+     "kept_by_entity_overlap": 100,
+     "kept_by_similarity": 100,
+     "kept_by_all_three": 100
+    },
+    "pinned": {
+     "planted": 100,
+     "conflict_by_construction": true,
+     "solver_correct": 100,
+     "enumerator_correct": 100,
+     "kept_by_scope_query": 100,
+     "kept_by_entity_overlap": 17,
+     "kept_by_similarity": 62,
+     "kept_by_all_three": 17
+    },
+    "nearmiss": {
+     "planted": 100,
+     "conflict_by_construction": false,
+     "solver_correct": 100,
+     "enumerator_correct": 100,
+     "kept_by_scope_query": 7,
+     "kept_by_entity_overlap": 30,
+     "kept_by_similarity": 53,
+     "kept_by_all_three": 0
+    }
+   }
+  }
+ },
+ "timing": {
+  "Continue-A": {
+   "dataset": "Continue-A",
+   "repetitions": 5,
+   "pairs": 14280,
+   "intake_seconds": 0.027,
+   "variants": {
+    "exhaustive": {
+     "steps": [],
+     "solver_calls": 14280,
+     "conflicts_found": 482,
+     "filter_seconds": 0.0,
+     "solver_seconds": 38.024,
+     "total_seconds": 38.024,
+     "total_seconds_min_max": [
+      34.987,
+      39.53
+     ]
+    },
+    "similarity": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 6855,
+       "seconds": 4.236
+      }
+     ],
+     "solver_calls": 6855,
+     "conflicts_found": 453,
+     "filter_seconds": 4.236,
+     "solver_seconds": 16.411,
+     "total_seconds": 20.578,
+     "total_seconds_min_max": [
+      20.086,
+      23.047
+     ]
+    },
+    "entity": {
+     "steps": [
+      {
+       "stage": "entity",
+       "kept": 3206,
+       "seconds": 0.01
+      }
+     ],
+     "solver_calls": 3206,
+     "conflicts_found": 367,
+     "filter_seconds": 0.01,
+     "solver_seconds": 9.066,
+     "total_seconds": 9.076,
+     "total_seconds_min_max": [
+      8.063,
+      9.8
+     ]
+    },
+    "scope": {
+     "steps": [
+      {
+       "stage": "scope",
+       "kept": 486,
+       "seconds": 3.331
+      }
+     ],
+     "solver_calls": 486,
+     "conflicts_found": 482,
+     "filter_seconds": 3.331,
+     "solver_seconds": 1.518,
+     "total_seconds": 4.935,
+     "total_seconds_min_max": [
+      4.777,
+      5.558
+     ]
+    },
+    "no_similarity": {
+     "steps": [
+      {
+       "stage": "entity",
+       "kept": 3206,
+       "seconds": 0.01
+      },
+      {
+       "stage": "scope",
+       "kept": 371,
+       "seconds": 3.208
+      }
+     ],
+     "solver_calls": 371,
+     "conflicts_found": 367,
+     "filter_seconds": 3.218,
+     "solver_seconds": 1.582,
+     "total_seconds": 4.837,
+     "total_seconds_min_max": [
+      4.386,
+      5.025
+     ]
+    },
+    "no_entity": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 6855,
+       "seconds": 4.008
+      },
+      {
+       "stage": "scope",
+       "kept": 457,
+       "seconds": 3.185
+      }
+     ],
+     "solver_calls": 457,
+     "conflicts_found": 453,
+     "filter_seconds": 7.345,
+     "solver_seconds": 2.043,
+     "total_seconds": 9.368,
+     "total_seconds_min_max": [
+      8.419,
+      9.657
+     ]
+    },
+    "no_scope": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 6855,
+       "seconds": 4.268
+      },
+      {
+       "stage": "entity",
+       "kept": 3129,
+       "seconds": 0.008
+      }
+     ],
+     "solver_calls": 3129,
+     "conflicts_found": 354,
+     "filter_seconds": 4.276,
+     "solver_seconds": 8.842,
+     "total_seconds": 13.122,
+     "total_seconds_min_max": [
+      12.599,
+      13.883
+     ]
+    },
+    "original": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 6855,
+       "seconds": 4.038
+      },
+      {
+       "stage": "entity",
+       "kept": 3129,
+       "seconds": 0.008
+      },
+      {
+       "stage": "scope",
+       "kept": 358,
+       "seconds": 3.254
+      }
+     ],
+     "solver_calls": 358,
+     "conflicts_found": 354,
+     "filter_seconds": 7.362,
+     "solver_seconds": 1.373,
+     "total_seconds": 8.621,
+     "total_seconds_min_max": [
+      8.421,
+      9.619
+     ]
+    }
+   }
+  },
+  "CrossFramework": {
+   "dataset": "CrossFramework",
+   "repetitions": 5,
+   "pairs": 131,
+   "intake_seconds": 0.003,
+   "variants": {
+    "exhaustive": {
+     "steps": [],
+     "solver_calls": 131,
+     "conflicts_found": 7,
+     "filter_seconds": 0.0,
+     "solver_seconds": 0.362,
+     "total_seconds": 0.362,
+     "total_seconds_min_max": [
+      0.352,
+      0.504
+     ]
+    },
+    "similarity": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 42,
+       "seconds": 0.363
+      }
+     ],
+     "solver_calls": 42,
+     "conflicts_found": 7,
+     "filter_seconds": 0.363,
+     "solver_seconds": 0.113,
+     "total_seconds": 0.476,
+     "total_seconds_min_max": [
+      0.435,
+      0.555
+     ]
+    },
+    "entity": {
+     "steps": [
+      {
+       "stage": "entity",
+       "kept": 43,
+       "seconds": 0.0
+      }
+     ],
+     "solver_calls": 43,
+     "conflicts_found": 7,
+     "filter_seconds": 0.0,
+     "solver_seconds": 0.111,
+     "total_seconds": 0.111,
+     "total_seconds_min_max": [
+      0.092,
+      0.14
+     ]
+    },
+    "scope": {
+     "steps": [
+      {
+       "stage": "scope",
+       "kept": 7,
+       "seconds": 0.13
+      }
+     ],
+     "solver_calls": 7,
+     "conflicts_found": 7,
+     "filter_seconds": 0.13,
+     "solver_seconds": 0.031,
+     "total_seconds": 0.157,
+     "total_seconds_min_max": [
+      0.149,
+      0.176
+     ]
+    },
+    "no_similarity": {
+     "steps": [
+      {
+       "stage": "entity",
+       "kept": 43,
+       "seconds": 0.0
+      },
+      {
+       "stage": "scope",
+       "kept": 7,
+       "seconds": 0.066
+      }
+     ],
+     "solver_calls": 7,
+     "conflicts_found": 7,
+     "filter_seconds": 0.067,
+     "solver_seconds": 0.03,
+     "total_seconds": 0.096,
+     "total_seconds_min_max": [
+      0.091,
+      0.11
+     ]
+    },
+    "no_entity": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 42,
+       "seconds": 0.357
+      },
+      {
+       "stage": "scope",
+       "kept": 7,
+       "seconds": 0.063
+      }
+     ],
+     "solver_calls": 7,
+     "conflicts_found": 7,
+     "filter_seconds": 0.419,
+     "solver_seconds": 0.039,
+     "total_seconds": 0.46,
+     "total_seconds_min_max": [
+      0.42,
+      0.516
+     ]
+    },
+    "no_scope": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 42,
+       "seconds": 0.374
+      },
+      {
+       "stage": "entity",
+       "kept": 29,
+       "seconds": 0.0
+      }
+     ],
+     "solver_calls": 29,
+     "conflicts_found": 7,
+     "filter_seconds": 0.375,
+     "solver_seconds": 0.104,
+     "total_seconds": 0.474,
+     "total_seconds_min_max": [
+      0.409,
+      0.556
+     ]
+    },
+    "original": {
+     "steps": [
+      {
+       "stage": "similarity",
+       "kept": 42,
+       "seconds": 0.387
+      },
+      {
+       "stage": "entity",
+       "kept": 29,
+       "seconds": 0.0
+      },
+      {
+       "stage": "scope",
+       "kept": 7,
+       "seconds": 0.061
+      }
+     ],
+     "solver_calls": 7,
+     "conflicts_found": 7,
+     "filter_seconds": 0.459,
+     "solver_seconds": 0.036,
+     "total_seconds": 0.494,
+     "total_seconds_min_max": [
+      0.419,
+      0.497
+     ]
+    }
+   }
+  }
+ },
+ "totals": {
+  "obligations_and_advice_skipped": 5,
+  "descriptions_skipped": 63,
+  "designators_without_category": 55,
+  "conflicts": 526,
+  "eligible_pairs": 46869,
+  "witnesses": 526,
+  "balana_confirmed": 526,
+  "opa_confirmed": 526,
+  "enumerated_pairs": 14470,
+  "enumeration_disagreements": 0,
+  "searched_pairs": 46869,
+  "search_disagreements": 0,
+  "search_undecided": 0,
+  "planted": 600,
+  "planted_solver_correct": 600,
+  "planted_enumerator_correct": 600,
+  "planted_conflicts": 400,
+  "planted_conflicts_kept_by_scope_query": 400,
+  "planted_conflicts_kept_by_entity_overlap": 261,
+  "planted_conflicts_kept_by_similarity": 334,
+  "planted_conflicts_kept_by_all_three": 261,
+  "planted_near_misses": 200,
+  "planted_near_misses_dropped_by_scope_query": 189
+ },
+ "sweeps": {
+  "similarity": {
+   "KMarket": {
+    "0.3": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.35": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.4": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.45": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.5": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.55": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.6": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.65": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.7": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.75": {
+     "kept": 2,
+     "share_kept": 0.5,
+     "recall": 0.5
+    },
+    "0.8": {
+     "kept": 1,
+     "share_kept": 0.25,
+     "recall": 0.25
+    },
+    "0.85": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.9": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.95": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    }
+   },
+   "Continue-A": {
+    "0.3": {
+     "kept": 14280,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.35": {
+     "kept": 14280,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.4": {
+     "kept": 14274,
+     "share_kept": 0.9995798319327731,
+     "recall": 1.0
+    },
+    "0.45": {
+     "kept": 14069,
+     "share_kept": 0.9852240896358544,
+     "recall": 1.0
+    },
+    "0.5": {
+     "kept": 13157,
+     "share_kept": 0.9213585434173669,
+     "recall": 1.0
+    },
+    "0.55": {
+     "kept": 11688,
+     "share_kept": 0.8184873949579832,
+     "recall": 1.0
+    },
+    "0.6": {
+     "kept": 9706,
+     "share_kept": 0.6796918767507003,
+     "recall": 0.9979253112033195
+    },
+    "0.65": {
+     "kept": 6855,
+     "share_kept": 0.4800420168067227,
+     "recall": 0.9398340248962656
+    },
+    "0.7": {
+     "kept": 4436,
+     "share_kept": 0.31064425770308124,
+     "recall": 0.7344398340248963
+    },
+    "0.75": {
+     "kept": 3006,
+     "share_kept": 0.21050420168067227,
+     "recall": 0.4190871369294606
+    },
+    "0.8": {
+     "kept": 1918,
+     "share_kept": 0.13431372549019607,
+     "recall": 0.21784232365145229
+    },
+    "0.85": {
+     "kept": 1079,
+     "share_kept": 0.07556022408963585,
+     "recall": 0.14107883817427386
+    },
+    "0.9": {
+     "kept": 447,
+     "share_kept": 0.03130252100840336,
+     "recall": 0.1037344398340249
+    },
+    "0.95": {
+     "kept": 99,
+     "share_kept": 0.006932773109243697,
+     "recall": 0.06431535269709543
+    }
+   },
+   "Pluto": {
+    "0.3": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.35": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.4": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.45": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.5": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.55": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.6": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.65": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.7": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.75": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.8": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.85": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.9": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.95": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    }
+   },
+   "Fedora": {
+    "0.3": {
+     "kept": 24,
+     "share_kept": 0.6857142857142857,
+     "recall": 0.15384615384615385
+    },
+    "0.35": {
+     "kept": 23,
+     "share_kept": 0.6571428571428571,
+     "recall": 0.07692307692307693
+    },
+    "0.4": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.45": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.5": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.55": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.6": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.65": {
+     "kept": 16,
+     "share_kept": 0.45714285714285713,
+     "recall": 0.0
+    },
+    "0.7": {
+     "kept": 12,
+     "share_kept": 0.34285714285714286,
+     "recall": 0.0
+    },
+    "0.75": {
+     "kept": 9,
+     "share_kept": 0.2571428571428571,
+     "recall": 0.0
+    },
+    "0.8": {
+     "kept": 2,
+     "share_kept": 0.05714285714285714,
+     "recall": 0.0
+    },
+    "0.85": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.9": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.95": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    }
+   },
+   "Synthetic360": {
+    "0.3": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.35": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.4": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.45": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.5": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.55": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.6": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.65": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.7": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.75": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.8": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.85": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.9": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.95": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    }
+   },
+   "CrossFramework": {
+    "0.3": {
+     "kept": 131,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.35": {
+     "kept": 131,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.4": {
+     "kept": 131,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.45": {
+     "kept": 129,
+     "share_kept": 0.9847328244274809,
+     "recall": 1.0
+    },
+    "0.5": {
+     "kept": 125,
+     "share_kept": 0.9541984732824428,
+     "recall": 1.0
+    },
+    "0.55": {
+     "kept": 101,
+     "share_kept": 0.7709923664122137,
+     "recall": 1.0
+    },
+    "0.6": {
+     "kept": 72,
+     "share_kept": 0.549618320610687,
+     "recall": 1.0
+    },
+    "0.65": {
+     "kept": 42,
+     "share_kept": 0.32061068702290074,
+     "recall": 1.0
+    },
+    "0.7": {
+     "kept": 26,
+     "share_kept": 0.1984732824427481,
+     "recall": 1.0
+    },
+    "0.75": {
+     "kept": 18,
+     "share_kept": 0.13740458015267176,
+     "recall": 0.5714285714285714
+    },
+    "0.8": {
+     "kept": 15,
+     "share_kept": 0.11450381679389313,
+     "recall": 0.5714285714285714
+    },
+    "0.85": {
+     "kept": 8,
+     "share_kept": 0.061068702290076333,
+     "recall": 0.2857142857142857
+    },
+    "0.9": {
+     "kept": 5,
+     "share_kept": 0.03816793893129771,
+     "recall": 0.14285714285714285
+    },
+    "0.95": {
+     "kept": 3,
+     "share_kept": 0.022900763358778626,
+     "recall": 0.0
+    }
+   }
+  },
+  "entity": {
+   "GEYSERS": {
+    "0.05": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.1": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.15": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.2": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.25": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.3": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.35": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.4": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.45": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.5": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.55": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.6": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.65": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    },
+    "0.7": {
+     "kept": 0,
+     "share_kept": null,
+     "recall": null
+    }
+   },
+   "KMarket": {
+    "0.05": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.1": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.15": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.2": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.25": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.3": {
+     "kept": 4,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.35": {
+     "kept": 2,
+     "share_kept": 0.5,
+     "recall": 0.5
+    },
+    "0.4": {
+     "kept": 2,
+     "share_kept": 0.5,
+     "recall": 0.5
+    },
+    "0.45": {
+     "kept": 2,
+     "share_kept": 0.5,
+     "recall": 0.5
+    },
+    "0.5": {
+     "kept": 2,
+     "share_kept": 0.5,
+     "recall": 0.5
+    },
+    "0.55": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.6": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.65": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.7": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    }
+   },
+   "Continue-A": {
+    "0.05": {
+     "kept": 14280,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.1": {
+     "kept": 12122,
+     "share_kept": 0.8488795518207283,
+     "recall": 1.0
+    },
+    "0.15": {
+     "kept": 4818,
+     "share_kept": 0.3373949579831933,
+     "recall": 1.0
+    },
+    "0.2": {
+     "kept": 4182,
+     "share_kept": 0.29285714285714287,
+     "recall": 0.9543568464730291
+    },
+    "0.25": {
+     "kept": 3206,
+     "share_kept": 0.22450980392156863,
+     "recall": 0.7614107883817427
+    },
+    "0.3": {
+     "kept": 2149,
+     "share_kept": 0.15049019607843137,
+     "recall": 0.4045643153526971
+    },
+    "0.35": {
+     "kept": 1644,
+     "share_kept": 0.11512605042016806,
+     "recall": 0.17427385892116182
+    },
+    "0.4": {
+     "kept": 1383,
+     "share_kept": 0.09684873949579832,
+     "recall": 0.17427385892116182
+    },
+    "0.45": {
+     "kept": 914,
+     "share_kept": 0.06400560224089635,
+     "recall": 0.14937759336099585
+    },
+    "0.5": {
+     "kept": 474,
+     "share_kept": 0.03319327731092437,
+     "recall": 0.14937759336099585
+    },
+    "0.55": {
+     "kept": 349,
+     "share_kept": 0.024439775910364146,
+     "recall": 0.11618257261410789
+    },
+    "0.6": {
+     "kept": 232,
+     "share_kept": 0.016246498599439777,
+     "recall": 0.11618257261410789
+    },
+    "0.65": {
+     "kept": 39,
+     "share_kept": 0.0027310924369747898,
+     "recall": 0.08091286307053942
+    },
+    "0.7": {
+     "kept": 27,
+     "share_kept": 0.0018907563025210084,
+     "recall": 0.056016597510373446
+    }
+   },
+   "Pluto": {
+    "0.05": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.1": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.15": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.2": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.25": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.3": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.35": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.4": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.45": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.5": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.55": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.6": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.65": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.7": {
+     "kept": 20,
+     "share_kept": 1.0,
+     "recall": 1.0
+    }
+   },
+   "Fedora": {
+    "0.05": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.1": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.15": {
+     "kept": 22,
+     "share_kept": 0.6285714285714286,
+     "recall": 0.0
+    },
+    "0.2": {
+     "kept": 14,
+     "share_kept": 0.4,
+     "recall": 0.0
+    },
+    "0.25": {
+     "kept": 2,
+     "share_kept": 0.05714285714285714,
+     "recall": 0.0
+    },
+    "0.3": {
+     "kept": 2,
+     "share_kept": 0.05714285714285714,
+     "recall": 0.0
+    },
+    "0.35": {
+     "kept": 2,
+     "share_kept": 0.05714285714285714,
+     "recall": 0.0
+    },
+    "0.4": {
+     "kept": 2,
+     "share_kept": 0.05714285714285714,
+     "recall": 0.0
+    },
+    "0.45": {
+     "kept": 1,
+     "share_kept": 0.02857142857142857,
+     "recall": 0.0
+    },
+    "0.5": {
+     "kept": 1,
+     "share_kept": 0.02857142857142857,
+     "recall": 0.0
+    },
+    "0.55": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.6": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.65": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    },
+    "0.7": {
+     "kept": 0,
+     "share_kept": 0.0,
+     "recall": 0.0
+    }
+   },
+   "Synthetic360": {
+    "0.05": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.1": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.15": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.2": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.25": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.3": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.35": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.4": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.45": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.5": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.55": {
+     "kept": 32399,
+     "share_kept": 1.0,
+     "recall": null
+    },
+    "0.6": {
+     "kept": 32379,
+     "share_kept": 0.9993826969968209,
+     "recall": null
+    },
+    "0.65": {
+     "kept": 31689,
+     "share_kept": 0.9780857433871416,
+     "recall": null
+    },
+    "0.7": {
+     "kept": 26264,
+     "share_kept": 0.8106423037748078,
+     "recall": null
+    }
+   },
+   "CrossFramework": {
+    "0.05": {
+     "kept": 131,
+     "share_kept": 1.0,
+     "recall": 1.0
+    },
+    "0.1": {
+     "kept": 113,
+     "share_kept": 0.8625954198473282,
+     "recall": 1.0
+    },
+    "0.15": {
+     "kept": 108,
+     "share_kept": 0.8244274809160306,
+     "recall": 1.0
+    },
+    "0.2": {
+     "kept": 80,
+     "share_kept": 0.6106870229007634,
+     "recall": 1.0
+    },
+    "0.25": {
+     "kept": 43,
+     "share_kept": 0.3282442748091603,
+     "recall": 1.0
+    },
+    "0.3": {
+     "kept": 21,
+     "share_kept": 0.16030534351145037,
+     "recall": 0.7142857142857143
+    },
+    "0.35": {
+     "kept": 12,
+     "share_kept": 0.0916030534351145,
+     "recall": 0.5714285714285714
+    },
+    "0.4": {
+     "kept": 12,
+     "share_kept": 0.0916030534351145,
+     "recall": 0.5714285714285714
+    },
+    "0.45": {
+     "kept": 10,
+     "share_kept": 0.07633587786259542,
+     "recall": 0.5714285714285714
+    },
+    "0.5": {
+     "kept": 9,
+     "share_kept": 0.06870229007633588,
+     "recall": 0.5714285714285714
+    },
+    "0.55": {
+     "kept": 7,
+     "share_kept": 0.05343511450381679,
+     "recall": 0.2857142857142857
+    },
+    "0.6": {
+     "kept": 5,
+     "share_kept": 0.03816793893129771,
+     "recall": 0.2857142857142857
+    },
+    "0.65": {
+     "kept": 3,
+     "share_kept": 0.022900763358778626,
+     "recall": 0.14285714285714285
+    },
+    "0.7": {
+     "kept": 2,
+     "share_kept": 0.015267175572519083,
+     "recall": 0.0
+    }
+   }
+  }
+ },
+ "prior_tool_earlier": {
+  "cases": 24,
+  "prior_status_counts": {
+   "SAT": 6,
+   "UNSAT": 6,
+   "ERROR": 12,
+   "TIMEOUT": 0,
+   "UNRESOLVED": 0
+  },
+  "prior_verdicts_matching": 12,
+  "own_label_mismatches": 0,
+  "completed_utc": "2026-10-20T22:40:10.991974+00:00"
+ },
+ "model_check": {
+  "model_file": {
+   "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+   "matches_manifest": true
+  },
+  "stored_counts": [
+   {
+    "input": "heterogeneous-030",
+    "pairs": 173,
+    "kept_stored": 16,
+    "kept_now": 16,
+    "pairs_within_0.005_of_threshold": 5
+   },
+   {
+    "input": "heterogeneous-100",
+    "pairs": 1884,
+    "kept_stored": 154,
+    "kept_now": 154,
+    "pairs_within_0.005_of_threshold": 35
+   },
+   {
+    "input": "heterogeneous-300",
+    "pairs": 16878,
+    "kept_stored": 1291,
+    "kept_now": 1291,
+    "pairs_within_0.005_of_threshold": 378
+   },
+   {
+    "input": "interval-030",
+    "pairs": 225,
+    "kept_stored": 225,
+    "kept_now": 225,
+    "pairs_within_0.005_of_threshold": 0
+   },
+   {
+    "input": "interval-100",
+    "pairs": 2500,
+    "kept_stored": 2500,
+    "kept_now": 2500,
+    "pairs_within_0.005_of_threshold": 0
+   },
+   {
+    "input": "interval-300",
+    "pairs": 22500,
+    "kept_stored": 22500,
+    "kept_now": 22500,
+    "pairs_within_0.005_of_threshold": 0
+   },
+   {
+    "input": "disjoint-030",
+    "pairs": 225,
+    "kept_stored": 225,
+    "kept_now": 225,
+    "pairs_within_0.005_of_threshold": 0
+   },
+   {
+    "input": "disjoint-100",
+    "pairs": 2500,
+    "kept_stored": 2500,
+    "kept_now": 2500,
+    "pairs_within_0.005_of_threshold": 0
+   },
+   {
+    "input": "disjoint-300",
+    "pairs": 22500,
+    "kept_stored": 22498,
+    "kept_now": 22498,
+    "pairs_within_0.005_of_threshold": 3
+   }
+  ],
+  "pairs": 69385,
+  "reproduces_stored_counts": true
+ },
+ "ci_output": [
+  "policy gate: 18 rules, 71 opposite-effect pairs, 1 solver call, 0.2 s",
+  "NEW CONFLICT  AMLD-40-retain-cdd-governed  x  GDPR-17-erase-governed",
+  "  witness request: action-id=erase, contains-pii=true,",
+  "                   record-type=cdd-record, under-legal-hold=true",
+  "FAIL: 1 new conflict(s), 0 unresolved pair(s)"
+ ],
+ "run_minutes": 22
+}

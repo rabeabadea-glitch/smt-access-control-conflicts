@@ -1,0 +1,73 @@
+{
+  "result": [
+    {
+      "expressions": [
+        {
+          "value": [
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "AMLD-40-retain-txn",
+                "GDPR-17-erase-ungoverned"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "AMLD-39-tipping-off",
+                "GDPR-15-subject-access-ungoverned"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "GDPR-5c-minimisation",
+                "PCI-10-2-log-access"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "GDPR-5e-storage-purge",
+                "SOX-802-retain-audit"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "DORA-19-report-incident",
+                "GDPR-6-restrict-transfer-ungoverned"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "AMLD-investigator-full-pan",
+                "PCI-3-3-mask-pan"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "NIST-63B-no-forced-rotation",
+                "PCI-8-3-9-rotate-password"
+              ]
+            }
+          ],
+          "text": "[r | x := data.cases[_]; r := data.thesis.result with input as x]",
+          "location": {
+            "row": 1,
+            "col": 1
+          }
+        }
+      ]
+    }
+  ]
+}

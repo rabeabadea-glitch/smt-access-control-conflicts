@@ -1,0 +1,73 @@
+{
+ "model_file": {
+  "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+  "matches_manifest": true
+ },
+ "stored_counts": [
+  {
+   "input": "heterogeneous-030",
+   "pairs": 173,
+   "kept_stored": 16,
+   "kept_now": 16,
+   "pairs_within_0.005_of_threshold": 5
+  },
+  {
+   "input": "heterogeneous-100",
+   "pairs": 1884,
+   "kept_stored": 154,
+   "kept_now": 154,
+   "pairs_within_0.005_of_threshold": 35
+  },
+  {
+   "input": "heterogeneous-300",
+   "pairs": 16878,
+   "kept_stored": 1291,
+   "kept_now": 1291,
+   "pairs_within_0.005_of_threshold": 378
+  },
+  {
+   "input": "interval-030",
+   "pairs": 225,
+   "kept_stored": 225,
+   "kept_now": 225,
+   "pairs_within_0.005_of_threshold": 0
+  },
+  {
+   "input": "interval-100",
+   "pairs": 2500,
+   "kept_stored": 2500,
+   "kept_now": 2500,
+   "pairs_within_0.005_of_threshold": 0
+  },
+  {
+   "input": "interval-300",
+   "pairs": 22500,
+   "kept_stored": 22500,
+   "kept_now": 22500,
+   "pairs_within_0.005_of_threshold": 0
+  },
+  {
+   "input": "disjoint-030",
+   "pairs": 225,
+   "kept_stored": 225,
+   "kept_now": 225,
+   "pairs_within_0.005_of_threshold": 0
+  },
+  {
+   "input": "disjoint-100",
+   "pairs": 2500,
+   "kept_stored": 2500,
+   "kept_now": 2500,
+   "pairs_within_0.005_of_threshold": 0
+  },
+  {
+   "input": "disjoint-300",
+   "pairs": 22500,
+   "kept_stored": 22498,
+   "kept_now": 22498,
+   "pairs_within_0.005_of_threshold": 3
+  }
+ ],
+ "pairs": 69385,
+ "reproduces_stored_counts": true
+}

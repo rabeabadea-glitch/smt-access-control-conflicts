@@ -1,0 +1,500 @@
+{
+ "dataset": "Pluto",
+ "stats": {
+  "file": "pluto3.xml",
+  "sha256": "77d62814299990dfec5fd5b37057a143da3d13e839c3f8be76ef87b01499bd76",
+  "rules": 21,
+  "permit": 20,
+  "deny": 1,
+  "attributes": 3,
+  "rank_coded_attributes": 0,
+  "sources": 1,
+  "skipped_elements": {
+   "Description": 21,
+   "ObligationExpressions": 0,
+   "AdviceExpressions": 0
+  },
+  "designators_without_category": 0
+ },
+ "eligible_pairs": 20,
+ "all_pairs": 210,
+ "dead_rules": 0,
+ "own_scope_status": {
+  "SAT": 21
+ },
+ "thresholds": {
+  "embedding_cosine": 0.65,
+  "entity_jaccard": 0.25,
+  "tfidf": 0.3,
+  "keyword": 0.2,
+  "solver_budget_ms": 2000
+ },
+ "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+ "model_file": {
+  "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+  "matches_manifest": true
+ },
+ "z3": "4.15.4.0",
+ "rows": [
+  {
+   "pair": [
+    "odu_faculty_aps",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.1396329700946808,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.706186000011712,
+   "witness": {
+    "a_46938bffd46c1d3c": "faculty@odu.edu",
+    "a_343b8d05ea6a6c04": "APS:citations",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_faculty_cern",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.1499045044183731,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.788921999979266,
+   "witness": {
+    "a_46938bffd46c1d3c": "faculty@odu.edu",
+    "a_343b8d05ea6a6c04": "CERN:citations",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_faculty_Emilio",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.13286429643630981,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.760728999987805,
+   "witness": {
+    "a_46938bffd46c1d3c": "faculty@odu.edu",
+    "a_343b8d05ea6a6c04": "Emilio:citations",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_faculty_NTRS-Physics",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.1378832459449768,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.761583999983941,
+   "witness": {
+    "a_46938bffd46c1d3c": "faculty@odu.edu",
+    "a_343b8d05ea6a6c04": "NTRS-Physics:citations",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_faculty_arXiv",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.1333717554807663,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.7177700000038385,
+   "witness": {
+    "a_46938bffd46c1d3c": "faculty@odu.edu",
+    "a_343b8d05ea6a6c04": "arXiv:citations",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_student_APS",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.131993368268013,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.740255000048819,
+   "witness": {
+    "a_46938bffd46c1d3c": "student@odu.edu",
+    "a_343b8d05ea6a6c04": "APS:datestamp",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_student_CERN",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.14304780960083008,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.725279000003411,
+   "witness": {
+    "a_46938bffd46c1d3c": "student@odu.edu",
+    "a_343b8d05ea6a6c04": "CERN:datestamp",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_student_Emilio",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.12033884972333908,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.5973379999868484,
+   "witness": {
+    "a_46938bffd46c1d3c": "student@odu.edu",
+    "a_343b8d05ea6a6c04": "Emilio:datestamp",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_student_NTRS-Physics",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.12741754949092865,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.504595999994308,
+   "witness": {
+    "a_46938bffd46c1d3c": "student@odu.edu",
+    "a_343b8d05ea6a6c04": "NTRS-Physics:datestamp",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_student_arXiv",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.12300236523151398,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.5277419999838457,
+   "witness": {
+    "a_46938bffd46c1d3c": "student@odu.edu",
+    "a_343b8d05ea6a6c04": "arXiv:datestamp",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_staff_APS",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.13561666011810303,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.407070999993266,
+   "witness": {
+    "a_46938bffd46c1d3c": "staff@odu.edu",
+    "a_343b8d05ea6a6c04": "APS:discovery",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_staff_CERN",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.14134326577186584,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.3682370000415176,
+   "witness": {
+    "a_46938bffd46c1d3c": "staff@odu.edu",
+    "a_343b8d05ea6a6c04": "CERN:discovery",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_staff_Emilio",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.11515054106712341,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.3434020000081546,
+   "witness": {
+    "a_46938bffd46c1d3c": "staff@odu.edu",
+    "a_343b8d05ea6a6c04": "Emilio:discovery",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_staff_NTRS-Physics",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.12983830273151398,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.3610210000128973,
+   "witness": {
+    "a_46938bffd46c1d3c": "staff@odu.edu",
+    "a_343b8d05ea6a6c04": "NTRS-Physics:discovery",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_staff_arXiv",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.13322022557258606,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.3683770000388904,
+   "witness": {
+    "a_46938bffd46c1d3c": "staff@odu.edu",
+    "a_343b8d05ea6a6c04": "arXiv:discovery",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_guest_APS",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.07711899280548096,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.7666490000465274,
+   "witness": {
+    "a_46938bffd46c1d3c": "guest@odu.edu",
+    "a_343b8d05ea6a6c04": "APS:creator",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_guest_CERN",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.0909411758184433,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.7855940000117698,
+   "witness": {
+    "a_46938bffd46c1d3c": "guest@odu.edu",
+    "a_343b8d05ea6a6c04": "CERN:creator",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_guest_Emilio",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.053860798478126526,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.7606769999929384,
+   "witness": {
+    "a_46938bffd46c1d3c": "guest@odu.edu",
+    "a_343b8d05ea6a6c04": "Emilio:creator",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_guest_NTRS-Physics",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.07880254089832306,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.7694950000191056,
+   "witness": {
+    "a_46938bffd46c1d3c": "guest@odu.edu",
+    "a_343b8d05ea6a6c04": "NTRS-Physics:creator",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  },
+  {
+   "pair": [
+    "odu_guest_arXiv",
+    "default"
+   ],
+   "effects": [
+    "Permit",
+    "Deny"
+   ],
+   "cosine": 0.06242690980434418,
+   "jaccard": 1.0,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.0,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.7661370000041643,
+   "witness": {
+    "a_46938bffd46c1d3c": "guest@odu.edu",
+    "a_343b8d05ea6a6c04": "arXiv:creator",
+    "a_eb7d4aff0b314c2a": "execute"
+   }
+  }
+ ]
+}

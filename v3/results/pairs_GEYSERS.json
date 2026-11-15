@@ -1,0 +1,36 @@
+{
+ "dataset": "GEYSERS",
+ "stats": {
+  "file": "GEYSERS.xml",
+  "sha256": "b955aa160d2e9a29a94c6c7a9b2ce05d647cd28157a709a34bfc31a3b9aa24ae",
+  "rules": 15,
+  "permit": 15,
+  "deny": 0,
+  "attributes": 2,
+  "rank_coded_attributes": 0,
+  "sources": 1,
+  "skipped_elements": {
+   "Description": 7,
+   "ObligationExpressions": 0,
+   "AdviceExpressions": 0
+  },
+  "designators_without_category": 55
+ },
+ "eligible_pairs": 0,
+ "all_pairs": 105,
+ "dead_rules": 0,
+ "own_scope_status": {
+  "SAT": 15
+ },
+ "thresholds": {
+  "embedding_cosine": 0.65,
+  "entity_jaccard": 0.25,
+  "tfidf": 0.3,
+  "keyword": 0.2,
+  "solver_budget_ms": 2000
+ },
+ "model_revision": null,
+ "model_file": null,
+ "z3": "4.15.4.0",
+ "rows": []
+}

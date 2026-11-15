@@ -1,0 +1,49 @@
+{
+  "result": [
+    {
+      "expressions": [
+        {
+          "value": [
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "permit-rule",
+                "total-amount"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "deny-liquor",
+                "permit-rule"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "max-drink-amount",
+                "permit-rule"
+              ]
+            },
+            {
+              "allow": false,
+              "decision": "Conflict",
+              "matched": [
+                "max-medicine-amount",
+                "permit-rule"
+              ]
+            }
+          ],
+          "text": "[r | x := data.cases[_]; r := data.thesis.result with input as x]",
+          "location": {
+            "row": 1,
+            "col": 1
+          }
+        }
+      ]
+    }
+  ]
+}

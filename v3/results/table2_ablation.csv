@@ -1,0 +1,74 @@
+dataset,variant,kept,conflicts_kept,conflicts_lost,recall,precision,f1,pairs_removed_percent,solver_seconds
+GEYSERS,exhaustive (no filter),0,0,0,,,,,0.0
+GEYSERS,entity overlap only,0,0,0,,,,,0.0
+GEYSERS,scope query only,0,0,0,,,,,0.0
+GEYSERS,without similarity (entity + scope),0,0,0,,,,,0.0
+GEYSERS,TF-IDF baseline,0,0,0,,,,,0.0
+GEYSERS,keyword baseline,0,0,0,,,,,0.0
+GEYSERS,older shared-attribute SPARQL gate,0,0,0,,,,,0.0
+KMarket,exhaustive (no filter),4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,similarity only,4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,entity overlap only,4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,scope query only,4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,without scope query (similarity + entity),4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,without entity overlap (similarity + scope),4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,without similarity (entity + scope),4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,all three filters,4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,TF-IDF baseline,4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,keyword baseline,4,4,0,1.0,1.0,1.0,0.0,0.02
+KMarket,older shared-attribute SPARQL gate,4,4,0,1.0,1.0,1.0,0.0,0.02
+Continue-A,exhaustive (no filter),14280,482,0,1.0,0.03375350140056022,0.06530280449803548,0.0,82.52
+Continue-A,similarity only,6855,453,29,0.9398340248962656,0.06608315098468272,0.12348371268911,52.0,40.27
+Continue-A,entity overlap only,3206,367,115,0.7614107883817427,0.11447286338116032,0.19902386117136658,77.55,19.46
+Continue-A,scope query only,486,482,0,1.0,0.9917695473251029,0.9958677685950413,96.6,4.01
+Continue-A,without scope query (similarity + entity),3129,354,128,0.7344398340248963,0.11313518696069032,0.19606757130988645,78.09,18.95
+Continue-A,without entity overlap (similarity + scope),457,453,29,0.9398340248962656,0.9912472647702407,0.964856230031949,96.8,3.75
+Continue-A,without similarity (entity + scope),371,367,115,0.7614107883817427,0.9892183288409704,0.8604923798358733,97.4,3.25
+Continue-A,all three filters,358,354,128,0.7344398340248963,0.9888268156424581,0.842857142857143,97.49,3.12
+Continue-A,TF-IDF baseline,1326,482,0,1.0,0.363499245852187,0.5331858407079646,90.71,8.84
+Continue-A,keyword baseline,2746,476,6,0.9875518672199171,0.1733430444282593,0.2949194547707559,80.77,17.01
+Continue-A,older shared-attribute SPARQL gate,14280,482,0,1.0,0.03375350140056022,0.06530280449803548,0.0,82.52
+Pluto,exhaustive (no filter),20,20,0,1.0,1.0,1.0,0.0,0.05
+Pluto,similarity only,0,0,20,0.0,,,100.0,0.0
+Pluto,entity overlap only,20,20,0,1.0,1.0,1.0,0.0,0.05
+Pluto,scope query only,20,20,0,1.0,1.0,1.0,0.0,0.05
+Pluto,without scope query (similarity + entity),0,0,20,0.0,,,100.0,0.0
+Pluto,without entity overlap (similarity + scope),0,0,20,0.0,,,100.0,0.0
+Pluto,without similarity (entity + scope),20,20,0,1.0,1.0,1.0,0.0,0.05
+Pluto,all three filters,0,0,20,0.0,,,100.0,0.0
+Pluto,TF-IDF baseline,0,0,20,0.0,,,100.0,0.0
+Pluto,keyword baseline,0,0,20,0.0,,,100.0,0.0
+Pluto,older shared-attribute SPARQL gate,20,20,0,1.0,1.0,1.0,0.0,0.05
+Fedora,exhaustive (no filter),35,13,0,1.0,0.37142857142857144,0.5416666666666666,0.0,0.07
+Fedora,similarity only,16,0,13,0.0,0.0,0.0,54.29,0.03
+Fedora,entity overlap only,2,0,13,0.0,0.0,0.0,94.29,0.0
+Fedora,scope query only,23,13,0,1.0,0.5652173913043478,0.7222222222222222,34.29,0.04
+Fedora,without scope query (similarity + entity),1,0,13,0.0,0.0,0.0,97.14,0.0
+Fedora,without entity overlap (similarity + scope),4,0,13,0.0,0.0,0.0,88.57,0.01
+Fedora,without similarity (entity + scope),2,0,13,0.0,0.0,0.0,94.29,0.0
+Fedora,all three filters,1,0,13,0.0,0.0,0.0,97.14,0.0
+Fedora,TF-IDF baseline,2,0,13,0.0,0.0,0.0,94.29,0.0
+Fedora,keyword baseline,2,0,13,0.0,0.0,0.0,94.29,0.0
+Fedora,older shared-attribute SPARQL gate,22,0,13,0.0,0.0,0.0,37.14,0.04
+Synthetic360,exhaustive (no filter),32399,0,0,,0.0,,0.0,89.59
+Synthetic360,similarity only,32399,0,0,,0.0,,0.0,89.59
+Synthetic360,entity overlap only,32399,0,0,,0.0,,0.0,89.59
+Synthetic360,scope query only,1145,0,0,,0.0,,96.47,3.35
+Synthetic360,without scope query (similarity + entity),32399,0,0,,0.0,,0.0,89.59
+Synthetic360,without entity overlap (similarity + scope),1145,0,0,,0.0,,96.47,3.35
+Synthetic360,without similarity (entity + scope),1145,0,0,,0.0,,96.47,3.35
+Synthetic360,all three filters,1145,0,0,,0.0,,96.47,3.35
+Synthetic360,TF-IDF baseline,32399,0,0,,0.0,,0.0,89.59
+Synthetic360,keyword baseline,32399,0,0,,0.0,,0.0,89.59
+Synthetic360,older shared-attribute SPARQL gate,32399,0,0,,0.0,,0.0,89.59
+CrossFramework,exhaustive (no filter),131,7,0,1.0,0.05343511450381679,0.10144927536231885,0.0,0.27
+CrossFramework,similarity only,42,7,0,1.0,0.16666666666666666,0.2857142857142857,67.94,0.09
+CrossFramework,entity overlap only,43,7,0,1.0,0.16279069767441862,0.28,67.18,0.09
+CrossFramework,scope query only,7,7,0,1.0,1.0,1.0,94.66,0.02
+CrossFramework,without scope query (similarity + entity),29,7,0,1.0,0.2413793103448276,0.3888888888888889,77.86,0.06
+CrossFramework,without entity overlap (similarity + scope),7,7,0,1.0,1.0,1.0,94.66,0.02
+CrossFramework,without similarity (entity + scope),7,7,0,1.0,1.0,1.0,94.66,0.02
+CrossFramework,all three filters,7,7,0,1.0,1.0,1.0,94.66,0.02
+CrossFramework,TF-IDF baseline,17,5,2,0.7142857142857143,0.29411764705882354,0.4166666666666667,87.02,0.04
+CrossFramework,keyword baseline,25,7,0,1.0,0.28,0.43750000000000006,80.92,0.06
+CrossFramework,older shared-attribute SPARQL gate,131,7,0,1.0,0.05343511450381679,0.10144927536231885,0.0,0.27

@@ -1,0 +1,18 @@
+# GitHub Actions job: run the policy gate on every pull request that touches a policy file.
+name: policy-gate
+on:
+  pull_request:
+    paths: ['policies/**']
+jobs:
+  conflicts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -r requirements.txt
+      - run: git show origin/${{ github.base_ref }}:policies/policy.xml > /tmp/baseline.xml
+      - run: |
+          export Z3_LIBRARY=$(python -c "import z3, os; print(os.path.join(os.path.dirname(z3.__file__), 'lib', 'libz3.so'))")
+          python v3/ci_gate.py /tmp/baseline.xml policies/policy.xml policy

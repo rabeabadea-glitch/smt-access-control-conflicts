@@ -1,0 +1,7 @@
+# Pluto and Fedora come from github.com/dianxiangxu/XPA, which publishes no licence for them.
+# fetch_xpa.sh downloads the two files; their replay folders hold rule-by-rule copies and a Rego
+# translation of them. Neither is redistributed here; run_all.sh regenerates both.
+data/xpa/
+results/replay/Pluto/
+results/replay/Fedora/
+__pycache__/

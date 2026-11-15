@@ -1,0 +1,5 @@
+policy gate: 18 rules, 71 opposite-effect pairs, 1 solver call, 0.2 s
+NEW CONFLICT  AMLD-40-retain-cdd-governed  x  GDPR-17-erase-governed
+  witness request: action-id=erase, contains-pii=true,
+                   record-type=cdd-record, under-legal-hold=true
+FAIL: 1 new conflict(s), 0 unresolved pair(s)

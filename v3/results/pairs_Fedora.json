@@ -1,0 +1,770 @@
+{
+ "dataset": "Fedora",
+ "stats": {
+  "file": "fedora-rule3.xml",
+  "sha256": "c5fc93c477b7b56b028b4f079a7d1858520ea3ea43ed6608266444d3a36f8677",
+  "rules": 12,
+  "permit": 5,
+  "deny": 7,
+  "attributes": 4,
+  "rank_coded_attributes": 0,
+  "sources": 1,
+  "skipped_elements": {
+   "Description": 0,
+   "ObligationExpressions": 0,
+   "AdviceExpressions": 0
+  },
+  "designators_without_category": 0
+ },
+ "eligible_pairs": 35,
+ "all_pairs": 66,
+ "dead_rules": 0,
+ "own_scope_status": {
+  "SAT": 12
+ },
+ "thresholds": {
+  "embedding_cosine": 0.65,
+  "entity_jaccard": 0.25,
+  "tfidf": 0.3,
+  "keyword": 0.2,
+  "solver_budget_ms": 2000
+ },
+ "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+ "model_file": {
+  "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+  "matches_manifest": true
+ },
+ "z3": "4.15.4.0",
+ "rows": [
+  {
+   "pair": [
+    "rule1",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7517306208610535,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.07833352671333145,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7447290000518478,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule1",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.1766532063484192,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.0022839082863381874,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.755435999972633,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:api-m",
+    "a_4569cf4f17dc1968": "__OTHER__",
+    "a_343b8d05ea6a6c04": "Active",
+    "a_46938bffd46c1d3c": "administrator"
+   }
+  },
+  {
+   "pair": [
+    "rule1",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.8470821380615234,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.25572729434272706,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7407959999786726,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule1",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7730748653411865,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.07833352671333145,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7398969999931069,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule1",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7636915445327759,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.07833352671333145,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6895100000056118,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule2",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.32968538999557495,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.005807696414063006,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.9764759999816306,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-adminPing",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "Deleted",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule2",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.657829999923706,
+   "jaccard": 0.4,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.5312210814032167,
+   "keyword": 0.3333333333333333,
+   "status": "UNSAT",
+   "solve_ms": 1.1099490000106016,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule2",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.20895445346832275,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.0031616351149337434,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.881921999995484,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:api-a",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "Deleted",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule2",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.26870018243789673,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.005807696414063006,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.9070049999641014,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-oai",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "Deleted",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule2",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.2966628670692444,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.005807696414063006,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.9516770000223005,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-serverStatus",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "Deleted",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule4",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.3555094599723816,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.005225343393621772,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.8845430000169472,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-adminPing",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "POLICY",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule4",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6492014527320862,
+   "jaccard": 0.5,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.7156693547507857,
+   "keyword": 0.5,
+   "status": "UNSAT",
+   "solve_ms": 1.094261000048391,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule4",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.2432795614004135,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.002844609632290332,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.8734440000116592,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:api-a",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "POLICY",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule4",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.27150920033454895,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.005225343393621772,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.9139959999847633,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-oai",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "POLICY",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule4",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.2898431718349457,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.005225343393621772,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 1.8767340000067634,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-serverStatus",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "POLICY",
+    "a_46938bffd46c1d3c": "__OTHER__"
+   }
+  },
+  {
+   "pair": [
+    "rule5",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6087935566902161,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.11048930605735459,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7411339999853226,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule5",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.201136976480484,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.004160269255712106,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.3665749999963737,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-purgeDatastream",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "Active",
+    "a_46938bffd46c1d3c": "administrator"
+   }
+  },
+  {
+   "pair": [
+    "rule5",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6267657279968262,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.08740988807484484,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7251030000124956,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule5",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6540802717208862,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.11048930605735459,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.699358999985634,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule5",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6428418755531311,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.11048930605735459,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.737203999994108,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule6",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6296996474266052,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.11048930605735459,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6972359999840592,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule6",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.23782186210155487,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.004160269255712106,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 2.363832000014554,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-purgeObject",
+    "a_4569cf4f17dc1968": "127.0.0.1",
+    "a_343b8d05ea6a6c04": "Active",
+    "a_46938bffd46c1d3c": "administrator"
+   }
+  },
+  {
+   "pair": [
+    "rule6",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6403365135192871,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.08740988807484484,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6563029999474566,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule6",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6682457327842712,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.11048930605735459,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6919969999662499,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule6",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.6566863059997559,
+   "jaccard": 0.16666666666666666,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.11048930605735459,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6547639999657804,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule7",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7598865032196045,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.08465121648393101,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7223890000082065,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule7",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.20724093914031982,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.0030242789760628786,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 3.257411999982196,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-reloadPolicies",
+    "a_4569cf4f17dc1968": "__OTHER__",
+    "a_343b8d05ea6a6c04": "Active",
+    "a_46938bffd46c1d3c": "administrator"
+   }
+  },
+  {
+   "pair": [
+    "rule7",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7527257800102234,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.06707926111235685,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6760379999709585,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule7",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7732078433036804,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.08465121648393101,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7084020000197597,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule7",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7894130945205688,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.08465121648393101,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6690060000428275,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule8",
+    "rule9"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.721837043762207,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.08465121648393101,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6797160000123768,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule8",
+    "rule10"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.23420041799545288,
+   "jaccard": 0.0,
+   "graph": false,
+   "scope": true,
+   "tfidf": 0.0030242789760628786,
+   "keyword": 0.0,
+   "status": "SAT",
+   "solve_ms": 3.1805729999518917,
+   "witness": {
+    "a_eb7d4aff0b314c2a": "urn:fedora:names:fedora:2.1:action:id-serverShutdown",
+    "a_4569cf4f17dc1968": "__OTHER__",
+    "a_343b8d05ea6a6c04": "Active",
+    "a_46938bffd46c1d3c": "administrator"
+   }
+  },
+  {
+   "pair": [
+    "rule8",
+    "rule11"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7207375764846802,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.06707926111235685,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6933100000073864,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule8",
+    "rule12"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7152968049049377,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.08465121648393101,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.7398300000195377,
+   "witness": null
+  },
+  {
+   "pair": [
+    "rule8",
+    "rule13"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.8272214531898499,
+   "jaccard": 0.2,
+   "graph": true,
+   "scope": false,
+   "tfidf": 0.08465121648393101,
+   "keyword": 0.0,
+   "status": "UNSAT",
+   "solve_ms": 1.6694079999979294,
+   "witness": null
+  }
+ ]
+}

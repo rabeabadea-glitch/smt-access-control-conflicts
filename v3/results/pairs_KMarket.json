@@ -1,0 +1,136 @@
+{
+ "dataset": "KMarket",
+ "stats": {
+  "file": "KMarket.xml",
+  "sha256": "7c2ae84a0a16867f9919e51fd9fd9a51b1320366154c3bedd1b5b35d800a7ca1",
+  "rules": 5,
+  "permit": 1,
+  "deny": 4,
+  "attributes": 4,
+  "rank_coded_attributes": 0,
+  "sources": 1,
+  "skipped_elements": {
+   "Description": 2,
+   "ObligationExpressions": 1,
+   "AdviceExpressions": 4
+  },
+  "designators_without_category": 0
+ },
+ "eligible_pairs": 4,
+ "all_pairs": 10,
+ "dead_rules": 0,
+ "own_scope_status": {
+  "SAT": 5
+ },
+ "thresholds": {
+  "embedding_cosine": 0.65,
+  "entity_jaccard": 0.25,
+  "tfidf": 0.3,
+  "keyword": 0.2,
+  "solver_budget_ms": 2000
+ },
+ "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+ "model_file": {
+  "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+  "matches_manifest": true
+ },
+ "z3": "4.15.4.0",
+ "rows": [
+  {
+   "pair": [
+    "total-amount",
+    "permit-rule"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.8017153739929199,
+   "jaccard": 0.5,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.34911604659962037,
+   "keyword": 0.5,
+   "status": "SAT",
+   "solve_ms": 5.164306000040142,
+   "witness": {
+    "a_e232eb642850c70a": "kmarket-silver",
+    "a_56d33ff3e4b7eebb": 501,
+    "a_343b8d05ea6a6c04": "Drink",
+    "a_8000bc4a22b7b38c": 4
+   }
+  },
+  {
+   "pair": [
+    "deny-liquor",
+    "permit-rule"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.795146644115448,
+   "jaccard": 0.5,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.4422917535808657,
+   "keyword": 0.5,
+   "status": "SAT",
+   "solve_ms": 5.072984000037195,
+   "witness": {
+    "a_e232eb642850c70a": "kmarket-silver",
+    "a_56d33ff3e4b7eebb": 499,
+    "a_343b8d05ea6a6c04": "Liquor",
+    "a_8000bc4a22b7b38c": 4
+   }
+  },
+  {
+   "pair": [
+    "max-drink-amount",
+    "permit-rule"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7193451523780823,
+   "jaccard": 0.3333333333333333,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.3535305626674665,
+   "keyword": 0.3333333333333333,
+   "status": "SAT",
+   "solve_ms": 7.486932000006163,
+   "witness": {
+    "a_e232eb642850c70a": "kmarket-silver",
+    "a_56d33ff3e4b7eebb": 499,
+    "a_343b8d05ea6a6c04": "Drink",
+    "a_8000bc4a22b7b38c": 51
+   }
+  },
+  {
+   "pair": [
+    "max-medicine-amount",
+    "permit-rule"
+   ],
+   "effects": [
+    "Deny",
+    "Permit"
+   ],
+   "cosine": 0.7406750321388245,
+   "jaccard": 0.3333333333333333,
+   "graph": true,
+   "scope": true,
+   "tfidf": 0.3535305626674665,
+   "keyword": 0.3333333333333333,
+   "status": "SAT",
+   "solve_ms": 5.492548000006536,
+   "witness": {
+    "a_e232eb642850c70a": "kmarket-silver",
+    "a_56d33ff3e4b7eebb": 499,
+    "a_343b8d05ea6a6c04": "Medicine",
+    "a_8000bc4a22b7b38c": 6
+   }
+  }
+ ]
+}

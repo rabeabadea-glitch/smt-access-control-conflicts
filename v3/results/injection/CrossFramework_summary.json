@@ -1,0 +1,37 @@
+{
+ "dataset": "CrossFramework",
+ "seed": 20261112,
+ "per_kind": 100,
+ "kinds": {
+  "twin": {
+   "planted": 100,
+   "conflict_by_construction": true,
+   "solver_correct": 100,
+   "enumerator_correct": 100,
+   "kept_by_scope_query": 100,
+   "kept_by_entity_overlap": 100,
+   "kept_by_similarity": 100,
+   "kept_by_all_three": 100
+  },
+  "pinned": {
+   "planted": 100,
+   "conflict_by_construction": true,
+   "solver_correct": 100,
+   "enumerator_correct": 100,
+   "kept_by_scope_query": 100,
+   "kept_by_entity_overlap": 17,
+   "kept_by_similarity": 62,
+   "kept_by_all_three": 17
+  },
+  "nearmiss": {
+   "planted": 100,
+   "conflict_by_construction": false,
+   "solver_correct": 100,
+   "enumerator_correct": 100,
+   "kept_by_scope_query": 7,
+   "kept_by_entity_overlap": 30,
+   "kept_by_similarity": 53,
+   "kept_by_all_three": 0
+  }
+ }
+}
