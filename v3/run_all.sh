@@ -17,6 +17,7 @@ $PY -B v3/independent_check.py v3/results/pairs_Pluto.json          v3/data/xpa/
 $PY -B v3/independent_check.py v3/results/pairs_Fedora.json         v3/data/xpa/fedora-rule3.xml file   > /dev/null
 $PY -B v3/independent_check.py v3/results/pairs_CrossFramework.json $D/cross_source_corpus.xml policy > /dev/null
 $PY -B v3/independent_check.py v3/results/pairs_Synthetic360.json   v3/data/synthetic360.xml   file   > /dev/null
+$PY -B v3/missed.py > /dev/null                 # shapes of the conflicts the resemblance filters miss
 $PY -B v3/replay.py KMarket CrossFramework Continue-A Pluto Fedora
 $PY -B v3/inject.py Continue-A 100     > /dev/null
 $PY -B v3/inject.py CrossFramework 100 > /dev/null

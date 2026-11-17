@@ -1,0 +1,127 @@
+{
+ "thresholds": {
+  "cosine": 0.65,
+  "entity_overlap": 0.25
+ },
+ "datasets": {
+  "Continue-A": {
+   "narrow vs broad": {
+    "pairs": 351,
+    "conflicts": 351,
+    "lost": 69,
+    "lost_by_similarity": 29,
+    "lost_by_entity_overlap": 56,
+    "kept_by_scope_query": 351,
+    "max_cosine_of_conflicts": 0.988
+   },
+   "different attributes": {
+    "pairs": 4429,
+    "conflicts": 131,
+    "lost": 59,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 59,
+    "kept_by_scope_query": 131,
+    "max_cosine_of_conflicts": 0.98
+   },
+   "other": {
+    "pairs": 9500,
+    "conflicts": 0,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 0,
+    "max_cosine_of_conflicts": null
+   }
+  },
+  "Pluto": {
+   "catch-all": {
+    "pairs": 20,
+    "conflicts": 20,
+    "lost": 20,
+    "lost_by_similarity": 20,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 20,
+    "max_cosine_of_conflicts": 0.15
+   }
+  },
+  "Fedora": {
+   "narrow vs broad": {
+    "pairs": 2,
+    "conflicts": 0,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 0,
+    "max_cosine_of_conflicts": null
+   },
+   "different attributes": {
+    "pairs": 13,
+    "conflicts": 13,
+    "lost": 13,
+    "lost_by_similarity": 13,
+    "lost_by_entity_overlap": 13,
+    "kept_by_scope_query": 13,
+    "max_cosine_of_conflicts": 0.356
+   },
+   "other": {
+    "pairs": 20,
+    "conflicts": 0,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 0,
+    "max_cosine_of_conflicts": null
+   }
+  },
+  "KMarket": {
+   "narrow vs broad": {
+    "pairs": 4,
+    "conflicts": 4,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 4,
+    "max_cosine_of_conflicts": 0.802
+   }
+  },
+  "CrossFramework": {
+   "narrow vs broad": {
+    "pairs": 1,
+    "conflicts": 1,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 1,
+    "max_cosine_of_conflicts": 0.74
+   },
+   "different attributes": {
+    "pairs": 94,
+    "conflicts": 6,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 6,
+    "max_cosine_of_conflicts": 0.933
+   },
+   "other": {
+    "pairs": 36,
+    "conflicts": 0,
+    "lost": 0,
+    "lost_by_similarity": 0,
+    "lost_by_entity_overlap": 0,
+    "kept_by_scope_query": 0,
+    "max_cosine_of_conflicts": null
+   }
+  }
+ },
+ "totals": {
+  "narrow vs broad: conflicts": 356,
+  "narrow vs broad: lost": 69,
+  "different attributes: conflicts": 150,
+  "different attributes: lost": 72,
+  "other: conflicts": 0,
+  "other: lost": 0,
+  "catch-all: conflicts": 20,
+  "catch-all: lost": 20
+ }
+}

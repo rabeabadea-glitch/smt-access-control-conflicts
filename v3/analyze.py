@@ -96,7 +96,7 @@ def main(elapsed_seconds=None):
              'variants': {k: metrics(rows, f) for k, f in variants(has_e).items()}}
         d['model_file'] = t.get('model_file')
         d['z3'] = t.get('z3')
-        if has_e:       # pairs reaching each stage, in the order of the first submission and reordered
+        if has_e:       # pairs reaching each stage, in the similarity-first order and reordered
             steps, kept = [], rows
             for label, f in (('similarity', lambda r: r['cosine'] >= E), ('entity overlap', lambda r: r['jaccard'] >= N),
                              ('scope query', lambda r: r['scope'])):
@@ -319,7 +319,7 @@ def funnel_figure(summary, name='Continue-A'):
                 ax.annotate('', xy=(xs[i + 1] - 0.02, y + h / 2), xytext=(x + w + 0.02, y + h / 2),
                             arrowprops=dict(arrowstyle='-|>', color='#333333', lw=1.3))
         return xs
-    xs = row(top, 2.75, 'Order of the first submission: lossy filters first')
+    xs = row(top, 2.75, 'Similarity-first order: the lossy filters come first')
     row(bottom, 0.65, 'Reordered: the sound filter first, similarity only ranks the findings', [xs[0], xs[3], xs[4], xs[5]])
     fig.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
     fig.savefig(OUT / 'fig1_funnel.png', dpi=300)

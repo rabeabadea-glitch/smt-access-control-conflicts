@@ -20,6 +20,7 @@ the Rego export (`src/research/rego.py`) as they are.
 | `timing.py` | Wall-clock time of every filter variant of the ablation, one fresh process per repetition. |
 | `ci_gate.py` | Pull-request gate: fails when a pair that was conflict-free in the base file is a conflict in the changed file. `examples/policy-gate.yml` is the GitHub Actions job. |
 | `model_check.py` | Checks the embedding model on disk against `models/all-MiniLM-L6-v2/manifest.json` and against the screening counts stored by the thesis runs. |
+| `missed.py` | Sorts every conflict by how its two rules relate (catch-all, broad and narrow, different attributes) and counts how many the resemblance filters lose in each shape; writes `results/missed_conflicts.json`. |
 | `analyze.py` | Builds `results/summary.json`, the ablation table, the threshold sweeps and the two figures. |
 | `fetch_xpa.sh` | Downloads the Pluto and Fedora policy files from the XPA repository at a fixed commit and checks their SHA-256. |
 | `run_all.sh` | Runs all of the above from an empty `results/` folder. |
