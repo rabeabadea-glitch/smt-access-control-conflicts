@@ -40,3 +40,18 @@ python census_distinct.py repos census_new.json census_distinct_new.json
 ```
 
 On 1 November 2026 both commands were run on the files in `repos/`, and the two new outputs were identical to `census.json` and `census_distinct.json`.
+
+## extra_checks: two re-checks added on 21 November 2026
+
+| File | What it does |
+|---|---|
+| `refusal_check.py` | Re-runs the 17 refused listed-order runs of the chained-priority benchmark (Section 6.4.3). Their refusal code is also used when the solver gives no answer, so the script prints the status of the query that checks the narrowed losing rule. UNSAT means the edit really would have emptied the rule. |
+| `rerun_case.py` | Re-checks the case study (Sections 6.2 and 6.4.4). It evaluates every rule with numpy over all 31,492,800 requests and compares the overlapping pairs with a fresh Z3 scan and with `results/case_study/summary.json`. It also checks the witnesses, the Conflict counts and the settled-winner repair. |
+| `refusal_check_output.txt`, `rerun_case_output.txt` | Outputs of the run of 21 November 2026 (Windows 11, Python 3.12.14, Z3 4.15.4, numpy 2.3.5) |
+
+Both scripts write nothing and find the package from their own location, so no lines need changing. Set `Z3_LIBRARY` as in the main README. OPA and Balana are not used.
+
+```bash
+python verification/extra_checks/refusal_check.py   # about 1 minute; ends with {(True, 'UNSAT'): 17}
+python verification/extra_checks/rerun_case.py      # about 1 minute; both "grid == solver == recorded" lines print True
+```

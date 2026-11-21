@@ -1,0 +1,18 @@
+rebuilt model == saved model: True
+
+== A_all_25_rules: grid size 31,492,800, valid requests 31,492,800
+eligible pairs: 131 | grid overlapping: 7 | solver SAT now: 7 | recorded: 7
+grid == solver == recorded: True | unresolved: 0
+witnesses outside both regions: 0
+Conflict requests before repair: 307,152 recorded: 307,152
+settled re-run: REJECTED NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS steps 6 | recorded: REJECTED NO_AUTHORIZED_DIRECTION_FOR_REMAINING_CONFLICTS 6
+
+== B_F2_retranslated: grid size 31,492,800, valid requests 31,492,800
+eligible pairs: 109 | grid overlapping: 6 | solver SAT now: 6 | recorded: 6
+grid == solver == recorded: True | unresolved: 0
+witnesses outside both regions: 0
+Conflict requests before repair: 268,272 recorded: 268,272
+settled re-run: ACCEPTED BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED steps 6 | recorded: ACCEPTED BOUNDED_TRANSACTION_AND_EXHAUSTIVE_CHECK_PASSED 6
+after repair: Conflict 0 | changed 268,272 | changed from Conflict 268,272
+
+seconds 41.0
